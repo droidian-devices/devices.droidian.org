@@ -1,0 +1,55 @@
+baseURL = 'https://devices.droidian.org/'
+languageCode = 'en-us'
+title = "Droidian"
+#theme = "gohugo-theme-ananke"
+
+[params]
+  custom_css = ["css/theme.css", "css/custom.css", "css/fork-awesome.min.css"]
+  env = "production"
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+# Controls the navigation
+[[menu.main]]
+  identifier = "a"
+  name = "Home"
+  title = "home"
+  url = "/"
+  weight = -400
+
+[[menu.main]]
+  identifier = "blog"
+  name = "Blog"
+  title = "Blog"
+  url = "/blog"
+  weight = -340
+
+[[menu.main]]
+  identifier = "projects"
+  name = "Projects"
+  title = "Projects"
+  url = "https://github.com/orgs/droidian/projects"
+  weight = -330
+  
+[[menu.main]]
+  identifier = "images"
+  name = "Images"
+  title = "Images"
+  url = "https://github.com/droidian-images"
+  weight = -300
+
+[[menu.main]]
+  identifier = "devices"
+  name = "Devices"
+  title = "Devices"
+  url = "/devices"
+  weight = -300
+  
+  
+[[menu.main]]
+  identifier = "bugtracker"
+  name = "Bug Tracker"
+  title = "Bug Tracker"
+  url = "https://github.com/droidian/meta/issues"
+  weight = -290

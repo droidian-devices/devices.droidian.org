@@ -1,0 +1,204 @@
+- manufacturer: unknown # modify to add device manufacturer's name.Eg: Sony,Samsung,Xiaomi
+  name: unknown # modify to add device's name.Eg: Pixel 3a 
+  codename: unknown # modify to add device's codename.sargo, miatoll 
+  support: community # possible values: community / official
+  device_type: phone # possible values: phone / tablet
+  halium_version: 9 # version of valium used to build the port.
+  fastboot_mode: '`Vol-` and `Power`' # button combination to be pressed for booting in fastboot mode 
+  recovery_mode: '`Vol+` and `Power`' #button combination to be pressed for booting in recovery mode
+  ab_slot:  True # Ste to True if the device has A/B slots, else leave empty if not
+  api_version: API28 # version of the android API used for the device .Eg: API28
+  arch: arm64 # device architecture EG: arm64, arm32
+  droidian_release: https://github.com/droidian-images/rootfs-api28gsi-all/releases # A link to the corresponding Droidian release
+  droidian_required_build: # Some devices might need a specific build, links to the files can be specified here, otherwise leave empty
+      rootfs_link:
+      devtools_link:
+  android:
+      link:
+      text:
+      filename:
+  vendor_zip:
+      link:
+      text:
+      filename:
+  vendor_image:
+      link:
+      text:
+      filename:
+  boot:
+      link:
+      text:
+      filename:
+  recovery:
+      name:
+      link:
+      text: 
+      filename:
+      must_flash:
+  adaptation:
+      link:
+      text:
+      filename:
+  statuspage:
+  contact:
+      text:
+      link:  
+  credit:
+      -  name:
+         link:
+  command:
+  notes:
+  port_status:
+  # + : working 
+  # - : not working
+  # ~ : partially working
+  # ? : status unknown.Needs to be tested
+  # x : Not Supported / No Hardware support
+  - category_name: "Actors"
+    features:
+      - id: "manual_brightness"
+        value: "?"
+        comments: ""
+      - id: "notification_led"
+        value: "?"
+        comments: ""
+      - id: "torchlight"
+        value: "?"
+        comments: ""
+      - id: "vibration"
+        value: "?"
+        comments: ""
+  - category_name: "Camera"
+    features:
+      - id: "flashlight"
+        value: "?"
+        comments: ""
+      - id: "photo"
+        value: "?"
+        comments: ""
+      - id: "video"
+        value: "?"
+        comments: ""
+      - id: "switch_camera"
+        value: "?"
+        comments: ""
+  - category_name: "Cellular"
+    features:
+      - id: "carrier_info"
+        value: "?"
+        comments: ""
+      - id: "data_connection"
+        value: "?"
+        comments: ""
+      - id: "dua_sim"
+        value: "?"
+        comments: ""
+      - id: "calls"
+        value: "?"
+        comments: ""
+      - id: "mms"
+        value: "?"
+        comments: ""
+      - id: "pin_unlock"
+        value: "?"
+        comments: ""
+      - id: "sms"
+        value: "?"
+        comments: ""
+      - id: "audio_routings"
+        value: "?"
+        comments: ""
+      - id: "voice_call"
+        value: "?"
+        comments: ""
+      - id: "volume_control"
+        value: "?"
+        comments: ""
+  - category_name: "Misc"
+    features:
+      - id: "battery_percentage"
+        value: "?"
+        comments: ""
+      - id: "offline_charging"
+        value: "?"
+        comments: ""
+      - id: "online_charging"
+        value: "?"
+        comments: ""
+      - id: "rtc_time"
+        value: "?"
+        comments: ""
+      - id: "sd_card"
+        value: "?"
+        comments: ""
+      - id: "shutdown"
+        value: "?"
+        comments: ""
+      - id: "wirelessCharging"
+        value: "?"
+        comments: ""
+      - id: "wireless_external_monitor"
+        value: "?"
+        comments: ""
+  - category_name: "Network"
+    features:
+      - id: "bluetooth"
+        value: "?"
+        comments: ""
+      - id: "flight_mode"
+        value: "?"
+        comments: ""
+      - id: "hotspot"
+        value: "?"
+        comments: ""
+      - id: "nfc"
+        value: "?"
+        comments: ""
+      - id: "wifi"
+        value: "?"
+        comments: ""
+  - category_name: "Sensors"
+    features:
+      - id: "auto_brightness"
+        value: "?"
+        comments: ""
+      - id: "fingerprint"
+        value: "?"
+        comments: ""
+      - id: "gps"
+        value: "?"
+        comments: ""
+      - id: "proximity"
+        value: "?"
+        comments: ""
+      - id: "rotation"
+        value: "?"
+        comments: ""
+      - id: "touchscreen"
+        value: "?"
+        comments: ""
+  - category_name: "Sound"
+    features:
+      - id: "earphones"
+        value: "?"
+        comments: ""
+      - id: "loudspeaker"
+        value: "?"
+        comments: ""
+      - id: "microphone"
+        value: "?"
+        comments: ""
+      - id: "volume_control"
+        value: "?"
+        comments: ""
+  - category_name: "USB"
+    features:
+      - id: "mtp"
+        value: "?"
+        comments: ""
+      - id: "adb"
+        value: "?"
+        comments: ""
+      - id: "wired_external_monitor"
+        value: "?"
+        comments: ""

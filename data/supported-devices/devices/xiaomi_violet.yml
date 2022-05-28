@@ -1,0 +1,179 @@
+manufacturer: Xiaomi
+name: Redmi Note 7 Pro
+codename: violet
+support: community
+device_type: phone
+halium_version: 9
+fastboot_mode: '`Vol-` and `Power`'
+recovery_mode: '`Vol+` and `Power`'
+ab_slot: False
+api_version: API28
+arch: arch64
+droidian_release: https://github.com/droidian-images/rootfs-api28gsi-all/releases
+droidian_required_build: 
+  rootfs_link:
+  devtools_link:
+android:
+  link: https://xiaomifirmwareupdater.com/firmware/violet/weekly/9.9.3/
+  text: Android 9 Pie Firmware
+  filename: fw_violet_miui_VIOLET_9.9.3_79d3ccd33b_9.0.zip
+vendor_zip:
+  link: https://github.com/ubuntu-touch-violet/ubuntu-touch-violet/releases/tag/20210510
+  text: Android 9 vendor
+  filename: vendor.zip
+vendor_image:
+  link:
+  text:
+  filename:
+boot:
+  link: https://gitlab.com/mathew-dennis/xiaomi-violet/-/jobs/2428049402/artifacts/file/out/boot.img
+  text: Halium-boot
+  filename: boot.img
+recovery:
+  name: Orange Fox Recovery
+  link: https://orangefox.download/device/violet
+  text: Latest Orange Fox Recovery
+  filename: OrangeFox-violet-stable@VERSION.zip
+  must_flash: True
+adaptation:
+  link: https://github.com/mathew-dennis/droidian-recovery-flashing-adaptation-violet/releases/tag/v1.1
+  text: Adaptation (unofficial)
+  filename: droidian-recovery-flashing-adaptation-violet.zip
+statuspage:
+contact:
+  text:
+  link:
+credit:
+  - name: mathew-dennis
+    link: https://gitlab.com/mathew-dennis
+  - name: mardy
+    link: https://forums.ubports.com/user/mardy
+command:
+notes:
+port_status:
+# Possible values for port_status features :
+# + : working 
+# - : not working
+# ~ : partially working
+# ? : status unknown.Needs to be tested
+# x : Not Supported / No Hardware support
+  - category_name: "Actors"
+    features:
+      - id: "manual_brightness"
+        value: "?"
+      - id: "notification_led"
+        value: "?"
+      - id: "torchlight"
+        value: "?"
+      - id: "vibration"
+        value: "?"
+  - category_name: "Camera"
+    features:
+      - id: "flashlight"
+        value: "?"
+      - id: "photo"
+        value: "?"
+      - id: "video"
+        value: "?"
+      - id: "switch_camera"
+        value: "?"
+  - category_name: "Cellular"
+    features:
+      - id: "carrier_info"
+        value: "?"
+      - id: "data_connection"
+        value: "?"
+      - id: "dua_sim"
+        value: "?"
+      - id: "calls"
+        value: "?"
+      - id: "mms"
+        value: "?"
+      - id: "pin_unlock"
+        value: "?"
+      - id: "sms"
+        value: "?"
+      - id: "audio_routings"
+        value: "?"
+      - id: "voice_call"
+        value: "?"
+      - id: "volume_control"
+        value: "?"
+  - category_name: "Endurance"
+    features:
+      - id: "batteryLifetimeTest"
+        value: "?"
+      - id: "noRebootTest"
+        value: "?"
+  - category_name: "GPU"
+    features:
+      - id: "uiBoot"
+        value: "?"
+      - id: "videoAcceleration"
+        value: "?"
+  - category_name: "Misc"
+    features:
+      - id: "apparmorPatches"
+        value: "?"
+      - id: "battery_percentage"
+        value: "?"
+      - id: "offline_charging"
+        value: "?"
+      - id: "online_charging"
+        value: "?"
+      - id: "factoryReset"
+        value: "?"
+      - id: "rtc_time"
+        value: "?"
+      - id: "sd_card"
+        value: "?"
+      - id: "shutdown"
+        value: "?"
+      - id: "wirelessCharging"
+        value: "x"
+      - id: "wireless_external_monitor"
+        value: "?"
+  - category_name: "Network"
+    features:
+      - id: "bluetooth"
+        value: "?"
+      - id: "flight_mode"
+        value: "?"
+      - id: "hotspot"
+        value: "?"
+      - id: "nfc"
+        value: "x"
+      - id: "wifi"
+        value: "?"
+  - category_name: "Sensors"
+    features:
+      - id: "auto_brightness"
+        value: "?"
+      - id: "fingerprint"
+        value: "?"
+      - id: "gps"
+        value: "?"
+      - id: "proximity"
+        value: "?"
+      - id: "rotation"
+        value: "?"
+      - id: "touchscreen"
+        value: "?"
+  - category_name: "Sound"
+    features:
+      - id: "earphones"
+        value: "?"
+      - id: "loudspeaker"
+        value: "?"
+      - id: "microphone"
+        value: "?"
+      - id: "volume_control"
+        value: "?"
+  - category_name: "USB"
+    features:
+      - id: "mtp"
+        value: "?"
+      - id: "adb"
+        value: "?"
+      - id: "wired_external_monitor"
+        value: "x"

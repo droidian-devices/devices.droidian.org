@@ -19,7 +19,7 @@ jobs:
         with:
           python-version: '3.9'
           cache: 'pip'
-      - run: pip install pyyaml schema
+      - run: pip install -r requirements.txt
       - run: python generate_device_pages.py
 
       - name: Setup Hugo

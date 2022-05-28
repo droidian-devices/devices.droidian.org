@@ -1,7 +1,7 @@
 baseURL = 'https://devices.droidian.org/'
 languageCode = 'en-us'
 title = "Droidian"
-#theme = "gohugo-theme-ananke"
+theme = "gohugo-theme-ananke"
 
 [params]
   custom_css = ["css/theme.css", "css/custom.css", "css/fork-awesome.min.css"]
@@ -15,14 +15,14 @@ title = "Droidian"
   identifier = "a"
   name = "Home"
   title = "home"
-  url = "/"
+  url = "https://droidian.org/"
   weight = -400
 
 [[menu.main]]
   identifier = "blog"
   name = "Blog"
   title = "Blog"
-  url = "/blog"
+  url = "https://droidian.org/blog"
   weight = -340
 
 [[menu.main]]

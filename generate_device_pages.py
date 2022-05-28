@@ -39,7 +39,6 @@ for device in devices:
     outlines.append("---")
     outlines.append("draft: false")
     outlines.append(f"title: {device['manufacturer']} {device['name']} ({device['codename']})")
-    outlines.append(f"codename: {device['codename']}")
     outlines.append("---")
 
     outlines.append("> **Make a backup now, as your device will be wiped.**")
@@ -56,8 +55,7 @@ for device in devices:
     outlines.append("")
     outlines.append("## 1. Device preparation")
     if device['manufacturer'] == "Xiaomi":
-        outlines.append("- A USB 2.0 port/hub with an actual USB 2.0 controller is recommended")
-        outlines.append("    - Using `fastboot` on a USB 3.0 port may cause errors with some Xiaomi devices")
+        outlines.append("- A USB 2.0 port/hub with an actual USB 2.0 controller is recommended (Using `fastboot` on a USB 3.0 port may cause errors with some Xiaomi devices)")
     outlines.append("- Save your APN (Android)")
     outlines.append("    - The `Access Point Name` or `APN` can be found in the Settings menu of Android")
     outlines.append("    - Take a piece of paper or a text editor, and write down everything that you see on that screen")

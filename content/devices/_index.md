@@ -38,13 +38,14 @@ These devices are supported by members of the Droidian community. Device-specifi
     |  |  |
     | --- | --- |
     | Pocophone F1 (beryllium) | [install guide](/devices/beryllium/) |
+    | Pocophone M2 Pro (miatoll) | [install guide](/devices/beryllium/) |
 - **Xiaomi** 
     |  |  |
     | --- | --- |
-    | Xiaomi Mi A2 (jasmine) | [install guide](/devices/jasmine/) |
     | Xiaomi 6X (wayne)| [install guide](/devices/wayne) |
-    | Xiaomi Redmi Note 7 Pro (violet) | [install guide](/devices/violet) |
+    | Xiaomi Mi A2 (jasmine) | [install guide](/devices/jasmine/) |
     | Xiaomi Mi 9T (davinci) | |
+    | Xiaomi Redmi Note 7 Pro (violet) | [install guide](/devices/violet) |
 
 
  > If you have managed to run droidian on a device that is not listed above please raise a pull request to add the device [here](https://github.com/droidian-devices/devices.droidian.org).

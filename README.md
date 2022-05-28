@@ -1,2 +1,0 @@
-devices.droidian.org
-====================

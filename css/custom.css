@@ -1,0 +1,262 @@
+html,
+body {
+  height: 100%;
+  background-color: #25282f;
+  padding: 0;
+  color: #fff
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  text-align: center;
+  background-color: #0d1117 !important;
+}
+
+a {
+  color: #ccc;
+}
+
+a:hover {
+  color: #3ddc84;
+}
+
+/*
+ * Menu 
+ */
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #ccc;
+  
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: #3ddc84;
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/* Just a quick hamburger */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* Transform all the slices of hamburger into a crossmark. */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #cdcdcd;
+}
+
+/* But let's hide the middle one. */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/* Ohyeah and the last one should go the other direction */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/* Make this absolute positioned at the top right of the screen */
+#menu
+{
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -238px;
+  padding: 50px;
+  padding-top: 125px;
+  
+  background: #0d1117;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(0, -100%);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/* And let's slide it in from the left */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+/* 
+ * Droidian home
+ */ 
+.twitter:hover {
+    fill: #3ddc84;
+}
+
+.facebook:hover {
+    fill: #3ddc84;
+}
+
+.linkedin:hover {
+    fill: #3ddc84;
+}
+
+.color-grey {
+  color: #ccc;
+}
+
+.nested-links a {
+  color: #ccc;
+} 
+
+.nested-links a:hover {
+  color: #3ddc84;
+} 
+ 
+.green-swirl {
+  background-image: url('/img/homebg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+} 
+
+.bg-darkgrey {
+  background-color: #0d1117;
+}
+
+.bg-debian {
+  background-image: url('/img/bullseye.png');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+}
+
+.home-social-icon {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.pb7 {
+  padding-bottom: 0px !important;
+}
+
+.home-column-icon {
+  color: #cacaca; 
+  line-height: 2.5em;
+}
+
+.home-column-text {
+  line-height: 1em !important;
+  color: #ccc;
+}
+
+.home-column-title {
+  line-height: 1em !important;
+  color: #3ddc84;
+}
+
+
+/* Create three equal columns that floats next to each other */
+.home-column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+
+}
+
+.home-column a {
+  color: red !important;
+
+}
+
+.home-row {
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.home-row:after {
+  content: "";
+  display: table;
+  clear: both;
+  margin-bottom: 57px;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .home-column {
+    width: 100%;
+    text-align: center;
+  }
+  .home-row:after {
+    margin-bottom: 0px !important;
+  }
+}

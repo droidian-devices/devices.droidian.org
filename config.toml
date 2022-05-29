@@ -43,7 +43,7 @@ theme = "gohugo-theme-ananke"
   identifier = "devices"
   name = "Devices"
   title = "Devices"
-  url = "/devices"
+  url = "/"
   weight = -300
   
   

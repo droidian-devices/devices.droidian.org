@@ -1,5 +1,5 @@
 ---
-title: "Droidian Devices"
+title: "Supported Devices"
 draft: false
 ---
 

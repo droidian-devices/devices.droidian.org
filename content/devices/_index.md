@@ -38,7 +38,7 @@ These devices are supported by members of the Droidian community. Device-specifi
     |  |  |
     | --- | --- |
     | Pocophone F1 (beryllium) | [install guide](/devices/beryllium/) |
-    | Pocophone M2 Pro (miatoll) | [install guide](/devices/beryllium/) |
+    | Xiaomi Redmi Note 9 Pro/Pro Max/9S - Poco M2 Pro (miatoll) | [install guide](/devices/miatoll/) |
 - **Xiaomi** 
     |  |  |
     | --- | --- |

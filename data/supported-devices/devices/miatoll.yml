@@ -1,0 +1,169 @@
+manufacturer: Xiaomi
+name: Redmi Note 9 Pro/Pro Max/9S - Poco M2 Pro
+codename: miatoll
+support: community
+device_type: phone
+halium_version: 10
+fastboot_mode: '`Vol-` and `Power`'
+recovery_mode: '`Vol+` and `Power`'
+ab_slot: False
+api_version: API29
+arch: arm64
+droidian_release: https://github.com/droidian-images/rootfs-api29gsi-all/releases
+droidian_required_build:
+  rootfs_link:
+  devtools_link:
+android:
+  link: https://github.com/miatoll-linux/miatoll-linux/blob/main/README.md
+  text: Android 10 (Q) stock firmware
+  filename:
+vendor_zip:
+  link:
+  text:
+  filename:
+vendor_image:
+  link:
+  text:
+  filename:
+boot:
+  link: https://sourceforge.net/projects/miatoll-linux/files/Droidian/boot.img/download
+  text: Latest boot image
+  filename: boot.img
+recovery:
+  name: TWRP
+  link: https://forum.xda-developers.com/t/recovery-unofficial-miatoll-twrp-3-6-x.4366113/
+  text: Latest TWRP recovery
+  filename: twrp-VERSION-miatoll.img
+  must_flash:
+adaptation:
+  link: https://sourceforge.net/projects/miatoll-linux/files/Droidian/droidian-adaptation-miatoll.zip/download
+  text: Adaptation (unofficial)
+  filename: droidian-adaptation-miatoll.zip
+statuspage:
+contact:
+  text: Droidian for miatoll devices
+  link: https://t.me/ut_miatoll
+credit:
+  - name: Marcel Alexandru Nitan
+    link: https://github.com/nitanmarcel
+command:
+notes:
+  - title: Dtbo
+    text: Please also download the latest [dtbo.img](https://sourceforge.net/projects/miatoll-linux/files/Droidian/dtbo.img/download) and flash it to the `dtbo` partition (via the recovery or `fastboot flash dtbo.img dtbo`).
+  - title: Recovery
+    text: Use the recovery linked at the start of this page. Other recoveries are broken and require manual flashing as mentioned in the [old documentation for this device](https://miatoll-linux.github.io/droidian/#/?id=installation). 
+  - title: Default password
+    text: The default password is `1234`.
+  - title: Apn
+    text: Mobile data needs an APN to be set up from Settings -> Mobile Network -> Acess Point Names.
+  - title: Broken mobile data after calls
+    text: Data connection might break after recieving and making calls. Switch it off and on from Settings -> Mobile Network to fix it. Be careful to not turn off the mobile modem or a device restart might be required.
+  - title: Broken calls
+    text: Switching airplane mode on and off or switching the mobile modem off and on from the Quick Settings or the Settings App will break calls. If that's the case reboot the phone to fix it.
+  - title: Status
+    text: Droidian GSIs are experimental! Bugs and missing features are expected.
+port_status:
+  - category_name: "Actors"
+    features:
+      - id: "manual_brightness"
+        value: "+"
+      - id: "notification_led"
+        value: "-"
+      - id: "torchlight"
+        value: "-"
+      - id: "vibration"
+        value: "+"
+  - category_name: "Camera"
+    features:
+      - id: "flashlight"
+        value: "-"
+      - id: "photo"
+        value: "-"
+      - id: "video"
+        value: "-"
+      - id: "switch_camera"
+        value: "-"
+  - category_name: "Cellular"
+    features:
+      - id: "carrier_info"
+        value: "+"
+      - id: "data_connection"
+        value: "+"
+      - id: "dua_sim"
+        value: "-"
+      - id: "calls"
+        value: "+"
+      - id: "mms"
+        value: "?"
+      - id: "pin_unlock"
+        value: "+"
+      - id: "sms"
+        value: "+"
+      - id: "audio_routings"
+        value: "+"
+      - id: "voice_call"
+        value: "+"
+      - id: "volume_control"
+        value: "+"
+  - category_name: "Misc"
+    features:
+      - id: "battery_percentage"
+        value: "+"
+      - id: "offline_charging"
+        value: "~"
+      - id: "online_charging"
+        value: "+"
+      - id: "rtc_time"
+        value: "+"
+      - id: "sd_card"
+        value: "-"
+      - id: "shutdown"
+        value: "+"
+      - id: "wirelessCharging"
+        value: "x"
+      - id: "wireless_external_monitor"
+        value: "?"
+  - category_name: "Network"
+    features:
+      - id: "bluetooth"
+        value: "+"
+      - id: "flight_mode"
+        value: "~"
+      - id: "hotspot"
+        value: "+"
+      - id: "nfc"
+        value: "?"
+      - id: "wifi"
+        value: "+"
+  - category_name: "Sensors"
+    features:
+      - id: "auto_brightness"
+        value: "+"
+      - id: "fingerprint"
+        value: "-"
+      - id: "gps"
+        value: "+"
+      - id: "proximity"
+        value: "+"
+      - id: "rotation"
+        value: "+"
+      - id: "touchscreen"
+        value: "+"
+  - category_name: "Sound"
+    features:
+      - id: "earphones"
+        value: "+"
+      - id: "loudspeaker"
+        value: "+"
+      - id: "microphone"
+        value: "+"
+      - id: "volume_control"
+        value: "+"
+  - category_name: "USB"
+    features:
+      - id: "mtp"
+        value: "-"
+      - id: "adb"
+        value: "-"
+      - id: "wired_external_monitor"
+        value: "x"

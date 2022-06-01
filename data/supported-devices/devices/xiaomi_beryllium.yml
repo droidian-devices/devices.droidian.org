@@ -29,6 +29,10 @@ boot:
   link: https://github.com/Unofficial-droidian-for-pocof1/linux_android_xiaomi_beryllium/releases
   text: Latest boot image
   filename: boot.img
+dtbo:
+      link:
+      text:
+      filename:
 recovery:
   name: TWRP
   link: https://dl.twrp.me/beryllium/

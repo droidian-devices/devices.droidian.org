@@ -29,6 +29,10 @@ boot:
   link: https://gitlab.com/mathew-dennis/xiaomi-violet/-/jobs/2428049402/artifacts/file/out/boot.img
   text: Halium-boot
   filename: boot.img
+dtbo:
+      link:
+      text:
+      filename:
 recovery:
   name: Orange Fox Recovery
   link: https://orangefox.download/device/violet

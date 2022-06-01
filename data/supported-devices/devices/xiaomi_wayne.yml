@@ -29,6 +29,10 @@ boot:
   link:
   text:
   filename:
+dtbo:
+      link:
+      text:
+      filename:
 recovery:
   name: TWRP
   link: https://dl.twrp.me/wayne/

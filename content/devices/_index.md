@@ -24,7 +24,7 @@ You can ask for help at the [Droidian Telegram](https://t.me/droidianlinux) grou
     | Volla Phone (volla-yggdrasil) |  |
 
 ## Community devices
-These devices are supported by members of the Droidian community. Device-specific fixes are provided by the maintainers in various forms (flashable zips or runnable scripts). Please, follow the guides corresponding to your device. You can ask for help at the [Droidian Telegram](https://t.me/droidianlinux) group or device specific groups created by maintainer.
+These devices are supported by members of the Droidian community. Device-specific fixes are provided by the maintainers in various forms (flashable zips or runnable scripts). Please follow the guides corresponding to your device. You can ask for help at the [Droidian Telegram](https://t.me/droidianlinux) group or device specific groups created by maintainer.
 - **Asus**
     |  |  |
     | --- | --- |
@@ -34,14 +34,11 @@ These devices are supported by members of the Droidian community. Device-specifi
     | --- | --- |
     | Oneplus 6/6T (enchilada/fajita) |  |
     | Oneplus 3/3T (oneplus3) |  |
-- **Poco**
+- **Poco / Xiaomi**
     |  |  |
     | --- | --- |
     | Pocophone F1 (beryllium) | [install guide](/devices/beryllium/) |
-    | Xiaomi Redmi Note 9 Pro/Pro Max/9S - Poco M2 Pro (miatoll) | [install guide](/devices/miatoll/) |
-- **Xiaomi** 
-    |  |  |
-    | --- | --- |
+    | Poco M2 Pro / Xiaomi Redmi Note 9 Pro / Pro Max / 9S  (miatoll) | [install guide](/devices/miatoll/) |
     | Xiaomi 6X (wayne)| [install guide](/devices/wayne) |
     | Xiaomi Mi A2 (jasmine) | [install guide](/devices/jasmine/) |
     | Xiaomi Mi 9T (davinci) | |

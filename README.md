@@ -14,9 +14,9 @@ The site is up at [http://localhost:1313](http://localhost:1313) by default
 ## Adding new device to list of supported devices
  In order to work with support device pages, ensure that python is installed on your machine.The step by step guide to install python can be found [here](https://realpython.com/installing-python)
 
-- The scripts depends on the `yaml` and `schema` Python packages, hence you need to install them before using running the script.
+- The scripts depends on the `yaml` and `schema` Python packages, hence you need to install them before using running the script.You can install the dependencies by running the command:
     
-    pip install schema pyyaml
+    pip install -r requirements.txt
 
 The list of devices that are known to run droidian can to found at https:devices.droidian.org.If you wish to add a new device to the list you will have to add an entry manually in the content/_index.md. You could point to an external URL for installation guide or use the generate_device_pages.py script present within in the project to automatically generate the installation guide.The script generates guides in markdown(.md) file format. The guides are genrated based on the device specific YAML configuration files present inside data/supported-devices directory.
 

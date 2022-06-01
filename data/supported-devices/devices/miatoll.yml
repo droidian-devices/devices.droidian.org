@@ -29,6 +29,10 @@ boot:
   link: https://sourceforge.net/projects/miatoll-linux/files/Droidian/boot.img/download
   text: Latest boot image
   filename: boot.img
+dtbo:
+  link: https://sourceforge.net/projects/miatoll-linux/files/Droidian/dtbo.img/download
+  text: Latest dtbo image
+  filename: dtbo.img
 recovery:
   name: TWRP
   link: https://forum.xda-developers.com/t/recovery-unofficial-miatoll-twrp-3-6-x.4366113/

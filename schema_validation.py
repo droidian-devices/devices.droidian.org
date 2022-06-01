@@ -39,6 +39,11 @@ device_schema = Schema({
         'text': Or(None, str),
         'filename': Or(None, str),
         },
+    'dtbo': {
+        'link': Or(None, str),
+        'text': Or(None, str),
+        'filename': Or(None, str),
+        },
     'recovery': {
         'name': str,
         'link': str,

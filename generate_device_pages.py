@@ -42,18 +42,18 @@ for device in devices:
     outlines.append("---")
 
     outlines.append("> **Make a backup now, as your device will be wiped.**")
-    outlines.append("## 0. Download the needed files and tools")
+    outlines.append("## Download the needed files and tools")
     if device['droidian_required_build'] == None or device['droidian_required_build']['rootfs_link'] == None:
         outlines.append(f"- [Droidian `rootfs` and `devtools`]({device['droidian_release']}) for `{device['arch']}` (nightly releases include devtools)")
     else:
         outlines.append(f"- [Droidian `rootfs`]({device['droidian_required_build']['rootfs_link']}) (specific build required)")
         outlines.append(f"- [Droidian `devtools`]({device['droidian_required_build']['devtools_link']}) (specific build required)")
-    for downloadable in ["android", "vendor_zip", "vendor_image", "boot", "recovery", "adaptation"]:
+    for downloadable in ["android", "vendor_zip", "vendor_image", "boot","dtbo", "recovery", "adaptation"]:
         if device[downloadable]["link"] is not None:
                 outlines.append(f"- [{device[downloadable]['text']}]({device[downloadable]['link']})")
     outlines.append("")
     outlines.append("")
-    outlines.append("## 1. Device preparation")
+    outlines.append("## Device preparation")
     if device['manufacturer'] == "Xiaomi":
         outlines.append("- A USB 2.0 port/hub with an actual USB 2.0 controller is recommended (Using `fastboot` on a USB 3.0 port may cause errors with some Xiaomi devices)")
     outlines.append("- Save your APN (Android)")
@@ -88,7 +88,7 @@ for device in devices:
     outlines.append(f"    - When {device['recovery']['name']} is booted, open the device's `Internal storage` from your computer")
     outlines.append("    - Copy all of the files you downloaded to this folder")
     outlines.append("")
-    outlines.append(f"## 2. Droidian installation ({device['recovery']['name']})")
+    outlines.append(f"## Droidian installation ({device['recovery']['name']})")
     if device['ab_slot'] == True:
         outlines.append("- Install base Android version and/or Vendor to both A/B slots")
         outlines.append("  - Go to the `Reboot` menu and see which slot is active")
@@ -143,7 +143,7 @@ for device in devices:
     outlines.append("    - This component is already included in nightly builds")
     outlines.append("    - Installation is optional for stable releases, but it is recommended, because it helps with debugging")
     outlines.append("")
-    outlines.append("## 3. Finalizing the installation")
+    outlines.append("## Finalizing the installation")
     if device['adaptation']['filename'] is not None:
         outlines.append(f"- Install adaptation package as a flashable zip ({device['recovery']['name']})")
         outlines.append(recovery_zip(device['adaptation']['filename']))

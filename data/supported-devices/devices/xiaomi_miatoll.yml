@@ -9,9 +9,9 @@ recovery_mode: '`Vol+` and `Power`'
 ab_slot: False
 api_version: API29
 arch: arm64
-droidian_release: https://github.com/droidian-images/rootfs-api29gsi-all/releases
+droidian_release: https://github.com/droidian-images/rootfs-api29gsi-all/releases/tag/nightly
 droidian_required_build:
-  rootfs_link:
+  rootfs_link: https://github.com/droidian-images/rootfs-api29gsi-all/releases/tag/nightly
   devtools_link:
 android:
   link: https://github.com/miatoll-linux/miatoll-linux/blob/main/README.md

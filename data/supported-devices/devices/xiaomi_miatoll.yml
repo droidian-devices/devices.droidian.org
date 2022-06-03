@@ -26,13 +26,13 @@ vendor_image:
   text:
   filename:
 boot:
-  link: https://sourceforge.net/projects/miatoll-linux/files/Droidian/boot.img/download
-  text: Latest boot image
-  filename: boot.img
+  link:
+  text:
+  filename:
 dtbo:
-  link: https://sourceforge.net/projects/miatoll-linux/files/Droidian/dtbo.img/download
-  text: Latest dtbo image
-  filename: dtbo.img
+  link:
+  text:
+  filename:
 recovery:
   name: TWRP
   link: https://forum.xda-developers.com/t/recovery-unofficial-miatoll-twrp-3-6-x.4366113/
@@ -40,9 +40,9 @@ recovery:
   filename: twrp-VERSION-miatoll.img
   must_flash:
 adaptation:
-  link: https://sourceforge.net/projects/miatoll-linux/files/Droidian/droidian-adaptation-miatoll.zip/download
+  link: https://github.com/miatoll-linux/miatoll-linux/releases/download/adaptation-droidian/adaptation-droidian-miatoll.zip
   text: Adaptation (unofficial)
-  filename: droidian-adaptation-miatoll.zip
+  filename: adaptation-droidian-miatoll.zip
 statuspage:
 contact:
   text: Droidian for miatoll devices
@@ -52,8 +52,6 @@ credit:
     link: https://github.com/nitanmarcel
 command:
 notes:
-  - title: Dtbo
-    text: Please also download the latest [dtbo.img](https://sourceforge.net/projects/miatoll-linux/files/Droidian/dtbo.img/download) and flash it to the `dtbo` partition (via the recovery or `fastboot flash dtbo.img dtbo`).
   - title: Recovery
     text: Use the recovery linked at the start of this page. Other recoveries are broken and require manual flashing as mentioned in the [old documentation for this device](https://miatoll-linux.github.io/droidian/#/?id=installation). 
   - title: Default password

@@ -53,7 +53,7 @@ credit:
 command:
 notes:
   - title: Recovery
-    text: Use the recovery linked at the start of this page. Other recoveries are broken and require manual flashing as mentioned in the [old documentation for this device](https://miatoll-linux.github.io/droidian/#/?id=installation). 
+    text: Use the recovery linked at the start of this page. The instalation might fail with other recoveries that the one mentioned above.
   - title: Default password
     text: The default password is `1234`.
   - title: Apn
@@ -62,6 +62,8 @@ notes:
     text: Data connection might break after recieving and making calls. Switch it off and on from Settings -> Mobile Network to fix it. Be careful to not turn off the mobile modem or a device restart might be required.
   - title: Broken calls
     text: Switching airplane mode on and off or switching the mobile modem off and on from the Quick Settings or the Settings App will break calls. If that's the case reboot the phone to fix it.
+  - title: Out of storage
+    text: "By default when flashing Droidian it allocates 8GB of memory to the system. This might not be enough and luckily you can allocate more storage with ADB by running (while in recovery): `adb shell e2fsck -fy /data/rootfs.img` and `adb shell resize2fs -f /data/rootfs.img xG` where __x__ is the amount of GB to allocate (eg: 50G for 50 GB)."
   - title: Status
     text: Droidian GSIs are experimental! Bugs and missing features are expected.
 port_status:

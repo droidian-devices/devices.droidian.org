@@ -9,6 +9,8 @@
   ab_slot:  True # Ste to True if the device has A/B slots, else leave empty if not
   api_version: API28 # version of the android API used for the device .Eg: API28
   arch: arm64 # device architecture EG: arm64, arm32
+  channel:    #stable/nightly
+  notes_before_you_start: # any warning that you want user to know before starting with installation like issues with to not to use specific version of droidian.
   droidian_release: https://github.com/droidian-images/rootfs-api28gsi-all/releases # A link to the corresponding Droidian release
   droidian_required_build: # Some devices might need a specific build, links to the files can be specified here, otherwise leave empty
       rootfs_link:

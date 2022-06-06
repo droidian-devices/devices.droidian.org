@@ -9,6 +9,7 @@ recovery_mode: '`Vol+` and `Power`'
 ab_slot: False
 api_version: API28
 arch: arm64
+channel: stable
 droidian_release: https://github.com/droidian-images/rootfs-api28gsi-all/releases
 droidian_required_build:
   rootfs_link:

@@ -42,7 +42,17 @@ for device in devices:
     outlines.append("---")
 
     outlines.append("> **Make a backup now, as your device will be wiped.**")
-    outlines.append("## Download the needed files and tools")
+    notes_before_you_start = device.get('notes_before_you_start')
+    outlines.append("## Before you proceed :")
+    if notes_before_you_start is not None:
+        for note in notes_before_you_start :
+            notes_title = note.get('title')
+            if(notes_title) :
+                outlines.append(f"### {note['title']}")
+            outlines.append(note['text'])
+            outlines.append("")
+    outlines.append("## Downloading the needed files and tools")
+    outlines.append("Please download the belowed needed files and tools:")
     if device['droidian_required_build'] == None or device['droidian_required_build']['rootfs_link'] == None:
         outlines.append(f"- [Droidian `rootfs` and `devtools`]({device['droidian_release']}) for `{device['arch']}` (nightly releases include devtools)")
     else:
@@ -137,11 +147,14 @@ for device in devices:
     outlines.append("- Install Droidian `rootfs`")
     outlines.append(recovery_zip(f"droidian-rootfs-{device['arch']}_YYYYMMDD.zip"))
     outlines.append(sideload_zip(f"droidian-rootfs-{device['arch']}_YYYYMMDD.zip"))
-    outlines.append("- Install `devtools` (for stable release)")
-    outlines.append(recovery_zip(f"droidian-devtools-{device['arch']}_YYYYMMDD.zip"))
-    outlines.append(sideload_zip(f"droidian-devtools-{device['arch']}_YYYYMMDD.zip"))
-    outlines.append("    - This component is already included in nightly builds")
-    outlines.append("    - Installation is optional for stable releases, but it is recommended, because it helps with debugging")
+    channel = device.get('channel')
+    if channel == "stable" :    # The nightly builds already includes devtools hence showing the devtool install instruction only for stable channel
+        outlines.append("- Installing `devtools`")
+        outlines.append("    - Installation of devtools is optional for stable releases, but it is recommended as it helps with debugging.")
+        outlines.append(recovery_zip(f"droidian-devtools-{device['arch']}_YYYYMMDD.zip"))
+        outlines.append(sideload_zip(f"droidian-devtools-{device['arch']}_YYYYMMDD.zip"))
+    else :
+        outlines.append("    - `devtools` is already included in nightly builds.")
     outlines.append("")
     outlines.append("## Finalizing the installation")
     if device['adaptation']['filename'] is not None:

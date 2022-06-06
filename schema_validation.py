@@ -1,6 +1,6 @@
 import yaml
 import os
-from schema import Or, Schema, SchemaError
+from schema import Optional,Or, Schema, SchemaError
 
 device_schema = Schema({
     'manufacturer': str,
@@ -14,7 +14,14 @@ device_schema = Schema({
     'ab_slot': bool,
     'api_version': str,
     'arch': str,
+    Optional('notes_before_you_start'): Or([
+        {
+        Optional('title'): Or(None, str),
+        'text': Or(None, str),
+        }
+    ], None),
     'droidian_release': Or(None, str),
+    'channel':Or("stable","nightly"),
     'droidian_required_build': {
         'rootfs_link': Or(None, str),
         'devtools_link': Or(None, str),

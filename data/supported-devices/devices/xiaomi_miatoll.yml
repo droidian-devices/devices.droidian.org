@@ -9,7 +9,10 @@ recovery_mode: '`Vol+` and `Power`'
 ab_slot: False
 api_version: API29
 arch: arm64
+channel: nightly
 droidian_release: https://github.com/droidian-images/rootfs-api29gsi-all/releases/tag/nightly
+notes_before_you_start: 
+  - text: Use the TWRP recovery linked mentioned in the [Downloading the needed files and tools](#downloading-the-needed-files-and-tools) section below. The installation might fail with other recoveries, other than then one mentioned below.
 droidian_required_build:
   rootfs_link: https://github.com/droidian-images/rootfs-api29gsi-all/releases/tag/nightly
   devtools_link:
@@ -36,7 +39,7 @@ dtbo:
 recovery:
   name: TWRP
   link: https://forum.xda-developers.com/t/recovery-unofficial-miatoll-twrp-3-6-x.4366113/
-  text: Latest TWRP recovery
+  text: TWRP recovery
   filename: twrp-VERSION-miatoll.img
   must_flash:
 adaptation:
@@ -52,8 +55,6 @@ credit:
     link: https://github.com/nitanmarcel
 command:
 notes:
-  - title: Recovery
-    text: Use the recovery linked at the start of this page. The instalation might fail with other recoveries that the one mentioned above.
   - title: Default password
     text: The default password is `1234`.
   - title: Apn

@@ -43,8 +43,8 @@ for device in devices:
 
     outlines.append("> **Make a backup now, as your device will be wiped.**")
     notes_before_you_start = device.get('notes_before_you_start')
-    outlines.append("## Before you proceed :")
     if notes_before_you_start is not None:
+        outlines.append("## Before you proceed")
         for note in notes_before_you_start :
             notes_title = note.get('title')
             if(notes_title) :

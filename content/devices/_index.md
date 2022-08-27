@@ -43,6 +43,7 @@ These devices are supported by members of the Droidian community. Device-specifi
     | Xiaomi Mi A2 (jasmine) | [install guide](/devices/jasmine/) |
     | Xiaomi Mi 9T (davinci) | |
     | Xiaomi Redmi Note 7 Pro (violet) | [install guide](/devices/violet) |
+    | Xiaomi MIX 3 (perseus) | [install guide](/devices/perseus/) |
 
 
  > If you have managed to run droidian on a device that is not listed above please raise a pull request to add the device [here](https://github.com/droidian-devices/devices.droidian.org).

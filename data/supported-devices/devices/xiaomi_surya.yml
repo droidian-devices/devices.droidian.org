@@ -1,0 +1,178 @@
+manufacturer: Xiaomi
+name: Poco X3 NFC
+codename: surya
+support: community
+device_type: phone
+halium_version: 10
+fastboot_mode: '`Vol-` and `Power`'
+recovery_mode: '`Vol+` and `Power`'
+ab_slot: False
+api_version: API29
+arch: arm64
+channel: nightly
+droidian_release: https://github.com/droidian-images/droidian/releases
+notes_before_you_start:
+  - text: Any recovery should work but TWRP is recommended
+droidian_required_build:
+  rootfs_link: https://github.com/droidian-images/droidian/releases
+  devtools_link: https://github.com/droidian-images/droidian/releases
+android:
+  link: https://xiaomifirmwareupdater.com/miui/surya/stable/V12.0.9.0.QJGMIXM/
+  text: Android 10 (Q) stock firmware
+  filename:
+vendor_zip:
+  link:
+  text:
+  filename:
+vendor_image:
+  link:
+  text:
+  filename:
+boot:
+  link: https://github.com/droidian-surya/kernel-xiaomi-surya/releases/download/images/boot.img
+  text: Boot image
+  filename: boot.img
+dtbo:
+  link: https://github.com/droidian-surya/kernel-xiaomi-surya/releases/download/images/dtbo.img
+  text: DTBO image
+  filename: dtbo.img
+recovery:
+  name: TWRP
+  link: https://forum.xda-developers.com/t/recovery-3-5-0-0-unofficial-twrp-xiaomi-poco-x3-surya-karna.4168511/unread
+  text: TWRP Recovery
+  filename: TWRP.img
+  must_flash:
+adaptation:
+  link: https://github.com/droidian-surya/adaptation-surya-script/releases/download/adaptation/adaptation-surya-script.zip
+  text: Adaptation (unofficial)
+  filename: adaptation-surya-script.zip
+statuspage:
+contact:
+  text: Droidian for surya devices
+  link: https://t.me/droidian_surya
+credit:
+  - name: Bardia Moshiri
+    link: https://bardia.tech
+  - name: ungeskriptet
+    link: https://gitlab.com/ubports/porting/community-ports/android10/xiaomi-poco-x3
+command:
+notes:
+  - title: Default password
+    text: The default password is `1234`.
+  - title: Apn
+    text: Mobile data needs an APN to be set up from Settings -> Mobile Network -> Acess Point Names.
+  - title: Broken mobile data after calls
+    text: Data connection might break after recieving and making calls. Switch it off and on from Settings -> Mobile Network to fix it. Be careful to not turn off the mobile modem or a device restart might be required.
+  - title: Out of storage
+    text: "By default when flashing Droidian it allocates 8GB of memory to the system. This might not be enough and luckily you can allocate more storage with ADB by running (while in recovery): `adb shell e2fsck -fy /data/rootfs.img` and `adb shell resize2fs -f /data/rootfs.img xG` where __x__ is the amount of GB to allocate (eg: 50G for 50 GB)."
+  - title: Status
+    text: Droidian GSIs are experimental! Bugs and missing features are expected.
+  - title: Booting times
+    text: Booting times are currently within 5-10 minutes.
+  - title: Audio
+    text: Currently speaker does not work but bluetooth earbuds/earphones work.
+port_status:
+  - category_name: "Actors"
+    features:
+      - id: "manual_brightness"
+        value: "+"
+      - id: "notification_led"
+        value: "?"
+      - id: "torchlight"
+        value: "-"
+      - id: "vibration"
+        value: "+"
+  - category_name: "Camera"
+    features:
+      - id: "flashlight"
+        value: "-"
+      - id: "photo"
+        value: "-"
+      - id: "video"
+        value: "-"
+      - id: "switch_camera"
+        value: "-"
+  - category_name: "Cellular"
+    features:
+      - id: "carrier_info"
+        value: "+"
+      - id: "data_connection"
+        value: "+"
+      - id: "dua_sim"
+        value: "-"
+      - id: "calls"
+        value: "+"
+      - id: "mms"
+        value: "?"
+      - id: "pin_unlock"
+        value: "+"
+      - id: "sms"
+        value: "+"
+      - id: "audio_routings"
+        value: "+"
+      - id: "voice_call"
+        value: "-"
+      - id: "volume_control"
+        value: "+"
+  - category_name: "Misc"
+    features:
+      - id: "battery_percentage"
+        value: "+"
+      - id: "offline_charging"
+        value: "?"
+      - id: "online_charging"
+        value: "+"
+      - id: "rtc_time"
+        value: "+"
+      - id: "sd_card"
+        value: "+"
+      - id: "shutdown"
+        value: "+"
+      - id: "wirelessCharging"
+        value: "x"
+      - id: "wireless_external_monitor"
+        value: "?"
+  - category_name: "Network"
+    features:
+      - id: "bluetooth"
+        value: "+"
+      - id: "flight_mode"
+        value: "+"
+      - id: "hotspot"
+        value: "?"
+      - id: "nfc"
+        value: "?"
+      - id: "wifi"
+        value: "+"
+  - category_name: "Sensors"
+    features:
+      - id: "auto_brightness"
+        value: "+"
+      - id: "fingerprint"
+        value: "x"
+      - id: "gps"
+        value: "+"
+      - id: "proximity"
+        value: "+"
+      - id: "rotation"
+        value: "+"
+      - id: "touchscreen"
+        value: "+"
+  - category_name: "Sound"
+    features:
+      - id: "earphones"
+        value: "+"
+      - id: "loudspeaker"
+        value: "-"
+      - id: "microphone"
+        value: "-"
+      - id: "volume_control"
+        value: "+"
+  - category_name: "USB"
+    features:
+      - id: "mtp"
+        value: "-"
+      - id: "adb"
+        value: "-"
+      - id: "wired_external_monitor"
+        value: "x"

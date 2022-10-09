@@ -39,7 +39,7 @@ Please download the belowed needed files and tools:
     - Copy all of the files you downloaded to this folder
 
 ## Droidian installation (TWRP)
-- Install the required base Android version (9, 10, 11)
+- Install the required base Android version (9)
     - Install the file called `fw_beryllium_miui_POCOF1Global_9.6.27_6673f8a455_9.0.zip` as a Zip file
     - Alternatively, you can enter `ADB sideload` mode and run `adb sideload fw_beryllium_miui_POCOF1Global_9.6.27_6673f8a455_9.0.zip`
 - Install the vendor image
@@ -53,7 +53,7 @@ Please download the belowed needed files and tools:
 - Install Droidian `rootfs`
     - Install the file called `droidian-rootfs-arm64_YYYYMMDD.zip` as a Zip file
     - Alternatively, you can enter `ADB sideload` mode and run `adb sideload droidian-rootfs-arm64_YYYYMMDD.zip`
-- Installing `devtools`
+    - Installing `devtools`
     - Installation of devtools is optional for stable releases, but it is recommended as it helps with debugging.
     - Install the file called `droidian-devtools-arm64_YYYYMMDD.zip` as a Zip file
     - Alternatively, you can enter `ADB sideload` mode and run `adb sideload droidian-devtools-arm64_YYYYMMDD.zip`
@@ -69,18 +69,18 @@ Please download the belowed needed files and tools:
     - You should be greeted with the lock screen, the default password is `1234`
 - Run a specific command after first boot (Droidian)
     - Open the `King's Cross` application or connect via SSH (see the `SSH` entry in the Notes below), and type in the following:
-```
-sudo systemctl enable enable-ipa sudo systemctl reboot
-```
+    ```
+    sudo systemctl enable enable-ipa sudo systemctl reboot
+    ```
 
 Congratulations, if everything went well, now you should be running Droidian.
 
 ## Notes
-### SIM slot
-Dual-SIM mode is not supported as of now. Only the SIM2 slot is active, so a microSD card can be used at the same time.
+    ### SIM slot
+    Dual-SIM mode is not supported as of now. Only the SIM2 slot is active, so a microSD card can be used at the same time.
 
-### Extras
-For other tweaks, open the `King's Cross` terminal app, and run `beryllium-extras.sh`. This includes a notch fix and automated installation of Waydroid.
+    ### Extras
+    For other tweaks, open the `King's Cross` terminal app, and run `beryllium-extras.sh`. This includes a notch fix and automated installation of Waydroid.
 
 ### SSH access
 Flashing the `devtools` zip enables `SSH` over USB. To use it, connect your phone to your computer and type `ssh droidian@10.15.19.82`, the password is `1234` (on Windows, you may need [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/))

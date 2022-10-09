@@ -13,6 +13,7 @@ channel: nightly
 droidian_release: https://github.com/droidian-images/rootfs-api29gsi-all/releases/tag/nightly
 notes_before_you_start: 
   - text: Use the TWRP recovery linked mentioned in the [Downloading the needed files and tools](#downloading-the-needed-files-and-tools) section below. The installation might fail with other recoveries, other than then one mentioned below.
+is_specific_build_required : true
 droidian_required_build:
   rootfs_link: https://github.com/droidian-images/rootfs-api29gsi-all/releases/tag/nightly
   devtools_link:

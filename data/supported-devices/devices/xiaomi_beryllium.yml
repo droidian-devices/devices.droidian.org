@@ -11,9 +11,10 @@ api_version: API28
 arch: arm64
 channel: stable
 droidian_release: https://github.com/droidian-images/rootfs-api28gsi-all/releases
+is_specific_build_required : false
 droidian_required_build:
-  rootfs_link:
-  devtools_link:
+  rootfs_link: 
+  devtools_link: 
 android:
   link: https://xiaomifirmwareupdater.com/download/?file=fw_beryllium_miui_POCOF1Global_9.6.27_6673f8a455_9.0.zip
   text: Android 9 (Pie) stock firmware

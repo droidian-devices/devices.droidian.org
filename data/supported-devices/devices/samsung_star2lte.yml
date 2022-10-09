@@ -14,6 +14,7 @@ channel: nightly
 droidian_release: https://github.com/droidian-images/droidian/releases
 notes_before_you_start:
   - text: Any recovery should work but TWRP is recommended
+is_specific_build_required: true
 droidian_required_build:
   rootfs_link: https://github.com/droidian-images/droidian/releases
   devtools_link: https://github.com/droidian-images/droidian/releases

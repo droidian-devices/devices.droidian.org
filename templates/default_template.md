@@ -3,23 +3,36 @@ draft: false
 title: {{{manufacturer}}} {{{name}}} ({{{codename}}})
 ---
 > **Make a backup now, as your device will be wiped.**
-## Before you proceed
 {{#notes_before_you_start}}
+## Before you proceed
 {{text}}
 
 {{/notes_before_you_start}}
-
 ## Downloading the needed files and tools
 Please download the belowed needed files and tools:
+{{#is_specific_build_required}}
 {{#droidian_required_build.rootfs_link}}
 - [Droidian `rootfs`]({{{droidian_required_build.rootfs_link}}}) (specific build required)
 {{/droidian_required_build.rootfs_link}}
 {{#droidian_required_build.devtools_link}}
 - [Droidian `devtools`]({{{droidian_required_build.devtools_link}}}) (specific build required)
 {{/droidian_required_build.devtools_link}}
+{{/is_specific_build_required}}
+{{^is_specific_build_required}}
+- [Droidian `rootfs` and `devtools`](https://github.com/droidian-images/rootfs-api28gsi-all/releases) for `{{arch}}` (nightly releases include devtools)
+{{/is_specific_build_required}}
+{{#isNightlyBuild}}
+    > `devtools` is already included in nightly builds.
+{{/isNightlyBuild}}
 {{#android.link}}
 - [{{android.text}}]({{{android.link}}})
 {{/android.link}}
+{{#vendor_zip.link}}
+- [{{vendor_zip.text}}]({{{vendor_zip.link}}})
+{{/vendor_zip.link}}
+{{#vendor_image.link}}
+- [{{vendor_image.text}}]({{{vendor_image.link}}})
+{{/vendor_image.link}}
 {{#boot.link}}
 - [{{boot.text}}]({{{boot.link}}})
 {{/boot.link}}
@@ -59,12 +72,45 @@ Please download the belowed needed files and tools:
     - Copy all of the files you downloaded to this folder
 
 ## Droidian installation (TWRP)
+{{#android}}
+- Install the required base Android version ({{halium_version}})
+    {{#android.filename}}
+    - Install the file called `{{{android.filename}}}` as a Zip file
+    - Alternatively, you can enter `ADB sideload` mode and run `adb sideload {{{android.filename}}}`
+    {{/android.filename}}
+{{/android}}
+{{#vendor_image}}
+- Install the vendor image
+    {{#vendor_image.filename}}
+    - Install the file called `{{{vendor_image.filename}}}` as an Image to the `Vendor` partition
+    - Alternatively, you can enter fastboot mode and `fastboot flash vendor {{{vendor_image.filename}}}`
+    {{/vendor_image.filename}}
+{{/vendor_image}}
+{{#boot}}
+- Install the boot image
+    {{#boot.filename}}
+    - Install the file called `{{{boot.filename}}}` as an Image to the `Boot` partition
+    - Alternatively, you can enter fastboot mode and `fastboot flash boot {{{boot.filename}}}`
+    {{/boot.filename}}
+{{/boot}}
+{{#recovery}}
 - Install recovery
+    {{#recovery.filename}}
     - Install the file called `{{{recovery.filename}}}` as an Image to the `Recovery` partition
+    {{/recovery.filename}}
+{{/recovery}}
 - Install Droidian `rootfs`
     - Install the file called `droidian-rootfs-arm64_YYYYMMDD.zip` as a Zip file
     - Alternatively, you can enter `ADB sideload` mode and run `adb sideload droidian-rootfs-arm64_YYYYMMDD.zip`
+    {{#isNightlyBuild}}
     - `devtools` is already included in nightly builds.
+    {{/isNightlyBuild}}
+    {{^isNightlyBuild}}
+    - Installing `devtools`
+    - Installation of devtools is optional for stable releases, but it is recommended as it helps with debugging.
+    - Install the file called `droidian-devtools-arm64_YYYYMMDD.zip` as a Zip file
+    - Alternatively, you can enter `ADB sideload` mode and run `adb sideload droidian-devtools-arm64_YYYYMMDD.zip`
+    {{/isNightlyBuild}}
 
 ## Finalizing the installation
 - Install adaptation package as a flashable zip (TWRP)
@@ -75,28 +121,24 @@ Please download the belowed needed files and tools:
     - TWRP might complain that there is no OS installed, but that's fine
     - The first boot may take longer, and at least one spontaneous reboot is expected during the process
     - You should be greeted with the lock screen, the default password is `1234`
+{{#isCommandProvided}}
+- Run a specific command after first boot (Droidian)
+    - Open the `King's Cross` application or connect via SSH (see the `SSH` entry in the Notes below), and type in the following:
+    {{#command}}
+    ```
+    {{{command}}}
+    ```
+    {{/command}}
+{{/isCommandProvided}}
 
 Congratulations, if everything went well, now you should be running Droidian.
 
-## Notes
-### Default password
-The default password is `1234`.
+{{#hasNotes}}## Notes{{/hasNotes}}
+{{#notes}}
+    ### {{{title}}}
+    {{{text}}}
 
-### Apn
-Mobile data needs an APN to be set up from Settings -> Mobile Network -> Acess Point Names.
-
-### Broken mobile data after calls
-Data connection might break after recieving and making calls. Switch it off and on from Settings -> Mobile Network to fix it. Be careful to not turn off the mobile modem or a device restart might be required.
-
-### Broken calls
-Switching airplane mode on and off or switching the mobile modem off and on from the Quick Settings or the Settings App will break calls. If that's the case reboot the phone to fix it.
-
-### Out of storage
-By default when flashing Droidian it allocates 8GB of memory to the system. This might not be enough and luckily you can allocate more storage with ADB by running (while in recovery): `adb shell e2fsck -fy /data/rootfs.img` and `adb shell resize2fs -f /data/rootfs.img xG` where __x__ is the amount of GB to allocate (eg: 50G for 50 GB).
-
-### Status
-Droidian GSIs are experimental! Bugs and missing features are expected.
-
+{{/notes}}
 ### SSH access
 Flashing the `devtools` zip enables `SSH` over USB. To use it, connect your phone to your computer and type `ssh droidian@10.15.19.82`, the password is `1234` (on Windows, you may need [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/))
 
@@ -113,3 +155,5 @@ You can find a list of mobile-friendly Linux applications at [LinuxPhoneApps](ht
 {{#contact.link}}
 You can ask for assistance specific to this device at [{{contact.text}}]({{{contact.link}}}).
 {{/contact.link}}
+
+

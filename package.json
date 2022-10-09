@@ -1,0 +1,17 @@
+{
+    "name": "md-page-generator",
+    "version": "1.0.0",
+    "description": "A script that is use to generate the md file using a specified templete",
+    "main": "generate_device_pages.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "fs-extra": "^10.1.0",
+        "mustache": "^4.2.0",
+        "yaml": "^2.1.3"
+    }
+}

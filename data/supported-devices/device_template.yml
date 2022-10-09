@@ -96,7 +96,7 @@
       - id: "data_connection"
         value: "?"
         comments: ""
-      - id: "dua_sim"
+      - id: "dual_sim"
         value: "?"
         comments: ""
       - id: "calls"

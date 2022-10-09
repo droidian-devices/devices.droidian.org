@@ -1,4 +1,5 @@
-- manufacturer: unknown # modify to add device manufacturer's name.Eg: Sony,Samsung,Xiaomi
+- templateName: default_template
+  manufacturer: unknown # modify to add device manufacturer's name.Eg: Sony,Samsung,Xiaomi
   name: unknown # modify to add device's name.Eg: Pixel 3a 
   codename: unknown # modify to add device's codename.sargo, miatoll 
   support: community # possible values: community / official

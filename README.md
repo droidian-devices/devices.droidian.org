@@ -23,7 +23,7 @@ The list of devices that are known to run droidian can to found at https:devices
     python generate_device_pages.py
 
 In order to new automatically generate the installation guide add new file with <codename>.yaml file inside data/supported-devices directory.
-copy the contents of device_template.yml(present in same folder) into the recently created <codename>.yaml file.
+copy the contents of sample.yml(present in same folder) into the recently created <codename>.yaml file.
 Now update the paramters in the <codename>.yaml as per your device.
 
 These are the parameters used in `codename.yml`. Start each device entry with a `-`.
@@ -51,7 +51,7 @@ These are the parameters used in `codename.yml`. Start each device entry with a 
 - `credit`: also a list, each entry should start with a `-`. `name`: the name of the maintainer, `link`: maintainer's page
 - `command`: a list of commands that need to be run after first boot, start each line of the commands with a `-`
 - `notes`: additional considerations for the device, start each note with a `-`. A note contains a `title` entry and a `text` that contains the note itself
-- `port_status`: please, see the `device_template.yml` file for details
+- `port_status`: please, see the `sample.yml` file for details
 
 \* `android`, `vendor_zip`, `vendor_image`, and `boot` have multiple parts. The `link` contains the actual link to the file or release page; the `text` contains the string what the download link should say in the page; and the `filename` specifies the name of the file that identifies the file when flashing.
 

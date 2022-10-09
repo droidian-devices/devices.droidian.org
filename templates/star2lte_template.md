@@ -12,10 +12,10 @@ Please download the belowed needed files and tools:
 - [Droidian `rootfs`]({{{droidian_required_build.rootfs_link}}}) (specific build required)
 {{/droidian_required_build.rootfs_link}}
 - [Droidian `devtools`]({{{droidian_required_build.devtools_link}}}) (specific build required)
-  <!-- // TODO : change to stock_rom for all other congfigs from android -->
-{{#stock_rom.link}}
-- [{{stock_rom.text}}]({{{stock_rom.link}}})
-{{/stock_rom.link}}
+  <!-- // TODO : change to android for all other congfigs from android -->
+{{#android.link}}
+- [{{android.text}}]({{{android.link}}})
+{{/android.link}}
 - [{{boot.text}}]({{{boot.link}}})
 - [{{recovery.text}}]({{{recovery.link}}})
 - [{{adaptation.text}}]({{{adaptation.link}}})

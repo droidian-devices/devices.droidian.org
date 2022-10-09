@@ -4,8 +4,8 @@ const fs = require('fs-extra')
 const YAML = require('yaml')
 
 const CONFIG_DIR_NAME = `data/supported-devices/devices`;
-const TEMPLETE_DIR_NAME = `templete`;
-const MD_OUTPUT_DIR =`./content/devices/temp`;
+const TEMPLETE_DIR_NAME = `templates`;
+let MD_OUTPUT_DIR =`./content/devices`;
 
 async function main() {
 
@@ -25,10 +25,19 @@ async function main() {
             deviceConfig = YAML.parse(await fs.readFile(`${CONFIG_DIR_NAME}/${fileName}`, 'utf8'));
         }
             
-        const templeteName = deviceConfig.templeteName ?? 'default_templete';
-        let template = fs.readFileSync(`${TEMPLETE_DIR_NAME}/${templeteName}.md`).toString();
+        const templateName = deviceConfig.templateName ?? 'default_template';
+        let template = fs.readFileSync(`${TEMPLETE_DIR_NAME}/${templateName}.md`).toString();
         let output = render(template, deviceConfig)
-        fs.writeFileSync(`${MD_OUTPUT_DIR}/${deviceConfig.codename}.md`, output)
+        // TODO the below line is added temperatiry to be after moving from python script to js script is complete
+        const migrationCompleted =['star2lte'];
+        if(migrationCompleted.includes(deviceConfig.codename))
+        {
+            fs.writeFileSync(`${MD_OUTPUT_DIR}/${deviceConfig.codename}.md`, output)
+        }
+        else
+        {
+            fs.writeFileSync(`${MD_OUTPUT_DIR}/temp/${deviceConfig.codename}.md`, output)
+        }
     }
 }
 main();

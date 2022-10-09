@@ -204,9 +204,12 @@ for device in devices:
     outlines.append("")
 
     outfile_name =  os.getcwd()+"/content/devices/"+device['codename']+".md"
-    outfile = open(outfile_name, 'w')
-    for line in outlines:
-        outfile.write(line+'\n')
-    outfile.close()
-    print(f"generated {outfile_name} file sucessfully.")
+    if os.path.isfile(outfile_name):
+       print('The device page for device is already exists.Not modifying the existing file') 
+    else:
+        outfile = open(outfile_name, 'w')
+        for line in outlines:
+            outfile.write(line+'\n')
+        outfile.close()
+        print(f"generated {outfile_name} file sucessfully.")
 print('Done')

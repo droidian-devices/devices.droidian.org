@@ -93,7 +93,7 @@ You can find a list of mobile-friendly Linux applications at [LinuxPhoneApps](ht
 ## Credit
 [Bardia Moshiri](https://bardia.tech)
 
-[SolAZDev and TheKit](https://gitlab.com/ubports/porting/community-ports/android10/xiaomi-poco-x3)
+[SolAZDev and TheKit](https://gitlab.com/ubports/porting/community-ports/android10/samsung-galaxy-s9)
 
 [Droidian](http://droidian.org/) [Mobian](https://mobian-project.org/) [UBports](https://ubuntu-touch.io/)
 

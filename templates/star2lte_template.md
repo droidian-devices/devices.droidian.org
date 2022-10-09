@@ -11,8 +11,9 @@ Please download the belowed needed files and tools:
 {{#droidian_required_build.rootfs_link}}
 - [Droidian `rootfs`]({{{droidian_required_build.rootfs_link}}}) (specific build required)
 {{/droidian_required_build.rootfs_link}}
+{{#droidian_required_build.devtools_link}}
 - [Droidian `devtools`]({{{droidian_required_build.devtools_link}}}) (specific build required)
-  <!-- // TODO : change to android for all other congfigs from android -->
+{{/droidian_required_build.devtools_link}}
 {{#android.link}}
 - [{{android.text}}]({{{android.link}}})
 {{/android.link}}

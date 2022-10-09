@@ -6,10 +6,10 @@ title: Xiaomi Redmi Note 9 Pro/Pro Max/9S - Poco M2 Pro (miatoll)
 ## Before you proceed
 Use the TWRP recovery linked mentioned in the [Downloading the needed files and tools](#downloading-the-needed-files-and-tools) section below. The installation might fail with other recoveries, other than then one mentioned below.
 
+
 ## Downloading the needed files and tools
 Please download the belowed needed files and tools:
 - [Droidian `rootfs`](https://github.com/droidian-images/rootfs-api29gsi-all/releases/tag/nightly) (specific build required)
-- [Droidian `devtools`](None) (specific build required)
 - [Android 10 (Q) stock firmware](https://github.com/miatoll-linux/miatoll-linux/blob/main/README.md)
 - [TWRP recovery](https://forum.xda-developers.com/t/recovery-unofficial-miatoll-twrp-3-6-x.4366113/)
 - [Adaptation (unofficial)](https://github.com/miatoll-linux/miatoll-linux/releases/download/adaptation-droidian/adaptation-droidian-miatoll.zip)
@@ -91,5 +91,3 @@ You can find a list of mobile-friendly Linux applications at [LinuxPhoneApps](ht
 [Droidian](http://droidian.org/) [Mobian](https://mobian-project.org/) [UBports](https://ubuntu-touch.io/)
 
 You can ask for assistance specific to this device at [Droidian for miatoll devices](https://t.me/ut_miatoll).
-
-

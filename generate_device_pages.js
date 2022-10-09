@@ -27,9 +27,12 @@ async function main() {
             
         const templateName = deviceConfig.templateName ?? 'default_template';
         let template = fs.readFileSync(`${TEMPLETE_DIR_NAME}/${templateName}.md`).toString();
+        
+        deviceConfig = {...deviceConfig,isManufacturerXiaomi: deviceConfig.manufacturer.toLowerCase().trim()==='xiaomi'}
+        
         let output = render(template, deviceConfig)
         // TODO the below line is added temperatiry to be after moving from python script to js script is complete
-        const migrationCompleted =['star2lte'];
+        const migrationCompleted =['star2lte','miatoll'];
         if(migrationCompleted.includes(deviceConfig.codename))
         {
             fs.writeFileSync(`${MD_OUTPUT_DIR}/${deviceConfig.codename}.md`, output)

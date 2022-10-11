@@ -164,8 +164,8 @@ Congratulations, if everything went well, now you should be running Droidian.
 
 {{#hasNotes}}## Notes{{/hasNotes}}
 {{#notes}}
-    ### {{{title}}}
-    {{{text}}}
+### {{{title}}}
+{{{text}}}
 
 {{/notes}}
 ### SSH access

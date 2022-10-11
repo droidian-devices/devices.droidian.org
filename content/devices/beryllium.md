@@ -76,11 +76,11 @@ Please download the belowed needed files and tools:
 Congratulations, if everything went well, now you should be running Droidian.
 
 ## Notes
-    ### SIM slot
-    Dual-SIM mode is not supported as of now. Only the SIM2 slot is active, so a microSD card can be used at the same time.
+### SIM slot
+Dual-SIM mode is not supported as of now. Only the SIM2 slot is active, so a microSD card can be used at the same time.
 
-    ### Extras
-    For other tweaks, open the `King's Cross` terminal app, and run `beryllium-extras.sh`. This includes a notch fix and automated installation of Waydroid.
+### Extras
+For other tweaks, open the `King's Cross` terminal app, and run `beryllium-extras.sh`. This includes a notch fix and automated installation of Waydroid.
 
 ### SSH access
 Flashing the `devtools` zip enables `SSH` over USB. To use it, connect your phone to your computer and type `ssh droidian@10.15.19.82`, the password is `1234` (on Windows, you may need [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/))

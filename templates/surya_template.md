@@ -1,50 +1,31 @@
 ---
 draft: false
-title: {{{manufacturer}}} {{{name}}} ({{{codename}}})
+title: {{manufacturer}} {{name}} ({{codename}})
 ---
 > **Make a backup now, as your device will be wiped.**
-{{#notes_before_you_start}}
 ## Before you proceed
-{{text}}
+Any recovery should work but TWRP is recommended
 
-{{/notes_before_you_start}}
 ## Downloading the needed files and tools
 Please download the belowed needed files and tools:
-{{#is_specific_build_required}}
 {{#droidian_required_build.rootfs_link}}
 - [Droidian `rootfs`]({{{droidian_required_build.rootfs_link}}}) (specific build required)
 {{/droidian_required_build.rootfs_link}}
 {{#droidian_required_build.devtools_link}}
 - [Droidian `devtools`]({{{droidian_required_build.devtools_link}}}) (specific build required)
 {{/droidian_required_build.devtools_link}}
-{{/is_specific_build_required}}
-{{^is_specific_build_required}}
-- [Droidian `rootfs` and `devtools`](https://github.com/droidian-images/rootfs-api28gsi-all/releases) for `{{arch}}` (nightly releases include devtools)
-{{/is_specific_build_required}}
-{{#isNightlyBuild}}
-    > `devtools` is already included in nightly builds.
-{{/isNightlyBuild}}
 {{#android.link}}
 - [{{android.text}}]({{{android.link}}})
 {{/android.link}}
-{{#vendor_zip.link}}
-- [{{vendor_zip.text}}]({{{vendor_zip.link}}})
-{{/vendor_zip.link}}
-{{#vendor_image.link}}
-- [{{vendor_image.text}}]({{{vendor_image.link}}})
-{{/vendor_image.link}}
-{{#boot.link}}
 - [{{boot.text}}]({{{boot.link}}})
-{{/boot.link}}
 {{#dtbo.link}}
 - [{{dtbo.text}}]({{{dtbo.link}}})
 {{/dtbo.link}}
-{{#recovery.link}}
+{{#vbmeta.link}}
+- [{{vbmeta.text}}]({{{vbmeta.link}}})
+{{/vbmeta.link}}
 - [{{recovery.text}}]({{{recovery.link}}})
-{{/recovery.link}}
-{{#adaptation.link}}
 - [{{adaptation.text}}]({{{adaptation.link}}})
-{{/adaptation.link}}
 
 
 ## Device preparation
@@ -55,20 +36,12 @@ Please download the belowed needed files and tools:
     - The `Access Point Name` or `APN` can be found in the Settings menu of Android
     - Take a piece of paper or a text editor, and write down everything that you see on that screen
     - These are likely to include a URL (e. g., `internet.carrier.net`), a username, and possibly a password
-- Unlock the bootloader (using Computer)
+- Unlock the bootloader (Computer)
     - Refer to the instructions provided by the device manufacturer
     - Other useful sources include the [LineageOS wiki](https://wiki.lineageos.org/devices/) and [xda-developers](https://www.xda-developers.com/search2/)
-{{#recovery.must_flash}}
-Flash recovery (using Computer)
-    - Flash {{{recovery.name}}} to your device by running `fastboot flash recovery {{{recovery.filename}}}`
-    - Boot into recovery by pressing {{{recovery_mode}}}
-    - If your device boots to the stock recovery menu at some point, you should repeat this step.
-{{/recovery.must_flash}}
-{{^recovery.must_flash}}
 - Boot into recovery (Computer)
-    - Boot {{{recovery.name}}} by running `fastboot boot {{{recovery.filename}}}`
-{{/recovery.must_flash}}
-- Wipe the device (using {{{recovery.name}}})
+    - Boot TWRP by running `fastboot boot TWRP.img`
+- Wipe the device (TWRP)
     - Go to the `Wipe` menu
     - Select `Advanced wipe`
     - Tick the boxes called `Dalvik / ART cache`, `Cache`, `System`, `Vendor`, `Data`
@@ -76,18 +49,13 @@ Flash recovery (using Computer)
     - Go back to the previous menu
     - Choose `Format data` and type `yes`
     - Go back to the main menu and select `Reboot`
-    {{#recovery.must_flash}}
-    - Choose `Recovery`
-    {{/recovery.must_flash}}
-    {{^recovery.must_flash}}
     - Choose `Bootloader`
-    - Boot {{{recovery.name}}} again by running `fastboot boot {{{recovery.filename}}}`
-    {{/recovery.must_flash}}
+    - Boot TWRP again by running `fastboot boot TWRP.img`
 - Copy the files to the device  (Computer)
-    - When {{{recovery.name}}} is booted, open the device's `Internal storage` from your computer
+    - When TWRP is booted, open the device's `Internal storage` from your computer
     - Copy all of the files you downloaded to this folder
 
-## Droidian installation 
+## Droidian installation (TWRP)
 {{#ab_slot}}
 - Install base Android version and/or Vendor to both A/B slots
   - Go to the `Reboot` menu and see which slot is active
@@ -107,8 +75,8 @@ Flash recovery (using Computer)
 {{/ab_slot}}
 {{^ab_slot}}
 {{#android}}
+{{#android.filename}}
 - Install the required base Android version ({{{halium_version}}})
-    {{#android.filename}}
     {{#recovery.name}}
     - Install the file called `{{{android.filename}}}` as a Zip file using {{recovery.name}}
     {{/recovery.name}}
@@ -164,7 +132,7 @@ Flash recovery (using Computer)
 {{/recovery}}
 - Install Droidian `rootfs`
     - Install the file called `droidian-rootfs-{{{arch}}}_YYYYMMDD.zip` as a Zip file
-    - Alternatively, you can enter `ADB sideload` mode and run `adb sideload droidian-rootfs-{{{arch}}}_YYYYMMDD.zip`
+    - sideload is broken on this version of TWRP so file must be pushed to data and flashed from recovery itself.
     {{#isNightlyBuild}}
     - `devtools` is already included in nightly builds.
     {{/isNightlyBuild}}
@@ -176,23 +144,15 @@ Flash recovery (using Computer)
     {{/isNightlyBuild}}
 
 ## Finalizing the installation
-- Install adaptation package as a flashable zip ({{{recovery.name}}})
-    - Install the file called `{{{adaptation.filename}}}` as a Zip file
-    - Alternatively, you can enter `ADB sideload` mode and run `adb sideload {{{adaptation.filename}}}`
+{{#adaptation.filename}}
+- Extract {{{adaptation.filename}}} and install adaptation via pushing it to the phone and running install.sh
+    - `adb push adaptation-surya-script /tmp` then `adb shell` and `cd /tmp/adaptation-surya-script && chmod +x install.sh && ./install.sh`
+{{/adaptation.filename}}
 - Boot your device
     - Go to the `Reboot` menu and choose `System`
-    - {{{recovery.name}}} might complain that there is no OS installed, but that's fine
+    - TWRP might complain that there is no OS installed, but that's fine
     - The first boot may take longer, and at least one spontaneous reboot is expected during the process
     - You should be greeted with the lock screen, the default password is `1234`
-{{#isCommandProvided}}
-- Run a specific command after first boot (Droidian)
-    - Open the `King's Cross` application or connect via SSH (see the `SSH` entry in the Notes below), and type in the following:
-    {{#command}}
-    ```
-    {{{command}}}
-    ```
-    {{/command}}
-{{/isCommandProvided}}
 
 Congratulations, if everything went well, now you should be running Droidian.
 

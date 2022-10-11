@@ -1,3 +1,4 @@
+templateName: surya_template
 manufacturer: Xiaomi
 name: Poco X3 NFC
 codename: surya
@@ -36,6 +37,10 @@ dtbo:
   link: https://github.com/droidian-surya/kernel-xiaomi-surya/releases/download/images/dtbo.img
   text: DTBO image
   filename: dtbo.img
+vbmeta:
+    link: https://github.com/droidian-surya/kernel-xiaomi-surya/releases/download/images/vbmeta.img
+    text: vbmeta image
+    filename: vbmeta.img
 recovery:
   name: TWRP
   link: https://forum.xda-developers.com/t/recovery-3-5-0-0-unofficial-twrp-xiaomi-poco-x3-surya-karna.4168511/unread

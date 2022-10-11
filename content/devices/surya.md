@@ -9,7 +9,7 @@ Any recovery should work but TWRP is recommended
 ## Downloading the needed files and tools
 Please download the belowed needed files and tools:
 - [Droidian `rootfs`](https://github.com/droidian-images/droidian/releases) (specific build required)
-- [Droidian `devtools`](None) (specific build required)
+- [Droidian `devtools`](https://github.com/droidian-images/droidian/releases) (specific build required)
 - [Android 10 (Q) stock firmware](https://xiaomifirmwareupdater.com/miui/surya/stable/V12.0.9.0.QJGMIXM/)
 - [Boot image](https://github.com/droidian-surya/kernel-xiaomi-surya/releases/download/images/boot.img)
 - [DTBO image](https://github.com/droidian-surya/kernel-xiaomi-surya/releases/download/images/dtbo.img)
@@ -19,6 +19,7 @@ Please download the belowed needed files and tools:
 
 
 ## Device preparation
+isManufacturerXiaomi:true
 - A USB 2.0 port/hub with an actual USB 2.0 controller is recommended (Using `fastboot` on a USB 3.0 port may cause errors with some Xiaomi devices)
 - Save your APN (Android)
     - The `Access Point Name` or `APN` can be found in the Settings menu of Android
@@ -48,10 +49,10 @@ Please download the belowed needed files and tools:
     - Install the file called `boot.img` as an Image to the `Boot` partition
     - Alternatively, you can enter fastboot mode and `fastboot flash boot boot.img`
 - Install the DTBO image
-    - Install the file called `dtbo.img` as an Image to the `dtbo` partition
+    - Install the file called `dtbo.img` as an Image to the `dtbo` partition using TWRP
     - Alternatively, you can enter fastboot mode and `fastboot flash dtbo dtbo.img`
 - Install the vbmeta image
-    - Install the file called `vbmeta.img` as an Image to the `vbmeta` partition
+    - Install the file called `vbmeta.img` as an Image to the `vbmeta` partition using TWRP
     - Alternatively, you can enter fastboot mode and `fastboot flash vbmeta vbmeta.img`
 - Install recovery
     - Install the file called `TWRP.img` as an Image to the `Recovery` partition

@@ -69,7 +69,7 @@ Flash recovery (using Computer)
 
 Congratulations, if everything went well, now you should be running Droidian.
 
-
+## Notes
 ### SSH access
 Flashing the `devtools` zip enables `SSH` over USB. To use it, connect your phone to your computer and type `ssh droidian@10.15.19.82`, the password is `1234` (on Windows, you may need [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/))
 

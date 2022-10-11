@@ -10,21 +10,24 @@ The hugo server can be started locally using the command:
 
 > -D flag is provided used to allow draft pages to be included.
 
+The installation guide generation scripts use nodejs, hence it is recommanded to install nodejs
+and running the command `npm install` in after navigation into the cloned root directory(the directory that contains package.json).
+
 The site is up at [http://localhost:1313](http://localhost:1313) by default
 ## Adding new device to list of supported devices
- In order to work with support device pages, ensure that python is installed on your machine.The step by step guide to install python can be found [here](https://realpython.com/installing-python)
+The list of devices that are known to run droidian can to found at https:devices.droidian.org.If you wish to add a new device to the list, you will have to add an entry manually in the content/_index.md. You could point to an external URL for installation guide in the content/_index.md, or use generate_device_pages.js script present within in the project to automatically generate the installation guide.
+The The script generates guides in markdown(.md) file format. The guides are genrated based on the device specific YAML configuration files present inside data/supported-devices directory.
 
-- The scripts depends on the `yaml` and `schema` Python packages, hence you need to install them before using running the script.You can install the dependencies by running the command:
-    
-    pip install -r requirements.txt
-
-The list of devices that are known to run droidian can to found at https:devices.droidian.org.If you wish to add a new device to the list you will have to add an entry manually in the content/_index.md. You could point to an external URL for installation guide or use the generate_device_pages.py script present within in the project to automatically generate the installation guide.The script generates guides in markdown(.md) file format. The guides are genrated based on the device specific YAML configuration files present inside data/supported-devices directory.
-
-    python generate_device_pages.py
+    node generate_device_pages.js
 
 In order to new automatically generate the installation guide add new file with <codename>.yaml file inside data/supported-devices directory.
-copy the contents of sample.yml(present in same folder) into the recently created <codename>.yaml file.
-Now update the paramters in the <codename>.yaml as per your device.
+The generate_device_pages.js looks at the templateName field to identify the templete to be used, If the field is not provided ,by default the `default_template.md` present inside templates folder is used.
+If you do not which to use any other custom template, create a new .md file inside templates folder and 
+specify the name of the file as templeteName's value in your <codename>.yaml file.
+The md template supports (mustache)[https://mustache.github.io/] syntax, and the fields in <codename>.yaml file, will be available as
+mustache variables during the build.
+Refer the contents of sample.yml(present inside data/supported-devices folder) to know about the feilds, a to copy them into the recently created <codename>.yaml file.
+Now update the parameters in the <codename>.yaml as per your device.
 
 These are the parameters used in `codename.yml`. Start each device entry with a `-`.
 - `manufacturer`: manufacturer of the device

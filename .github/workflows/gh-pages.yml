@@ -14,13 +14,12 @@ jobs:
         with:
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
-      - name: Setup Python
-        uses: actions/setup-python@v3
+      - name: Setup Nodejs
+        uses: actions/setup-node@v3
         with:
-          python-version: '3.9'
-          cache: 'pip'
-      - run: pip install -r requirements.txt
-      - run: python generate_device_pages.py
+          node-version: 16
+      - run: npm install
+      - run: node generate_device_pages.js
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2

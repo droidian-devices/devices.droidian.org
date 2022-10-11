@@ -67,6 +67,9 @@ Please download the belowed needed files and tools:
 - Install adaptation package as a flashable zip (OrangeFox)
     - Install the file called `adaptation-droidian-garden.zip` as a Zip file
     - Alternatively, you can enter `ADB sideload` mode and run `adb sideload adaptation-droidian-garden.zip`
+- If for some reason adaptation-droidian-garden.zip failed this method can be used:
+    - Extract adaptation-garden-script.zip and install adaptation via pushing it to the phone and running install.sh
+    - `adb push adaptation-garden-script /tmp` then `adb shell` and `cd /tmp/adaptation-garden-script && chmod +x install.sh && ./install.sh`
 - Boot your device
     - Go to the `Reboot` menu and choose `System`
     - OrangeFox might complain that there is no OS installed, but that's fine

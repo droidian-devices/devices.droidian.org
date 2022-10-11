@@ -32,12 +32,13 @@ async function main() {
             isManufacturerXiaomi: deviceConfig.manufacturer.toLowerCase().trim() === 'xiaomi',
             isNightlyBuild: deviceConfig.channel === 'nightly',
             hasNotes: deviceConfig.notes?.length > 0,
-            isCommandProvided: deviceConfig.command?.length > 0
+            isCommandProvided: deviceConfig.command?.length > 0,
+            isTwrpRecovery: deviceConfig.recovery?.name?.trim().toLowerCase() ==='twrp'
         }
 
         let output = render(template, deviceConfig)
         // TODO the below line is added temperatiry to be after moving from python script to js script is complete
-        const migrationCompleted = ['star2lte', 'miatoll', 'beryllium'];
+        const migrationCompleted = ['star2lte', 'miatoll','beryllium','violet'];
         if (migrationCompleted.includes(deviceConfig.codename)) {
             fs.writeFileSync(`${MD_OUTPUT_DIR}/${deviceConfig.codename}.md`, output)
         }

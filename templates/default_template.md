@@ -52,12 +52,20 @@ Please download the belowed needed files and tools:
     - The `Access Point Name` or `APN` can be found in the Settings menu of Android
     - Take a piece of paper or a text editor, and write down everything that you see on that screen
     - These are likely to include a URL (e. g., `internet.carrier.net`), a username, and possibly a password
-- Unlock the bootloader (Computer)
+- Unlock the bootloader (using Computer)
     - Refer to the instructions provided by the device manufacturer
     - Other useful sources include the [LineageOS wiki](https://wiki.lineageos.org/devices/) and [xda-developers](https://www.xda-developers.com/search2/)
+{{#recovery.must_flash}}
+Flash recovery (using Computer)
+    - Flash {{{recovery.name}}} to your device by running `fastboot flash recovery {{{recovery.filename}}}`
+    - Boot into recovery by pressing {{{recovery_mode}}}
+    - If your device boots to the stock recovery menu at some point, you should repeat this step.
+{{/recovery.must_flash}}
+{{^recovery.must_flash}}
 - Boot into recovery (Computer)
-    - Boot TWRP by running `fastboot boot {{{recovery.filename}}}`
-- Wipe the device (TWRP)
+    - Boot {{{recovery.name}}} by running `fastboot boot {{{recovery.filename}}}`
+{{/recovery.must_flash}}
+- Wipe the device (using {{{recovery.name}}})
     - Go to the `Wipe` menu
     - Select `Advanced wipe`
     - Tick the boxes called `Dalvik / ART cache`, `Cache`, `System`, `Vendor`, `Data`
@@ -65,60 +73,81 @@ Please download the belowed needed files and tools:
     - Go back to the previous menu
     - Choose `Format data` and type `yes`
     - Go back to the main menu and select `Reboot`
+    {{#recovery.must_flash}}
+    - Choose `Recovery`
+    {{/recovery.must_flash}}
+    {{^recovery.must_flash}}
     - Choose `Bootloader`
-    - Boot TWRP again by running `fastboot boot {{{recovery.filename}}}`
+    - Boot {{{recovery.name}}} again by running `fastboot boot {{{recovery.filename}}}`
+    {{/recovery.must_flash}}
 - Copy the files to the device  (Computer)
-    - When TWRP is booted, open the device's `Internal storage` from your computer
+    - When {{{recovery.name}}} is booted, open the device's `Internal storage` from your computer
     - Copy all of the files you downloaded to this folder
 
-## Droidian installation (TWRP)
+## Droidian installation 
 {{#android}}
-- Install the required base Android version ({{halium_version}})
+- Install the required base Android version ({{{halium_version}}})
     {{#android.filename}}
-    - Install the file called `{{{android.filename}}}` as a Zip file
+    {{#recovery.name}}
+    - Install the file called `{{{android.filename}}}` as a Zip file using {{recovery.name}}
+    {{/recovery.name}}
     - Alternatively, you can enter `ADB sideload` mode and run `adb sideload {{{android.filename}}}`
     {{/android.filename}}
 {{/android}}
 {{#vendor_image}}
+{{#vendor_image.filename}}
 - Install the vendor image
-    {{#vendor_image.filename}}
     - Install the file called `{{{vendor_image.filename}}}` as an Image to the `Vendor` partition
     - Alternatively, you can enter fastboot mode and `fastboot flash vendor {{{vendor_image.filename}}}`
-    {{/vendor_image.filename}}
+{{/vendor_image.filename}}
 {{/vendor_image}}
+{{#vendor_zip}}
+{{#vendor_zip.filename}}
+- Install the required vendor version
+    - Install the file called `{{{vendor_zip.filename}}}` as a Zip file
+    - Alternatively, you can enter `ADB sideload` mode and run `adb sideload {{{vendor_zip.filename}}}`
+{{/vendor_zip.filename}}
+{{/vendor_zip}}
 {{#boot}}
 - Install the boot image
-    {{#boot.filename}}
+{{#boot.filename}}
     - Install the file called `{{{boot.filename}}}` as an Image to the `Boot` partition
     - Alternatively, you can enter fastboot mode and `fastboot flash boot {{{boot.filename}}}`
     {{/boot.filename}}
 {{/boot}}
 {{#recovery}}
+{{^recovery.must_flash}}
 - Install recovery
     {{#recovery.filename}}
+    {{#isTwrpRecovery}}
     - Install the file called `{{{recovery.filename}}}` as an Image to the `Recovery` partition
+    {{/isTwrpRecovery}}
+    {{^isTwrpRecovery}}
+    - Please, follow the official guide to install {{{recovery.name}}}
+    {{/isTwrpRecovery}}
     {{/recovery.filename}}
+{{/recovery.must_flash}}
 {{/recovery}}
 - Install Droidian `rootfs`
-    - Install the file called `droidian-rootfs-arm64_YYYYMMDD.zip` as a Zip file
-    - Alternatively, you can enter `ADB sideload` mode and run `adb sideload droidian-rootfs-arm64_YYYYMMDD.zip`
+    - Install the file called `droidian-rootfs-{{{arch}}}_YYYYMMDD.zip` as a Zip file
+    - Alternatively, you can enter `ADB sideload` mode and run `adb sideload droidian-rootfs-{{{arch}}}_YYYYMMDD.zip`
     {{#isNightlyBuild}}
     - `devtools` is already included in nightly builds.
     {{/isNightlyBuild}}
     {{^isNightlyBuild}}
     - Installing `devtools`
     - Installation of devtools is optional for stable releases, but it is recommended as it helps with debugging.
-    - Install the file called `droidian-devtools-arm64_YYYYMMDD.zip` as a Zip file
-    - Alternatively, you can enter `ADB sideload` mode and run `adb sideload droidian-devtools-arm64_YYYYMMDD.zip`
+    - Install the file called `droidian-devtools-{{{arch}}}_YYYYMMDD.zip` as a Zip file
+    - Alternatively, you can enter `ADB sideload` mode and run `adb sideload droidian-devtools-{{{arch}}}_YYYYMMDD.zip`
     {{/isNightlyBuild}}
 
 ## Finalizing the installation
-- Install adaptation package as a flashable zip (TWRP)
+- Install adaptation package as a flashable zip ({{{recovery.name}}})
     - Install the file called `{{{adaptation.filename}}}` as a Zip file
     - Alternatively, you can enter `ADB sideload` mode and run `adb sideload {{{adaptation.filename}}}`
 - Boot your device
     - Go to the `Reboot` menu and choose `System`
-    - TWRP might complain that there is no OS installed, but that's fine
+    - {{{recovery.name}}} might complain that there is no OS installed, but that's fine
     - The first boot may take longer, and at least one spontaneous reboot is expected during the process
     - You should be greeted with the lock screen, the default password is `1234`
 {{#isCommandProvided}}

@@ -19,14 +19,14 @@ Please download the belowed needed files and tools:
     - The `Access Point Name` or `APN` can be found in the Settings menu of Android
     - Take a piece of paper or a text editor, and write down everything that you see on that screen
     - These are likely to include a URL (e. g., `internet.carrier.net`), a username, and possibly a password
-- Unlock the bootloader (Computer)
+- Unlock the bootloader (using Computer)
     - Refer to the instructions provided by the device manufacturer
     - Other useful sources include the [LineageOS wiki](https://wiki.lineageos.org/devices/) and [xda-developers](https://www.xda-developers.com/search2/)
-- Flash recovery (Computer)
+Flash recovery (using Computer)
     - Flash Orange Fox Recovery to your device by running `fastboot flash recovery OrangeFox-violet-stable@VERSION.zip`
     - Boot into recovery by pressing `Vol+` and `Power`
     - If your device boots to the stock recovery menu at some point, you should repeat this step.
-- Wipe the device (Orange Fox Recovery)
+- Wipe the device (using Orange Fox Recovery)
     - Go to the `Wipe` menu
     - Select `Advanced wipe`
     - Tick the boxes called `Dalvik / ART cache`, `Cache`, `System`, `Vendor`, `Data`
@@ -39,9 +39,9 @@ Please download the belowed needed files and tools:
     - When Orange Fox Recovery is booted, open the device's `Internal storage` from your computer
     - Copy all of the files you downloaded to this folder
 
-## Droidian installation (Orange Fox Recovery)
-- Install the required base Android version (9, 10, 11)
-    - Install the file called `fw_violet_miui_VIOLET_9.9.3_79d3ccd33b_9.0.zip` as a Zip file
+## Droidian installation 
+- Install the required base Android version (9)
+    - Install the file called `fw_violet_miui_VIOLET_9.9.3_79d3ccd33b_9.0.zip` as a Zip file using Orange Fox Recovery
     - Alternatively, you can enter `ADB sideload` mode and run `adb sideload fw_violet_miui_VIOLET_9.9.3_79d3ccd33b_9.0.zip`
 - Install the required vendor version
     - Install the file called `vendor.zip` as a Zip file
@@ -52,7 +52,7 @@ Please download the belowed needed files and tools:
 - Install Droidian `rootfs`
     - Install the file called `droidian-rootfs-arch64_YYYYMMDD.zip` as a Zip file
     - Alternatively, you can enter `ADB sideload` mode and run `adb sideload droidian-rootfs-arch64_YYYYMMDD.zip`
-- Installing `devtools`
+    - Installing `devtools`
     - Installation of devtools is optional for stable releases, but it is recommended as it helps with debugging.
     - Install the file called `droidian-devtools-arch64_YYYYMMDD.zip` as a Zip file
     - Alternatively, you can enter `ADB sideload` mode and run `adb sideload droidian-devtools-arch64_YYYYMMDD.zip`
@@ -69,7 +69,7 @@ Please download the belowed needed files and tools:
 
 Congratulations, if everything went well, now you should be running Droidian.
 
-## Notes
+
 ### SSH access
 Flashing the `devtools` zip enables `SSH` over USB. To use it, connect your phone to your computer and type `ssh droidian@10.15.19.82`, the password is `1234` (on Windows, you may need [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/))
 

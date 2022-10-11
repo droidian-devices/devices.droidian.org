@@ -21,12 +21,12 @@ Please download the belowed needed files and tools:
     - The `Access Point Name` or `APN` can be found in the Settings menu of Android
     - Take a piece of paper or a text editor, and write down everything that you see on that screen
     - These are likely to include a URL (e. g., `internet.carrier.net`), a username, and possibly a password
-- Unlock the bootloader (Computer)
+- Unlock the bootloader (using Computer)
     - Refer to the instructions provided by the device manufacturer
     - Other useful sources include the [LineageOS wiki](https://wiki.lineageos.org/devices/) and [xda-developers](https://www.xda-developers.com/search2/)
 - Boot into recovery (Computer)
     - Boot TWRP by running `fastboot boot twrp-VERSION-miatoll.img`
-- Wipe the device (TWRP)
+- Wipe the device (using TWRP)
     - Go to the `Wipe` menu
     - Select `Advanced wipe`
     - Tick the boxes called `Dalvik / ART cache`, `Cache`, `System`, `Vendor`, `Data`
@@ -40,9 +40,8 @@ Please download the belowed needed files and tools:
     - When TWRP is booted, open the device's `Internal storage` from your computer
     - Copy all of the files you downloaded to this folder
 
-## Droidian installation (TWRP)
+## Droidian installation 
 - Install the required base Android version (10)
-- Install the vendor image
 - Install the boot image
 - Install recovery
     - Install the file called `twrp-VERSION-miatoll.img` as an Image to the `Recovery` partition

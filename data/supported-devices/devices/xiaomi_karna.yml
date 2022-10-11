@@ -1,3 +1,4 @@
+templateName: karna_template
 manufacturer: Xiaomi
 name: Poco X3
 codename: karna
@@ -11,6 +12,7 @@ api_version: API29
 arch: arm64
 channel: nightly
 droidian_release: https://github.com/droidian-images/droidian/releases
+is_specific_build_required : true
 notes_before_you_start:
   - text: Any recovery should work but TWRP is recommended
 droidian_required_build:
@@ -36,6 +38,11 @@ dtbo:
   link: https://github.com/droidian-surya/kernel-xiaomi-surya/releases/download/karna/dtbo.img
   text: DTBO image
   filename: dtbo.img
+vbmeta:
+  link: https://github.com/droidian-surya/kernel-xiaomi-surya/releases/download/karna/vbmeta.img
+  text: vbmeta image
+  filename: vbmeta.img
+
 recovery:
   name: TWRP
   link: https://forum.xda-developers.com/t/recovery-3-5-0-0-unofficial-twrp-xiaomi-poco-x3-surya-karna.4168511/unread

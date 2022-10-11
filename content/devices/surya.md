@@ -19,7 +19,6 @@ Please download the belowed needed files and tools:
 
 
 ## Device preparation
-isManufacturerXiaomi:true
 - A USB 2.0 port/hub with an actual USB 2.0 controller is recommended (Using `fastboot` on a USB 3.0 port may cause errors with some Xiaomi devices)
 - Save your APN (Android)
     - The `Access Point Name` or `APN` can be found in the Settings menu of Android

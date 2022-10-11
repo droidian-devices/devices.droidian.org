@@ -99,13 +99,13 @@ Flash recovery (using Computer)
 - **With `Slot B` as active:**
 {{#android.filename}}
 - Install the file called `{{{android.filename}}}` as a Zip file
-    - Alternatively, you can enter `ADB sideload` mode and run `adb sideload {{android.filename}}`
+    - sideload is broken on this version of TWRP so file must be pushed to data and flashed from recovery itself.mode and run `adb sideload {{android.filename}}`
 {{/android.filename}}
 -    Now switch back to `Slot A` and boot {{{recovery.name}}} again (must boot again, switching is not enough)
 
 - **With `Slot A` as active:**
     - Install the file called `{{{android.filename}}}` as a Zip file
-    - Alternatively, you can enter `ADB sideload` mode and run `adb sideload {{{android.filename}}}`
+    - sideload is broken on this version of TWRP so file must be pushed to data and flashed from recovery itself.
     - For the rest of the guide, keep using `Slot A`
 {{/ab_slot}}
 {{^ab_slot}}
@@ -113,7 +113,7 @@ Flash recovery (using Computer)
 {{#android.filename}}
 - Install the required base Android version ({{{halium_version}}})
     - Install the file called `{{{android.filename}}}` as a Zip file using {{recovery.name}}
-    - Alternatively, you can enter `ADB sideload` mode and run `adb sideload {{{android.filename}}}`
+    - sideload is broken on this version of TWRP so file must be pushed to data and flashed from recovery itself.
     {{/android.filename}}
 {{/android}}
 {{/ab_slot}}
@@ -128,7 +128,7 @@ Flash recovery (using Computer)
 {{#vendor_zip.filename}}
 - Install the required vendor version
     - Install the file called `{{{vendor_zip.filename}}}` as a Zip file
-    - Alternatively, you can enter `ADB sideload` mode and run `adb sideload {{{vendor_zip.filename}}}`
+    - sideload is broken on this version of TWRP so file must be pushed to data and flashed from recovery itself.mode and run `adb sideload {{{vendor_zip.filename}}}`
 {{/vendor_zip.filename}}
 {{/vendor_zip}}
 {{#boot}}
@@ -165,7 +165,7 @@ Flash recovery (using Computer)
 {{/recovery}}
 - Install Droidian `rootfs`
     - Install the file called `droidian-rootfs-{{{arch}}}_YYYYMMDD.zip` as a Zip file
-    - Alternatively, you can enter `ADB sideload` mode and run `adb sideload droidian-rootfs-{{{arch}}}_YYYYMMDD.zip`
+    - sideload is broken on this version of TWRP so file must be pushed to data and flashed from recovery itself.
     {{#isNightlyBuild}}
     - `devtools` is already included in nightly builds.
     {{/isNightlyBuild}}
@@ -173,13 +173,12 @@ Flash recovery (using Computer)
     - Installing `devtools`
     - Installation of devtools is optional for stable releases, but it is recommended as it helps with debugging.
     - Install the file called `droidian-devtools-{{{arch}}}_YYYYMMDD.zip` as a Zip file
-    - Alternatively, you can enter `ADB sideload` mode and run `adb sideload droidian-devtools-{{{arch}}}_YYYYMMDD.zip`
+    - sideload is broken on this version of TWRP so file must be pushed to data and flashed from recovery itself.mode and run `adb sideload droidian-devtools-{{{arch}}}_YYYYMMDD.zip`
     {{/isNightlyBuild}}
 
 ## Finalizing the installation
-- Install adaptation package as a flashable zip ({{{recovery.name}}})
-    - Install the file called `{{{adaptation.filename}}}` as a Zip file
-    - Alternatively, you can enter `ADB sideload` mode and run `adb sideload {{{adaptation.filename}}}`
+- Extract adaptation-surya-script.zip and install adaptation via pushing it to the phone and running install.sh
+    - `adb push {{{adaptation.extractedFoldeName}}} /tmp` then `adb shell` and `cd /tmp/{{{adaptation.extractedFoldeName}}} && chmod +x install.sh && ./install.sh`
 - Boot your device
     - Go to the `Reboot` menu and choose `System`
     - {{{recovery.name}}} might complain that there is no OS installed, but that's fine

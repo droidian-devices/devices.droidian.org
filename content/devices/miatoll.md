@@ -41,7 +41,6 @@ Please download the belowed needed files and tools:
     - Copy all of the files you downloaded to this folder
 
 ## Droidian installation 
-- Install the required base Android version (10)
 - Install recovery
     - Install the file called `twrp-VERSION-miatoll.img` as an Image to the `Recovery` partition
 - Install Droidian `rootfs`

@@ -42,9 +42,9 @@ async function main() {
         if (migrationCompleted.includes(deviceConfig.codename)) {
             fs.writeFileSync(`${MD_OUTPUT_DIR}/${deviceConfig.codename}.md`, output)
         }
-        else {
-            fs.writeFileSync(`${MD_OUTPUT_DIR}/temp/${deviceConfig.codename}.md`, output)
-        }
+        // else {
+        //     fs.writeFileSync(`${MD_OUTPUT_DIR}/temp/${deviceConfig.codename}.md`, output)
+        // }
     }
 }
 main();

@@ -19,13 +19,13 @@
       link:
       text:
       filename:
-      direct_link: #link that is directly downloadable ,mainly for the installer.
+      direct_download_link: #link that is directly downloadable ,mainly for the installer.
       is_recovery_flashable: # to know if the file is recovery flashable ,mainly for the installer.
   vendor_zip:
       link:
       text:
       filename:
-      direct_link:
+      direct_download_link:
       is_recovery_flashable:
   vendor_image:
       link:
@@ -36,24 +36,24 @@
       link:
       text:
       filename:
-      direct_link:
+      direct_download_link:
   dtbo:
       link:
       text:
       filename:
-      direct_link:
+      direct_download_link:
   recovery:
       name:
       link:
       text: 
       filename:
-      direct_link:
+      direct_download_link:
       must_flash:
   adaptation:
       link:
       text:
       filename:
-      direct_link:
+      direct_download_link:
   statuspage:
   contact:
       text:

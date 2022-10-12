@@ -37,14 +37,7 @@ async function main() {
         }
 
         let output = render(template, deviceConfig)
-        // TODO the below line is added temperatiry to be after moving from python script to js script is complete
-        const migrationCompleted = ['star2lte', 'miatoll','beryllium','violet','wayne','jasmine','surya','karna','lavender','perseus','angelica'];
-        if (migrationCompleted.includes(deviceConfig.codename)) {
-            fs.writeFileSync(`${MD_OUTPUT_DIR}/${deviceConfig.codename}.md`, output)
-        }
-        else {
-            fs.writeFileSync(`${MD_OUTPUT_DIR}/temp/${deviceConfig.codename}.md`, output)
-        }
+        fs.writeFileSync(`${MD_OUTPUT_DIR}/${deviceConfig.codename}.md`, output)
     }
 }
 main();

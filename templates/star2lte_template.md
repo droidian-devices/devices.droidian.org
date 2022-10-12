@@ -48,8 +48,8 @@ Please download the belowed needed files and tools:
 
 ## Droidian installation (TWRP)
 - Install the boot image
-    - Install the file called `boot-star2lte.img` as an Image to the `Boot` partition
-    - Alternatively, you can enter fastboot mode and `fastboot flash boot boot-star2lte.img`
+    - Install the file called `{{{boot.filename}}}` as an Image to the `Boot` partition
+    - Alternatively, you can enter fastboot mode and `fastboot flash boot {{{boot.filename}}}`
 - Install recovery
     - Install the file called `TWRP.img` as an Image to the `Recovery` partition
 - Install Droidian `rootfs`

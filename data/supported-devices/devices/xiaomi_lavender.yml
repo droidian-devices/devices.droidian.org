@@ -13,6 +13,7 @@ channel: nightly
 droidian_release: https://github.com/droidian-images/droidian/releases
 notes_before_you_start:
   - text: Any recovery should work but TWRP is recommended
+is_specific_build_required : true
 droidian_required_build:
   rootfs_link: https://github.com/droidian-images/droidian/releases
   devtools_link: https://github.com/droidian-images/droidian/releases
@@ -36,6 +37,10 @@ dtbo:
   link:
   text:
   filename:
+vbmeta:
+    link: https://github.com/droidian-lavender/kernel-xiaomi-lavender/releases/download/images/vbmeta.img
+    text: vbmeta image 
+    filename: vbmeta.img
 recovery:
   name: TWRP
   link: https://twrp.me/xiaomi/xiaomiredminote7.html

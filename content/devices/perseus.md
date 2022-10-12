@@ -17,14 +17,14 @@ Please download the belowed needed files and tools:
     - The `Access Point Name` or `APN` can be found in the Settings menu of Android
     - Take a piece of paper or a text editor, and write down everything that you see on that screen
     - These are likely to include a URL (e. g., `internet.carrier.net`), a username, and possibly a password
-- Unlock the bootloader (Computer)
+- Unlock the bootloader (using Computer)
     - Refer to the instructions provided by the device manufacturer
     - Other useful sources include the [LineageOS wiki](https://wiki.lineageos.org/devices/) and [xda-developers](https://www.xda-developers.com/search2/)
-- Flash recovery (Computer)
+Flash recovery (using Computer)
     - Flash TWRP to your device by running `fastboot flash recovery twrp-VERSION-perseus.img`
     - Boot into recovery by pressing `Vol+` and `Power`
     - If your device boots to the stock recovery menu at some point, you should repeat this step.
-- Wipe the device (TWRP)
+- Wipe the device (using TWRP)
     - Go to the `Wipe` menu
     - Select `Advanced wipe`
     - Tick the boxes called `Dalvik / ART cache`, `Cache`, `System`, `Vendor`, `Data`
@@ -37,14 +37,14 @@ Please download the belowed needed files and tools:
     - When TWRP is booted, open the device's `Internal storage` from your computer
     - Copy all of the files you downloaded to this folder
 
-## Droidian installation (TWRP)
-- Install the required base Android version (9, 10, 11)
-    - Install the file called `fw-vendor_perseus_miui_MIMIX3_9.9.3_a9dbc91c30_9.0.zip` as a Zip file
+## Droidian installation 
+- Install the required base Android version (9)
+    - Install the file called `fw-vendor_perseus_miui_MIMIX3_9.9.3_a9dbc91c30_9.0.zip` as a Zip file using TWRP
     - Alternatively, you can enter `ADB sideload` mode and run `adb sideload fw-vendor_perseus_miui_MIMIX3_9.9.3_a9dbc91c30_9.0.zip`
 - Install Droidian `rootfs`
     - Install the file called `droidian-rootfs-arm64_YYYYMMDD.zip` as a Zip file
     - Alternatively, you can enter `ADB sideload` mode and run `adb sideload droidian-rootfs-arm64_YYYYMMDD.zip`
-- Installing `devtools`
+    - Installing `devtools`
     - Installation of devtools is optional for stable releases, but it is recommended as it helps with debugging.
     - Install the file called `droidian-devtools-arm64_YYYYMMDD.zip` as a Zip file
     - Alternatively, you can enter `ADB sideload` mode and run `adb sideload droidian-devtools-arm64_YYYYMMDD.zip`

@@ -180,6 +180,9 @@ Flash recovery (using Computer)
 - Install adaptation package as a flashable zip ({{{recovery.name}}})
     - Install the file called `{{{adaptation.filename}}}` as a Zip file
     - Alternatively, you can enter `ADB sideload` mode and run `adb sideload {{{adaptation.filename}}}`
+- If for some reason adaptation-droidian-garden.zip failed this method can be used:
+    - Extract adaptation-garden-script.zip and install adaptation via pushing it to the phone and running install.sh
+    - `adb push adaptation-garden-script /tmp` then `adb shell` and `cd /tmp/adaptation-garden-script && chmod +x install.sh && ./install.sh`
 - Boot your device
     - Go to the `Reboot` menu and choose `System`
     - {{{recovery.name}}} might complain that there is no OS installed, but that's fine

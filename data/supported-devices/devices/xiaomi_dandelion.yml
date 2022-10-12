@@ -1,3 +1,4 @@
+templateName: dandelion_&_angelica_template
 manufacturer: Xiaomi
 name: Redmi 9A
 codename: dandelion
@@ -13,6 +14,7 @@ channel: stable
 droidian_release: https://github.com/droidian-images/droidian/releases
 notes_before_you_start:
   - text: Use PBRP or the custom OrangeFox recovery mentioned in the [Downloading the needed files and tools](#downloading-the-needed-files-and-tools) section below. The installation might fail with recoveries other than those.
+is_specific_build_required : true
 droidian_required_build:
   rootfs_link: https://github.com/droidian-images/droidian/releases
   devtools_link: https://github.com/droidian-images/droidian/releases
@@ -36,6 +38,10 @@ dtbo:
   link: https://github.com/droidian-mt6765/kernel-xiaomi-mt6765/releases/download/dandelion/dtbo-dandelion.img
   text: DTBO image
   filename: dtbo-dandelion.img
+vbmeta:
+  link: https://github.com/droidian-mt6765/kernel-xiaomi-mt6765/releases/download/dandelion/vbmeta-dandelion.img
+  text: vbmeta image
+  filename: vbmeta-dandelion.img
 recovery:
   name: OrangeFox
   link: https://garden.bardia.tech/OrangeFox-R11-garden-droidian.img

@@ -24,12 +24,12 @@ Please download the belowed needed files and tools:
     - The `Access Point Name` or `APN` can be found in the Settings menu of Android
     - Take a piece of paper or a text editor, and write down everything that you see on that screen
     - These are likely to include a URL (e. g., `internet.carrier.net`), a username, and possibly a password
-- Unlock the bootloader (Computer)
+- Unlock the bootloader (using Computer)
     - Refer to the instructions provided by the device manufacturer
     - Other useful sources include the [LineageOS wiki](https://wiki.lineageos.org/devices/) and [xda-developers](https://www.xda-developers.com/search2/)
 - Boot into recovery (Computer)
     - Boot OrangeFox by running `fastboot boot OrangeFox-R11-garden-droidian.img`
-- Wipe the device (OrangeFox)
+- Wipe the device (using OrangeFox)
     - Go to the `Wipe` menu
     - Select `Advanced wipe`
     - Tick the boxes called `Dalvik / ART cache`, `Cache`, `System`, `Vendor`, `Data`
@@ -43,22 +43,22 @@ Please download the belowed needed files and tools:
     - When OrangeFox is booted, open the device's `Internal storage` from your computer
     - Copy all of the files you downloaded to this folder
 
-## Droidian installation (OrangeFox)
+## Droidian installation 
 - Install the boot image
     - Install the file called `boot-dandelion.img` as an Image to the `Boot` partition
     - Alternatively, you can enter fastboot mode and `fastboot flash boot boot-dandelion.img`
 - Install the DTBO image
-    - Install the file called `dtbo-dandelion.img` as an Image to the `dtbo` partition
+    - Install the file called `dtbo-dandelion.img` as an Image to the `dtbo` partition using OrangeFox
     - Alternatively, you can enter fastboot mode and `fastboot flash dtbo dtbo-dandelion.img`
 - Install the vbmeta image
-    - Install the file called `vbmeta-dandelion.img` as an Image to the `vbmeta` partition
+    - Install the file called `vbmeta-dandelion.img` as an Image to the `vbmeta` partition using OrangeFox
     - Alternatively, you can enter fastboot mode and `fastboot flash vbmeta vbmeta-dandelion.img`
 - Install recovery
     - Please, follow the official guide to install OrangeFox
 - Install Droidian `rootfs`
     - Install the file called `droidian-rootfs-armhf_YYYYMMDD.zip` as a Zip file
     - Alternatively, you can enter `ADB sideload` mode and run `adb sideload droidian-rootfs-armhf_YYYYMMDD.zip`
-- Installing `devtools`
+    - Installing `devtools`
     - Installation of devtools is optional for stable releases, but it is recommended as it helps with debugging.
     - Install the file called `droidian-devtools-armhf_YYYYMMDD.zip` as a Zip file
     - Alternatively, you can enter `ADB sideload` mode and run `adb sideload droidian-devtools-armhf_YYYYMMDD.zip`

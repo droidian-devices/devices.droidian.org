@@ -49,8 +49,11 @@ These devices are supported by members of the Droidian community. Device-specifi
     | Xiaomi POCO X3 NFC (surya) | [install guide](/devices/surya) |
     | Xiaomi POCO X3 (karna) | [install guide](/devices/karna) |
     | Xiaomi Redmi Note 7 (lavender) | [install guide](/devices/lavender) |
+- **Samsung**
+    |  |  |
+    | --- | --- |
     | Samsung Galaxy S9 (starlte) | [install guide](/devices/starlte) |
     | Samsung Galaxy S9+ (star2lte) | [install guide](/devices/star2lte) |
 
- > If you have managed to run droidian on a device that is not listed above please raise a pull request to add the device [here](https://github.com/droidian-devices/devices.droidian.org).
+ > If you have managed to run Droidian on a device that is not listed above please raise a pull request to add the device [here](https://github.com/droidian-devices/devices.droidian.org).
 

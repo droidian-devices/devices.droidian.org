@@ -123,7 +123,7 @@ port_status:
       - id: "rtc_time"
         value: "+"
       - id: "sd_card"
-        value: "-"
+        value: "+"
       - id: "shutdown"
         value: "+"
       - id: "wirelessCharging"

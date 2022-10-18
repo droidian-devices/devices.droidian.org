@@ -55,6 +55,7 @@ These devices are supported by members of the Droidian community. Device-specifi
     | --- | --- |
     | Samsung Galaxy S9 (starlte) | [install guide](/devices/starlte) |
     | Samsung Galaxy S9+ (star2lte) | [install guide](/devices/star2lte) |
+    | Samsung Galaxy Note 9 (crownlte) | [install guide](/devices/crownlte) |
 
  > If you have managed to run Droidian on a device that is not listed above please raise a pull request to add the device [here](https://github.com/droidian-devices/devices.droidian.org).
 

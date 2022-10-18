@@ -73,7 +73,7 @@ Please download the belowed needed files and tools:
     sudo systemctl enable enable-ipa sudo systemctl reboot
     ```
 
-Congratulations, if everything went well, now you should be running Droidian.
+Congratulations, if everything went well you should be booting into Droidian.
 
 ## Notes
 ### SIM slot

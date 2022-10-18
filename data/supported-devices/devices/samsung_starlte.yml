@@ -1,6 +1,6 @@
 templateName: star2lte_template
 manufacturer: Samsung
-name: Galaxy S9
+name: Galaxy S9 (Exynos)
 codename: starlte
 support: community
 device_type: phone
@@ -69,7 +69,7 @@ notes:
   - title: Status
     text: Droidian GSIs are experimental! Bugs and missing features are expected.
   - title: Audio
-    text: Currently audio does not work and only the microphone works.
+    text: Currently audio output does not work.
   - title: Calls
     text: Because of the audio issue user cannot hear audio in calls either.
 port_status:

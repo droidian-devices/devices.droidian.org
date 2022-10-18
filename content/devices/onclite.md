@@ -61,7 +61,7 @@ Please download the belowed needed files and tools:
     - The first boot may take longer, and at least one spontaneous reboot is expected during the process
     - You should be greeted with the lock screen, the default password is `1234`
 
-Congratulations, if everything went well, now you should be running Droidian.
+Congratulations, if everything went well you should be booting into Droidian.
 
 ## Notes
 ### Default password

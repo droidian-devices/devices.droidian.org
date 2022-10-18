@@ -30,17 +30,17 @@ vendor_image:
   text:
   filename:
 boot:
-  link: https://github.com/droidian-onclite/kernel-xiaomi-onclite/releases/download/images/boot.img
-  text: Boot image
-  filename: boot.img
+  link:
+  text:
+  filename:
 dtbo:
-  link:https://github.com/droidian-onclite/kernel-xiaomi-onclite/releases/download/images/dtbo.img
-  text: DTBO image
-  filename: dtbo.img
+  link:
+  text:
+  filename:
 vbmeta:
-  link: https://github.com/droidian-onclite/kernel-xiaomi-onclite/releases/download/images/vbmeta.img
-  text: vbmeta image
-  filename: vbmeta.img
+  link:
+  text:
+  filename:
 recovery:
   name: TWRP
   link: https://dl.twrp.me/onclite/
@@ -53,8 +53,8 @@ adaptation:
   filename: adaptation-droidian-onclite.zip
 statuspage:
 contact:
-  text: 
-  link: 
+  text:
+  link:
 credit:
   - name: Bardia Moshiri
     link: https://bardia.tech

@@ -11,7 +11,7 @@ api_version: API28
 arch: arch64
 channel: stable
 droidian_release: https://github.com/droidian-images/rootfs-api28gsi-all/releases
-droidian_required_build: 
+droidian_required_build:
   rootfs_link:
   devtools_link:
 android:

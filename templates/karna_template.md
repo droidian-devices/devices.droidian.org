@@ -178,7 +178,7 @@ Flash recovery (using Computer)
 
 ## Finalizing the installation
 - Extract adaptation-surya-script.zip and install adaptation via pushing it to the phone and running install.sh
-    - `adb push {{{adaptation.extractedFoldeName}}} /tmp` then `adb shell` and `cd /tmp/{{{adaptation.extractedFoldeName}}} && chmod +x install.sh && ./install.sh`
+    - `adb push {{{adaptation.extractedFolderName}}} /tmp` then `adb shell` and `cd /tmp/{{{adaptation.extractedFolderName}}} && chmod +x install.sh && ./install.sh`
 - Boot your device
     - Go to the `Reboot` menu and choose `System`
     - {{{recovery.name}}} might complain that there is no OS installed, but that's fine

@@ -39,7 +39,7 @@ recovery:
   link: https://dl.twrp.me/perseus/
   text: Latest TWRP recovery
   filename: twrp-VERSION-perseus.img
-  must_flash: True
+  must_flash: true
 adaptation:
   link: https://github.com/droidian-perseus/android-recovery-perseus-adaptation/releases/
   text: Adaptation (unofficial)

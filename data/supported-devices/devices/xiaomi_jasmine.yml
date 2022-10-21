@@ -6,7 +6,7 @@ device_type: phone
 halium_version: 9
 fastboot_mode: '`Vol-` and `Power`'
 recovery_mode: '`Vol+` and `Power`'
-ab_slot: True
+ab_slot: true
 api_version: API28
 arch: arm64
 channel: stable

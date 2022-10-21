@@ -39,7 +39,7 @@ recovery:
   link: https://orangefox.download/device/violet
   text: Latest Orange Fox Recovery
   filename: OrangeFox-violet-stable@VERSION.zip
-  must_flash: True
+  must_flash: true
 adaptation:
   link: https://github.com/mathew-dennis/droidian-recovery-flashing-adaptation-violet/releases/tag/v1.1
   text: Adaptation (unofficial)

@@ -1,15 +1,15 @@
-templateName: dandelion_&_angelica_template
+templateName: default_template
 manufacturer: Xiaomi
-name: Redmi 9C
-codename: angelica
+name: Redmi 7
+codename: onclite
 support: community
 device_type: phone
-halium_version: 10
+halium_version: 9
 fastboot_mode: '`Vol-` and `Power`'
 recovery_mode: '`Vol+` and `Power`'
 ab_slot: False
-api_version: API29
-arch: armhf
+api_version: API28
+arch: arm64
 channel: stable
 droidian_release: https://github.com/droidian-images/droidian/releases
 notes_before_you_start:
@@ -19,8 +19,8 @@ droidian_required_build:
   rootfs_link: https://github.com/droidian-images/droidian/releases
   devtools_link: https://github.com/droidian-images/droidian/releases
 android:
-  link: https://xiaomifirmwareupdater.com/archive/miui/angelica/
-  text: Android 10 (Q) stock firmware
+  link: https://xiaomifirmwareupdater.com/archive/miui/onclite/
+  text: Android 9 (P) stock firmware
   filename:
 vendor_zip:
   link:
@@ -31,36 +31,36 @@ vendor_image:
   text:
   filename:
 boot:
-  link: https://github.com/droidian-mt6765/kernel-xiaomi-mt6765/releases/download/angelica/boot-angelica.img
-  text: Boot image
-  filename: boot-angelica.img
+  link:
+  text:
+  filename:
 dtbo:
-  link: https://github.com/droidian-mt6765/kernel-xiaomi-mt6765/releases/download/angelica/dtbo-angelica.img
-  text: DTBO image
-  filename: dtbo-angelica.img
+  link:
+  text:
+  filename:
 vbmeta:
-  link: https://github.com/droidian-mt6765/kernel-xiaomi-mt6765/releases/download/angelica/vbmeta-angelica.img
-  text: vbmeta image
-  filename: vbmeta-angelica.img
+  link:
+  text:
+  filename:
 recovery:
-  name: OrangeFox
-  link: https://garden.bardia.tech/OrangeFox-R11-garden-droidian.img
-  text: OrangeFox recovery
-  filename: OrangeFox-R11-garden-droidian.img
+  name: TWRP
+  link: https://dl.twrp.me/onclite/
+  text: TWRP recovery
+  filename: TWRP.img
   must_flash:
 adaptation:
-  link: https://github.com/droidian-mt6765/adaptation-droidian-garden/releases/download/adaptation/adaptation-droidian-garden.zip
+  link: https://github.com/droidian-onclite/adaptation-droidian-onclite/releases/download/adaptation/adaptation-droidian-onclite.zip
   text: Adaptation (unofficial)
-  filename: adaptation-droidian-garden.zip
+  filename: adaptation-droidian-onclite.zip
 statuspage:
 contact:
-  text: Droidian for garden devices
-  link: https://t.me/ut_angelica
+  text:
+  link:
 credit:
   - name: Bardia Moshiri
     link: https://bardia.tech
-  - name: Mohammad and TheKit
-    link: https://gitlab.com/ubports/porting/community-ports/android10/xiaomi-redmi-9c
+  - name: TheKit
+    link: https://gitlab.com/ubports/porting/community-ports/android9/xiaomi-redmi-7
 command:
 notes:
   - title: Default password
@@ -73,41 +73,33 @@ notes:
     text: "By default when flashing Droidian it allocates 8GB of memory to the system. This might not be enough and luckily you can allocate more storage with ADB by running (while in recovery): `adb shell e2fsck -fy /data/rootfs.img` and `adb shell resize2fs -f /data/rootfs.img xG` where __x__ is the amount of GB to allocate (eg: 50G for 50 GB)."
   - title: Status
     text: Droidian GSIs are experimental! Bugs and missing features are expected.
-  - title: Kernel driver issues
-    text: Xiaomi has not updated their kernel source tree and as a result some models of 9A and 9C have non functional display panels with our kernel.
-  - title: Bluetooth
-    text: "Bluetooth can be used via the terminal using bluetoothctl command or using blueman: `sudo apt install blueman` but does not work via the settings app."
-  - title: GPS
-    text: GPS works partially via Epiphany (tested with OpenStreetMap).
-  - title: Signal Strengh
-    text: Signal strengh is reported at 1% but Mobile data and calls work just fine.
-  - title: Headphones/Headsets
-    text: When a headphone is plugged in it must be changed to be used manually in the settings.
+  - title: Brightness
+    text: Brightness can only be adjusted via the Brightness app, the scroll bar in phosh is broken.
 port_status:
   - category_name: "Actors"
     features:
       - id: "manual_brightness"
-        value: "+"
+        value: "~"
       - id: "notification_led"
-        value: "x"
+        value: "+"
       - id: "torchlight"
-        value: "-"
+        value: "+"
       - id: "vibration"
         value: "+"
   - category_name: "Camera"
     features:
       - id: "flashlight"
-        value: "-"
+        value: "+"
       - id: "photo"
-        value: "-"
+        value: "+"
       - id: "video"
         value: "-"
       - id: "switch_camera"
-        value: "-"
+        value: "+"
   - category_name: "Cellular"
     features:
       - id: "carrier_info"
-        value: "~"
+        value: "+"
       - id: "data_connection"
         value: "+"
       - id: "dua_sim"
@@ -131,7 +123,7 @@ port_status:
       - id: "battery_percentage"
         value: "+"
       - id: "offline_charging"
-        value: "~"
+        value: "+"
       - id: "online_charging"
         value: "+"
       - id: "rtc_time"
@@ -147,11 +139,11 @@ port_status:
   - category_name: "Network"
     features:
       - id: "bluetooth"
-        value: "~"
+        value: "+"
       - id: "flight_mode"
         value: "+"
       - id: "hotspot"
-        value: "-"
+        value: "+"
       - id: "nfc"
         value: "x"
       - id: "wifi"
@@ -163,7 +155,7 @@ port_status:
       - id: "fingerprint"
         value: "-"
       - id: "gps"
-        value: "~"
+        value: "?"
       - id: "proximity"
         value: "-"
       - id: "rotation"

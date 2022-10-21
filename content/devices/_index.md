@@ -44,16 +44,17 @@ These devices are supported by members of the Droidian community. Device-specifi
     | Xiaomi Mi 9T (davinci) | |
     | Xiaomi Redmi Note 7 Pro (violet) | [install guide](/devices/violet) |
     | Xiaomi MIX 3 (perseus) | [install guide](/devices/perseus/) |
-    | Xiaomi Redmi 9C (angelica) | [install guide](/devices/angelica) |
     | Xiaomi Redmi 9A (dandelion) | [install guide](/devices/dandelion) |
-    | Xiaomi POCO X3 NFC (surya) | [install guide](/devices/surya) |
-    | Xiaomi POCO X3 (karna) | [install guide](/devices/karna) |
+    | Xiaomi Redmi 9C (angelica) | [install guide](/devices/angelica) |
+    | Xiaomi Poco X3 (karna) | [install guide](/devices/karna) |
+    | Xiaomi Poco X3 NFC (surya) | [install guide](/devices/surya) |
+    | Xiaomi Redmi 7 (onclite) | [install guide](/devices/onclite) |
     | Xiaomi Redmi Note 7 (lavender) | [install guide](/devices/lavender) |
 - **Samsung**
     |  |  |
     | --- | --- |
     | Samsung Galaxy S9 (starlte) | [install guide](/devices/starlte) |
     | Samsung Galaxy S9+ (star2lte) | [install guide](/devices/star2lte) |
+    | Samsung Galaxy Note 9 (crownlte) | [install guide](/devices/crownlte) |
 
  > If you have managed to run Droidian on a device that is not listed above please raise a pull request to add the device [here](https://github.com/droidian-devices/devices.droidian.org).
-

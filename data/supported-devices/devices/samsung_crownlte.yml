@@ -1,7 +1,7 @@
-templateName: dandelion_&_angelica_template
-manufacturer: Xiaomi
-name: Redmi 9C
-codename: angelica
+templateName: exynos9810_template
+manufacturer: Samsung
+name: Galaxy Note 9 (Exynos)
+codename: crownlte
 support: community
 device_type: phone
 halium_version: 10
@@ -9,17 +9,17 @@ fastboot_mode: '`Vol-` and `Power`'
 recovery_mode: '`Vol+` and `Power`'
 ab_slot: False
 api_version: API29
-arch: armhf
-channel: stable
+arch: arm64
+channel: nightly
 droidian_release: https://github.com/droidian-images/droidian/releases
 notes_before_you_start:
-  - text: Use PBRP or the custom OrangeFox recovery mentioned in the [Downloading the needed files and tools](#downloading-the-needed-files-and-tools) section below. The installation might fail with recoveries other than those.
-is_specific_build_required : true
+  - text: Any recovery should work but TWRP is recommended
+is_specific_build_required: true
 droidian_required_build:
   rootfs_link: https://github.com/droidian-images/droidian/releases
   devtools_link: https://github.com/droidian-images/droidian/releases
 android:
-  link: https://xiaomifirmwareupdater.com/archive/miui/angelica/
+  link: https://samfw.com/firmware/SM-N960F/bit/all/av/Q(Android%2010)
   text: Android 10 (Q) stock firmware
   filename:
 vendor_zip:
@@ -31,36 +31,32 @@ vendor_image:
   text:
   filename:
 boot:
-  link: https://github.com/droidian-mt6765/kernel-xiaomi-mt6765/releases/download/angelica/boot-angelica.img
+  link: https://github.com/Sexynos/droidian-kernel-samsung-exynos9810/releases/download/crownlte/boot-crownlte.img
   text: Boot image
-  filename: boot-angelica.img
+  filename: boot-crownlte.img
 dtbo:
-  link: https://github.com/droidian-mt6765/kernel-xiaomi-mt6765/releases/download/angelica/dtbo-angelica.img
-  text: DTBO image
-  filename: dtbo-angelica.img
-vbmeta:
-  link: https://github.com/droidian-mt6765/kernel-xiaomi-mt6765/releases/download/angelica/vbmeta-angelica.img
-  text: vbmeta image
-  filename: vbmeta-angelica.img
+  link:
+  text:
+  filename:
 recovery:
-  name: OrangeFox
-  link: https://garden.bardia.tech/OrangeFox-R11-garden-droidian.img
-  text: OrangeFox recovery
-  filename: OrangeFox-R11-garden-droidian.img
+  name: TWRP
+  link: https://dl.twrp.me/crownlte/
+  text: TWRP Recovery
+  filename: TWRP.img
   must_flash:
 adaptation:
-  link: https://github.com/droidian-mt6765/adaptation-droidian-garden/releases/download/adaptation/adaptation-droidian-garden.zip
+  link: https://github.com/Sexynos/adaptation-exynos9810-script/releases/download/stable/adaptation-exynos9810-script.zip
   text: Adaptation (unofficial)
-  filename: adaptation-droidian-garden.zip
+  filename: adaptation-exynos9810-script.zip
 statuspage:
 contact:
-  text: Droidian for garden devices
-  link: https://t.me/ut_angelica
+  text:
+  link:
 credit:
   - name: Bardia Moshiri
     link: https://bardia.tech
-  - name: Mohammad and TheKit
-    link: https://gitlab.com/ubports/porting/community-ports/android10/xiaomi-redmi-9c
+  - name: SolAZDev and TheKit
+    link: https://gitlab.com/ubports/porting/community-ports/android10/samsung-galaxy-s9
 command:
 notes:
   - title: Default password
@@ -73,23 +69,17 @@ notes:
     text: "By default when flashing Droidian it allocates 8GB of memory to the system. This might not be enough and luckily you can allocate more storage with ADB by running (while in recovery): `adb shell e2fsck -fy /data/rootfs.img` and `adb shell resize2fs -f /data/rootfs.img xG` where __x__ is the amount of GB to allocate (eg: 50G for 50 GB)."
   - title: Status
     text: Droidian GSIs are experimental! Bugs and missing features are expected.
-  - title: Kernel driver issues
-    text: Xiaomi has not updated their kernel source tree and as a result some models of 9A and 9C have non functional display panels with our kernel.
-  - title: Bluetooth
-    text: "Bluetooth can be used via the terminal using bluetoothctl command or using blueman: `sudo apt install blueman` but does not work via the settings app."
-  - title: GPS
-    text: GPS works partially via Epiphany (tested with OpenStreetMap).
-  - title: Signal Strengh
-    text: Signal strengh is reported at 1% but Mobile data and calls work just fine.
-  - title: Headphones/Headsets
-    text: When a headphone is plugged in it must be changed to be used manually in the settings.
+  - title: Audio
+    text: Currently audio output does not work.
+  - title: Calls
+    text: Because of the audio issue user cannot hear audio in calls either.
 port_status:
   - category_name: "Actors"
     features:
       - id: "manual_brightness"
         value: "+"
       - id: "notification_led"
-        value: "x"
+        value: "?"
       - id: "torchlight"
         value: "-"
       - id: "vibration"
@@ -113,7 +103,7 @@ port_status:
       - id: "dua_sim"
         value: "-"
       - id: "calls"
-        value: "+"
+        value: "~"
       - id: "mms"
         value: "?"
       - id: "pin_unlock"
@@ -121,9 +111,9 @@ port_status:
       - id: "sms"
         value: "+"
       - id: "audio_routings"
-        value: "+"
+        value: "-"
       - id: "voice_call"
-        value: "+"
+        value: "-"
       - id: "volume_control"
         value: "+"
   - category_name: "Misc"
@@ -131,7 +121,7 @@ port_status:
       - id: "battery_percentage"
         value: "+"
       - id: "offline_charging"
-        value: "~"
+        value: "?"
       - id: "online_charging"
         value: "+"
       - id: "rtc_time"
@@ -147,25 +137,25 @@ port_status:
   - category_name: "Network"
     features:
       - id: "bluetooth"
-        value: "~"
+        value: "+"
       - id: "flight_mode"
         value: "+"
       - id: "hotspot"
-        value: "-"
+        value: "?"
       - id: "nfc"
-        value: "x"
+        value: "?"
       - id: "wifi"
         value: "+"
   - category_name: "Sensors"
     features:
       - id: "auto_brightness"
-        value: "-"
+        value: "+"
       - id: "fingerprint"
-        value: "-"
+        value: "x"
       - id: "gps"
-        value: "~"
-      - id: "proximity"
         value: "-"
+      - id: "proximity"
+        value: "+"
       - id: "rotation"
         value: "+"
       - id: "touchscreen"
@@ -173,11 +163,11 @@ port_status:
   - category_name: "Sound"
     features:
       - id: "earphones"
-        value: "+"
+        value: "-"
       - id: "loudspeaker"
-        value: "+"
+        value: "-"
       - id: "microphone"
-        value: "+"
+        value: "-"
       - id: "volume_control"
         value: "+"
   - category_name: "USB"

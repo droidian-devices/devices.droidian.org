@@ -1,3 +1,4 @@
+templateName: default_template
 manufacturer: Xiaomi
 name: Redmi Note 7
 codename: lavender
@@ -39,7 +40,7 @@ dtbo:
   filename:
 vbmeta:
     link: https://github.com/droidian-lavender/kernel-xiaomi-lavender/releases/download/images/vbmeta.img
-    text: vbmeta image 
+    text: vbmeta image
     filename: vbmeta.img
 recovery:
   name: TWRP

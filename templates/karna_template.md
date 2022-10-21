@@ -194,7 +194,7 @@ Flash recovery (using Computer)
     {{/command}}
 {{/isCommandProvided}}
 
-Congratulations, if everything went well, now you should be running Droidian.
+Congratulations, if everything went well you should be booting into Droidian.
 
 ## Notes
 {{#statuspage}}

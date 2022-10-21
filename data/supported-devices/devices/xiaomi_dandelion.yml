@@ -76,9 +76,9 @@ notes:
   - title: Kernel driver issues
     text: Xiaomi has not updated their kernel source tree and as a result some models of 9A and 9C have non functional display panels with our kernel.
   - title: Bluetooth
-    text: Bluetooth can be used via the terminal using bluetoothctl command or using blueman sudo apt install blueman but does not work via the settings app.
+    text: "Bluetooth can be used via the terminal using bluetoothctl command or using blueman: `sudo apt install blueman` but does not work via the settings app."
   - title: GPS
-    text: GPS works partially via Epiphany (tested with open street map).
+    text: GPS works partially via Epiphany (tested with OpenStreetMap).
   - title: Signal Strengh
     text: Signal strengh is reported at 1% but Mobile data and calls work just fine.
   - title: Headphones/Headsets
@@ -137,7 +137,7 @@ port_status:
       - id: "rtc_time"
         value: "+"
       - id: "sd_card"
-        value: "-"
+        value: "+"
       - id: "shutdown"
         value: "+"
       - id: "wirelessCharging"

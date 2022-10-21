@@ -1,6 +1,6 @@
 ---
 draft: false
-title: Samsung Galaxy S9 (starlte)
+title: {{manufacturer}} {{name}} ({{codename}})
 ---
 > **Make a backup now, as your device will be wiped.**
 ## Before you proceed
@@ -8,12 +8,18 @@ Any recovery should work but TWRP is recommended
 
 ## Downloading the needed files and tools
 Please download the belowed needed files and tools:
-- [Droidian `rootfs`](https://github.com/droidian-images/droidian/releases) (specific build required)
-- [Droidian `devtools`](https://github.com/droidian-images/droidian/releases) (specific build required)
-- [Android 10 (Q) stock firmware](https://samfw.com/firmware/SM-G965F/bit/all/av/Q(Android%2010))
-- [Boot image](https://github.com/Sexynos/droidian-kernel-samsung-exynos9810/releases/download/starlte/boot-starlte.img)
-- [TWRP Recovery](https://dl.twrp.me/star2lte/)
-- [Adaptation (unofficial)](https://github.com/Sexynos/adaptation-exynos9810-script/releases/download/stable/adaptation-exynos9810-script.zip)
+{{#droidian_required_build.rootfs_link}}
+- [Droidian `rootfs`]({{{droidian_required_build.rootfs_link}}}) (specific build required)
+{{/droidian_required_build.rootfs_link}}
+{{#droidian_required_build.devtools_link}}
+- [Droidian `devtools`]({{{droidian_required_build.devtools_link}}}) (specific build required)
+{{/droidian_required_build.devtools_link}}
+{{#android.link}}
+- [{{android.text}}]({{{android.link}}})
+{{/android.link}}
+- [{{boot.text}}]({{{boot.link}}})
+- [{{recovery.text}}]({{{recovery.link}}})
+- [{{adaptation.text}}]({{{adaptation.link}}})
 
 
 ## Device preparation
@@ -42,8 +48,8 @@ Please download the belowed needed files and tools:
 
 ## Droidian installation (TWRP)
 - Install the boot image
-    - Install the file called `boot-starlte.img` as an Image to the `Boot` partition
-    - Alternatively, you can enter fastboot mode and `fastboot flash boot boot-starlte.img`
+    - Install the file called `{{{boot.filename}}}` as an Image to the `Boot` partition
+    - Alternatively, you can enter fastboot mode and `fastboot flash boot {{{boot.filename}}}`
 - Install recovery
     - Install the file called `TWRP.img` as an Image to the `Recovery` partition
 - Install Droidian `rootfs`
@@ -60,7 +66,7 @@ Please download the belowed needed files and tools:
     - The first boot may take longer, and at least one spontaneous reboot is expected during the process
     - You should be greeted with the lock screen, the default password is `1234`
 
-Congratulations, if everything went well, now you should be running Droidian.
+Congratulations, if everything went well you should be booting into Droidian.
 
 ## Notes
 ### Default password
@@ -91,10 +97,10 @@ Flashing the `devtools` zip enables `SSH` over USB. To use it, connect your phon
 You can find a list of mobile-friendly Linux applications at [LinuxPhoneApps](https://linuxphoneapps.org/)
 
 ## Credit
-[Bardia Moshiri](https://bardia.tech)
+{{#credit}}
+[{{name}}]({{{link}}})
 
-[SolAZDev and TheKit](https://gitlab.com/ubports/porting/community-ports/android10/samsung-galaxy-s9)
-
+{{/credit}}
 [Droidian](http://droidian.org/) [Mobian](https://mobian-project.org/) [UBports](https://ubuntu-touch.io/)
 
 

@@ -11,7 +11,7 @@ api_version: API28
 arch: arm64
 channel: stable
 droidian_release: https://github.com/droidian-images/rootfs-api28gsi-all/releases
-droidian_required_build: 
+droidian_required_build:
   rootfs_link:
   devtools_link:
 android:
@@ -43,11 +43,11 @@ recovery:
 adaptation:
   link: https://github.com/Droidian-Mi-A2-6X/adaptation-xiaomi-wayne/releases
   text: Latest adaptation zip
-  filename: droidian-adaptation-xiaomi-wayne-arm64_MMMMDDYY.zip 
+  filename: droidian-adaptation-xiaomi-wayne-arm64_MMMMDDYY.zip
 statuspage: https://github.com/orgs/Droidian-Mi-A2-6X/projects/1
 contact:
   text: Shouko's Lab Telegram Group
-  link: https://t.me/shoukolab 
+  link: https://t.me/shoukolab
 credit:
    - name: kisekinopureya
      link: https://github.com/kisekinopureya

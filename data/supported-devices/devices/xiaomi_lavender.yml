@@ -31,17 +31,17 @@ vendor_image:
   text:
   filename:
 boot:
-  link: https://github.com/droidian-lavender/kernel-xiaomi-lavender/releases/download/images/boot.img
-  text: Boot image
-  filename: boot.img
+  link:
+  text:
+  filename:
 dtbo:
   link:
   text:
   filename:
 vbmeta:
-    link: https://github.com/droidian-lavender/kernel-xiaomi-lavender/releases/download/images/vbmeta.img
-    text: vbmeta image
-    filename: vbmeta.img
+    link:
+    text:
+    filename:
 recovery:
   name: TWRP
   link: https://twrp.me/xiaomi/xiaomiredminote7.html

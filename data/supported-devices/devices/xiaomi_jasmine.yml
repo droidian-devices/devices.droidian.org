@@ -1,3 +1,4 @@
+templateName: default_template
 manufacturer: Xiaomi
 name: Mi A2
 codename: jasmine
@@ -11,6 +12,7 @@ api_version: API28
 arch: arm64
 channel: stable
 droidian_release: https://github.com/droidian-images/rootfs-api28gsi-all/releases
+is_specific_build_of_drodian_required : true
 droidian_required_build:
   rootfs_link:
   devtools_link:
@@ -18,22 +20,6 @@ android:
   link: https://github.com/ubports-xiaomi-sdm660/artifacts/releases/download/v0.1/jasmine_sprout_stock_android9.zip
   text: Android 9 Pie Firmware
   filename: jasmine_sprout_stock_android9.zip
-vendor_zip:
-  link:
-  text:
-  filename:
-vendor_image:
-  link:
-  text:
-  filename:
-boot:
-  link:
-  text:
-  filename:
-dtbo:
-      link:
-      text:
-      filename:
 recovery:
   name: TWRP
   link: https://dl.twrp.me/jasmine_sprout/
@@ -53,8 +39,6 @@ credit:
     link: https://いらっしゃい.みんな/
   - name: kisekinopureya
     link: https://github.com/kisekinopureya
-command:
-notes:
 port_status:
   - category_name: "Actors"
     features:

@@ -7,27 +7,20 @@ device_type: phone
 halium_version: 10
 fastboot_mode: '`Vol-` and `Power`'
 recovery_mode: '`Vol+` and `Power`'
-ab_slot: False
+ab_slot: false
 api_version: API29
 arch: arm64
 channel: nightly
 droidian_release: https://github.com/droidian-images/droidian/releases
 notes_before_you_start:
   - text: Any recovery should work but TWRP is recommended
+is_specific_build_of_drodian_required:  true
 droidian_required_build:
   rootfs_link: https://github.com/droidian-images/droidian/releases
   devtools_link: https://github.com/droidian-images/droidian/releases
 android:
   link: https://xiaomifirmwareupdater.com/miui/surya/stable/V12.0.9.0.QJGMIXM/
   text: Android 10 (Q) stock firmware
-  filename:
-vendor_zip:
-  link:
-  text:
-  filename:
-vendor_image:
-  link:
-  text:
   filename:
 boot:
   link: https://github.com/droidian-surya/kernel-xiaomi-surya/releases/download/images/boot.img

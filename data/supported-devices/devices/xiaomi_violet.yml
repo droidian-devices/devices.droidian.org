@@ -1,3 +1,4 @@
+templateName: default_template
 manufacturer: Xiaomi
 name: Redmi Note 7 Pro
 codename: violet
@@ -6,14 +7,12 @@ device_type: phone
 halium_version: 9
 fastboot_mode: '`Vol-` and `Power`'
 recovery_mode: '`Vol+` and `Power`'
-ab_slot: False
+ab_slot: false
 api_version: API28
 arch: arch64
 channel: stable
 droidian_release: https://github.com/droidian-images/rootfs-api28gsi-all/releases
-droidian_required_build:
-  rootfs_link:
-  devtools_link:
+is_specific_build_of_drodian_required : false
 android:
   link: https://xiaomifirmwareupdater.com/firmware/violet/weekly/9.9.3/
   text: Android 9 Pie Firmware
@@ -22,18 +21,10 @@ vendor_zip:
   link: https://github.com/ubuntu-touch-violet/ubuntu-touch-violet/releases/tag/20210510
   text: Android 9 vendor
   filename: vendor.zip
-vendor_image:
-  link:
-  text:
-  filename:
 boot:
   link: https://gitlab.com/mathew-dennis/xiaomi-violet/-/jobs/2428049402/artifacts/file/out/boot.img
   text: Halium-boot
   filename: boot.img
-dtbo:
-      link:
-      text:
-      filename:
 recovery:
   name: Orange Fox Recovery
   link: https://orangefox.download/device/violet
@@ -44,17 +35,11 @@ adaptation:
   link: https://github.com/mathew-dennis/droidian-recovery-flashing-adaptation-violet/releases/tag/v1.1
   text: Adaptation (unofficial)
   filename: droidian-recovery-flashing-adaptation-violet.zip
-statuspage:
-contact:
-  text:
-  link:
 credit:
   - name: mathew-dennis
     link: https://gitlab.com/mathew-dennis
   - name: mardy
     link: https://forums.ubports.com/user/mardy
-command:
-notes:
 port_status:
 # Possible values for port_status features :
 # + : working 

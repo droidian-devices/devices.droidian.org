@@ -38,7 +38,7 @@ These are the parameters used in `codename.yml`. Start each device entry with a 
 - `halium_version`: 9, 10, or 11
 - `fastboot_mode`: button combination for booting in fastboot mode
 - `recovery_mode`: button combination for booting in recovery mode
-- `ab_slot`: `True` if the device has A/B slots, leave empty if not
+- `ab_slot`: `true` if the device has A/B slots, leave empty if not
 - `api_version`: version of the android API used for the device
 - `arch`: device architecture
 - `droidian_release`: a link to the correspodning Droidian release
@@ -58,6 +58,6 @@ These are the parameters used in `codename.yml`. Start each device entry with a 
 
 \* `android`, `vendor_zip`, `vendor_image`, and `boot` have multiple parts. The `link` contains the actual link to the file or release page; the `text` contains the string what the download link should say in the page; and the `filename` specifies the name of the file that identifies the file when flashing.
 
-\*\* `recovery` has two further entry called `name` and `must_flash`. `name` specifies the name of the recovery, e. g., `TWRP` or `Orange Fox Recovery`; if `must_flash` is set to `True`, the user will be prompted to flash the recovery instead of just booting it (some devices have been reported to not support directly booting to the recovery image)
+\*\* `recovery` has two further entry called `name` and `must_flash`. `name` specifies the name of the recovery, e. g., `TWRP` or `Orange Fox Recovery`; if `must_flash` is set to `true`, the user will be prompted to flash the recovery instead of just booting it (some devices have been reported to not support directly booting to the recovery image)
 
 

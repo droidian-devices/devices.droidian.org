@@ -10,17 +10,17 @@ title: {{{manufacturer}}} {{{name}}} ({{{codename}}})
 {{/notes_before_you_start}}
 ## Downloading the needed files and tools
 Please download the belowed needed files and tools:
-{{#is_specific_build_required}}
+{{#is_specific_build_of_drodian_required}}
 {{#droidian_required_build.rootfs_link}}
 - [Droidian `rootfs`]({{{droidian_required_build.rootfs_link}}}) (specific build required)
 {{/droidian_required_build.rootfs_link}}
 {{#droidian_required_build.devtools_link}}
 - [Droidian `devtools`]({{{droidian_required_build.devtools_link}}}) (specific build required)
 {{/droidian_required_build.devtools_link}}
-{{/is_specific_build_required}}
-{{^is_specific_build_required}}
+{{/is_specific_build_of_drodian_required}}
+{{^is_specific_build_of_drodian_required}}
 - [Droidian `rootfs` and `devtools`](https://github.com/droidian-images/rootfs-api28gsi-all/releases) for `{{arch}}` (nightly releases include devtools)
-{{/is_specific_build_required}}
+{{/is_specific_build_of_drodian_required}}
 {{#isNightlyBuild}}
     > `devtools` is already included in nightly builds.
 {{/isNightlyBuild}}

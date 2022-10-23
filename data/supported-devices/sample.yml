@@ -7,13 +7,13 @@
   halium_version: 9 # version of valium used to build the port.
   fastboot_mode: '`Vol-` and `Power`' # button combination to be pressed for booting in fastboot mode 
   recovery_mode: '`Vol+` and `Power`' #button combination to be pressed for booting in recovery mode
-  ab_slot:  True # Ste to True if the device has A/B slots, else leave empty if not
+  ab_slot:  true # Ste to true if the device has A/B slots, else leave empty if not
   api_version: API28 # version of the android API used for the device .Eg: API28
   arch: arm64 # device architecture EG: arm64, arm32
   channel:    #stable/nightly
   notes_before_you_start: # any warning that you want user to know before starting with installation like issues with to not to use specific version of droidian.
   droidian_release: https://github.com/droidian-images/rootfs-api28gsi-all/releases # A link to the corresponding Droidian release
-  is_specific_build_required : true # Some devices might need a specific build, set true if so  otherwise false
+  is_specific_build_of_drodian_required : true # Some devices might need a specific build of droidian, set true if so  otherwise false
   droidian_required_build: # Some devices might need a specific build, links to the files can be specified here, otherwise leave empty
       rootfs_link:
       devtools_link:

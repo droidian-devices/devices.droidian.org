@@ -120,34 +120,34 @@ Flash recovery (using Computer)
 {{#vendor_image}}
 {{#vendor_image.filename}}
 - Install the vendor image
-    - Install the file called `{{{vendor_image.filename}}}` as an Image to the `Vendor` partition
+    - Install the file called `{{{vendor_image.filename}}}` as an Image to the `Vendor` partition using `{{{recovery.name}}}`
     - Alternatively, you can enter fastboot mode and `fastboot flash vendor {{{vendor_image.filename}}}`
 {{/vendor_image.filename}}
 {{/vendor_image}}
 {{#vendor_zip}}
 {{#vendor_zip.filename}}
 - Install the required vendor version
-    - Install the file called `{{{vendor_zip.filename}}}` as a Zip file
+    - Install the file called `{{{vendor_zip.filename}}}` as a Zip file using `{{{recovery.name}}}`
     - Alternatively, you can enter `ADB sideload` mode and run `adb sideload {{{vendor_zip.filename}}}`
 {{/vendor_zip.filename}}
 {{/vendor_zip}}
 {{#boot}}
 {{#boot.filename}}
 - Install the boot image
-    - Install the file called `{{{boot.filename}}}` as an Image to the `Boot` partition
+    - Install the file called `{{{boot.filename}}}` as an Image to the `Boot` partition using `{{{recovery.name}}}`
     - Alternatively, you can enter fastboot mode and `fastboot flash boot {{{boot.filename}}}`
     {{/boot.filename}}
 {{/boot}}
 {{#dtbo}}
 {{#dtbo.filename}}
 - Install the DTBO image
-    - Install the file called `{{{dtbo.filename}}}` as an Image to the `dtbo` partition using {{{recovery.name}}}
-    - Alternatively, you can enter fastboot mode and `fastboot flash dtbo {{{dtbo.filename}}}`
+    - Install the file called `{{{dtbo.filename}}}` as an Image to the `dtbo` partition using `{{{recovery.name}}}`
+    - Alternatively, you can enter fastboot mode and run command `fastboot flash dtbo {{{dtbo.filename}}}`
 {{/dtbo.filename}}
 {{/dtbo}}
 {{#vbmeta.filename}}
 - Install the vbmeta image
-    - Install the file called `{{{vbmeta.filename}}}` as an Image to the `vbmeta` partition using {{{recovery.name}}}
+    - Install the file called `{{{vbmeta.filename}}}` as an Image to the `vbmeta` partition using `{{{recovery.name}}}`
     - Alternatively, you can enter fastboot mode and `fastboot flash vbmeta {{{vbmeta.filename}}}`
 {{/vbmeta.filename}}
 {{#recovery}}
@@ -155,7 +155,7 @@ Flash recovery (using Computer)
 - Install recovery
     {{#recovery.filename}}
     {{#isTwrpRecovery}}
-    - Install the file called `{{{recovery.filename}}}` as an Image to the `Recovery` partition
+    - Install the file called `{{{recovery.filename}}}` as an Image to the `Recovery` partition using `{{{recovery.name}}}`
     {{/isTwrpRecovery}}
     {{^isTwrpRecovery}}
     - Please, follow the official guide to install {{{recovery.name}}}

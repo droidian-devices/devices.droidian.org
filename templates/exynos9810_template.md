@@ -48,10 +48,10 @@ Please download the belowed needed files and tools:
 
 ## Droidian installation (TWRP)
 - Install the boot image
-    - Install the file called `{{{boot.filename}}}` as an Image to the `Boot` partition
+    - Install the file called `{{{boot.filename}}}` as an Image to the `Boot` partition using `{{{recovery.name}}}`
     - Alternatively, you can enter fastboot mode and `fastboot flash boot {{{boot.filename}}}`
 - Install recovery
-    - Install the file called `TWRP.img` as an Image to the `Recovery` partition
+    - Install the file called `TWRP.img` as an Image to the `Recovery` partition using `{{{recovery.name}}}`
 - Install Droidian `rootfs`
     - Install the file called `droidian-rootfs-arm64_YYYYMMDD.zip` as a Zip file
     - Alternatively, you can enter `ADB sideload` mode and run `adb sideload droidian-rootfs-arm64_YYYYMMDD.zip`

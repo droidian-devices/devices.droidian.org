@@ -44,7 +44,7 @@ Please download the belowed needed files and tools:
 - Wipe the device (TWRP)
     - Go to the `Wipe` menu
     - Select `Advanced wipe`
-    - Tick the boxes called `Dalvik / ART cache`, `Cache`, `System`, `Vendor`, `Data`
+    - Tick the boxes called `Dalvik / ART cache`, `Cache`, `System`, `Data`
     - Swipe to Wipe
     - Go back to the previous menu
     - Choose `Format data` and type `yes`

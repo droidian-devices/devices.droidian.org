@@ -74,7 +74,7 @@ Flash recovery (using Computer)
 - Wipe the device (using {{{recovery.name}}})
     - Go to the `Wipe` menu
     - Select `Advanced wipe`
-    - Tick the boxes called `Dalvik / ART cache`, `Cache`, `System`, `Vendor`, `Data`
+    - Tick the boxes called `Dalvik / ART cache`, `Cache`, `System`, `Data`
     - Swipe to Wipe
     - Go back to the previous menu
     - Choose `Format data` and type `yes`

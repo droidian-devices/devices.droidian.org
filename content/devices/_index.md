@@ -55,7 +55,7 @@ These devices are supported by members of the Droidian community. Device-specifi
     | Samsung Galaxy Note 9 (crownlte) | [install guide](/devices/crownlte) |
 
 ## Candidate devices
-These devices are known to have supported Droidian in the past or were to run Droidian to some degree.(For example a device that is able to boot with Drodian but touchscreen does not work). These devices might not currently have an active maintainer.If you are interested in maintaining the device or add any references to progress made by you,feel free to raise a merge request or express your interest in the [Droidian Telegram](https://t.me/droidianlinux) group. 
+These devices are known to have supported Droidian in the past or were able to run Droidian to some degree.(For example a device that is able to boot with Drodian but touchscreen does not work). These devices might not currently have an active maintainer.If you are interested in maintaining the device or add any references to progress made by you,feel free to raise a merge request or express your interest in the [Droidian Telegram](https://t.me/droidianlinux) group. 
 You can also ask for help related to these devices at the [Droidian Telegram](https://t.me/droidianlinux) group.
 
 - **Google**

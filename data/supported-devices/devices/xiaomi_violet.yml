@@ -14,27 +14,40 @@ channel: stable
 droidian_release: https://github.com/droidian-images/rootfs-api28gsi-all/releases
 is_specific_build_of_drodian_required : false
 android:
+  link:
+  text:
+  filename:
+  direct_download_link: #link that is directly downloadable ,mainly for the installer.
+  is_recovery_flashable: # to know if the file is recovery flashable ,mainly for the installer.
+firmware:
   link: https://xiaomifirmwareupdater.com/firmware/violet/weekly/9.9.3/
   text: Android 9 Pie Firmware
   filename: fw_violet_miui_VIOLET_9.9.3_79d3ccd33b_9.0.zip
+  direct_download_link: https://github.com/mathew-dennis/droidian-recovery-flashing-adaptation-violet/releases/download/firmware_9.9.3/fw_violet_miui_VIOLET_9.9.3_79d3ccd33b_9.0.zip
+  is_recovery_flashable: true
 vendor_zip:
   link: https://github.com/ubuntu-touch-violet/ubuntu-touch-violet/releases/tag/20210510
   text: Android 9 vendor
   filename: vendor.zip
+  direct_download_link: https://github.com/ubuntu-touch-violet/ubuntu-touch-violet/releases/download/20210510/vendor.zip
+  is_recovery_flashable: true
 boot:
-  link: https://gitlab.com/mathew-dennis/xiaomi-violet/-/jobs/2428049402/artifacts/file/out/boot.img
+  link: https://gitlab.com/redmi-note-7-pro/xiaomi-violet/-/jobs/3011030054/artifacts/file/out/boot.img
   text: Halium-boot
   filename: boot.img
+  direct_download_link: https://gitlab.com/redmi-note-7-pro/xiaomi-violet/-/jobs/3011030054/artifacts/raw/out/boot.img
 recovery:
   name: Orange Fox Recovery
   link: https://orangefox.download/device/violet
   text: Latest Orange Fox Recovery
   filename: OrangeFox-violet-stable@VERSION.zip
+  direct_download_link: https://androidfilehost.com/?fid=7161016148664827562
   must_flash: true
 adaptation:
   link: https://github.com/mathew-dennis/droidian-recovery-flashing-adaptation-violet/releases/tag/v1.1
   text: Adaptation (unofficial)
   filename: droidian-recovery-flashing-adaptation-violet.zip
+  direct_download_link: https://github.com/mathew-dennis/droidian-recovery-flashing-adaptation-violet/releases/download/v1.1/droidian-recovery-flashing-adaptation-violet.zip
 credit:
   - name: mathew-dennis
     link: https://gitlab.com/mathew-dennis

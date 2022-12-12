@@ -21,8 +21,8 @@
       link:# if an android rom is flashed first to setup the device.
       text:
       filename:
-      direct_download_link: # link that is directly downloadable ,mainly for the installer.
-      is_recovery_flashable: # to know if the file is recovery flashable ,mainly for the installer.
+      direct_download_link: # link that is directly downloadable, mainly for the installer.
+      is_recovery_flashable: # to know if the file is a recovery flashable zip, mainly for the installer.
   firmware:
       link:
       text:

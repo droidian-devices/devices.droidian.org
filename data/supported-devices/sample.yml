@@ -4,7 +4,7 @@
   codename: unknown # modify to add device's codename.sargo, miatoll 
   support: community # possible values: community / official
   device_type: phone # possible values: phone / tablet
-  halium_version: 9 # version of valium used to build the port.
+  halium_version: 9 # version of halium used to build the port.
   fastboot_mode: '`Vol-` and `Power`' # button combination to be pressed for booting in fastboot mode 
   recovery_mode: '`Vol+` and `Power`' #button combination to be pressed for booting in recovery mode
   ab_slot:  true # Ste to true if the device has A/B slots, else leave empty if not
@@ -18,11 +18,17 @@
       rootfs_link:
       devtools_link:
   android:
+      link:# if an android rom is flashed first to setup the device.
+      text:
+      filename:
+      direct_download_link: # link that is directly downloadable ,mainly for the installer.
+      is_recovery_flashable: # to know if the file is recovery flashable ,mainly for the installer.
+  firmware:
       link:
       text:
       filename:
-      direct_download_link: #link that is directly downloadable ,mainly for the installer.
-      is_recovery_flashable: # to know if the file is recovery flashable ,mainly for the installer.
+      direct_download_link:
+      is_recovery_flashable:
   vendor_zip:
       link:
       text:
@@ -30,7 +36,7 @@
       direct_download_link:
       is_recovery_flashable:
   vendor_image:
-      link:
+      link: # please use this if the vendor image in not a zip, but has an .img extension.
       text:
       filename:
       direct_download_link:

@@ -18,7 +18,7 @@
       rootfs_link:
       devtools_link:
   android:
-      link:# if an android rom is flashed first to setup the device.
+      link: # if an android rom is flashed first to setup the device.
       text:
       filename:
       direct_download_link: # link that is directly downloadable, mainly for the installer.

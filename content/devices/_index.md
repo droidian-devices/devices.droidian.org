@@ -15,10 +15,6 @@ You can ask for help at the [Droidian Telegram](https://t.me/droidianlinux) grou
     |  |  |
     | --- | --- |
     | Sony Xperia 5 (bahamut) |  |
-- **Volla**
-    |  |  |
-    | --- | --- |
-    | Volla Phone (volla-yggdrasil) |  |
 
 ## Community devices
 These devices are supported by members of the Droidian community. Device-specific fixes are provided by the maintainers in various forms (flashable zips or runnable scripts). Please follow the guides corresponding to your device. You can ask for help at the [Droidian Telegram](https://t.me/droidianlinux) group or device specific groups created by maintainer.
@@ -62,6 +58,10 @@ You can also ask for help related to these devices at the [Droidian Telegram](ht
     |  |  |
     | --- | --- |
     | Google Pixel 3a (sargo) |  |
+- **Volla**
+    |  |  |
+    | --- | --- |
+    | Volla Phone (volla-yggdrasil) |  |
 
 
 

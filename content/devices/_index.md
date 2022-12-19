@@ -10,12 +10,12 @@ You can ask for help at the [Droidian Telegram](https://t.me/droidianlinux) grou
 - **F(x)tec**
     |  |  |
     | --- | --- |
-    | F(x)tec Pro 1 |  |
+    | F(x)tec Pro 1 | [details](https://github.com/droidian-images/droidian#droidian) |
     | F(x)tec Pro 1-X | [details](https://github.com/droidian-images/droidian#droidian) |
 - **Sony**
     |  |  |
     | --- | --- |
-    | Sony Xperia 5 (bahamut) |  |
+    | Sony Xperia 5 (bahamut) | [details](https://github.com/droidian-images/droidian#droidian) |
 
 ## Community devices
 These devices are supported by members of the Droidian community. Device-specific fixes are provided by the maintainers in various forms (flashable zips or runnable scripts). Please follow the guides corresponding to your device. You can ask for help at the [Droidian Telegram](https://t.me/droidianlinux) group or device specific groups created by maintainer.

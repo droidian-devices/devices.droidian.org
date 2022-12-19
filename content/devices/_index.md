@@ -11,6 +11,7 @@ You can ask for help at the [Droidian Telegram](https://t.me/droidianlinux) grou
     |  |  |
     | --- | --- |
     | F(x)tec Pro 1 |  |
+    | F(x)tec Pro 1-X | [details](https://github.com/droidian-images/droidian#droidian) |
 - **Sony**
     |  |  |
     | --- | --- |

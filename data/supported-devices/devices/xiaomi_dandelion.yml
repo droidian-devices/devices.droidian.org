@@ -1,4 +1,4 @@
-templateName: dandelion_&_angelica_template
+templateName: garden_template
 manufacturer: Xiaomi
 name: Redmi 9A
 codename: dandelion
@@ -82,7 +82,7 @@ port_status:
       - id: "notification_led"
         value: "x"
       - id: "torchlight"
-        value: "-"
+        value: "~"
       - id: "vibration"
         value: "+"
   - category_name: "Camera"
@@ -154,9 +154,9 @@ port_status:
       - id: "fingerprint"
         value: "x"
       - id: "gps"
-        value: "~"
-      - id: "proximity"
         value: "-"
+      - id: "proximity"
+        value: "+"
       - id: "rotation"
         value: "+"
       - id: "touchscreen"

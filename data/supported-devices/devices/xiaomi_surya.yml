@@ -69,27 +69,29 @@ notes:
     text: Booting times are currently within 5-10 minutes.
   - title: Audio
     text: Currently speaker does not work but bluetooth earbuds/earphones work.
+  - title: Camera
+    text: Camera works on Waydroid but not on the system itself. So it is usable but every time user wants to use it they have to start Waydroid.
 port_status:
   - category_name: "Actors"
     features:
       - id: "manual_brightness"
         value: "+"
       - id: "notification_led"
-        value: "?"
+        value: "+"
       - id: "torchlight"
-        value: "-"
+        value: "+"
       - id: "vibration"
         value: "+"
   - category_name: "Camera"
     features:
       - id: "flashlight"
-        value: "-"
+        value: "+"
       - id: "photo"
-        value: "-"
+        value: "~"
       - id: "video"
-        value: "-"
+        value: "~"
       - id: "switch_camera"
-        value: "-"
+        value: "~"
   - category_name: "Cellular"
     features:
       - id: "carrier_info"
@@ -117,7 +119,7 @@ port_status:
       - id: "battery_percentage"
         value: "+"
       - id: "offline_charging"
-        value: "?"
+        value: "-"
       - id: "online_charging"
         value: "+"
       - id: "rtc_time"
@@ -137,7 +139,7 @@ port_status:
       - id: "flight_mode"
         value: "+"
       - id: "hotspot"
-        value: "?"
+        value: "+"
       - id: "nfc"
         value: "?"
       - id: "wifi"

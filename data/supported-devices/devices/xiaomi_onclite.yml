@@ -50,7 +50,7 @@ notes:
   - title: Status
     text: Droidian GSIs are experimental! Bugs and missing features are expected.
   - title: Brightness
-    text: Brightness can only be adjusted via the Brightness app, the scroll bar in phosh is broken.
+    text: Brightness can only be adjusted via the Brightness app, the scroll bar in Phosh is broken.
 port_status:
   - category_name: "Actors"
     features:
@@ -69,7 +69,7 @@ port_status:
       - id: "photo"
         value: "+"
       - id: "video"
-        value: "-"
+        value: "+"
       - id: "switch_camera"
         value: "+"
   - category_name: "Cellular"
@@ -133,7 +133,7 @@ port_status:
       - id: "gps"
         value: "?"
       - id: "proximity"
-        value: "-"
+        value: "+"
       - id: "rotation"
         value: "+"
       - id: "touchscreen"

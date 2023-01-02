@@ -99,7 +99,7 @@ port_status:
       - id: "battery_percentage"
         value: "+"
       - id: "offline_charging"
-        value: "+"
+        value: "-"
       - id: "online_charging"
         value: "+"
       - id: "rtc_time"

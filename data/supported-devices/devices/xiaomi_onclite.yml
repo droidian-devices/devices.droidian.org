@@ -34,14 +34,14 @@ adaptation:
   filename: adaptation-droidian-onclite.zip
 statuspage:
 credit:
-  - name: Bardia Moshiri
-    link: https://bardia.tech
+  - name: FakeShell (Bardia Moshiri)
+    link: https://github.com/fakeshell
   - name: TheKit
     link: https://gitlab.com/ubports/porting/community-ports/android9/xiaomi-redmi-7
 notes:
   - title: Default password
     text: The default password is `1234`.
-  - title: Apn
+  - title: APN
     text: Mobile data needs an APN to be set up from Settings -> Mobile Network -> Acess Point Names.
   - title: Broken mobile data after calls
     text: Data connection might break after recieving and making calls. Switch it off and on from Settings -> Mobile Network to fix it. Be careful to not turn off the mobile modem or a device restart might be required.
@@ -50,7 +50,7 @@ notes:
   - title: Status
     text: Droidian GSIs are experimental! Bugs and missing features are expected.
   - title: Brightness
-    text: Brightness can only be adjusted via the Brightness app, the scroll bar in phosh is broken.
+    text: Brightness can only be adjusted via the Brightness app, the scroll bar in Phosh is broken.
 port_status:
   - category_name: "Actors"
     features:
@@ -69,7 +69,7 @@ port_status:
       - id: "photo"
         value: "+"
       - id: "video"
-        value: "-"
+        value: "+"
       - id: "switch_camera"
         value: "+"
   - category_name: "Cellular"
@@ -99,7 +99,7 @@ port_status:
       - id: "battery_percentage"
         value: "+"
       - id: "offline_charging"
-        value: "+"
+        value: "-"
       - id: "online_charging"
         value: "+"
       - id: "rtc_time"
@@ -133,7 +133,7 @@ port_status:
       - id: "gps"
         value: "?"
       - id: "proximity"
-        value: "-"
+        value: "+"
       - id: "rotation"
         value: "+"
       - id: "touchscreen"

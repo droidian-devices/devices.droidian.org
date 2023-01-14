@@ -1,4 +1,4 @@
-templateName: dandelion_&_angelica_template
+templateName: garden_template
 manufacturer: Xiaomi
 name: Redmi 9A
 codename: dandelion
@@ -49,31 +49,31 @@ contact:
   text: Droidian for garden devices
   link: https://t.me/ut_angelica
 credit:
-  - name: Bardia Moshiri
-    link: https://bardia.tech
+  - name: FakeShell (Bardia Moshiri)
+    link: https://github.com/fakeshell
   - name: Mohammad and TheKit
     link: https://gitlab.com/ubports/porting/community-ports/android10/xiaomi-redmi-9c
 notes:
   - title: Default password
     text: The default password is `1234`.
-  - title: Apn
+  - title: APN
     text: Mobile data needs an APN to be set up from Settings -> Mobile Network -> Acess Point Names.
   - title: Broken mobile data after calls
     text: Data connection might break after recieving and making calls. Switch it off and on from Settings -> Mobile Network to fix it. Be careful to not turn off the mobile modem or a device restart might>
   - title: Out of storage
     text: "By default when flashing Droidian it allocates 8GB of memory to the system. This might not be enough and luckily you can allocate more storage with ADB by running (while in recovery): `adb shell resize2fs -f /data/rootfs.img xG` where __x__ is the amount of GB to allocate (eg: 50G for 50 GB)."
-  - title: Status
-    text: Droidian GSIs are experimental! Bugs and missing features are expected.
-  - title: Kernel driver issues
-    text: Xiaomi has not updated their kernel source tree and as a result some models of 9A and 9C have non functional display panels with our kernel.
   - title: Bluetooth
     text: "Bluetooth can be used via the terminal using bluetoothctl command or using blueman: `sudo apt install blueman` but does not work via the settings app."
+  - text: Hotspot
+    title: Just like bluetooth, hotspot does not work from settings either and has to be used from a GUI application (such as the default advanced network app) or from terminal.
   - title: GPS
-    text: GPS works partially via Epiphany (tested with OpenStreetMap).
+    text: GPS does not work.
   - title: Signal Strengh
     text: Signal strengh is reported at 1% but Mobile data and calls work just fine.
   - title: Headphones/Headsets
     text: When a headphone is plugged in it must be changed to be used manually in the settings.
+  - title: Camera
+    text: Anything related to cameras only works in Waydroid which.
 port_status:
   - category_name: "Actors"
     features:
@@ -82,7 +82,7 @@ port_status:
       - id: "notification_led"
         value: "x"
       - id: "torchlight"
-        value: "-"
+        value: "+"
       - id: "vibration"
         value: "+"
   - category_name: "Camera"
@@ -90,11 +90,11 @@ port_status:
       - id: "flashlight"
         value: "~"
       - id: "photo"
-        value: "-"
+        value: "~"
       - id: "video"
-        value: "-"
+        value: "~"
       - id: "switch_camera"
-        value: "-"
+        value: "~"
   - category_name: "Cellular"
     features:
       - id: "carrier_info"
@@ -142,7 +142,7 @@ port_status:
       - id: "flight_mode"
         value: "+"
       - id: "hotspot"
-        value: "-"
+        value: "~"
       - id: "nfc"
         value: "x"
       - id: "wifi"
@@ -154,9 +154,9 @@ port_status:
       - id: "fingerprint"
         value: "x"
       - id: "gps"
-        value: "~"
-      - id: "proximity"
         value: "-"
+      - id: "proximity"
+        value: "+"
       - id: "rotation"
         value: "+"
       - id: "touchscreen"

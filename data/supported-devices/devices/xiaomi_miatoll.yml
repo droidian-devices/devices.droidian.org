@@ -43,7 +43,7 @@ credit:
 notes:
   - title: Default password
     text: The default password is `1234`.
-  - title: Apn
+  - title: APN
     text: Mobile data needs an APN to be set up from Settings -> Mobile Network -> Acess Point Names.
   - title: Broken mobile data after calls
     text: Data connection might break after recieving and making calls. Switch it off and on from Settings -> Mobile Network to fix it. Be careful to not turn off the mobile modem or a device restart might be required.
@@ -53,27 +53,29 @@ notes:
     text: "By default when flashing Droidian it allocates 8GB of memory to the system. This might not be enough and luckily you can allocate more storage with ADB by running (while in recovery): `adb shell e2fsck -fy /data/rootfs.img` and `adb shell resize2fs -f /data/rootfs.img xG` where __x__ is the amount of GB to allocate (eg: 50G for 50 GB)."
   - title: Status
     text: Droidian GSIs are experimental! Bugs and missing features are expected.
+  - title: Camera
+    text: Camera works on Waydroid but not on the system itself. So it is usable but every time user wants to use it they have to start Waydroid.
 port_status:
   - category_name: "Actors"
     features:
       - id: "manual_brightness"
         value: "+"
       - id: "notification_led"
-        value: "-"
+        value: "+"
       - id: "torchlight"
-        value: "-"
+        value: "+"
       - id: "vibration"
         value: "+"
   - category_name: "Camera"
     features:
       - id: "flashlight"
-        value: "-"
+        value: "~"
       - id: "photo"
-        value: "-"
+        value: "~"
       - id: "video"
-        value: "-"
+        value: "~"
       - id: "switch_camera"
-        value: "-"
+        value: "~"
   - category_name: "Cellular"
     features:
       - id: "carrier_info"
@@ -119,7 +121,7 @@ port_status:
       - id: "bluetooth"
         value: "+"
       - id: "flight_mode"
-        value: "~"
+        value: "+"
       - id: "hotspot"
         value: "+"
       - id: "nfc"

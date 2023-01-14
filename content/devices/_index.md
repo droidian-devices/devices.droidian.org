@@ -23,6 +23,10 @@ These devices are supported by members of the Droidian community. Device-specifi
     |  |  |
     | --- | --- |
     | Asus Zenfone Max Pro M2 (X01BD) EXPERIMENTAL | [install guide](https://github.com/thomashastings/droidian-x01bd-guide) |
+- **Motorola**
+    |  |  |
+    | --- | --- |
+    | Moto G Power (sofia) | [install guide](https://github.com/arpio23/droidian-images) |
 - **Oneplus**
     |  |  |
     | --- | --- |

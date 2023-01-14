@@ -36,9 +36,9 @@ vbmeta:
     filename: vbmeta.img
 recovery:
   name: TWRP
-  link: https://forum.xda-developers.com/t/recovery-3-5-0-0-unofficial-twrp-xiaomi-poco-x3-surya-karna.4168511/unread
+  link: https://github.com/droidian-surya/kernel-xiaomi-surya/releases/download/images/twrp.img
   text: TWRP Recovery
-  filename: TWRP.img
+  filename: twrp.img
   must_flash:
 adaptation:
   link: https://github.com/droidian-surya/adaptation-surya-script/releases/download/adaptation/adaptation-surya-script.zip
@@ -49,15 +49,19 @@ contact:
   text: Droidian for surya devices
   link: https://t.me/droidian_surya
 credit:
-  - name: Bardia Moshiri
-    link: https://bardia.tech
+  - name: FakeShell (Bardia Moshiri)
+    link: https://github.com/fakeshell
+  - name: Sergio Cuervo (Tester)
+    link: https://github.com/sergiorgb
+  - name: Javad (Tester)
+    link: https://github.com/uidops
   - name: ungeskriptet
     link: https://gitlab.com/ubports/porting/community-ports/android10/xiaomi-poco-x3
 command:
 notes:
   - title: Default password
     text: The default password is `1234`.
-  - title: Apn
+  - title: APN
     text: Mobile data needs an APN to be set up from Settings -> Mobile Network -> Acess Point Names.
   - title: Broken mobile data after calls
     text: Data connection might break after recieving and making calls. Switch it off and on from Settings -> Mobile Network to fix it. Be careful to not turn off the mobile modem or a device restart might be required.
@@ -69,27 +73,29 @@ notes:
     text: Booting times are currently within 5-10 minutes.
   - title: Audio
     text: Currently speaker does not work but bluetooth earbuds/earphones work.
+  - title: Camera
+    text: Camera works on Waydroid but not on the system itself. So it is usable but every time user wants to use it they have to start Waydroid.
 port_status:
   - category_name: "Actors"
     features:
       - id: "manual_brightness"
         value: "+"
       - id: "notification_led"
-        value: "?"
+        value: "+"
       - id: "torchlight"
-        value: "-"
+        value: "+"
       - id: "vibration"
         value: "+"
   - category_name: "Camera"
     features:
       - id: "flashlight"
-        value: "-"
+        value: "+"
       - id: "photo"
-        value: "-"
+        value: "~"
       - id: "video"
-        value: "-"
+        value: "~"
       - id: "switch_camera"
-        value: "-"
+        value: "~"
   - category_name: "Cellular"
     features:
       - id: "carrier_info"
@@ -117,7 +123,7 @@ port_status:
       - id: "battery_percentage"
         value: "+"
       - id: "offline_charging"
-        value: "?"
+        value: "-"
       - id: "online_charging"
         value: "+"
       - id: "rtc_time"
@@ -137,7 +143,7 @@ port_status:
       - id: "flight_mode"
         value: "+"
       - id: "hotspot"
-        value: "?"
+        value: "+"
       - id: "nfc"
         value: "?"
       - id: "wifi"

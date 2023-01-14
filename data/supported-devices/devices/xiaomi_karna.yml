@@ -36,9 +36,9 @@ vbmeta:
   filename: vbmeta.img
 recovery:
   name: TWRP
-  link: https://forum.xda-developers.com/t/recovery-3-5-0-0-unofficial-twrp-xiaomi-poco-x3-surya-karna.4168511/unread
+  link: https://github.com/droidian-surya/kernel-xiaomi-surya/releases/download/images/twrp.img
   text: TWRP Recovery
-  filename: TWRP.img
+  filename: twrp.img
   must_flash:
 adaptation:
   link: https://github.com/droidian-surya/adaptation-surya-script/releases/download/adaptation/adaptation-surya-script.zip

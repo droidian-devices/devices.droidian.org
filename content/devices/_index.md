@@ -5,7 +5,7 @@ draft: false
 
 ## Official devices
 Official devices are supported by members of the Droidian core team.They receive support and adaptation packages from the Droidian core team.
-You can ask for help at the [Droidian Telegram](https://t.me/droidianlinux) group.
+You can ask for help at the [Droidian Telegram](https://t.me/DroidianLinux) group.
 
 - **F(x)tec**
     |  |  |
@@ -36,28 +36,28 @@ These devices are supported by members of the Droidian community. Device-specifi
     |  |  |
     | --- | --- |
     | Pocophone F1 (beryllium) | [install guide](/devices/beryllium/) |
-    | Poco M2 Pro / Xiaomi Redmi Note 9 Pro / Pro Max / 9S  (miatoll) | [install guide](/devices/miatoll/) |
-    | Xiaomi 6X (wayne)| [install guide](/devices/wayne) |
+    | Poco M2 Pro / Xiaomi Redmi Note 9 Pro / Pro Max / 9S  (miatoll) | [install guide](https://github.com/miatoll-linux/droidian) or use the [old install guide](/devices/miatoll/) |
+    | Xiaomi 6X (wayne)| [install guide](/devices/wayne/) |
     | Xiaomi Mi A2 (jasmine) | [install guide](/devices/jasmine/) |
     | Xiaomi Mi 9T (davinci) | |
-    | Xiaomi Redmi Note 7 Pro (violet) | [install guide](/devices/violet) |
+    | Xiaomi Redmi Note 7 Pro (violet) | [install guide](/devices/violet/) |
     | Xiaomi MIX 3 (perseus) | [install guide](/devices/perseus/) |
-    | Xiaomi Redmi 9A (dandelion) | [install guide](/devices/dandelion) |
-    | Xiaomi Redmi 9C (angelica) | [install guide](/devices/angelica) |
-    | Xiaomi Poco X3 (karna) | [install guide](/devices/karna) |
-    | Xiaomi Poco X3 NFC (surya) | [install guide](/devices/surya) |
-    | Xiaomi Redmi 7 (onclite) | [install guide](/devices/onclite) |
-    | Xiaomi Redmi Note 7 (lavender) | [install guide](/devices/lavender) |
+    | Xiaomi Redmi 9A/9AT (dandelion) | [install guide](https://github.com/droidian-mt6765/droidian-images-dandelion) or use the [old install guide](/devices/dandelion/) |
+    | Xiaomi Redmi 9C/9C NFC (angelica) | [install guide](https://github.com/droidian-mt6765/droidian-images-angelica) or use the [old install guide](/devices/angelica/) |
+    | Xiaomi Poco X3 (karna) | [install guide](https://github.com/droidian-surya/droidian-images) or use the [old install guide](/devices/karna/) |
+    | Xiaomi Poco X3 NFC (surya) | [install guide](https://github.com/droidian-surya/droidian-images) or use the [old install guide](/devices/surya/) |
+    | Xiaomi Redmi 7 (onclite) | [install guide](https://github.com/droidian-onclite/droidian-images) or use the [old install guide](/devices/onclite/) |
+    | Xiaomi Redmi Note 7 (lavender) | [install guide](https://github.com/droidian-lavender/droidian-images) or use the [old install guide](/devices/lavender/) |
 - **Samsung**
     |  |  |
     | --- | --- |
-    | Samsung Galaxy S9 (starlte) | [install guide](/devices/starlte) |
-    | Samsung Galaxy S9+ (star2lte) | [install guide](/devices/star2lte) |
-    | Samsung Galaxy Note 9 (crownlte) | [install guide](/devices/crownlte) |
+    | Samsung Galaxy S9 (starlte) | [install guide](/devices/starlte/) |
+    | Samsung Galaxy S9+ (star2lte) | [install guide](/devices/star2lte/) |
+    | Samsung Galaxy Note 9 (crownlte) | [install guide](/devices/crownlte/) |
 
 ## Candidate devices
-These devices are known to have supported Droidian in the past or were able to run Droidian to some degree.(For example a device that is able to boot with Drodian but touchscreen does not work). These devices might not currently have an active maintainer.If you are interested in maintaining the device or add any references to progress made by you,feel free to raise a merge request or express your interest in the [Droidian Telegram](https://t.me/droidianlinux) group. 
-You can also ask for help related to these devices at the [Droidian Telegram](https://t.me/droidianlinux) group.
+These devices are known to have supported Droidian in the past or were able to run Droidian to some degree.(For example a device that is able to boot with Drodian but touchscreen does not work). These devices might not currently have an active maintainer.If you are interested in maintaining the device or add any references to progress made by you,feel free to raise a merge request or express your interest in the [Droidian Telegram](https://t.me/DroidianLinux) group.
+You can also ask for help related to these devices at the [Droidian Telegram](https://t.me/DroidianLinux) group.
 
 - **Google**
     |  |  |

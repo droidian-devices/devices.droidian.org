@@ -23,6 +23,10 @@ These devices are supported by members of the Droidian community. Device-specifi
     |  |  |
     | --- | --- |
     | Asus Zenfone Max Pro M2 (X01BD) EXPERIMENTAL | [install guide](https://github.com/thomashastings/droidian-x01bd-guide) |
+- **Google**
+    |  |  |
+    | --- | --- |
+    | Google Pixel 3a/3a XL (sargo/bonito) | [install guide](https://github.com/droidian-sargo/droidian-images) |
 - **Motorola**
     |  |  |
     | --- | --- |
@@ -43,7 +47,7 @@ These devices are supported by members of the Droidian community. Device-specifi
     | Xiaomi Redmi Note 7 Pro (violet) | [install guide](/devices/violet/) |
     | Xiaomi MIX 3 (perseus) | [install guide](/devices/perseus/) |
     | Xiaomi Redmi 9A/9AT (dandelion) | [install guide](https://github.com/droidian-mt6765/droidian-images-dandelion) or use the [old install guide](/devices/dandelion/) |
-    | Xiaomi Redmi 9C/9C NFC (angelica) | [install guide](https://github.com/droidian-mt6765/droidian-images-angelica) or use the [old install guide](/devices/angelica/) |
+    | Xiaomi Redmi 9C/9C NFC (angelica/angelican) | [install guide](https://github.com/droidian-mt6765/droidian-images-angelica) or use the [old install guide](/devices/angelica/) |
     | Xiaomi Poco X3 (karna) | [install guide](https://github.com/droidian-surya/droidian-images) or use the [old install guide](/devices/karna/) |
     | Xiaomi Poco X3 NFC (surya) | [install guide](https://github.com/droidian-surya/droidian-images) or use the [old install guide](/devices/surya/) |
     | Xiaomi Redmi 7 (onclite) | [install guide](https://github.com/droidian-onclite/droidian-images) or use the [old install guide](/devices/onclite/) |
@@ -59,10 +63,6 @@ These devices are supported by members of the Droidian community. Device-specifi
 These devices are known to have supported Droidian in the past or were able to run Droidian to some degree.(For example a device that is able to boot with Drodian but touchscreen does not work). These devices might not currently have an active maintainer.If you are interested in maintaining the device or add any references to progress made by you,feel free to raise a merge request or express your interest in the [Droidian Telegram](https://t.me/DroidianLinux) group.
 You can also ask for help related to these devices at the [Droidian Telegram](https://t.me/DroidianLinux) group.
 
-- **Google**
-    |  |  |
-    | --- | --- |
-    | Google Pixel 3a (sargo) |  |
 - **Volla**
     |  |  |
     | --- | --- |

@@ -19,7 +19,7 @@ droidian_required_build:
   rootfs_link: https://github.com/droidian-images/droidian/releases
   devtools_link: https://github.com/droidian-images/droidian/releases
 android:
-  link: https://samfw.com/firmware/SM-G965F/bit/all/av/Q(Android%2010)
+  link: https://samfw.com/firmware/SM-G960F/bit/all/av/Q(Android%2010)
   text: Android 10 (Q) stock firmware
   filename:
 boot:
@@ -28,7 +28,7 @@ boot:
   filename: boot-starlte.img
 recovery:
   name: TWRP
-  link: https://dl.twrp.me/star2lte/
+  link: https://dl.twrp.me/starlte/
   text: TWRP Recovery
   filename: TWRP.img
   must_flash:

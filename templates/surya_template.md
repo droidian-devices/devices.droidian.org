@@ -3,30 +3,51 @@ draft: false
 title: {{manufacturer}} {{name}} ({{codename}})
 ---
 > **Make a backup now, as your device will be wiped.**
+{{#notes_before_you_start}}
 ## Before you proceed
-Any recovery should work but TWRP is recommended
+{{text}}
 
+{{/notes_before_you_start}}
 ## Downloading the needed files and tools
 Please download the belowed needed files and tools:
+{{#is_specific_build_of_drodian_required}}
 {{#droidian_required_build.rootfs_link}}
 - [Droidian `rootfs`]({{{droidian_required_build.rootfs_link}}}) (specific build required)
 {{/droidian_required_build.rootfs_link}}
 {{#droidian_required_build.devtools_link}}
 - [Droidian `devtools`]({{{droidian_required_build.devtools_link}}}) (specific build required)
 {{/droidian_required_build.devtools_link}}
+{{/is_specific_build_of_drodian_required}}
+{{^is_specific_build_of_drodian_required}}
+- [Droidian `rootfs` and `devtools`](https://github.com/droidian-images/droidian/releases) for `{{arch}}` (nightly releases include devtools)
+{{/is_specific_build_of_drodian_required}}
+{{#isNightlyBuild}}
+    > `devtools` is already included in nightly builds.
+{{/isNightlyBuild}}
 {{#android.link}}
 - [{{android.text}}]({{{android.link}}})
 {{/android.link}}
+{{#vendor_zip.link}}
+- [{{vendor_zip.text}}]({{{vendor_zip.link}}})
+{{/vendor_zip.link}}
+{{#vendor_image.link}}
+- [{{vendor_image.text}}]({{{vendor_image.link}}})
+{{/vendor_image.link}}
+{{#boot.link}}
 - [{{boot.text}}]({{{boot.link}}})
+{{/boot.link}}
 {{#dtbo.link}}
 - [{{dtbo.text}}]({{{dtbo.link}}})
 {{/dtbo.link}}
 {{#vbmeta.link}}
 - [{{vbmeta.text}}]({{{vbmeta.link}}})
 {{/vbmeta.link}}
+{{#recovery.link}}
 - [{{recovery.text}}]({{{recovery.link}}})
+{{/recovery.link}}
+{{#adaptation.link}}
 - [{{adaptation.text}}]({{{adaptation.link}}})
-
+{{/adaptation.link}}
 
 ## Device preparation
 {{#isManufacturerXiaomi}}
@@ -77,10 +98,8 @@ Please download the belowed needed files and tools:
 {{#android}}
 {{#android.filename}}
 - Install the required base Android version ({{{halium_version}}})
-    {{#recovery.name}}
     - Install the file called `{{{android.filename}}}` as a Zip file using {{recovery.name}}
-    {{/recovery.name}}
-    - Alternatively, you can enter `ADB sideload` mode and run `adb sideload {{{android.filename}}}`
+    - sideload is broken on this version of TWRP so file must be pushed to data and flashed from recovery itself.
     {{/android.filename}}
 {{/android}}
 {{/ab_slot}}
@@ -95,7 +114,7 @@ Please download the belowed needed files and tools:
 {{#vendor_zip.filename}}
 - Install the required vendor version
     - Install the file called `{{{vendor_zip.filename}}}` as a Zip file
-    - Alternatively, you can enter `ADB sideload` mode and run `adb sideload {{{vendor_zip.filename}}}`
+    - sideload is broken on this version of TWRP so file must be pushed to data and flashed from recovery itself.
 {{/vendor_zip.filename}}
 {{/vendor_zip}}
 {{#boot}}
@@ -131,7 +150,7 @@ Please download the belowed needed files and tools:
 {{/recovery.must_flash}}
 {{/recovery}}
 - Install Droidian `rootfs`
-    - Install the file called `droidian-rootfs-{{{arch}}}_YYYYMMDD.zip` as a Zip file
+    - Install the file called `droidian-OFFICIAL-phosh-phone-rootfs-api29-{{{arch}}}-nightly_YYYYMMDD.zip` as a Zip file
     - sideload is broken on this version of TWRP so file must be pushed to data and flashed from recovery itself.
     {{#isNightlyBuild}}
     - `devtools` is already included in nightly builds.
@@ -140,7 +159,7 @@ Please download the belowed needed files and tools:
     - Installing `devtools`
     - Installation of devtools is optional for stable releases, but it is recommended as it helps with debugging.
     - Install the file called `droidian-devtools-{{{arch}}}_YYYYMMDD.zip` as a Zip file
-    - Alternatively, you can enter `ADB sideload` mode and run `adb sideload droidian-devtools-{{{arch}}}_YYYYMMDD.zip`
+    - sideload is broken on this version of TWRP so file must be pushed to data and flashed from recovery itself.
     {{/isNightlyBuild}}
 
 ## Finalizing the installation
@@ -153,8 +172,17 @@ Please download the belowed needed files and tools:
     - TWRP might complain that there is no OS installed, but that's fine
     - The first boot may take longer, and at least one spontaneous reboot is expected during the process
     - You should be greeted with the lock screen, the default password is `1234`
+{{#isCommandProvided}}
+- Run a specific command after first boot (Droidian)
+    - Open the `Console` application or connect via SSH (see the `SSH` entry in the Notes below), and type in the following:
+    {{#command}}
+    ```
+    {{{command}}}
+    ```
+    {{/command}}
+{{/isCommandProvided}}
 
-Congratulations, if everything went well you should be booting into Droidian.
+Congratulations, if everything went well you should be booted into Droidian.
 
 ## Notes
 {{#statuspage}}

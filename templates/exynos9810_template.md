@@ -3,24 +3,51 @@ draft: false
 title: {{manufacturer}} {{name}} ({{codename}})
 ---
 > **Make a backup now, as your device will be wiped.**
+{{#notes_before_you_start}}
 ## Before you proceed
-Any recovery should work but TWRP is recommended
+{{text}}
 
+{{/notes_before_you_start}}
 ## Downloading the needed files and tools
 Please download the belowed needed files and tools:
+{{#is_specific_build_of_drodian_required}}
 {{#droidian_required_build.rootfs_link}}
 - [Droidian `rootfs`]({{{droidian_required_build.rootfs_link}}}) (specific build required)
 {{/droidian_required_build.rootfs_link}}
 {{#droidian_required_build.devtools_link}}
 - [Droidian `devtools`]({{{droidian_required_build.devtools_link}}}) (specific build required)
 {{/droidian_required_build.devtools_link}}
+{{/is_specific_build_of_drodian_required}}
+{{^is_specific_build_of_drodian_required}}
+- [Droidian `rootfs` and `devtools`](https://github.com/droidian-images/droidian/releases) for `{{arch}}` (nightly releases include devtools)
+{{/is_specific_build_of_drodian_required}}
+{{#isNightlyBuild}}
+    > `devtools` is already included in nightly builds.
+{{/isNightlyBuild}}
 {{#android.link}}
 - [{{android.text}}]({{{android.link}}})
 {{/android.link}}
+{{#vendor_zip.link}}
+- [{{vendor_zip.text}}]({{{vendor_zip.link}}})
+{{/vendor_zip.link}}
+{{#vendor_image.link}}
+- [{{vendor_image.text}}]({{{vendor_image.link}}})
+{{/vendor_image.link}}
+{{#boot.link}}
 - [{{boot.text}}]({{{boot.link}}})
+{{/boot.link}}
+{{#dtbo.link}}
+- [{{dtbo.text}}]({{{dtbo.link}}})
+{{/dtbo.link}}
+{{#vbmeta.link}}
+- [{{vbmeta.text}}]({{{vbmeta.link}}})
+{{/vbmeta.link}}
+{{#recovery.link}}
 - [{{recovery.text}}]({{{recovery.link}}})
+{{/recovery.link}}
+{{#adaptation.link}}
 - [{{adaptation.text}}]({{{adaptation.link}}})
-
+{{/adaptation.link}}
 
 ## Device preparation
 - Save your APN (Android)
@@ -30,8 +57,6 @@ Please download the belowed needed files and tools:
 - Unlock the bootloader (Computer)
     - Refer to the instructions provided by the device manufacturer
     - Other useful sources include the [LineageOS wiki](https://wiki.lineageos.org/devices/) and [xda-developers](https://www.xda-developers.com/search2/)
-- Boot into recovery (Computer)
-    - Boot TWRP by running `fastboot boot TWRP.img`
 - Wipe the device (TWRP)
     - Go to the `Wipe` menu
     - Select `Advanced wipe`
@@ -40,8 +65,7 @@ Please download the belowed needed files and tools:
     - Go back to the previous menu
     - Choose `Format data` and type `yes`
     - Go back to the main menu and select `Reboot`
-    - Choose `Bootloader`
-    - Boot TWRP again by running `fastboot boot TWRP.img`
+    - Choose `Recovery`
 - Copy the files to the device  (Computer)
     - When TWRP is booted, open the device's `Internal storage` from your computer
     - Copy all of the files you downloaded to this folder
@@ -49,12 +73,9 @@ Please download the belowed needed files and tools:
 ## Droidian installation (TWRP)
 - Install the boot image
     - Install the file called `{{{boot.filename}}}` as an Image to the `Boot` partition using `{{{recovery.name}}}`
-    - Alternatively, you can enter fastboot mode and `fastboot flash boot {{{boot.filename}}}`
-- Install recovery
-    - Install the file called `TWRP.img` as an Image to the `Recovery` partition using `{{{recovery.name}}}`
 - Install Droidian `rootfs`
-    - Install the file called `droidian-rootfs-arm64_YYYYMMDD.zip` as a Zip file
-    - Alternatively, you can enter `ADB sideload` mode and run `adb sideload droidian-rootfs-arm64_YYYYMMDD.zip`
+    - Install the file called `droidian-OFFICIAL-phosh-phone-rootfs-api29-arm64-nightly_YYYYMMDD.zip` as a Zip file
+    - Alternatively, you can enter `ADB sideload` mode and run `adb sideload droidian-OFFICIAL-phosh-phone-rootfs-api29-arm64-nightly_YYYYMMDD.zip`
     - `devtools` is already included in nightly builds.
 
 ## Finalizing the installation
@@ -63,16 +84,24 @@ Please download the belowed needed files and tools:
 - Boot your device
     - Go to the `Reboot` menu and choose `System`
     - TWRP might complain that there is no OS installed, but that's fine
-    - The first boot may take longer, and at least one spontaneous reboot is expected during the process
     - You should be greeted with the lock screen, the default password is `1234`
+{{#isCommandProvided}}
+- Run a specific command after first boot (Droidian)
+    - Open the `Console` application or connect via SSH (see the `SSH` entry in the Notes below), and type in the following:
+    {{#command}}
+    ```
+    {{{command}}}
+    ```
+    {{/command}}
+{{/isCommandProvided}}
 
-Congratulations, if everything went well you should be booting into Droidian.
+Congratulations, if everything went well you should be booted into Droidian.
 
 ## Notes
 ### Default password
 The default password is `1234`.
 
-### Apn
+### APN
 Mobile data needs an APN to be set up from Settings -> Mobile Network -> Acess Point Names.
 
 ### Broken mobile data after calls
@@ -102,6 +131,5 @@ You can find a list of mobile-friendly Linux applications at [LinuxPhoneApps](ht
 
 {{/credit}}
 [Droidian](http://droidian.org/) [Mobian](https://mobian-project.org/) [UBports](https://ubuntu-touch.io/)
-
 
 

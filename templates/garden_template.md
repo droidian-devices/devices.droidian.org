@@ -19,7 +19,7 @@ Please download the belowed needed files and tools:
 {{/droidian_required_build.devtools_link}}
 {{/is_specific_build_of_drodian_required}}
 {{^is_specific_build_of_drodian_required}}
-- [Droidian `rootfs` and `devtools`](https://github.com/droidian-images/rootfs-api28gsi-all/releases) for `{{arch}}` (nightly releases include devtools)
+- [Droidian `rootfs` and `devtools`](https://github.com/droidian-images/droidian/releases) for `{{arch}}` (nightly releases include devtools)
 {{/is_specific_build_of_drodian_required}}
 {{#isNightlyBuild}}
     > `devtools` is already included in nightly builds.
@@ -164,7 +164,7 @@ Flash recovery (using Computer)
 {{/recovery.must_flash}}
 {{/recovery}}
 - Install Droidian `rootfs`
-    - Install the file called `droidian-rootfs-{{{arch}}}_YYYYMMDD.zip` as a Zip file
+    - Install the file called `droidian-OFFICIAL-phosh-phone-rootfs-api29-{{{arch}}}-nightly_YYYYMMDD.zip` as a Zip file
     - Alternatively, you can enter `ADB sideload` mode and run `adb sideload droidian-rootfs-{{{arch}}}_YYYYMMDD.zip`
     {{#isNightlyBuild}}
     - `devtools` is already included in nightly builds.
@@ -190,7 +190,7 @@ Flash recovery (using Computer)
     - You should be greeted with the lock screen, the default password is `1234`
 {{#isCommandProvided}}
 - Run a specific command after first boot (Droidian)
-    - Open the `King's Cross` application or connect via SSH (see the `SSH` entry in the Notes below), and type in the following:
+    - Open the `Console` application or connect via SSH (see the `SSH` entry in the Notes below), and type in the following:
     {{#command}}
     ```
     {{{command}}}
@@ -198,7 +198,7 @@ Flash recovery (using Computer)
     {{/command}}
 {{/isCommandProvided}}
 
-Congratulations, if everything went well you should be booting into Droidian.
+Congratulations, if everything went well you should be booted into Droidian.
 
 ## Notes
 {{#statuspage}}

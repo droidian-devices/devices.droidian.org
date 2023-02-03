@@ -27,10 +27,6 @@ These devices are supported by members of the Droidian community. Device-specifi
     |  |  |
     | --- | --- |
     | Moto G Power (sofia) | [install guide](https://github.com/arpio23/droidian-images) |
-- **Oneplus**
-    |  |  |
-    | --- | --- |
-    | Oneplus 3/3T (oneplus3/oneplus3t) |  |
 - **Poco / Xiaomi**
     |  |  |
     | --- | --- |
@@ -63,6 +59,7 @@ If you are interested in maintaining the device or contributing to its progress,
 - **Oneplus**
     |  |  |
     | --- | --- |
+    | Oneplus 3/3T (oneplus3/oneplus3t) |  |
     | Oneplus 6/6T (enchilada/fajita) |  |
 - **Poco / Xiaomi**
     |  |  |

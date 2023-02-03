@@ -1,5 +1,5 @@
 ---
-title: "Supported Devices"
+title: "Devices"
 draft: false
 ---
 
@@ -34,14 +34,11 @@ These devices are supported by members of the Droidian community. Device-specifi
 - **Oneplus**
     |  |  |
     | --- | --- |
-    | Oneplus 6/6T (enchilada/fajita) |  |
     | Oneplus 3/3T (oneplus3) |  |
 - **Poco / Xiaomi**
     |  |  |
     | --- | --- |
-    | Pocophone F1 (beryllium) | [install guide](/devices/beryllium/) |
     | Poco M2 Pro / Xiaomi Redmi Note 9 Pro / Pro Max / 9S  (miatoll) | [install guide](https://github.com/miatoll-linux/droidian) or use the [old install guide](/devices/miatoll/) |
-    | Xiaomi 6X (wayne)| [install guide](/devices/wayne/) |
     | Xiaomi Mi A2 (jasmine) | [install guide](/devices/jasmine/) |
     | Xiaomi Mi 9T (davinci) | |
     | Xiaomi Redmi Note 7 Pro (violet) | [install guide](/devices/violet/) |
@@ -59,15 +56,25 @@ These devices are supported by members of the Droidian community. Device-specifi
     | Samsung Galaxy S9+ (star2lte) | [install guide](/devices/star2lte/) |
     | Samsung Galaxy Note 9 (crownlte) | [install guide](/devices/crownlte/) |
 
-## Candidate devices
-These devices are known to have supported Droidian in the past or were able to run Droidian to some degree.(For example a device that is able to boot with Drodian but touchscreen does not work). These devices might not currently have an active maintainer.If you are interested in maintaining the device or add any references to progress made by you,feel free to raise a merge request or express your interest in the [Droidian Telegram](https://t.me/DroidianLinux) group.
-You can also ask for help related to these devices at the [Droidian Telegram](https://t.me/DroidianLinux) group.
+## Potential candidate devices
+> **Warning**
+> Proceed with caution when installing Droidian on these unsupported devices.
 
+These devices have had past support for Droidian, but may no longer have active maintenance and could be running outdated versions with broken packages. Installing on these devices may result in numerous issues and roadblocks. 
+If you are interested in maintaining the device or contributing to its progress, please reach out to the [Droidian Telegram](https://t.me/DroidianLinux) group or submit a merge request.
+- **Oneplus**
+    |  |  |
+    | --- | --- |
+    | Oneplus 6/6T (enchilada/fajita) |  |
+- **Poco / Xiaomi**
+    |  |  |
+    | --- | --- |
+    | Pocophone F1 (beryllium) | [install guide](/devices/beryllium/) |
+    | Xiaomi 6X (wayne)| [install guide](/devices/wayne/) |
 - **Volla**
     |  |  |
     | --- | --- |
     | Volla Phone (volla-yggdrasil) |  |
-
 
 
  > If you have managed to run Droidian on a device that is not listed above please raise a pull request to add the device [here](https://github.com/droidian-devices/devices.droidian.org).

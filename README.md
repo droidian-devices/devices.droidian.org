@@ -14,7 +14,7 @@ The installation guide generation scripts use nodejs, hence it is recommanded to
 and running the command `npm install` in after navigation into the cloned root directory(the directory that contains package.json).
 
 The site is up at [http://localhost:1313](http://localhost:1313) by default
-## Adding new device to list of supported devices
+## Adding new device to list of devices
 The list of devices that are known to run droidian can to found at https:devices.droidian.org.If you wish to add a new device to the list, you will have to add an entry manually in the content/_index.md. You could point to an external URL for installation guide in the content/_index.md, or use generate_device_pages.js script present within in the project to automatically generate the installation guide.
 The The script generates guides in markdown(.md) file format. The guides are genrated based on the device specific YAML configuration files present inside data/supported-devices directory.
 

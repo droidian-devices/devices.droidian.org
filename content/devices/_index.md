@@ -19,10 +19,6 @@ You can ask for help at the [Droidian Telegram](https://t.me/DroidianLinux) grou
 
 ## Community devices
 These devices are supported by members of the Droidian community. Device-specific fixes are provided by the maintainers in various forms (flashable zips or runnable scripts). Please follow the guides corresponding to your device. You can ask for help at the [Droidian Telegram](https://t.me/droidianlinux) group or device specific groups created by maintainer.
-- **Asus**
-    |  |  |
-    | --- | --- |
-    | Asus Zenfone Max Pro M2 (X01BD) EXPERIMENTAL | [install guide](https://github.com/thomashastings/droidian-x01bd-guide) |
 - **Google**
     |  |  |
     | --- | --- |
@@ -34,13 +30,11 @@ These devices are supported by members of the Droidian community. Device-specifi
 - **Oneplus**
     |  |  |
     | --- | --- |
-    | Oneplus 3/3T (oneplus3) |  |
+    | Oneplus 3/3T (oneplus3/oneplus3t) |  |
 - **Poco / Xiaomi**
     |  |  |
     | --- | --- |
-    | Poco M2 Pro / Xiaomi Redmi Note 9 Pro / Pro Max / 9S  (miatoll) | [install guide](https://github.com/miatoll-linux/droidian) or use the [old install guide](/devices/miatoll/) |
-    | Xiaomi Mi A2 (jasmine) | [install guide](/devices/jasmine/) |
-    | Xiaomi Mi 9T (davinci) | |
+    | Poco M2 Pro / Xiaomi Redmi Note 9 Pro / Pro Max / 9S (miatoll) | [install guide](https://github.com/miatoll-linux/droidian) or use the [old install guide](/devices/miatoll/) |
     | Xiaomi Redmi Note 7 Pro (violet) | [install guide](/devices/violet/) |
     | Xiaomi MIX 3 (perseus) | [install guide](/devices/perseus/) |
     | Xiaomi Redmi 9A/9AT (dandelion) | [install guide](https://github.com/droidian-mt6765/droidian-images-dandelion) or use the [old install guide](/devices/dandelion/) |
@@ -62,6 +56,10 @@ These devices are supported by members of the Droidian community. Device-specifi
 
 These devices have had past support for Droidian, but may no longer have active maintenance and could be running outdated versions with broken packages. Installing on these devices may result in numerous issues and roadblocks. 
 If you are interested in maintaining the device or contributing to its progress, please reach out to the [Droidian Telegram](https://t.me/DroidianLinux) group or submit a merge request.
+- **Asus**
+    |  |  |
+    | --- | --- |
+    | Asus Zenfone Max Pro M2 (X01BD) | |
 - **Oneplus**
     |  |  |
     | --- | --- |
@@ -69,8 +67,10 @@ If you are interested in maintaining the device or contributing to its progress,
 - **Poco / Xiaomi**
     |  |  |
     | --- | --- |
-    | Pocophone F1 (beryllium) | [install guide](/devices/beryllium/) |
-    | Xiaomi 6X (wayne)| [install guide](/devices/wayne/) |
+    | Pocophone F1 (beryllium) | |
+    | Xiaomi Mi A2 (jasmine) | |
+    | Xiaomi Mi 9T (davinci) | |
+    | Xiaomi 6X (wayne) | |
 - **Volla**
     |  |  |
     | --- | --- |

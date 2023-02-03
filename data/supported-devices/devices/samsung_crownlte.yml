@@ -22,6 +22,10 @@ android:
   link: https://samfw.com/firmware/SM-N960F/bit/all/av/Q(Android%2010)
   text: Android 10 (Q) stock firmware
   filename:
+vendor_image:
+  link: https://github.com/Sexynos/droidian-kernel-samsung-exynos9810/releases/download/crownlte/vendor.img
+  text: Vendor image
+  filename: vendor.img
 boot:
   link: https://github.com/Sexynos/droidian-kernel-samsung-exynos9810/releases/download/crownlte/boot-crownlte.img
   text: Boot image
@@ -52,7 +56,7 @@ notes:
   - title: Broken mobile data after calls
     text: Data connection might break after recieving and making calls. Switch it off and on from Settings -> Mobile Network to fix it. Be careful to not turn off the mobile modem or a device restart might be required.
   - title: Out of storage
-    text: "By default when flashing Droidian it allocates 8GB of memory to the system. This might not be enough and luckily you can allocate more storage with ADB by running (while in recovery): `adb shell e2fsck -fy /data/rootfs.img` and `adb shell resize2fs -f /data/rootfs.img xG` where __x__ is the amount of GB to allocate (eg: 50G for 50 GB)."
+    text: "By default when flashing Droidian it allocates 8GB of storage to the system. This might not be enough and luckily you can allocate more storage with ADB by running (while in recovery): `adb shell e2fsck -fy /data/rootfs.img` and `adb shell resize2fs -f /data/rootfs.img xG` where __x__ is the amount of GB to allocate (eg: 50G for 50 GB)."
   - title: Status
     text: Droidian GSIs are experimental! Bugs and missing features are expected.
   - title: Audio

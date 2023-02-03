@@ -19,7 +19,7 @@ Please download the belowed needed files and tools:
 {{/droidian_required_build.devtools_link}}
 {{/is_specific_build_of_drodian_required}}
 {{^is_specific_build_of_drodian_required}}
-- [Droidian `rootfs` and `devtools`](https://github.com/droidian-images/rootfs-api28gsi-all/releases) for `{{arch}}` (nightly releases include devtools)
+- [Droidian `rootfs` and `devtools`](https://github.com/droidian-images/droidian/releases) for `{{arch}}` (nightly releases include devtools)
 {{/is_specific_build_of_drodian_required}}
 {{#isNightlyBuild}}
     > `devtools` is already included in nightly builds.
@@ -48,7 +48,6 @@ Please download the belowed needed files and tools:
 {{#adaptation.link}}
 - [{{adaptation.text}}]({{{adaptation.link}}})
 {{/adaptation.link}}
-
 
 ## Device preparation
 {{#isManufacturerXiaomi}}
@@ -99,7 +98,7 @@ Flash recovery (using Computer)
 - **With `Slot B` as active:**
 {{#android.filename}}
 - Install the file called `{{{android.filename}}}` as a Zip file
-    - sideload is broken on this version of TWRP so file must be pushed to data and flashed from recovery itself.mode and run `adb sideload {{android.filename}}`
+    - sideload is broken on this version of TWRP so file must be pushed to data and flashed from recovery itself.`
 {{/android.filename}}
 -    Now switch back to `Slot A` and boot {{{recovery.name}}} again (must boot again, switching is not enough)
 
@@ -128,7 +127,7 @@ Flash recovery (using Computer)
 {{#vendor_zip.filename}}
 - Install the required vendor version
     - Install the file called `{{{vendor_zip.filename}}}` as a Zip file
-    - sideload is broken on this version of TWRP so file must be pushed to data and flashed from recovery itself.mode and run `adb sideload {{{vendor_zip.filename}}}`
+    - sideload is broken on this version of TWRP so file must be pushed to data and flashed from recovery itself.`
 {{/vendor_zip.filename}}
 {{/vendor_zip}}
 {{#boot}}
@@ -164,7 +163,7 @@ Flash recovery (using Computer)
 {{/recovery.must_flash}}
 {{/recovery}}
 - Install Droidian `rootfs`
-    - Install the file called `droidian-rootfs-{{{arch}}}_YYYYMMDD.zip` as a Zip file
+    - Install the file called `droidian-OFFICIAL-phosh-phone-rootfs-api29-{{{arch}}}-arm64_YYYYMMDD.zip` as a Zip file
     - sideload is broken on this version of TWRP so file must be pushed to data and flashed from recovery itself.
     {{#isNightlyBuild}}
     - `devtools` is already included in nightly builds.
@@ -173,7 +172,7 @@ Flash recovery (using Computer)
     - Installing `devtools`
     - Installation of devtools is optional for stable releases, but it is recommended as it helps with debugging.
     - Install the file called `droidian-devtools-{{{arch}}}_YYYYMMDD.zip` as a Zip file
-    - sideload is broken on this version of TWRP so file must be pushed to data and flashed from recovery itself.mode and run `adb sideload droidian-devtools-{{{arch}}}_YYYYMMDD.zip`
+    - sideload is broken on this version of TWRP so file must be pushed to data and flashed from recovery itself.`
     {{/isNightlyBuild}}
 
 ## Finalizing the installation
@@ -182,11 +181,10 @@ Flash recovery (using Computer)
 - Boot your device
     - Go to the `Reboot` menu and choose `System`
     - {{{recovery.name}}} might complain that there is no OS installed, but that's fine
-    - The first boot may take longer, and at least one spontaneous reboot is expected during the process
     - You should be greeted with the lock screen, the default password is `1234`
 {{#isCommandProvided}}
 - Run a specific command after first boot (Droidian)
-    - Open the `King's Cross` application or connect via SSH (see the `SSH` entry in the Notes below), and type in the following:
+    - Open the `Console` application or connect via SSH (see the `SSH` entry in the Notes below), and type in the following:
     {{#command}}
     ```
     {{{command}}}
@@ -194,7 +192,7 @@ Flash recovery (using Computer)
     {{/command}}
 {{/isCommandProvided}}
 
-Congratulations, if everything went well you should be booting into Droidian.
+Congratulations, if everything went well you should be booted into Droidian.
 
 ## Notes
 {{#statuspage}}

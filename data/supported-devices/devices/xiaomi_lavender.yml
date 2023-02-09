@@ -22,6 +22,10 @@ android:
   link: https://xiaomifirmwareupdater.com/miui/lavender/stable/V11.0.6.0.PFGMIXM/
   text: Android 9 (P) stock firmware
   filename:
+vendor_image:
+  link: https://github.com/droidian-lavender/kernel-xiaomi-lavender/releases/download/images/vendor.img
+  text: Vendor image
+  filename: vendor.img
 recovery:
   name: TWRP
   link: https://twrp.me/xiaomi/xiaomiredminote7.html

@@ -35,8 +35,8 @@ These devices are supported by members of the Droidian community. Device-specifi
     | Xiaomi MIX 3 (perseus) | [install guide](/devices/perseus/) |
     | Xiaomi Redmi 9A/9AT (dandelion) | [install guide](https://github.com/droidian-mt6765/droidian-images-dandelion) or use the [old install guide](/devices/dandelion/) |
     | Xiaomi Redmi 9C/9C NFC (angelica/angelican) | [install guide](https://github.com/droidian-mt6765/droidian-images-angelica) or use the [old install guide](/devices/angelica/) |
-    | Xiaomi Poco X3 (karna) | [install guide](https://github.com/droidian-surya/droidian-images) or use the [old install guide](/devices/karna/) |
-    | Xiaomi Poco X3 NFC (surya) | [install guide](https://github.com/droidian-surya/droidian-images) or use the [old install guide](/devices/surya/) |
+    | Xiaomi Poco X3 (karna) | install guide](/devices/karna/) |
+    | Xiaomi Poco X3 NFC (surya) | [install guide](/devices/surya/) |
     | Xiaomi Redmi 7 (onclite) | [install guide](https://github.com/droidian-onclite/droidian-images) or use the [old install guide](/devices/onclite/) |
     | Xiaomi Redmi Note 7 (lavender) | [install guide](https://github.com/droidian-lavender/droidian-images) or use the [old install guide](/devices/lavender/) |
 - **Samsung**

@@ -42,9 +42,10 @@ These devices are supported by members of the Droidian community. Device-specifi
 - **Samsung**
     |  |  |
     | --- | --- |
-    | Samsung Galaxy S9 (starlte) | [install guide](/devices/starlte/) |
-    | Samsung Galaxy S9+ (star2lte) | [install guide](/devices/star2lte/) |
-    | Samsung Galaxy Note 9 (crownlte) | [install guide](/devices/crownlte/) |
+    | Samsung Galaxy S9 (Qualcomm) (starqlte) | [install guide](https://github.com/droidian-starqlte/droidian-images) |
+    | Samsung Galaxy S9 (Exynos) (starlte) | [install guide](/devices/starlte/) |
+    | Samsung Galaxy S9+ (Exynos) (star2lte) | [install guide](/devices/star2lte/) |
+    | Samsung Galaxy Note 9 (Exynos) (crownlte) | [install guide](/devices/crownlte/) |
 - **Sony**
     |  |  |
     | --- | --- |

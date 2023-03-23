@@ -16,13 +16,13 @@ You can ask for help at the [Droidian Telegram](https://t.me/DroidianLinux) grou
     |  |  |
     | --- | --- |
     | Sony Xperia 5 (bahamut) | [details](https://github.com/droidian-images/droidian#droidian) |
-
-## Community devices
-These devices are supported by members of the Droidian community. Device-specific fixes are provided by the maintainers in various forms (flashable zips or runnable scripts). Please follow the guides corresponding to your device. You can ask for help at the [Droidian Telegram](https://t.me/droidianlinux) group or device specific groups created by maintainer.
 - **Google**
     |  |  |
     | --- | --- |
-    | Google Pixel 3a/3a XL (sargo/bonito) | [install guide](https://github.com/droidian-sargo/droidian-images) |
+    | Google Pixel 3a/3a XL (sargo/bonito) | [details](https://github.com/droidian-images/droidian#droidian) |
+
+## Community devices
+These devices are supported by members of the Droidian community. Device-specific fixes are provided by the maintainers in various forms (flashable zips or runnable scripts). Please follow the guides corresponding to your device. You can ask for help at the [Droidian Telegram](https://t.me/droidianlinux) group or device specific groups created by maintainer.
 - **Motorola**
     |  |  |
     | --- | --- |

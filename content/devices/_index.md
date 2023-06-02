@@ -20,6 +20,11 @@ You can ask for help at the [Droidian Telegram](https://t.me/DroidianLinux) grou
     |  |  |
     | --- | --- |
     | Google Pixel 3a/3a XL (sargo/bonito) | [details](https://github.com/droidian-images/droidian#droidian) |
+- **Volla**
+    |  |  |
+    | --- | --- |
+    | Volla Phone (yggdrasil) | [details](https://github.com/droidian-images/droidian#droidian) |
+    | Volla Phone 22 (mimameid) | [details](https://github.com/droidian-images/droidian#droidian) |
 
 ## Community devices
 These devices are supported by members of the Droidian community. Device-specific fixes are provided by the maintainers in various forms (flashable zips or runnable scripts). Please follow the guides corresponding to your device. You can ask for help at the [Droidian Telegram](https://t.me/droidianlinux) group or device specific groups created by maintainer.
@@ -76,10 +81,6 @@ If you are interested in maintaining the device or contributing to its progress,
     | Xiaomi Mi A2 (jasmine) | |
     | Xiaomi Mi 9T (davinci) | |
     | Xiaomi 6X (wayne) | |
-- **Volla**
-    |  |  |
-    | --- | --- |
-    | Volla Phone (volla-yggdrasil) |  |
 
 
  > If you have managed to run Droidian on a device that is not listed above please raise a pull request to add the device [here](https://github.com/droidian-devices/devices.droidian.org).

@@ -36,7 +36,7 @@ theme = "gohugo-theme-ananke"
   identifier = "images"
   name = "Images"
   title = "Images"
-  url = "https://github.com/droidian-images"
+  url = "https://github.com/droidian-images/droidian/releases"
   weight = -300
 
 [[menu.main]]

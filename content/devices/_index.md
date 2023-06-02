@@ -3,6 +3,25 @@ title: "Devices"
 draft: false
 ---
 
+## UBports Installer
+You can install Droidian on some devices using UBports Installer. It is developed by UBports Foundation as a graphical tool to install Ubuntu Touch and other OSes easily.
+
+Currently, the following devices are supported:
+
+- **Official devices**
+    |  |
+    | --- |
+    | Google Pixel 3a/3a XL (sargo/bonito) |
+    | Volla Phone (yggdrasil) |
+- **Community devices**
+    |  |
+    | --- |
+    | Xiaomi Redmi 9C/9C NFC (angelica/angelican) |
+    | Xiaomi Redmi 7 (onclite) |
+    | Xiaomi Redmi Note 7 (lavender) |
+
+**[Download UBports Installer](https://devices.ubuntu-touch.io/installer/)**
+
 ## Official devices
 Official devices are supported by members of the Droidian core team.They receive support and adaptation packages from the Droidian core team.
 You can ask for help at the [Droidian Telegram](https://t.me/DroidianLinux) group.

@@ -40,6 +40,10 @@ You can ask for help at the [Droidian Telegram](https://t.me/DroidianLinux) grou
     |  |  |
     | --- | --- |
     | Google Pixel 3a/3a XL (sargo/bonito) | [details](https://github.com/droidian-images/droidian#droidian) |
+- **Poco / Xiaomi**
+    |  |  |
+    | --- | --- |
+    | Poco M2 Pro / Xiaomi Redmi Note 9 Pro / Pro Max / 9S (miatoll) | [details](https://github.com/droidian-images/droidian#droidian) |
 - **Volla**
     |  |  |
     | --- | --- |
@@ -59,7 +63,6 @@ These devices are supported by members of the Droidian community. Device-specifi
 - **Poco / Xiaomi**
     |  |  |
     | --- | --- |
-    | Poco M2 Pro / Xiaomi Redmi Note 9 Pro / Pro Max / 9S (miatoll) | [install guide](https://github.com/miatoll-linux/droidian) or use the [old install guide](/devices/miatoll/) |
     | Xiaomi Redmi Note 7 Pro (violet) | [install guide](/devices/violet/) |
     | Xiaomi MIX 3 (perseus) | [install guide](/devices/perseus/) |
     | Xiaomi Redmi 9A/9AT (dandelion) | [install guide](https://github.com/droidian-mt6765/droidian-images-dandelion) or use the [old install guide](/devices/dandelion/) |

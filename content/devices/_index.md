@@ -13,6 +13,7 @@ Currently, the following devices are supported:
     | --- |
     | Google Pixel 3a/3a XL (sargo/bonito) |
     | Volla Phone (yggdrasil) |
+    | Volla Phone 22 (mimameid) |
 - **Community devices**
     |  |
     | --- |

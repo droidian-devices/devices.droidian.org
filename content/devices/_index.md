@@ -14,10 +14,10 @@ Currently, the following devices are supported:
     | Google Pixel 3a/3a XL (sargo/bonito) |
     | Volla Phone (yggdrasil) |
     | Volla Phone 22 (mimameid) |
+    | Xiaomi Redmi 9C/9C NFC (angelica/angelican) |
 - **Community devices**
     |  |
     | --- |
-    | Xiaomi Redmi 9C/9C NFC (angelica/angelican) |
     | Xiaomi Redmi 7 (onclite) |
     | Xiaomi Redmi Note 7 (lavender) |
 
@@ -43,6 +43,7 @@ You can ask for help at the [Droidian Telegram](https://t.me/DroidianLinux) grou
 - **Poco / Xiaomi**
     |  |  |
     | --- | --- |
+    | Xiaomi Redmi 9C/9C NFC (angelica/angelican) | [details](https://github.com/droidian-images/droidian#droidian) |
     | Poco M2 Pro / Xiaomi Redmi Note 9 Pro / Pro Max / 9S (miatoll) | [details](https://github.com/droidian-images/droidian#droidian) |
 - **Volla**
     |  |  |
@@ -66,7 +67,6 @@ These devices are supported by members of the Droidian community. Device-specifi
     | Xiaomi Redmi Note 7 Pro (violet) | [install guide](/devices/violet/) |
     | Xiaomi MIX 3 (perseus) | [install guide](/devices/perseus/) |
     | Xiaomi Redmi 9A/9AT (dandelion) | [install guide](https://github.com/droidian-mt6765/droidian-images-dandelion) or use the [old install guide](/devices/dandelion/) |
-    | Xiaomi Redmi 9C/9C NFC (angelica/angelican) | [install guide](https://github.com/droidian-mt6765/droidian-images-angelica) or use the [old install guide](/devices/angelica/) |
     | Xiaomi Poco X3 (karna) | [install guide](/devices/karna/) |
     | Xiaomi Poco X3 NFC (surya) | [install guide](/devices/surya/) |
     | Xiaomi Redmi 7 (onclite) | [install guide](https://github.com/droidian-onclite/droidian-images) or use the [old install guide](/devices/onclite/) |

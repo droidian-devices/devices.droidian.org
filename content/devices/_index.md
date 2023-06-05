@@ -43,6 +43,8 @@ You can ask for help at the [Droidian Telegram](https://t.me/DroidianLinux) grou
 - **Poco / Xiaomi**
     |  |  |
     | --- | --- |
+    | Xiaomi Redmi 7 (onclite) | [details](https://github.com/droidian-images/droidian#droidian) |
+    | Xiaomi Redmi Note 7 (lavender) | [details](https://github.com/droidian-images/droidian#droidian) |
     | Xiaomi Redmi 9C/9C NFC (angelica/angelican) | [details](https://github.com/droidian-images/droidian#droidian) |
     | Poco M2 Pro / Xiaomi Redmi Note 9 Pro / Pro Max / 9S (miatoll) | [details](https://github.com/droidian-images/droidian#droidian) |
 - **Volla**
@@ -50,6 +52,10 @@ You can ask for help at the [Droidian Telegram](https://t.me/DroidianLinux) grou
     | --- | --- |
     | Volla Phone (yggdrasil) | [details](https://github.com/droidian-images/droidian#droidian) |
     | Volla Phone 22 (mimameid) | [details](https://github.com/droidian-images/droidian#droidian) |
+- **Samsung**
+    |  |  |
+    | --- | --- |
+    | Samsung Galaxy S9 (Qualcomm) (starqlte) | [details](https://github.com/droidian-images/droidian#droidian) |
 
 ## Community devices
 These devices are supported by members of the Droidian community. Device-specific fixes are provided by the maintainers in various forms (flashable zips or runnable scripts). Please follow the guides corresponding to your device. You can ask for help at the [Droidian Telegram](https://t.me/droidianlinux) group or device specific groups created by maintainer.
@@ -69,12 +75,9 @@ These devices are supported by members of the Droidian community. Device-specifi
     | Xiaomi Redmi 9A/9AT (dandelion) | [install guide](https://github.com/droidian-mt6765/droidian-images-dandelion) or use the [old install guide](/devices/dandelion/) |
     | Xiaomi Poco X3 (karna) | [install guide](/devices/karna/) |
     | Xiaomi Poco X3 NFC (surya) | [install guide](/devices/surya/) |
-    | Xiaomi Redmi 7 (onclite) | [install guide](https://github.com/droidian-onclite/droidian-images) or use the [old install guide](/devices/onclite/) |
-    | Xiaomi Redmi Note 7 (lavender) | [install guide](https://github.com/droidian-lavender/droidian-images) or use the [old install guide](/devices/lavender/) |
 - **Samsung**
     |  |  |
     | --- | --- |
-    | Samsung Galaxy S9 (Qualcomm) (starqlte) | [install guide](https://github.com/droidian-starqlte/droidian-images) |
     | Samsung Galaxy S9 (Exynos) (starlte) | [install guide](/devices/starlte/) |
     | Samsung Galaxy S9+ (Exynos) (star2lte) | [install guide](/devices/star2lte/) |
     | Samsung Galaxy Note 9 (Exynos) (crownlte) | [install guide](/devices/crownlte/) |

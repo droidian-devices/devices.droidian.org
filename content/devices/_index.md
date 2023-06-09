@@ -12,14 +12,12 @@ Currently, the following devices are supported:
     |  |
     | --- |
     | Google Pixel 3a/3a XL (sargo/bonito) |
-    | Volla Phone (yggdrasil) |
-    | Volla Phone 22 (mimameid) |
-    | Xiaomi Redmi 9C/9C NFC (angelica/angelican) |
-- **Community devices**
-    |  |
-    | --- |
     | Xiaomi Redmi 7 (onclite) |
     | Xiaomi Redmi Note 7 (lavender) |
+    | Xiaomi Redmi 9C/9C NFC (angelica/angelican) |
+    | Poco M2 Pro / Xiaomi Redmi Note 9 Pro / Pro Max / 9S (miatoll) |
+    | Volla Phone (yggdrasil) |
+    | Volla Phone 22 (mimameid) |
 
 **[Download UBports Installer](https://devices.ubuntu-touch.io/installer/)**
 

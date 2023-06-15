@@ -3,8 +3,8 @@ title: "Devices"
 draft: false
 ---
 
-## UBports Installer
-You can install Droidian on some devices using UBports Installer. It is developed by UBports Foundation as a graphical tool to install Ubuntu Touch and other OSes easily.
+## Droidian Installer
+You can install Droidian on some devices using Droidian Installer. It is based on [UBports Installer](https://devices.ubuntu-touch.io/installer/) which is developed by UBports Foundation.
 
 Currently, the following devices are supported:
 
@@ -19,7 +19,7 @@ Currently, the following devices are supported:
     | Volla Phone (yggdrasil) |
     | Volla Phone 22 (mimameid) |
 
-**[Download UBports Installer](https://devices.ubuntu-touch.io/installer/)**
+**[Download Droidian Installer](https://github.com/droidian-releng/droidian-installer/releases/)**
 
 ## Official devices
 Official devices are supported by members of the Droidian core team.They receive support and adaptation packages from the Droidian core team.

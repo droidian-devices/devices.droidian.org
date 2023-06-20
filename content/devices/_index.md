@@ -38,6 +38,10 @@ You can ask for help at the [Droidian Telegram](https://t.me/DroidianLinux) grou
     |  |  |
     | --- | --- |
     | Google Pixel 3a/3a XL (sargo/bonito) | [details](https://github.com/droidian-images/droidian#droidian) |
+- **Oneplus**
+    |  |  |
+    | --- | --- |
+    | Oneplus 3/3T (oneplus3/oneplus3t) | [details](https://github.com/droidian-images/droidian#droidian) |
 - **Poco / Xiaomi**
     |  |  |
     | --- | --- |
@@ -61,10 +65,6 @@ These devices are supported by members of the Droidian community. Device-specifi
     |  |  |
     | --- | --- |
     | Moto G Power (sofia) | [install guide](https://github.com/arpio23/droidian-images) |
-- **Oneplus**
-    |  |  |
-    | --- | --- |
-    | Oneplus 3/3T (oneplus3/oneplus3t) | [install guide](https://github.com/Droidian-oneplus3/device-page) |
 - **Poco / Xiaomi**
     |  |  |
     | --- | --- |

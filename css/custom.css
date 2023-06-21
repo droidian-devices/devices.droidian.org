@@ -198,6 +198,7 @@ a:hover {
   background-image: url('/img/bookworm.png');
   background-repeat: no-repeat;
   background-position: 50% 0;
+  background-size: cover;
 }
 
 .home-social-icon {

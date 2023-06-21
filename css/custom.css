@@ -195,7 +195,7 @@ a:hover {
 }
 
 .bg-debian {
-  background-image: url('/img/bullseye.png');
+  background-image: url('/img/bookworm.png');
   background-repeat: no-repeat;
   background-position: 50% 0;
 }

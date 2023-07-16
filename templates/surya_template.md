@@ -2,6 +2,12 @@
 draft: false
 title: {{manufacturer}} {{name}} ({{codename}})
 ---
+
+- ✅: Confirmed, Working
+- 🧩: Partial, Working to some extent but with issues
+- ❌: Not Working
+- ❔: Untested
+
 {{{port_status}}}
 
 > **Make a backup now, as your device will be wiped.**
@@ -188,11 +194,6 @@ Please download the belowed needed files and tools:
 Congratulations, if everything went well you should be booted into Droidian.
 
 ## Notes
-{{#statuspage}}
-### Porting status
-You can check out the status of the port [here]({{{statuspage}}})
-
-{{/statuspage}}
 {{#notes}}
 ### {{{title}}}
 {{{text}}}
@@ -209,7 +210,7 @@ You can find a list of mobile-friendly Linux applications at [LinuxPhoneApps](ht
 [{{name}}]({{{link}}})
 
 {{/credit}}
-[Droidian](http://droidian.org/) [Mobian](https://mobian-project.org/) [UBports](https://ubuntu-touch.io/)
+[Droidian Project](http://droidian.org/)
 
 {{#contact.link}}
 You can ask for assistance specific to this device at [{{{contact.text}}}]({{{contact.link}}}).

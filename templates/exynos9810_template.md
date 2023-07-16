@@ -2,6 +2,12 @@
 draft: false
 title: {{manufacturer}} {{name}} ({{codename}})
 ---
+
+- ✅: Confirmed, Working
+- 🧩: Partial, Working to some extent but with issues
+- ❌: Not Working
+- ❔: Untested
+
 {{{port_status}}}
 
 > **Make a backup now, as your device will be wiped.**
@@ -105,22 +111,16 @@ Congratulations, if everything went well you should be booted into Droidian.
 The default password is `1234`.
 
 ### APN
-Mobile data needs an APN to be set up from Settings -> Mobile Network -> Acess Point Names.
-
-### Broken mobile data after calls
-Data connection might break after recieving and making calls. Switch it off and on from Settings -> Mobile Network to fix it. Be careful to not turn off the mobile modem or a device restart might be required.
+Mobile data needs an APN to be set up from Settings -> Mobile Network -> Access Point Names.
 
 ### Out of storage
 By default when flashing Droidian it allocates 8GB of memory to the system. This might not be enough and luckily you can allocate more storage with ADB by running (while in recovery): `adb shell e2fsck -fy /data/rootfs.img` and `adb shell resize2fs -f /data/rootfs.img xG` where __x__ is the amount of GB to allocate (eg: 50G for 50 GB).
 
-### Status
-Droidian GSIs are experimental! Bugs and missing features are expected.
-
 ### Audio
-Currently audio does not work and only the microphone works.
+Audio is inconsistent and does not work on all boots
 
 ### Calls
-Because of the audio issue user cannot hear audio in calls either.
+Because of the audio issue user might not be able to hear audio in calls either.
 
 ### SSH access
 Flashing the `devtools` zip enables `SSH` over USB. To use it, connect your phone to your computer and type `ssh droidian@10.15.19.82`, the password is `1234` (on Windows, you may need [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/))
@@ -133,4 +133,4 @@ You can find a list of mobile-friendly Linux applications at [LinuxPhoneApps](ht
 [{{name}}]({{{link}}})
 
 {{/credit}}
-[Droidian](http://droidian.org/) [Mobian](https://mobian-project.org/) [UBports](https://ubuntu-touch.io/)
+[Droidian Project](http://droidian.org/)

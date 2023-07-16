@@ -62,7 +62,7 @@ notes:
   - title: Default password
     text: The default password is `1234`.
   - title: APN
-    text: Mobile data needs an APN to be set up from Settings -> Mobile Network -> Acess Point Names.
+    text: Mobile data needs an APN to be set up from Settings -> Mobile Network -> Access Point Names.
   - title: Booting times
     text: Booting times are currently within 5-10 minutes.
   - title: Audio

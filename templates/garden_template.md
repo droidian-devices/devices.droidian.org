@@ -2,6 +2,12 @@
 draft: false
 title: {{{manufacturer}}} {{{name}}} ({{{codename}}})
 ---
+
+- ✅: Confirmed, Working
+- 🧩: Partial, Working to some extent but with issues
+- ❌: Not Working
+- ❔: Untested
+
 {{{port_status}}}
 
 > **Make a backup now, as your device will be wiped.**
@@ -93,7 +99,7 @@ Flash recovery (using Computer)
     - When {{{recovery.name}}} is booted, open the device's `Internal storage` from your computer
     - Copy all of the files you downloaded to this folder
 
-## Droidian installation 
+## Droidian installation
 {{#ab_slot}}
 - Install base Android version and/or Vendor to both A/B slots
   - Go to the `Reboot` menu and see which slot is active
@@ -204,11 +210,6 @@ Flash recovery (using Computer)
 Congratulations, if everything went well you should be booted into Droidian.
 
 ## Notes
-{{#statuspage}}
-### Porting status
-You can check out the status of the port [here]({{{statuspage}}})
-
-{{/statuspage}}
 {{#notes}}
 ### {{{title}}}
 {{{text}}}
@@ -225,7 +226,7 @@ You can find a list of mobile-friendly Linux applications at [LinuxPhoneApps](ht
 [{{name}}]({{{link}}})
 
 {{/credit}}
-[Droidian](http://droidian.org/) [Mobian](https://mobian-project.org/) [UBports](https://ubuntu-touch.io/)
+[Droidian Project](http://droidian.org/)
 
 {{#contact.link}}
 You can ask for assistance specific to this device at [{{{contact.text}}}]({{{contact.link}}}).

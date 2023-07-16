@@ -22,32 +22,37 @@ const isValidTemplateName = (value) => {
   }
 };
 
-//RSF stands for Required String Field
+// RSF stands for Required String Field
 const RSF = string().required();
 // const RSFWI = string().requiedWhenSectionIncluded();
-//OSF stands for optionalStringField
+
+// OSF stands for optionalStringField
 const OSF = string().nullable();
 
-//RSF stands for Required Boolean Field
+// RSF stands for Required Boolean Field
 const RBF = boolean().required();
+
+// OSF stands for Optional Boolean Field
 const OBF = boolean().nullable();
 
-//RNF stands for Required Number Field
+// RNF stands for Required Number Field
 const RNF = number().required();
+
+// ONF stands for Optional Number Field
 const ONF = number();
 
-//RSF stands for Required Link Field
+// RSF stands for Required Link Field
 const RLF = string().url().required();
 
-//OSF stands for optionalStringField
+// OSF stands for optionalStringField
 const OLF = string().url().nullable();
-//RLFII stands for Required Link Field when section is included
+// RLFII stands for Required Link Field when section is included
 
-//WDHS stands for when defined use schema 
+// WDHS stands for when defined use schema 
 function whenDefinedUseSchema(schemaWhenDefined){
   return lazy((value) => {
       switch (typeof value) {
-        case "object": 
+        case "object":
           return schemaWhenDefined;
         case "undefined":
         case "null":
@@ -58,15 +63,15 @@ function whenDefinedUseSchema(schemaWhenDefined){
 }
 
 const linkTextFileName = {
-link: RLF ,
+link: RLF,
 text: RSF,
 filename: OSF,
-direct_download_link: OLF ,
+direct_download_link: OLF,
 is_recovery_flashable: OBF
 }
 
 const vendorZipSchema= object(linkTextFileName);
-const vendorImageSchema = vendorZipSchema; 
+const vendorImageSchema = vendorZipSchema;
 const androidSchema= vendorZipSchema;
 const bootSchema = vendorZipSchema;
 const dtboSchema= vendorZipSchema;
@@ -104,12 +109,12 @@ const deviceSchema = object({
   boot: whenDefinedUseSchema(bootSchema),
   dtbo: whenDefinedUseSchema(dtboSchema),
   vbmeta: whenDefinedUseSchema(vbmetaSchema),
-  recovery: whenDefinedUseSchema(object({...linkTextFileName,name: OSF,must_flash: OBF})),
-  adaptation: whenDefinedUseSchema(object({...linkTextFileName,name: OSF,extractedFolderName: RSF})),
-  statuspage: OLF ,
+  recovery: whenDefinedUseSchema(object({...linkTextFileName, name: OSF, must_flash: OBF})),
+  adaptation: whenDefinedUseSchema(object({...linkTextFileName, name: OSF, text: OSF, link: OLF, extractedFolderName: OSF})),
+  statuspage: OLF,
   contact: whenDefinedUseSchema(object({
-    text: RSF,
-    link: RLF
+    text: OSF,
+    link: OLF
   })),
   credit: array().of(object({ name: OSF, link: OLF  })).nullable(),
   command: array().of(OSF).nullable(),

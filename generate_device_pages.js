@@ -32,6 +32,7 @@ async function main() {
     const recoveryName = deviceConfig.recovery?.name?.trim().toLowerCase();
     deviceConfig = {
       ...deviceConfig,
+      hasNotesBeforeStart: deviceConfig.notes_before_you_start && deviceConfig.notes_before_you_start.length > 0,
       isManufacturerXiaomi:
         deviceConfig.manufacturer.toLowerCase().trim() === "xiaomi",
       isNightlyBuild: deviceConfig.channel === "nightly",
@@ -101,7 +102,7 @@ function formatPortStatus(port_status) {
 }
 
 const formatPortStatusTable = (portStatusQuads) => {
-  let table = "| Feature | Status | Feature | Status | Feature | Status | Feature | Status |\n|---|---|---|---|---|---|---|---|\n";
+  let table = "| Feature | State | Feature | State | Feature | State | Feature | State |\n|---|---|---|---|---|---|---|---|\n";
   for (const quad of portStatusQuads) {
     table += `| ${quad.id} | ${quad.value} | ${quad.id2} | ${quad.value2} | ${quad.id3} | ${quad.value3} | ${quad.id4} | ${quad.value4} |\n`;
   }

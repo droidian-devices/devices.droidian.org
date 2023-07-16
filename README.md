@@ -5,40 +5,41 @@ The instructions to install hugo can be found [here](https://gohugo.io/getting-s
 
 # Running the hugo server for development
 The hugo server can be started locally using the command:
-    
+
     $ hugo serve -D
 
 > -D flag is provided used to allow draft pages to be included.
 
-The installation guide generation scripts use nodejs, hence it is recommanded to install nodejs
-and running the command `npm install` in after navigation into the cloned root directory(the directory that contains package.json).
+The installation guide generation scripts use nodejs, hence nodejs must be installed.
+After the installation of nodejs, the command `npm install` has to be executed at the root of the repository to install all the dependencies
 
 The site is up at [http://localhost:1313](http://localhost:1313) by default
+
 ## Adding new device to list of devices
 The list of devices that are known to run droidian can to found at https:devices.droidian.org.If you wish to add a new device to the list, you will have to add an entry manually in the content/_index.md. You could point to an external URL for installation guide in the content/_index.md, or use generate_device_pages.js script present within in the project to automatically generate the installation guide.
-The The script generates guides in markdown(.md) file format. The guides are genrated based on the device specific YAML configuration files present inside data/supported-devices directory.
+The The script generates guides in markdown(.md) file format. The guides are genrated based on the device specific YAML configuration files present in data/supported-devices.
 
-    node generate_device_pages.js
+    $ node generate_device_pages.js
 
-In order to new automatically generate the installation guide add new file with <codename>.yaml file inside data/supported-devices directory.
-The generate_device_pages.js looks at the templateName field to identify the templete to be used, If the field is not provided ,by default the `default_template.md` present inside templates folder is used.
-If you do not which to use any other custom template, create a new .md file inside templates folder and 
-specify the name of the file as templeteName's value in your <codename>.yaml file.
-The md template supports (mustache)[https://mustache.github.io/] syntax, and the fields in <codename>.yaml file, will be available as
+In order to new automatically generate the installation guide add new file with the name <vendor>_<codename>.yaml inside data/supported-devices directory.
+The generate_device_pages.js looks at the templateName field to identify the templete to be used, If the field is not provided, by default the `default_template.md` present inside templates folder is used.
+If you do not want to use any other custom template, create a new .md file inside templates folder and
+specify the name of the file as templeteName's value in your <vendor>_<codename>.yaml file. although it is encouraged to always use one of the already provided templates to fit in with the rest of the devices.
+The md template supports (mustache)[https://mustache.github.io/] syntax, and the fields in <vendor>_<codename>.yaml file, will be available as
 mustache variables during the build.
-Refer the contents of sample.yml(present inside data/supported-devices folder) to know about the feilds, a to copy them into the recently created <codename>.yaml file.
-Now update the parameters in the <codename>.yaml as per your device.
+Refer to the contents of sample.yml (present in data/supported-devices) to get more info about each field and to copy them into the recently created <vendor>_<codename>.yaml file.
+Now update the parameters in the <vendor>_<codename>.yaml as per your device.
 
-These are the parameters used in `codename.yml`. Start each device entry with a `-`.
+These are the parameters used that can be used in <vendor>_<codename>.yml. Start each device entry with a `-`.
 - `manufacturer`: manufacturer of the device
-- `name`: name of the device 
+- `name`: name of the device
 - `codename`: codename of the device
 - `support`: `official` or `community`
 - `device_type`: phone, tablet, etc
 - `halium_version`: 9, 10, or 11
-- `fastboot_mode`: button combination for booting in fastboot mode
-- `recovery_mode`: button combination for booting in recovery mode
-- `ab_slot`: `true` if the device has A/B slots, leave empty if not
+- `fastboot_mode`: button combination for booting to fastboot mode
+- `recovery_mode`: button combination for booting to recovery mode
+- `ab_slot`: `true` if the device has A/B slots, leave empty otherwise
 - `api_version`: version of the android API used for the device
 - `arch`: device architecture
 - `droidian_release`: a link to the correspodning Droidian release
@@ -58,6 +59,4 @@ These are the parameters used in `codename.yml`. Start each device entry with a 
 
 \* `android`, `vendor_zip`, `vendor_image`, and `boot` have multiple parts. The `link` contains the actual link to the file or release page; the `text` contains the string what the download link should say in the page; and the `filename` specifies the name of the file that identifies the file when flashing.
 
-\*\* `recovery` has two further entry called `name` and `must_flash`. `name` specifies the name of the recovery, e. g., `TWRP` or `Orange Fox Recovery`; if `must_flash` is set to `true`, the user will be prompted to flash the recovery instead of just booting it (some devices have been reported to not support directly booting to the recovery image)
-
-
+\*\* `recovery` has two further entries called `name` and `must_flash`. `name` specifies the name of the recovery, e. g., `TWRP` or `Orange Fox Recovery`; if `must_flash` is set to `true`, the user will be prompted to flash the recovery instead of just booting it (some devices have been reported to not support directly booting to the recovery image)

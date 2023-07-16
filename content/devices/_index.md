@@ -37,7 +37,7 @@ You can ask for help at the [Droidian Telegram](https://t.me/DroidianLinux) grou
 - **Google**
     |  |  |
     | --- | --- |
-    | Google Pixel 3a/3a XL (sargo/bonito) | [details](https://github.com/droidian-images/droidian#droidian) |
+    | Google Pixel 3a/3a XL (sargo/bonito) | [details](/devices/sargo/) |
 - **Oneplus**
     |  |  |
     | --- | --- |
@@ -45,10 +45,10 @@ You can ask for help at the [Droidian Telegram](https://t.me/DroidianLinux) grou
 - **Poco / Xiaomi**
     |  |  |
     | --- | --- |
-    | Xiaomi Redmi 7 (onclite) | [details](https://github.com/droidian-images/droidian#droidian) |
-    | Xiaomi Redmi Note 7 (lavender) | [details](https://github.com/droidian-images/droidian#droidian) |
-    | Xiaomi Redmi 9C/9C NFC (angelica/angelican) | [details](https://github.com/droidian-images/droidian#droidian) |
-    | Poco M2 Pro / Xiaomi Redmi Note 9 Pro / Pro Max / 9S (miatoll) | [details](https://github.com/droidian-images/droidian#droidian) |
+    | Xiaomi Redmi 7 (onclite) | [details](/devices/onclite/) |
+    | Xiaomi Redmi Note 7 (lavender) | [details](/devices/lavender/) |
+    | Xiaomi Redmi 9C/9C NFC (angelica/angelican) | [details](/devices/angelica/) |
+    | Poco M2 Pro / Xiaomi Redmi Note 9 Pro / Pro Max / 9S (miatoll) | [details](/devices/miatoll/) |
 - **Volla**
     |  |  |
     | --- | --- |
@@ -57,7 +57,7 @@ You can ask for help at the [Droidian Telegram](https://t.me/DroidianLinux) grou
 - **Samsung**
     |  |  |
     | --- | --- |
-    | Samsung Galaxy S9 (Qualcomm) (starqlte) | [details](https://github.com/droidian-images/droidian#droidian) |
+    | Samsung Galaxy S9 (Qualcomm) (starqlte) | [details](/devices/starqlte/) |
 
 ## Community devices
 These devices are supported by members of the Droidian community. Device-specific fixes are provided by the maintainers in various forms (flashable zips or runnable scripts). Please follow the guides corresponding to your device. You can ask for help at the [Droidian Telegram](https://t.me/droidianlinux) group or device specific groups created by maintainer.
@@ -68,7 +68,7 @@ These devices are supported by members of the Droidian community. Device-specifi
 - **Poco / Xiaomi**
     |  |  |
     | --- | --- |
-    | Xiaomi Redmi 9A/9AT (dandelion) | [install guide](https://github.com/droidian-mt6765/droidian-images-dandelion) |
+    | Xiaomi Redmi 9A/9AT (dandelion) | [install guide](/devices/dandelion/) |
 - **Samsung**
     |  |  |
     | --- | --- |

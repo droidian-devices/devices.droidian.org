@@ -10,15 +10,16 @@ title: {{manufacturer}} {{name}} ({{codename}})
 
 {{{port_status}}}
 
-> **Make a backup now, as your device will be wiped.**
-
-{{#notes_before_you_start}}
+{{#hasNotesBeforeStart}}
 ## Before you proceed
-{{text}}
+{{#notes_before_you_start}}
+> {{text}}
 
 {{/notes_before_you_start}}
+{{/hasNotesBeforeStart}}
+
 ## Downloading the needed files and tools
-Please download the belowed needed files and tools:
+Please download the mentioned needed files and tools:
 {{#is_specific_build_of_drodian_required}}
 {{#droidian_required_build.rootfs_link}}
 - [Droidian `rootfs`]({{{droidian_required_build.rootfs_link}}}) (specific build required)
@@ -66,10 +67,11 @@ Please download the belowed needed files and tools:
     - The `Access Point Name` or `APN` can be found in the Settings menu of Android
     - Take a piece of paper or a text editor, and write down everything that you see on that screen
     - These are likely to include a URL (e. g., `internet.carrier.net`), a username, and possibly a password
-- Unlock the bootloader (Computer)
+    - APN settings can also be found at [apn.how](http://apn.how/)
+- Unlock the bootloader (computer)
     - Refer to the instructions provided by the device manufacturer
-    - Other useful sources include the [LineageOS wiki](https://wiki.lineageos.org/devices/) and [xda-developers](https://www.xda-developers.com/search2/)
-- Boot into recovery (Computer)
+    - Other useful sources include the [LineageOS wiki](https://wiki.lineageos.org/devices/) and [xda-developers](https://forum.xda-developers.com/)
+- Boot into recovery (computer)
     - Boot TWRP by running `fastboot boot TWRP.img`
 - Wipe the device (TWRP)
     - Go to the `Wipe` menu
@@ -81,7 +83,7 @@ Please download the belowed needed files and tools:
     - Go back to the main menu and select `Reboot`
     - Choose `Bootloader`
     - Boot TWRP again by running `fastboot boot TWRP.img`
-- Copy the files to the device  (Computer)
+- Copy the files to the device (computer)
     - When TWRP is booted, open the device's `Internal storage` from your computer
     - Copy all of the files you downloaded to this folder
 

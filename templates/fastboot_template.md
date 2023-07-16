@@ -10,15 +10,16 @@ title: {{{manufacturer}}} {{{name}}} ({{{codename}}})
 
 {{{port_status}}}
 
-> **Make a backup now, as your device will be wiped.**
-
-{{#notes_before_you_start}}
+{{#hasNotesBeforeStart}}
 ## Before you proceed
-{{text}}
+{{#notes_before_you_start}}
+> {{text}}
 
 {{/notes_before_you_start}}
+{{/hasNotesBeforeStart}}
+
 ## Downloading the needed files and tools
-Please download the belowed needed files and tools:
+Please download the mentioned needed files and tools:
 {{#is_specific_build_of_drodian_required}}
 {{#droidian_required_build.rootfs_link}}
 - [Droidian `image`]({{{droidian_required_build.rootfs_link}}})
@@ -33,46 +34,25 @@ Please download the belowed needed files and tools:
 {{#vendor_image.link}}
 - [{{vendor_image.text}}]({{{vendor_image.link}}})
 {{/vendor_image.link}}
+{{#recovery.link}}
+- [{{recovery.text}}]({{{recovery.link}}})
+{{/recovery.link}}
 
 ## Device preparation
-{{#isManufacturerXiaomi}}
-- A USB 2.0 port/hub with an actual USB 2.0 controller is recommended (Using `fastboot` on a USB 3.0 port may cause errors with some Xiaomi devices)
-{{/isManufacturerXiaomi}}
 - Save your APN (Android)
     - The `Access Point Name` or `APN` can be found in the Settings menu of Android
     - Take a piece of paper or a text editor, and write down everything that you see on that screen
     - These are likely to include a URL (e. g., `internet.carrier.net`), a username, and possibly a password
-- Unlock the bootloader (using Computer)
+    - APN settings can also be found at [apn.how](http://apn.how/)
+- Unlock the bootloader (using a computer)
     - Refer to the instructions provided by the device manufacturer
-    - Other useful sources include the [LineageOS wiki](https://wiki.lineageos.org/devices/) and [xda-developers](https://www.xda-developers.com/search2/)
+    - Other useful sources include the [LineageOS wiki](https://wiki.lineageos.org/devices/) and [xda-developers](https://forum.xda-developers.com/)
 {{#recovery.must_flash}}
-Flash recovery (using Computer)
-    - Flash {{{recovery.name}}} to your device by running `fastboot flash recovery {{{recovery.filename}}}`
+- Flash recovery (using a computer)
+    - Flash {{{recovery.name}}} to your device.
     - Boot into recovery by pressing {{{recovery_mode}}}
     - If your device boots to the stock recovery menu at some point, you should repeat this step.
 {{/recovery.must_flash}}
-{{^recovery.must_flash}}
-- Boot into recovery (Computer)
-    - Boot {{{recovery.name}}} by running `fastboot boot {{{recovery.filename}}}`
-{{/recovery.must_flash}}
-- Wipe the device (using {{{recovery.name}}})
-    - Go to the `Wipe` menu
-    - Select `Advanced wipe`
-    - Tick the boxes called `Dalvik / ART cache`, `Cache`, `System`, `Data`
-    - Swipe to Wipe
-    - Go back to the previous menu
-    - Choose `Format data` and type `yes`
-    - Go back to the main menu and select `Reboot`
-    {{#recovery.must_flash}}
-    - Choose `Recovery`
-    {{/recovery.must_flash}}
-    {{^recovery.must_flash}}
-    - Choose `Bootloader`
-    - Boot {{{recovery.name}}} again by running `fastboot boot {{{recovery.filename}}}`
-    {{/recovery.must_flash}}
-- Copy the files to the device  (Computer)
-    - When {{{recovery.name}}} is booted, open the device's `Internal storage` from your computer
-    - Copy all of the files you downloaded to this folder
 
 ## Droidian installation
 {{#vendor_image}}
@@ -82,6 +62,11 @@ Flash recovery (using Computer)
     - Alternatively, you can enter fastboot mode and `fastboot flash vendor {{{vendor_image.filename}}}`
 {{/vendor_image.filename}}
 {{/vendor_image}}
+- Extract the downloaded zip file
+- Boot to fastboot (or fastbootd in TWRP or any recovery for Samsung devices) and run `flash_all.sh` to flash the image to your device. To flash each partition manually
+    - Check the list of images in `data/` and flash each image manually like so: `fastboot flash partition_name partition_name.img`
+    - The following images might be included: `boot.img`, `dtbo.img`, `vbmeta.img`, `userdata.img`.
+- Reboot
 
 Congratulations, if everything went well you should be booted into Droidian.
 

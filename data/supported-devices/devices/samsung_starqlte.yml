@@ -1,61 +1,36 @@
-templateName: exynos9810_template
+templateName: fastboot_template
 manufacturer: Samsung
-name: Galaxy S9 (Exynos)
-codename: starlte
-support: community
+name: Galaxy S9 (Qualcomm)
+codename: starqlte
+support: official
 device_type: phone
 halium_version: 10
-fastboot_mode: '`Vol-` and `Power` and `Bixby`'
+fastboot_mode: '`Vol+` and `Power` and `Bixby`'
 recovery_mode: '`Vol+` and `Power` and `Bixby`'
 ab_slot: false
 api_version: API29
 arch: arm64
 channel: nightly
-droidian_release: https://github.com/droidian-images/droidian/releases
 notes_before_you_start:
   - text: Device has to be downgraded to stock Android 10 before installation
 is_specific_build_of_drodian_required : true
+droidian_release: https://images.droidian.org/droidian/nightly/arm64/samsung/image-fastboot-starqlte.zip
 droidian_required_build:
-  rootfs_link: https://github.com/droidian-images/droidian/releases
-  devtools_link: https://github.com/droidian-images/droidian/releases
-android:
-  link: https://samfw.com/firmware/SM-G960F/bit/all/av/Q(Android%2010)
-  text: Android 10 (Q) stock firmware
-  filename:
-vendor_image:
-  link: https://github.com/Sexynos/droidian-kernel-samsung-exynos9810/releases/download/starlte/vendor.img
-  text: Vendor image
-  filename: vendor.img
-boot:
-  link: https://github.com/Sexynos/droidian-kernel-samsung-exynos9810/releases/download/starlte/boot-starlte.img
-  text: Boot image
-  filename: boot-starlte.img
+  rootfs_link: https://images.droidian.org/droidian/nightly/arm64/samsung/image-fastboot-starqlte.zip
 recovery:
   name: TWRP
-  link: https://dl.twrp.me/starlte/
+  link: https://github.com/droidian-starqlte/android_kernel_samsung_sdm845/releases/download/starqlte/recovery.img
   text: TWRP Recovery
-  filename: TWRP.img
-  must_flash:
-adaptation:
-  link: https://github.com/Sexynos/adaptation-exynos9810-script/releases/download/stable/adaptation-exynos9810-script.zip
-  text: Adaptation (unofficial)
-  filename: adaptation-exynos9810-script.zip
+  filename: recovery.img
+  must_flash: true
 credit:
   - name: FakeShell (Bardia Moshiri)
     link: https://github.com/fakeshell
-  - name: JeyKul (Tester)
-    link: https://github.com/JeyKul
-  - name: SolAZDev and TheKit
-    link: https://gitlab.com/ubports/porting/community-ports/android10/samsung-galaxy-s9
 notes:
   - title: Default password
     text: The default password is `1234`.
   - title: APN
     text: Mobile data needs an APN to be set up from Settings -> Mobile Network -> Access Point Names.
-  - title: Audio
-    text: Audio is inconsistent and does not work on all boots
-  - title: Calls
-    text: Because of the audio issue user might not be able to hear audio in calls either.
 port_status:
   - id: "Brightness control"
     value: "✅"
@@ -66,11 +41,11 @@ port_status:
   - id: "Vibration"
     value: "✅"
   - id: "Photo"
-    value: "❌"
+    value: "✅"
   - id: "Video"
     value: "❌"
   - id: "Switch camera"
-    value: "❌"
+    value: "✅"
   - id: "Carrier info"
     value: "🧩"
   - id: "Data"
@@ -94,17 +69,17 @@ port_status:
   - id: "Flight mode"
     value: "✅"
   - id: "Hotspot"
-    value: "❔"
+    value: "✅"
   - id: "NFC"
-    value: "❔"
+    value: "✅"
   - id: "WiFi"
     value: "✅"
   - id: "Auto brightness"
     value: "✅"
   - id: "Fingerprint"
-    value: "❔"
+    value: "✅"
   - id: "GPS"
-    value: "❔"
+    value: "✅"
   - id: "Proximity"
     value: "✅"
   - id: "Rotation"
@@ -112,16 +87,16 @@ port_status:
   - id: "Touchscreen"
     value: "✅"
   - id: "Headphones"
-    value: "🧩"
+    value: "✅"
   - id: "Speaker"
-    value: "🧩"
+    value: "✅"
   - id: "Microphone"
-    value: "🧩"
+    value: "✅"
   - id: "MTP"
-    value: "❔"
+    value: "✅"
   - id: "External display"
-    value: "❌"
+    value: "✅"
   - id: "Encryption"
     value: "❌"
   - id: "Waydroid"
-    value: "❌"
+    value: "✅"

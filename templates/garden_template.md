@@ -10,15 +10,16 @@ title: {{{manufacturer}}} {{{name}}} ({{{codename}}})
 
 {{{port_status}}}
 
-> **Make a backup now, as your device will be wiped.**
-
-{{#notes_before_you_start}}
+{{#hasNotesBeforeStart}}
 ## Before you proceed
-{{text}}
+{{#notes_before_you_start}}
+> {{text}}
 
 {{/notes_before_you_start}}
+{{/hasNotesBeforeStart}}
+
 ## Downloading the needed files and tools
-Please download the belowed needed files and tools:
+Please download the mentioned needed files and tools:
 {{#is_specific_build_of_drodian_required}}
 {{#droidian_required_build.rootfs_link}}
 - [Droidian `rootfs`]({{{droidian_required_build.rootfs_link}}}) (specific build required)
@@ -67,17 +68,18 @@ Please download the belowed needed files and tools:
     - The `Access Point Name` or `APN` can be found in the Settings menu of Android
     - Take a piece of paper or a text editor, and write down everything that you see on that screen
     - These are likely to include a URL (e. g., `internet.carrier.net`), a username, and possibly a password
-- Unlock the bootloader (using Computer)
+    - APN settings can also be found at [apn.how](http://apn.how/)
+- Unlock the bootloader (using a computer)
     - Refer to the instructions provided by the device manufacturer
-    - Other useful sources include the [LineageOS wiki](https://wiki.lineageos.org/devices/) and [xda-developers](https://www.xda-developers.com/search2/)
+    - Other useful sources include the [LineageOS wiki](https://wiki.lineageos.org/devices/) and [xda-developers](https://forum.xda-developers.com/)
 {{#recovery.must_flash}}
-Flash recovery (using Computer)
+Flash recovery (using a computer)
     - Flash {{{recovery.name}}} to your device by running `fastboot flash recovery {{{recovery.filename}}}`
     - Boot into recovery by pressing {{{recovery_mode}}}
     - If your device boots to the stock recovery menu at some point, you should repeat this step.
 {{/recovery.must_flash}}
 {{^recovery.must_flash}}
-- Boot into recovery (Computer)
+- Boot into recovery (computer)
     - Boot {{{recovery.name}}} by running `fastboot boot {{{recovery.filename}}}`
 {{/recovery.must_flash}}
 - Wipe the device (using {{{recovery.name}}})
@@ -95,7 +97,7 @@ Flash recovery (using Computer)
     - Choose `Bootloader`
     - Boot {{{recovery.name}}} again by running `fastboot boot {{{recovery.filename}}}`
     {{/recovery.must_flash}}
-- Copy the files to the device  (Computer)
+- Copy the files to the device (computer)
     - When {{{recovery.name}}} is booted, open the device's `Internal storage` from your computer
     - Copy all of the files you downloaded to this folder
 

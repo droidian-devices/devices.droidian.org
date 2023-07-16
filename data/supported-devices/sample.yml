@@ -1,18 +1,18 @@
 - templateName: default_template
-  manufacturer: unknown # modify to add device manufacturer's name.Eg: Sony,Samsung,Xiaomi
-  name: unknown # modify to add device's name.Eg: Pixel 3a 
-  codename: unknown # modify to add device's codename.sargo, miatoll 
+  manufacturer: unknown # modify to add device manufacturer's name.Eg: (Sony, Samsung, Xiaomi, etc)
+  name: unknown # modify to add device's name. Eg: Pixel 3a
+  codename: unknown # modify to add device's codename. (sargo, miatoll, etc)
   support: community # possible values: community / official
   device_type: phone # possible values: phone / tablet
   halium_version: 9 # version of halium used to build the port.
-  fastboot_mode: '`Vol-` and `Power`' # button combination to be pressed for booting in fastboot mode 
-  recovery_mode: '`Vol+` and `Power`' #button combination to be pressed for booting in recovery mode
-  ab_slot:  true # Ste to true if the device has A/B slots, else leave empty if not
+  fastboot_mode: '`Vol-` and `Power`' # button combination to be pressed for booting in fastboot mode
+  recovery_mode: '`Vol+` and `Power`' # button combination to be pressed for booting in recovery mode
+  ab_slot:  true # Set to true if the device has A/B slots, else leave empty if not
   api_version: API28 # version of the android API used for the device .Eg: API28
-  arch: arm64 # device architecture EG: arm64, arm32
-  channel:    #stable/nightly
+  arch: arm64 # device architecture Eg: arm64, arm32
+  channel:    # stable/nightly
   notes_before_you_start: # any warning that you want user to know before starting with installation like issues with to not to use specific version of droidian.
-  droidian_release: https://github.com/droidian-images/rootfs-api28gsi-all/releases # A link to the corresponding Droidian release
+  droidian_release: https://github.com/droidian-images/droidian/releases
   is_specific_build_of_drodian_required : true # Some devices might need a specific build of droidian, set true if so  otherwise false
   droidian_required_build: # Some devices might need a specific build, links to the files can be specified here, otherwise leave empty
       rootfs_link:
@@ -58,7 +58,7 @@
   recovery:
       name:
       link:
-      text: 
+      text:
       filename:
       direct_download_link:
       must_flash:
@@ -70,163 +70,83 @@
   statuspage:
   contact:
       text:
-      link:  
+      link:
   credit:
       -  name:
          link:
   command:
   notes:
   port_status:
-  # + : working 
+  # + : working
   # - : not working
   # ~ : partially working
   # ? : status unknown.Needs to be tested
   # x : Not Supported / No Hardware support
-  - category_name: "Actors"
-    features:
-      - id: "manual_brightness"
+      - id: "Brightness control"
         value: "?"
-        comments: ""
-      - id: "notification_led"
+      - id: "Notification LED"
         value: "?"
-        comments: ""
-      - id: "torchlight"
+      - id: "Flashlight"
         value: "?"
-        comments: ""
-      - id: "vibration"
+      - id: "Vibration"
         value: "?"
-        comments: ""
-  - category_name: "Camera"
-    features:
-      - id: "flashlight"
+      - id: "Photo"
         value: "?"
-        comments: ""
-      - id: "photo"
+      - id: "Video"
         value: "?"
-        comments: ""
-      - id: "video"
+      - id: "Switch camera"
         value: "?"
-        comments: ""
-      - id: "switch_camera"
+      - id: "Carrier info"
         value: "?"
-        comments: ""
-  - category_name: "Cellular"
-    features:
-      - id: "carrier_info"
+      - id: "Data"
         value: "?"
-        comments: ""
-      - id: "data_connection"
+      - id: "Dual sim"
         value: "?"
-        comments: ""
-      - id: "dual_sim"
+      - id: "Calls"
         value: "?"
-        comments: ""
-      - id: "calls"
+      - id: "MMS"
         value: "?"
-        comments: ""
-      - id: "mms"
+      - id: "SMS"
         value: "?"
-        comments: ""
-      - id: "pin_unlock"
+      - id: "Volume control"
         value: "?"
-        comments: ""
-      - id: "sms"
+      - id: "Battery percentage"
         value: "?"
-        comments: ""
-      - id: "audio_routings"
+      - id: "Offline charging"
         value: "?"
-        comments: ""
-      - id: "voice_call"
+      - id: "Online charging"
         value: "?"
-        comments: ""
-      - id: "volume_control"
+      - id: "SD card"
         value: "?"
-        comments: ""
-  - category_name: "Misc"
-    features:
-      - id: "battery_percentage"
+      - id: "Bluetooth"
         value: "?"
-        comments: ""
-      - id: "offline_charging"
+      - id: "Flight mode"
         value: "?"
-        comments: ""
-      - id: "online_charging"
+      - id: "Hotspot"
         value: "?"
-        comments: ""
-      - id: "rtc_time"
+      - id: "NFC"
         value: "?"
-        comments: ""
-      - id: "sd_card"
+      - id: "WiFi"
         value: "?"
-        comments: ""
-      - id: "shutdown"
+      - id: "Auto brightness"
         value: "?"
-        comments: ""
-      - id: "wirelessCharging"
+      - id: "Fingerprint"
         value: "?"
-        comments: ""
-      - id: "wireless_external_monitor"
+      - id: "GPS"
         value: "?"
-        comments: ""
-  - category_name: "Network"
-    features:
-      - id: "bluetooth"
+      - id: "Proximity"
         value: "?"
-        comments: ""
-      - id: "flight_mode"
+      - id: "Rotation"
         value: "?"
-        comments: ""
-      - id: "hotspot"
+      - id: "Touchscreen"
         value: "?"
-        comments: ""
-      - id: "nfc"
+      - id: "Headphones"
         value: "?"
-        comments: ""
-      - id: "wifi"
+      - id: "Speaker"
         value: "?"
-        comments: ""
-  - category_name: "Sensors"
-    features:
-      - id: "auto_brightness"
+      - id: "Microphone"
         value: "?"
-        comments: ""
-      - id: "fingerprint"
+      - id: "MTP"
         value: "?"
-        comments: ""
-      - id: "gps"
+      - id: "External display"
         value: "?"
-        comments: ""
-      - id: "proximity"
-        value: "?"
-        comments: ""
-      - id: "rotation"
-        value: "?"
-        comments: ""
-      - id: "touchscreen"
-        value: "?"
-        comments: ""
-  - category_name: "Sound"
-    features:
-      - id: "earphones"
-        value: "?"
-        comments: ""
-      - id: "loudspeaker"
-        value: "?"
-        comments: ""
-      - id: "microphone"
-        value: "?"
-        comments: ""
-      - id: "volume_control"
-        value: "?"
-        comments: ""
-  - category_name: "USB"
-    features:
-      - id: "mtp"
-        value: "?"
-        comments: ""
-      - id: "adb"
-        value: "?"
-        comments: ""
-      - id: "wired_external_monitor"
-        value: "?"
-        comments: ""

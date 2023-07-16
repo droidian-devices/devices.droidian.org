@@ -2,7 +2,10 @@
 draft: false
 title: {{manufacturer}} {{name}} ({{codename}})
 ---
+> {{{port_status}}}
+
 > **Make a backup now, as your device will be wiped.**
+
 {{#notes_before_you_start}}
 ## Before you proceed
 {{text}}
@@ -131,5 +134,3 @@ You can find a list of mobile-friendly Linux applications at [LinuxPhoneApps](ht
 
 {{/credit}}
 [Droidian](http://droidian.org/) [Mobian](https://mobian-project.org/) [UBports](https://ubuntu-touch.io/)
-
-

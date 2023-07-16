@@ -114,7 +114,7 @@ const deviceSchema = object({
   credit: array().of(object({ name: OSF, link: OLF  })).nullable(),
   command: array().of(OSF).nullable(),
   notes: array().of(object({ title: OSF, text: OSF })).nullable(),
-  port_status: array().of(object({ category_name: RSF, features: array().of(object({ id: RSF, value: RSF, comments: OSF })) })),
+  port_status: array().of(object({ id: RSF, value: RSF })),
 });
 
 async function isDeviceSchemaValid(deviceConfigData, fileName) {

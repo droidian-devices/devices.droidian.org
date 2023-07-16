@@ -2,7 +2,7 @@
 draft: false
 title: {{manufacturer}} {{name}} ({{codename}})
 ---
-> {{{port_status}}}
+{{{port_status}}}
 
 > **Make a backup now, as your device will be wiped.**
 

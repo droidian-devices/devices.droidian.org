@@ -68,7 +68,6 @@ These devices are supported by members of the Droidian community. Device-specifi
 - **Poco / Xiaomi**
     |  |  |
     | --- | --- |
-    | Xiaomi Redmi Note 7 Pro (violet) | [install guide](/devices/violet/) |
     | Xiaomi Redmi 9A/9AT (dandelion) | [install guide](https://github.com/droidian-mt6765/droidian-images-dandelion) |
 - **Samsung**
     |  |  |
@@ -105,6 +104,6 @@ If you are interested in maintaining the device or contributing to its progress,
     | Xiaomi Poco X3 (karna) | |
     | Xiaomi Poco X3 NFC (surya) | |
     | Xiaomi MIX 3 (perseus) | |
-
+    | Xiaomi Redmi Note 7 Pro (violet) | |
 
  > If you have managed to run Droidian on a device that is not listed above please raise a pull request to add the device [here](https://github.com/droidian-devices/devices.droidian.org).

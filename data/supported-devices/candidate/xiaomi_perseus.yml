@@ -12,7 +12,7 @@ api_version: API28
 arch: arm64
 channel: stable
 droidian_release: https://github.com/droidian-images/droidian/releases
-is_specific_build_of_drodian_required: false
+is_specific_build_of_droidian_required: false
 android:
   link: https://xiaomifirmwareupdater.com/download/?file=fw-vendor_perseus_miui_MIMIX3_9.9.3_a9dbc91c30_9.0.zip
   text: Android 9 (Pie) stock firmware

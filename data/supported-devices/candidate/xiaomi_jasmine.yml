@@ -12,7 +12,7 @@ api_version: API28
 arch: arm64
 channel: stable
 droidian_release: https://github.com/droidian-images/droidian/releases
-is_specific_build_of_drodian_required : true
+is_specific_build_of_droidian_required : true
 droidian_required_build:
   rootfs_link:
   devtools_link:

@@ -33,8 +33,7 @@ async function main() {
     deviceConfig = {
       ...deviceConfig,
       hasNotesBeforeStart: deviceConfig.notes_before_you_start && deviceConfig.notes_before_you_start.length > 0,
-      isManufacturerXiaomi:
-        deviceConfig.manufacturer.toLowerCase().trim() === "xiaomi",
+      isManufacturerXiaomi: deviceConfig.manufacturer ? deviceConfig.manufacturer.toLowerCase().trim() === "xiaomi" : false,
       isNightlyBuild: deviceConfig.channel === "nightly",
       isCommandProvided: deviceConfig.command?.length > 0,
       isTwrpRecovery: recoveryName ? recoveryName === "twrp" : false,

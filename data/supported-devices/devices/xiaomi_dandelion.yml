@@ -13,7 +13,7 @@ arch: armhf
 channel: nightly
 notes_before_you_start:
   - text: Device has to be downgraded to stock Android 10
-is_specific_build_of_drodian_required : true
+is_specific_build_of_droidian_required: true
 droidian_release: https://github.com/droidian-mt6765/droidian-images-dandelion/releases/download/ubports-installer/droidian-UNOFFICIAL_xiaomi_dandelion-armhf-phosh-phone-29.zip
 droidian_required_build:
   rootfs_link: https://github.com/droidian-mt6765/droidian-images-dandelion/releases/download/ubports-installer/droidian-UNOFFICIAL_xiaomi_dandelion-armhf-phosh-phone-29.zip

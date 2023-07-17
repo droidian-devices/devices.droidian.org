@@ -17,7 +17,7 @@ notes_before_you_start:
   - text: Redmi Note 9S and 9 Pro (India variant) require stock MIUI 12.0.4
   - text: Redmi Note 9 Pro Max requires stock MIUI 12.0.2
   - text: Poco M2 Pro requires stock MIUI 12.0.4
-is_specific_build_of_drodian_required : true
+is_specific_build_of_droidian_required: true
 droidian_release: https://images.droidian.org/droidian/nightly/arm64/xiaomi/image-fastboot-miatoll.zip
 droidian_required_build:
   rootfs_link: https://images.droidian.org/droidian/nightly/arm64/xiaomi/image-fastboot-miatoll.zip

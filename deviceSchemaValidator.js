@@ -84,7 +84,7 @@ const deviceSchema = object({
   isTwrpRecovery: RBF,
 
   templateName: RSF,
-  manufacturer: OSF,
+  manufacturer: RSF,
   name: RSF,
   codename: RSF,
   support: RSF,
@@ -98,7 +98,7 @@ const deviceSchema = object({
   channel: RSF,
   notes_before_you_start: array().of(object({ text: RSF })),
   droidian_release: RSF,
-  is_specific_build_of_drodian_required: RBF,
+  is_specific_build_of_droidian_required: RBF,
   droidian_required_build: object({
     rootfs_link: OLF,
     devtools_link: OLF,

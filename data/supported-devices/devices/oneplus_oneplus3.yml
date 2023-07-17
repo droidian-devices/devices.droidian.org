@@ -1,6 +1,6 @@
 templateName: default_template
 manufacturer: OnePlus
-name: OnePlus 3/3T
+name: 3/3T
 codename: oneplus3
 support: official
 device_type: phone
@@ -53,8 +53,6 @@ notes:
     text: The default password is `1234`.
   - title: Unlocking SIM
     text: After entering a pin code to unlock your SIM card, you need to restart the Settings application to get access to the Mobile Network settings because the menu doesn't update automatically.
-  - title: APN Settings
-    text: "Mobile data needs an APN to be set up from Settings -> Mobile Network -> Access Point Names. You can get the apn settings for your carrier from `https://apn.how`"
   - title: Empty APN dialog
     text: "If you get an empty Access Points window even after you have entered the info, ofono is not working properly. Run the command 'sudo systemctl restart ofono.service' to solve the issue."
   - title: Dual SIM
@@ -67,13 +65,13 @@ notes:
     text: Currently GPU only works partially in Droidian, but in Waydroid it works perfectly.
 port_status:
   - id: "Brightness control"
-    value: "✔️ "
+    value: "✅"
   - id: "Notification LED"
-    value: "✔️ "
+    value: "✅"
   - id: "Flashlight"
-    value: "✔️ "
+    value: "✅"
   - id: "Vibration"
-    value: "✔️ "
+    value: "✅"
   - id: "Photo"
     value: "❌"
   - id: "Video"
@@ -81,34 +79,32 @@ port_status:
   - id: "Switch camera"
     value: "❌"
   - id: "Carrier info"
-    value: "✔️ "
+    value: "🧩"
   - id: "Data"
-    value: "✔️ "
+    value: "✅"
   - id: "Dual sim"
     value: "❌"
   - id: "Calls"
-    value: "✔️ "
+    value: "✅"
   - id: "SMS"
-    value: "✔️ "
+    value: "✅"
   - id: "Volume control"
-    value: "✔️ "
+    value: "✅"
   - id: "Tristate switch"
-    value: "✔️ "
+    value: "✅"
   - id: "Battery percentage"
-    value: "✔️ "
+    value: "✅"
   - id: "Charging"
-    value: "✔️ "
+    value: "✅"
   - id: "Hotspot"
-    value: "✔️ "
-  - id: "USB Tethering"
-    value: "✔️ "
+    value: "✅"
   - id: "NFC"
-    value: "✔️ "
+    value: "✅"
   - id: "Waydroid"
-    value: "✔️ "
+    value: "✅"
   - id: "Proximity sensor"
-    value: "✔️ "
+    value: "✅"
   - id: "Auto rotation"
-    value: "✔️ "
+    value: "✅"
   - id: "Fingerprint"
     value: "🧩"

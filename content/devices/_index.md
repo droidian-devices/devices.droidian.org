@@ -41,7 +41,7 @@ You can ask for help at the [Droidian Telegram](https://t.me/DroidianLinux) grou
 - **Oneplus**
     |  |  |
     | --- | --- |
-    | Oneplus 3/3T (oneplus3/oneplus3t) | [details](https://github.com/droidian-images/droidian#droidian) |
+    | Oneplus 3/3T (oneplus3) | [details](/devices/oneplus3) |
 - **Poco / Xiaomi**
     |  |  |
     | --- | --- |

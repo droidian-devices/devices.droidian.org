@@ -11,13 +11,11 @@ ab_slot: false
 api_version: API29
 arch: arm64
 channel: nightly
-droidian_release: https://github.com/droidian-images/droidian/releases
 notes_before_you_start:
   - text: Device has to be downgraded to stock Android 10 before installation
 is_specific_build_of_droidian_required: true
-droidian_required_build:
-  rootfs_link: https://github.com/droidian-images/droidian/releases
-  devtools_link: https://github.com/droidian-images/droidian/releases
+rootfs_link: https://github.com/droidian-images/droidian/releases
+devtools_link: https://github.com/droidian-images/droidian/releases
 android:
   link: https://samfw.com/firmware/SM-N960F/bit/all/av/Q(Android%2010)
   text: Android 10 (Q) stock firmware

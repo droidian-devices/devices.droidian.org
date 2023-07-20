@@ -21,9 +21,9 @@ title: {{{manufacturer}}} {{{name}}} ({{{codename}}})
 ## Downloading the needed files and tools
 Please download the mentioned needed files and tools:
 {{#is_specific_build_of_drodian_required}}
-{{#droidian_required_build.rootfs_link}}
-- [Droidian `image`]({{{droidian_required_build.rootfs_link}}})
-{{/droidian_required_build.rootfs_link}}
+{{#rootfs_link}}
+- [Droidian `image`]({{{rootfs_link}}})
+{{/rootfs_link}}
 {{/is_specific_build_of_drodian_required}}
 {{#android.link}}
 - [{{android.text}}]({{{android.link}}})

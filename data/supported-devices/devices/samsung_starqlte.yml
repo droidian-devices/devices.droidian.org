@@ -14,9 +14,7 @@ channel: nightly
 notes_before_you_start:
   - text: Device has to be downgraded to stock Android 10 before installation
 is_specific_build_of_droidian_required: true
-droidian_release: https://images.droidian.org/droidian/nightly/arm64/samsung/image-fastboot-starqlte.zip
-droidian_required_build:
-  rootfs_link: https://images.droidian.org/droidian/nightly/arm64/samsung/image-fastboot-starqlte.zip
+rootfs_link: https://images.droidian.org/droidian/nightly/arm64/samsung/image-fastboot-starqlte.zip
 recovery:
   name: TWRP
   link: https://github.com/droidian-starqlte/android_kernel_samsung_sdm845/releases/download/starqlte/recovery.img

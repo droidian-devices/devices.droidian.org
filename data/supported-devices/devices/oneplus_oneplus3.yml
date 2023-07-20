@@ -19,9 +19,7 @@ notes_before_you_start:
   - text: "Lastly, boot back into recovery, go to `Wipe` -> `Advanced Wipe` -> Select everything except `Vendor` and `USB-OTG`, then `Swipe to Wipe`. Then reboot back into recovery."
   - text: "Now your device is treblized and you can proceed to install Droidian."
 is_specific_build_of_droidian_required: true
-droidian_release: https://images.droidian.org/droidian/nightly/arm64/oneplus/image-fastboot-oneplus3.zip
-droidian_required_build:
-  rootfs_link: https://images.droidian.org/droidian/nightly/arm64/oneplus/image-fastboot-oneplus3.zip
+rootfs_link: https://images.droidian.org/droidian/nightly/arm64/oneplus/image-fastboot-oneplus3.zip
 firmware:
     link: https://github.com/nvertigo/firmware-3t/tree/master/archive
     text: Firmware for OnePlus 3 and OnePlus 3T. Make sure you install the correct one as firmware is device specific.

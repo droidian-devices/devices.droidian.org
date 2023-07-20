@@ -21,12 +21,12 @@ title: {{manufacturer}} {{name}} ({{codename}})
 ## Downloading the needed files and tools
 Please download the mentioned needed files and tools:
 {{#is_specific_build_of_drodian_required}}
-{{#droidian_required_build.rootfs_link}}
-- [Droidian `rootfs`]({{{droidian_required_build.rootfs_link}}}) (specific build required)
-{{/droidian_required_build.rootfs_link}}
-{{#droidian_required_build.devtools_link}}
-- [Droidian `devtools`]({{{droidian_required_build.devtools_link}}}) (specific build required)
-{{/droidian_required_build.devtools_link}}
+{{#rootfs_link}}
+- [Droidian `rootfs`]({{{rootfs_link}}}) (specific build required)
+{{/rootfs_link}}
+{{#devtools_link}}
+- [Droidian `devtools`]({{{devtools_link}}}) (specific build required)
+{{/devtools_link}}
 {{/is_specific_build_of_drodian_required}}
 {{^is_specific_build_of_drodian_required}}
 - [Droidian `rootfs` and `devtools`](https://github.com/droidian-images/droidian/releases) for `{{arch}}` (nightly releases include devtools)

@@ -14,9 +14,7 @@ channel: nightly
 notes_before_you_start:
   - text: Device has to be downgraded to stock Android 9
 is_specific_build_of_droidian_required: true
-droidian_release: https://images.droidian.org/droidian/nightly/arm64/xiaomi/image-fastboot-onclite.zip
-droidian_required_build:
-  rootfs_link: https://images.droidian.org/droidian/nightly/arm64/xiaomi/image-fastboot-onclite.zip
+rootfs_link: https://images.droidian.org/droidian/nightly/arm64/xiaomi/image-fastboot-onclite.zip
 credit:
   - name: FakeShell (Bardia Moshiri)
     link: https://github.com/fakeshell

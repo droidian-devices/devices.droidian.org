@@ -11,11 +11,9 @@ ab_slot: true
 api_version: API28
 arch: arm64
 channel: stable
-droidian_release: https://github.com/droidian-images/droidian/releases
 is_specific_build_of_droidian_required : true
-droidian_required_build:
-  rootfs_link:
-  devtools_link:
+rootfs_link:
+devtools_link:
 android:
   link: https://github.com/ubports-xiaomi-sdm660/artifacts/releases/download/v0.1/jasmine_sprout_stock_android9.zip
   text: Android 9 Pie Firmware

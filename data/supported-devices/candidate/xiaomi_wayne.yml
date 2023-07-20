@@ -11,7 +11,6 @@ ab_slot: false
 api_version: API28
 arch: arm64
 channel: stable
-droidian_release: https://github.com/droidian-images/droidian/releases
 is_specific_build_of_droidian_required:  false
 android:
   link: https://github.com/ubports-xiaomi-sdm660/artifacts/releases/download/v0.1/jasmine_sprout_stock_android9.zip

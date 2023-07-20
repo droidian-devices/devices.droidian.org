@@ -11,7 +11,6 @@ ab_slot: false
 api_version: API28
 arch: arch64
 channel: stable
-droidian_release: https://github.com/droidian-images/droidian/releases
 is_specific_build_of_droidian_required : false
 firmware:
   link: https://xiaomifirmwareupdater.com/firmware/violet/weekly/9.9.3/

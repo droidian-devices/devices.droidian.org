@@ -14,9 +14,7 @@ channel: nightly
 notes_before_you_start:
   - text: Device has to be downgraded to stock Android 10
 is_specific_build_of_droidian_required: true
-droidian_release: https://images.droidian.org/droidian/nightly/armhf/xiaomi/image-fastboot-angelica.zip
-droidian_required_build:
-  rootfs_link: https://images.droidian.org/droidian/nightly/armhf/xiaomi/image-fastboot-angelica.zip
+rootfs_link: https://images.droidian.org/droidian/nightly/armhf/xiaomi/image-fastboot-angelica.zip
 credit:
   - name: FakeShell (Bardia Moshiri)
     link: https://github.com/fakeshell

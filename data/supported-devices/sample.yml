@@ -12,11 +12,9 @@
   arch: arm64 # device architecture Eg: arm64, arm32
   channel:    # stable/nightly
   notes_before_you_start: # any warning that you want user to know before starting with installation like issues with to not to use specific version of droidian.
-  droidian_release: https://github.com/droidian-images/droidian/releases
-  is_specific_build_of_droidian_required : true # Some devices might need a specific build of droidian, set true if so  otherwise false
-  droidian_required_build: # Some devices might need a specific build, links to the files can be specified here, otherwise leave empty
-      rootfs_link:
-      devtools_link:
+  is_specific_build_of_droidian_required : true # Some devices might need a specific build of droidian, set true if so otherwise false
+  rootfs_link: # if your device needs a specific build, specify the link here, otherwise leave empty
+  devtools_link: # if your device needs a specific devtools build, specify the link here, otherwise leave empty
   android:
       link: # if an android rom is flashed first to setup the device.
       text:
@@ -77,7 +75,7 @@
   command:
   notes:
   port_status:
-  # ✔️ : working
+  # ✅ : working
   # ❌ : not working
   # 🧩 : partially working
   # ❔ : untested.

@@ -95,6 +95,6 @@ port_status:
   - id: "External display"
     value: "✅"
   - id: "Encryption"
-    value: "❌"
+    value: "✅"
   - id: "Waydroid"
     value: "✅"

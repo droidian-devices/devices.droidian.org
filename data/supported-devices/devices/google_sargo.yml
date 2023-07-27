@@ -23,6 +23,8 @@ notes:
     text: The default password is `1234`.
   - title: APN
     text: Mobile data needs an APN to be set up from Settings -> Mobile Network -> Access Point Names.
+  - title: Camera
+    text: Camera is currently only usable in Waydroid `sudo apt install waydroid -y`
 port_status:
   - id: "Brightness control"
     value: "✅"
@@ -31,11 +33,11 @@ port_status:
   - id: "Vibration"
     value: "✅"
   - id: "Photo"
-    value: "❌"
+    value: "🧩"
   - id: "Video"
     value: "❌"
   - id: "Switch camera"
-    value: "❌"
+    value: "🧩"
   - id: "Carrier info"
     value: "🧩"
   - id: "Data"

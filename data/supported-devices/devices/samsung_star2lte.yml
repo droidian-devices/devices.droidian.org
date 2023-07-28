@@ -1,4 +1,4 @@
-templateName: exynos9810_template
+templateName: fastboot_template
 manufacturer: Samsung
 name: Galaxy S9+ (Exynos)
 codename: star2lte
@@ -14,37 +14,16 @@ channel: nightly
 notes_before_you_start:
   - text: Device has to be downgraded to stock Android 10 before installation
 is_specific_build_of_droidian_required: true
-rootfs_link: https://github.com/droidian-images/droidian/releases
-devtools_link: https://github.com/droidian-images/droidian/releases
+rootfs_link: https://github.com/Sexynos/droidian-images-star2lte/releases/tag/nightly
 android:
   link: https://samfw.com/firmware/SM-G965F/bit/all/av/Q(Android%2010)
   text: Android 10 (Q) stock firmware
   filename:
-vendor_image:
-  link: https://github.com/Sexynos/droidian-kernel-samsung-exynos9810/releases/download/star2lte/vendor.img
-  text: Vendor image
-  filename: vendor.img
-boot:
-  link: https://github.com/Sexynos/droidian-kernel-samsung-exynos9810/releases/download/star2lte/boot-star2lte.img
-  text: Boot image
-  filename: boot-star2lte.img
-recovery:
-  name: TWRP
-  link: https://dl.twrp.me/star2lte/
-  text: TWRP Recovery
-  filename: TWRP.img
-  must_flash:
-adaptation:
-  link: https://github.com/Sexynos/adaptation-exynos9810-script/releases/download/stable/adaptation-exynos9810-script.zip
-  text: Adaptation (unofficial)
-  filename: adaptation-exynos9810-script.zip
 credit:
   - name: FakeShell (Bardia Moshiri)
     link: https://github.com/fakeshell
-  - name: JeyKul (Tester)
+  - name: JeyKul
     link: https://github.com/JeyKul
-  - name: SolAZDev and TheKit
-    link: https://gitlab.com/ubports/porting/community-ports/android10/samsung-galaxy-s9
 notes:
   - title: Default password
     text: The default password is `1234`.
@@ -54,6 +33,10 @@ notes:
     text: Audio is inconsistent and does not work on all boots
   - title: Calls
     text: Because of the audio issue user might not be able to hear audio in calls either.
+  - title: Camera
+    text: Camera currently works in Waydroid only. `sudo apt install waydroid`
+  - title: Apps
+    text: Apps are slow and some freeze at times. this is an issue with the exynos chipset.
 port_status:
   - id: "Brightness control"
     value: "✅"
@@ -64,11 +47,11 @@ port_status:
   - id: "Vibration"
     value: "✅"
   - id: "Photo"
-    value: "❌"
+    value: "🧩"
   - id: "Video"
     value: "❌"
   - id: "Switch camera"
-    value: "❌"
+    value: "🧩"
   - id: "Carrier info"
     value: "🧩"
   - id: "Data"
@@ -92,7 +75,7 @@ port_status:
   - id: "Flight mode"
     value: "✅"
   - id: "Hotspot"
-    value: "❔"
+    value: "✅"
   - id: "NFC"
     value: "❔"
   - id: "WiFi"
@@ -100,7 +83,7 @@ port_status:
   - id: "Auto brightness"
     value: "✅"
   - id: "Fingerprint"
-    value: "❔"
+    value: "✅"
   - id: "GPS"
     value: "❔"
   - id: "Proximity"
@@ -122,4 +105,4 @@ port_status:
   - id: "Encryption"
     value: "❌"
   - id: "Waydroid"
-    value: "❌"
+    value: "✅"

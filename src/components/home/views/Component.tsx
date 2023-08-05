@@ -1,17 +1,33 @@
 import React from 'react';
-import { Container, ContainerBody, PanelHeader } from '../../customs';
+import { Container, Header, OverflowContainerBody, PanelHeader } from '../../customs';
 import * as animation from '../../../animation';
-import { HomeHeader } from '../themed';
+import { HomeHeader, HomeIcon } from '../themed';
 
 const Home: React.FC = () => {
   return (
-    <Container variants={animation.slowSlideRight} initial="init" animate="visible" exit="exit">
-      <HomeHeader>
-        <div>
-          <PanelHeader>Droidian devices</PanelHeader>
-        </div>
-      </HomeHeader>
-      <ContainerBody $justify="space-between">Home page</ContainerBody>
+    <Container variants={animation.slideRight} initial="init" animate="visible" exit="exit">
+      <OverflowContainerBody $justify="space-evenly" $direction="row" $align="flex-start">
+        <HomeHeader>
+          <div>
+            <PanelHeader>Droidian devices</PanelHeader>
+          </div>
+        </HomeHeader>
+        <HomeIcon>
+          <i className="icon-ok-squared" />
+          <Header $full>Devices</Header>
+          <p>Devices that can run Droidian</p>
+        </HomeIcon>
+        <HomeIcon>
+          <i className="icon-graduation-cap" />
+          <Header $full>Porting guide</Header>
+          <p>Official Droidian devices porting guide</p>
+        </HomeIcon>
+        <HomeIcon>
+          <i className="icon-download" />
+          <Header $full>Get droidian</Header>
+          <p>Latest images from CI</p>
+        </HomeIcon>
+      </OverflowContainerBody>
     </Container>
   );
 };

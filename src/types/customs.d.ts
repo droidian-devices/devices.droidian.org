@@ -16,11 +16,6 @@ export interface ITextProps extends IDefaultChildren {
   $full?: boolean;
 }
 
-export interface IInputProps extends IDefaultChildren {
-  $full?: boolean;
-  $centerText?: boolean;
-}
-
 export interface INavContentProps extends IContainerProps {
   $active?: boolean;
 }

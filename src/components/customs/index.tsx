@@ -5,7 +5,6 @@ import { ThemeProvider } from 'styled-components';
 export * from './buttons';
 export * from './generic';
 export * from './containers';
-export * from './forms';
 export * from './text';
 
 const Theme: React.FC<{

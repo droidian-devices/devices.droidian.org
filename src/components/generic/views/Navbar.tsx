@@ -5,7 +5,7 @@ import { Link } from '../../customs';
 
 const NavContent: React.FC<{ active: boolean }> = ({ active }) => {
   return (
-    <NavLinks $active={active} $justify="space-evenly" $align="flex-start">
+    <NavLinks $active={active} $justify="space-evenly" $align="flex-start" $wrap="nowrap">
       <Link to="https://droidian.org/">Home</Link>
       <Link to="https://droidian.org/blog">Blog</Link>
       <Link to="https://github.com/orgs/droidian/projects?query=is%3Aopen">Projects</Link>
@@ -21,7 +21,7 @@ const Navbar: React.FC = () => {
 
   return (
     <NavbarContainer>
-      <NavbarBody $justify="space-between" $direction="row">
+      <NavbarBody $justify="space-between" $direction="row" $noScroll>
         <HomeButton />
         <NavToggle $active={active} onClick={(): void => toggleNavbar(setActive, active)}>
           <div />

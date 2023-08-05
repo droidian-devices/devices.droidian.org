@@ -1,5 +1,0 @@
-{{/* We only process CSS if below setting is true */}}
-
-{{ range .Site.Params.custom_css }}
-  <link rel="stylesheet" href="{{ relURL (.) }}">
-{{ end }}

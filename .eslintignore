@@ -20,25 +20,18 @@ node_modules
 
 release/app/dist
 release/build
-/build
-.erb/dll
-
-# Env
-.env
 
 .idea
 npm-debug.log.*
-*.css.d.ts
+*.css.d.tsw
 *.sass.d.ts
 *.scss.d.ts
 
-# Ignore patched css
-*.css.map
+cypress.config.ts
+cypress
 
-# Ignore local cache files
-**/**/yarn.lock
-**/**/yarn-error.json
-**/**/package-lock.json
-yarn.lock
-package-lock.json
-yarn-error.json
+src/main
+.erb/**/*
+.erb/*
+
+/**/*.js

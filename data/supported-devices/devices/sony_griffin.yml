@@ -20,7 +20,7 @@ credit:
     link: https://github.com/g7
 notes:
   - title: Instructions
-    text: The community port for Sony Xperia 1 is built from the official Sony Xperia 5 port. Please refer to the [Xperia 5 installation instructions](https://devices.droidian.org/devices/angelica/) for more details.
+    text: The community port for Sony Xperia 1 is built from the official Sony Xperia 5 port. Please refer to the [Xperia 5 installation instructions](/devices/bahamut/) for more details.
 port_status:
  - id: "Status"
    value: "Please check the Xperia 5 page"

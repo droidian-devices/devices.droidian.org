@@ -1,0 +1,26 @@
+templateName: fastboot_template
+manufacturer: Sony
+name: Xperia 1
+codename: griffin
+support: community
+device_type: phone
+halium_version: 11
+fastboot_mode: 'Shut down your device, keep Vol+` pressed and then connect to the PC'
+recovery_mode: '`Vol-` and `Power`'
+ab_slot: false
+api_version: API30
+arch: arm64
+channel: nightly
+notes_before_you_start:
+  - text: You need to upgrade to the latest available stock Android 11 release (55.2.A.4.332)
+is_specific_build_of_droidian_required : true
+rootfs_link: https://github.com/g7-droidian-unofficial/droidian/releases/tag/nightly
+credit:
+  - name: Eugenio Paolantonio
+    link: https://github.com/g7
+notes:
+  - title: Instructions
+    text: The community port for Sony Xperia 1 is built from the official Sony Xperia 5 port. Please refer to the [Xperia 5 installation instructions](https://devices.droidian.org/devices/angelica/) for more details.
+port_status:
+ - id: "Status"
+   value: "Please check the Xperia 5 page"

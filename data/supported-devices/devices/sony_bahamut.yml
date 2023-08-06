@@ -1,0 +1,90 @@
+templateName: fastboot_template
+manufacturer: Sony
+name: Xperia 5
+codename: bahamut
+support: official
+device_type: phone
+halium_version: 11
+fastboot_mode: 'Shut down your device, keep Vol+` pressed and then connect to the PC'
+recovery_mode: '`Vol-` and `Power`'
+ab_slot: false
+api_version: API30
+arch: arm64
+channel: nightly
+notes_before_you_start:
+  - text: You need to upgrade to the latest available stock Android 11 release (55.2.A.4.332)
+is_specific_build_of_droidian_required : true
+rootfs_link: https://images.droidian.org/droidian/nightly/arm64/sony/image-sony-bahamut.zip
+credit:
+  - name: Eugenio Paolantonio
+    link: https://github.com/g7
+notes:
+  - title: Default password
+    text: The default password is `1234`.
+  - title: APN
+    text: Mobile data needs an APN to be set up from Settings -> Mobile Network -> Access Point Names.
+port_status:
+  - id: "Brightness control"
+    value: "✅"
+  - id: "Flashlight"
+    value: "✅"
+  - id: "Vibration"
+    value: "✅"
+  - id: "Photo"
+    value: "✅"
+  - id: "Video"
+    value: "❌"
+  - id: "Switch camera"
+    value: "🧩"
+  - id: "Carrier info"
+    value: "🧩"
+  - id: "Data"
+    value: "✅"
+  - id: "Dual sim"
+    value: "❌"
+  - id: "Calls"
+    value: "✅"
+  - id: "SMS"
+    value: "✅"
+  - id: "Volume control"
+    value: "✅"
+  - id: "Battery percentage"
+    value: "✅"
+  - id: "Charging"
+    value: "✅"
+  - id: "SD card"
+    value: "✅"
+  - id: "Bluetooth"
+    value: "✅"
+  - id: "Flight mode"
+    value: "✅"
+  - id: "Hotspot"
+    value: "🧩"
+  - id: "NFC"
+    value: "❔"
+  - id: "WiFi"
+    value: "✅"
+  - id: "Auto brightness"
+    value: "✅"
+  - id: "Fingerprint"
+    value: "✅"
+  - id: "GPS"
+    value: "✅"
+  - id: "Proximity"
+    value: "✅"
+  - id: "Rotation"
+    value: "✅"
+  - id: "Touchscreen"
+    value: "✅"
+  - id: "Headphones"
+    value: "🧩"
+  - id: "Speaker"
+    value: "✅"
+  - id: "Microphone"
+    value: "✅"
+  - id: "MTP"
+    value: "❔"
+  - id: "Encryption"
+    value: "✅"
+  - id: "Waydroid"
+    value: "✅"

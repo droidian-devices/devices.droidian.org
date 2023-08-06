@@ -28,8 +28,8 @@ You can ask for help at the [Droidian Telegram](https://t.me/DroidianLinux) grou
 - **F(x)tec**
     |  |  |
     | --- | --- |
-    | F(x)tec Pro 1 | [details](https://github.com/droidian-images/droidian#droidian) |
-    | F(x)tec Pro 1-X | [details](https://github.com/droidian-images/droidian#droidian) |
+    | F(x)tec Pro1 | [details](/devices/pro1/) |
+    | F(x)tec Pro1-X | [details](/devices/pro1x/) |
 - **Sony**
     |  |  |
     | --- | --- |

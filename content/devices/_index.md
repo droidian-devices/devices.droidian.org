@@ -33,7 +33,7 @@ You can ask for help at the [Droidian Telegram](https://t.me/DroidianLinux) grou
 - **Sony**
     |  |  |
     | --- | --- |
-    | Sony Xperia 5 (bahamut) | [details](https://github.com/droidian-images/droidian#droidian) |
+    | Sony Xperia 5 (bahamut) | [details](/devices/bahamut/) |
 - **Google**
     |  |  |
     | --- | --- |
@@ -78,6 +78,7 @@ These devices are supported by members of the Droidian community. Device-specifi
 - **Sony**
     |  |  |
     | --- | --- |
+    | Sony Xperia 1 (griffin) | [install guide](/devices/griffin/) |
     | Sony Xperia 5 II (pdx206) | [install guide](https://github.com/PeterCxy/droidian-recipes) |
 
 ## Potential candidate devices

@@ -41,6 +41,15 @@ export const Link = styled(ButtonLink)<localTypes.IDefaultChildren>`
   }
 `;
 
+export const VisibleLik = styled(ButtonLink)<localTypes.IDefaultChildren>`
+  color: ${(props): string => props.theme.colors.default};
+  text-decoration: underline white;
+
+  &:hover {
+    color: #3ddc84;
+  }
+`;
+
 export const Button = styled(BaseButton)<localTypes.IDefaultChildren>`
   font-size: 1.5em;
   width: 80%;

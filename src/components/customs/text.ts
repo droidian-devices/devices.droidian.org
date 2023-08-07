@@ -17,3 +17,11 @@ export const PanelHeader = styled(Header)<localTypes.IHeaderProps>`
   align-self: ${(props): string => (props.$center ? 'inherit' : 'flex-start')};
   margin: ${(props): string => (props.$center ? '0' : '0 1')}rem;
 `;
+
+export const Green = styled(motion.span)<localTypes.IDefaultChildren>`
+  color: #3ddc84;
+`;
+
+export const ImportantText = styled(motion.div)<localTypes.IDefaultChildren>`
+  box-shadow: -10px 0 0 rgba(255, 255, 255, 0.7);
+`;

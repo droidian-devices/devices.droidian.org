@@ -3,6 +3,7 @@ import type { PayloadAction } from '@reduxjs/toolkit';
 export interface IDevice {
   name: string;
   brand: string;
+  id: number;
 }
 
 export interface IDevicesState {

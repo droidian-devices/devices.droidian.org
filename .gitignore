@@ -23,9 +23,6 @@ release/build
 /build
 .erb/dll
 
-# Env
-.env
-
 .idea
 npm-debug.log.*
 *.css.d.ts

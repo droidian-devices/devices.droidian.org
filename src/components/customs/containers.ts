@@ -26,6 +26,7 @@ export const OverlayContainer = styled(motion.div)<localTypes.IDefaultChildren>`
  * Container's body used to center elements inside
  */
 export const ContainerBody = styled(Container)<localTypes.IContainerProps>`
+  height: ${(props): string => (props.$fillHeight ? '100%' : '100vh')};
   display: flex;
   flex-direction: ${(props): string => props.$direction ?? 'column'};
   justify-content: ${(props): string => props.$justify ?? 'center'};

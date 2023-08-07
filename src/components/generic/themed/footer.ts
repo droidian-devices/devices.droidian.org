@@ -8,13 +8,12 @@ export const FooterContainer = styled(motion.div)<IDefaultChildren>`
   bottom: 0;
   width: 100%;
   height: 75px;
-  overflow-y: hidden;
-  overflow-x: hidden;
 `;
 
 export const FooterBody = styled(motion.div)<IDefaultChildren>`
   height: 100%;
   display: flex;
+  color: ${(props): string => props.theme.colors.semiDefault};
   margin: 0 auto;
   flex-direction: row;
   justify-content: center;
@@ -26,9 +25,5 @@ export const FooterBody = styled(motion.div)<IDefaultChildren>`
 
   * {
     margin: 5px;
-  }
-
-  @media (max-width: 767px) {
-    color: ${(props): string => props.theme.colors.semiDefault};
   }
 `;

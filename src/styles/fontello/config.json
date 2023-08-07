@@ -7,6 +7,18 @@
   "ascent": 850,
   "glyphs": [
     {
+      "uid": "0357f7abbc0babf43509669f332e41e6",
+      "css": "mobile",
+      "code": 61707,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "1400d5103edd2fa6d2d61688fee79a5a",
+      "css": "ok-squared",
+      "code": 61770,
+      "src": "fontawesome"
+    },
+    {
       "uid": "20fc52f9a88bb7bda023ef209acac095",
       "css": "graduation-cap",
       "code": 61853,
@@ -15,13 +27,13 @@
     {
       "uid": "9a76bc135eac17d2c8b8ad4a5774fc87",
       "css": "download",
-      "code": 59393,
+      "code": 59392,
       "src": "fontawesome"
     },
     {
-      "uid": "1400d5103edd2fa6d2d61688fee79a5a",
-      "css": "ok-squared",
-      "code": 61770,
+      "uid": "2d6150442079cbda7df64522dc24f482",
+      "css": "down-dir",
+      "code": 59393,
       "src": "fontawesome"
     }
   ]

@@ -6,13 +6,14 @@ import type { IDefaultChildren, INavContentProps } from '../../../types';
 export const NavbarContainer = styled(OverlayContainer)<IDefaultChildren>`
   height: 50px;
   width: 100%;
-  overflow-y: hidden;
-  overflow-x: hidden;
+  background: url('/bookworm.png');
+  background-size: cover;
 `;
 
 export const NavbarBody = styled(ContainerBody)<IDefaultChildren>`
   height: 100%;
   width: 100%;
+  background: rgba(0, 0, 0, 0.6);
   padding-left: 2rem;
   padding-right: 2rem;
 `;

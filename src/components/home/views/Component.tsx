@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Header, OverflowContainerBody, PanelHeader } from '../../customs';
+import { Container, Header, Link, OverflowContainerBody, PanelHeader } from '../../customs';
 import * as animation from '../../../animation';
 import { HomeHeader, HomeIcon } from '../themed';
 
@@ -12,11 +12,14 @@ const Home: React.FC = () => {
             <PanelHeader>Droidian devices</PanelHeader>
           </div>
         </HomeHeader>
-        <HomeIcon>
-          <i className="icon-ok-squared" />
-          <Header $full>Devices</Header>
-          <p>Devices that can run Droidian</p>
-        </HomeIcon>
+        <Link to="devices">
+          <HomeIcon>
+            <i className="icon-ok-squared" />
+            <Header $full>Devices</Header>
+            <p>Devices that can run Droidian</p>
+          </HomeIcon>
+        </Link>
+
         <HomeIcon>
           <i className="icon-graduation-cap" />
           <Header $full>Porting guide</Header>

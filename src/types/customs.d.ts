@@ -6,6 +6,7 @@ export interface IContainerProps extends IDefaultChildren {
   $align?: string;
   $wrap?: string;
   $noScroll?: boolean;
+  $fillHeight?: boolean;
 }
 
 export interface IHeaderProps extends IDefaultChildren {
@@ -17,5 +18,9 @@ export interface ITextProps extends IDefaultChildren {
 }
 
 export interface INavContentProps extends IContainerProps {
+  $active?: boolean;
+}
+
+export interface IBrandsProps extends IContainerProps {
   $active?: boolean;
 }

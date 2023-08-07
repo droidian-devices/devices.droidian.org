@@ -22,7 +22,9 @@ const Navbar: React.FC = () => {
   return (
     <NavbarContainer>
       <NavbarBody $justify="space-between" $direction="row" $noScroll>
-        <HomeButton />
+        <Link to="/">
+          <HomeButton />
+        </Link>
         <NavToggle $active={active} onClick={(): void => toggleNavbar(setActive, active)}>
           <div />
           <div />

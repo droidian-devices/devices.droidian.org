@@ -1,4 +1,6 @@
 
-.icon-download:before { content: '\e801'; } /* '' */
+.icon-download:before { content: '\e800'; } /* '' */
+.icon-down-dir:before { content: '\e801'; } /* '' */
+.icon-mobile:before { content: '\f10b'; } /* '' */
 .icon-ok-squared:before { content: '\f14a'; } /* '' */
 .icon-graduation-cap:before { content: '\f19d'; } /* '' */

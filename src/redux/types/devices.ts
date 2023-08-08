@@ -1,9 +1,11 @@
 import type { PayloadAction } from '@reduxjs/toolkit';
+import type { EDeviceCategory } from '../../enums';
 
 export interface IDevice {
   name: string;
   brand: string;
-  id: number;
+  category: EDeviceCategory;
+  id?: number;
 }
 
 export interface IDevicesState {

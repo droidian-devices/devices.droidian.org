@@ -11,7 +11,7 @@ export const slideRight = {
     },
   },
   exit: {
-    x: '-120vw',
+    x: '-100vw',
     transition: {
       delay: 0,
       duration: 0.5,
@@ -114,7 +114,7 @@ export const opacity = {
   },
   visible: {
     opacity: 1,
-    transition: { delay: 0, duration: 0.5, ease: 'easeInOut' },
+    transition: { delay: 0, duration: 0.8, ease: 'easeInOut' },
   },
   exit: {
     opacity: 0,

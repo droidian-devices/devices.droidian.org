@@ -35,7 +35,7 @@ export const HomeIcon = styled(motion.div)<IDefaultChildren>`
   min-height: 300px;
   height: fit-content;
   width: fit-content;
-  max-width: 200px;
+  max-width: 600px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -43,13 +43,41 @@ export const HomeIcon = styled(motion.div)<IDefaultChildren>`
   flex-wrap: nowrap;
   overflow-x: hidden;
   cursor: pointer;
+  transition: ${(props): string => props.theme.transition.default};
 
-  i {
-    font-size: 5rem;
+  @media (min-width: 768px) {
+    i {
+      font-size: 8vw;
+    }
+
+    header {
+      font-size: 2vw;
+    }
+
+    p {
+      font-size: 1.5vw;
+    }
+  }
+
+  @media (max-width: 767px) {
+    i {
+      font-size: 5rem;
+    }
   }
 
   header {
+    transition: ${(props): string => props.theme.transition.default};
     color: #3ddc84;
     font-weight: 500;
+  }
+
+  &:hover {
+    transition: ${(props): string => props.theme.transition.default};
+    color: #3ddc84;
+
+    header {
+      color: #3ddc84;
+      transition: ${(props): string => props.theme.transition.default};
+    }
   }
 `;

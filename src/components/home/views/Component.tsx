@@ -20,16 +20,21 @@ const Home: React.FC = () => {
           </HomeIcon>
         </Link>
 
-        <HomeIcon>
-          <i className="icon-graduation-cap" />
-          <Header $full>Porting guide</Header>
-          <p>Official Droidian devices porting guide</p>
-        </HomeIcon>
-        <HomeIcon>
-          <i className="icon-download" />
-          <Header $full>Get droidian</Header>
-          <p>Latest images from CI</p>
-        </HomeIcon>
+        <Link to="https://github.com/droidian/porting-guide">
+          <HomeIcon>
+            <i className="icon-graduation-cap" />
+            <Header $full>Porting guide</Header>
+            <p>Official Droidian devices porting guide</p>
+          </HomeIcon>
+        </Link>
+
+        <Link to="https://github.com/droidian-images/droidian/releases">
+          <HomeIcon>
+            <i className="icon-download" />
+            <Header $full>Get droidian</Header>
+            <p>Latest images from CI</p>
+          </HomeIcon>
+        </Link>
       </OverflowContainerBody>
     </Container>
   );

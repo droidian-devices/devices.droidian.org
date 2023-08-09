@@ -23,8 +23,6 @@ notes:
     text: The default password is `1234`.
   - title: APN
     text: Mobile data needs an APN to be set up from Settings -> Mobile Network -> Access Point Names.
-  - title: Bluetooth
-    text: Bluetooth is inconsistent in settings. It works fine in blueman. `sudo apt install blueman`
   - title: Rotation
     text: Rotation is currently broken and after rotation touch will be inverted.
 port_status:
@@ -33,7 +31,7 @@ port_status:
   - id: "Flashlight"
     value: "✅"
   - id: "Vibration"
-    value: "❌"
+    value: "✅"
   - id: "Photo"
     value: "✅"
   - id: "Video"
@@ -67,7 +65,7 @@ port_status:
   - id: "WiFi"
     value: "✅"
   - id: "Auto brightness"
-    value: "❌"
+    value: "✅"
   - id: "Fingerprint"
     value: "✅"
   - id: "GPS"

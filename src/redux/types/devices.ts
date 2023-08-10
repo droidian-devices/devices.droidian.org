@@ -1,11 +1,20 @@
 import type { PayloadAction } from '@reduxjs/toolkit';
-import type { EDeviceCategory } from '../../enums';
+import type { EDeviceCategory, ENoteType } from '../../enums';
+
+export type IFeature = Record<string, string[]>;
+
+export interface INotes {
+  type: ENoteType;
+  data: string[];
+}
 
 export interface IDevice {
   name: string;
-  brand: string;
   category: EDeviceCategory;
-  id?: number;
+  code: string;
+  description?: string;
+  features?: Record<string, IFeature>;
+  notes?: Record<string, Record<string, INotes> | string>;
 }
 
 export interface IDevicesState {

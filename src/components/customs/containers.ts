@@ -5,10 +5,10 @@ import type * as localTypes from '../../types';
 /**
  * Container of elements used to cover space
  */
-export const Container = styled(motion.div)<localTypes.IDefaultChildren>`
+export const Container = styled(motion.div)<localTypes.IOuterContainerProps>`
   width: 100%;
   height: 100vh;
-  overflow-y: hidden;
+  overflow-y: ${(props): string => (props.$overflow ? 'scroll' : 'hidden')};
   overflow-x: hidden;
 `;
 
@@ -36,21 +36,6 @@ export const ContainerBody = styled(Container)<localTypes.IContainerProps>`
   overflow-x: hidden;
   color: ${(props): string => props.theme.colors.default};
   transition: ${(props): string => props.theme.transition.semiSlow};
-
-  &::-webkit-scrollbar {
-    width: 15px;
-    border-radius: 50px;
-    background: ${(props): string => props.theme.background.opposite};
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: ${(props): string => props.theme.colors.default};
-    border-radius: 50px;
-
-    &:hover {
-      cursor: pointer;
-    }
-  }
 `;
 
 /**
@@ -67,19 +52,4 @@ export const OverflowContainerBody = styled(Container)<localTypes.IContainerProp
   padding-bottom: 100px;
   color: ${(props): string => props.theme.colors.default};
   transition: ${(props): string => props.theme.transition.semiSlow};
-
-  &::-webkit-scrollbar {
-    width: 15px;
-    border-radius: 50px;
-    background: ${(props): string => props.theme.background.opposite};
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: ${(props): string => props.theme.colors.default};
-    border-radius: 50px;
-
-    &:hover {
-      cursor: pointer;
-    }
-  }
 `;

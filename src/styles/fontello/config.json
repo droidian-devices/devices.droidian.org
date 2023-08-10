@@ -7,6 +7,18 @@
   "ascent": 850,
   "glyphs": [
     {
+      "uid": "9a76bc135eac17d2c8b8ad4a5774fc87",
+      "css": "download",
+      "code": 59392,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "2d6150442079cbda7df64522dc24f482",
+      "css": "down-dir",
+      "code": 59393,
+      "src": "fontawesome"
+    },
+    {
       "uid": "0357f7abbc0babf43509669f332e41e6",
       "css": "mobile",
       "code": 61707,
@@ -25,16 +37,22 @@
       "src": "fontawesome"
     },
     {
-      "uid": "9a76bc135eac17d2c8b8ad4a5774fc87",
-      "css": "download",
-      "code": 59392,
+      "uid": "xoidjr6q3rzi7tpw6hci1k6srz15g11l",
+      "css": "puzzle",
+      "code": 59394,
+      "src": "typicons"
+    },
+    {
+      "uid": "5211af474d3a9848f67f945e2ccaf143",
+      "css": "cancel",
+      "code": 59395,
       "src": "fontawesome"
     },
     {
-      "uid": "2d6150442079cbda7df64522dc24f482",
-      "css": "down-dir",
-      "code": 59393,
-      "src": "fontawesome"
+      "uid": "3a230e539a4f3b904debd04c6c155034",
+      "css": "help",
+      "code": 59396,
+      "src": "entypo"
     }
   ]
 }

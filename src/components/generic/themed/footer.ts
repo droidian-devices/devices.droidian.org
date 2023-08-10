@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import type { IDefaultChildren } from '../../../types';
+import type { IDefaultChildren, IFooterProps } from '../../../types';
 
-export const FooterContainer = styled(motion.div)<IDefaultChildren>`
+export const FooterContainer = styled(motion.div)<IFooterProps>`
   position: fixed;
   background: #0d1117;
-  bottom: 0;
+  bottom: ${(props): number => (props.$active ? -75 : 0)};
   width: 100%;
   height: 75px;
 `;

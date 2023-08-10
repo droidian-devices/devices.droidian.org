@@ -9,7 +9,7 @@ export const CategoryContainer = styled(motion.div)<IBrandsProps>`
   align-items: center;
   flex-wrap: wrap;
   padding: 5px;
-  margin-top: 40px;
+  margin-top: 50px;
   margin-bottom: 40px;
   color: ${(props): string => props.theme.colors.default};
   transition: ${(props): string => props.theme.transition.default};
@@ -62,6 +62,7 @@ export const Category = styled(motion.div)<IBrandsProps>`
   header {
     width: 90%;
     padding-left: 10%;
+    font-weight: 600;
   }
 
   @media (min-width: 768px) {
@@ -93,5 +94,17 @@ export const DevicesContainer = styled(motion.div)<IBrandsProps>`
   div {
     cursor: pointer;
     margin: 2px;
+  }
+
+  span {
+    width: 100%;
+    text-align: center;
+  }
+
+  p {
+    font-size: 1.1rem;
+    padding: 15px;
+    max-width: 700px;
+    margin: 0 auto;
   }
 `;

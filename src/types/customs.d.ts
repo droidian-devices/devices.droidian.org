@@ -24,3 +24,11 @@ export interface INavContentProps extends IContainerProps {
 export interface IBrandsProps extends IContainerProps {
   $active?: boolean;
 }
+
+export interface IFooterProps extends IContainerProps {
+  $active?: boolean;
+}
+
+export interface IOuterContainerProps extends IContainerProps {
+  $overflow?: boolean;
+}

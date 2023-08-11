@@ -4,8 +4,8 @@ import { useParams } from 'react-router';
 import { useSelector } from 'react-redux';
 import { Container, OverflowContainerBody } from '../../customs';
 import * as animation from '../../../animation';
-import type { IDevice } from '../../../redux/types';
 import * as hooks from '../../../redux';
+import type { IDevice } from '../../../types';
 
 const renderDevices = (devices: IDevice[]): ReactElement[] | ReactElement => {
   return devices.length > 0 ? (

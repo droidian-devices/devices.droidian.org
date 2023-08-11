@@ -2,4 +2,5 @@
 export enum ENoteType {
   List = 'list',
   String = 'string',
+  Header = 'header',
 }

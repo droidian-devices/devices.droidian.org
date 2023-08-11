@@ -2,8 +2,9 @@ import type { ReactElement } from 'react';
 import React from 'react';
 import { CategoryHeader, Green, ImportantCategoryHeader, Red, SmallHeader } from '../../customs';
 import { EFeaturesStatus, ENoteType } from '../../../enums';
-import type { IDevice, INotes } from '../../../redux/types';
-import { DeviceFeature } from '../themed';
+import { DeviceFeature, FeatureContainer } from '../themed';
+import { generateRandomName } from '../util';
+import type { IDevice, INotes } from '../../../types';
 
 export const States: React.FC = () => {
   return (
@@ -62,11 +63,11 @@ export const renderIcon = (item: EFeaturesStatus): ReactElement => {
 export const renderFeatures = (device: IDevice): ReactElement | null => {
   return !device.features || Object.entries(device.features)?.length <= 0 ? null : (
     <>
-      <SmallHeader>Features:</SmallHeader>
+      <SmallHeader $full>Features:</SmallHeader>
       <States />
       {Object.entries(device.features).map(([category, features]) => {
         return (
-          <div key={category}>
+          <FeatureContainer key={category}>
             <CategoryHeader>{category}</CategoryHeader>
             {Object.entries(features).map((d) =>
               d[1].map((e) => {
@@ -78,39 +79,61 @@ export const renderFeatures = (device: IDevice): ReactElement | null => {
                 );
               }),
             )}
-          </div>
+          </FeatureContainer>
         );
       })}
     </>
   );
 };
 
-export const renderInnerNote = (note: INotes): ReactElement | ReactElement[] => {
-  switch (note.type) {
-    case ENoteType.List:
-      return (
-        <ul>
-          {note.data.map((e) => {
-            return <li key={e}>{e}</li>;
-          })}
-        </ul>
-      );
-    case ENoteType.String:
-    default:
-      return note.data.map((e) => {
-        return <li key={e}>{e}</li>;
-      });
+export const renderString = (note: string): ReactElement => {
+  const splitted = note.split('#{');
+  const targets: string[] = [];
+
+  for (let x = 0; x <= splitted.length; x++) {
+    if (x !== splitted.length && x !== 0) {
+      const target = splitted[x]!.split('}');
+      targets.push(target[0]!);
+    }
   }
+
+  console.log('note');
+  console.log(note);
+  console.log('targets');
+  console.log(targets);
+
+  return <>{note}</>;
+};
+export const renderList = (note: INotes<ENoteType.List>): ReactElement | ReactElement[] => {
+  return (
+    <ul key={generateRandomName()}>
+      {note.data.map((e) => {
+        return typeof e === 'string' ? <li key={e}>{e}</li> : renderList(e as INotes<ENoteType.List>);
+      })}
+    </ul>
+  );
 };
 
-export const renderNote = (note: Record<string, INotes>): ReactElement[] => {
-  return Object.entries(note).map((e) => {
-    return (
-      <>
-        <CategoryHeader>{e[0]}</CategoryHeader>
-        {renderInnerNote(e[1])}
-      </>
-    );
+export const renderNote = (note: INotes<ENoteType>[]): ReactElement | ReactElement[] => {
+  return note.map((e) => {
+    switch (e.type) {
+      case ENoteType.List:
+        return (
+          <ul key={generateRandomName()}>
+            {(e as INotes<ENoteType.List>).data.map((e) => {
+              return typeof e === 'string' ? <li key={e}>{e}</li> : renderList(e as INotes<ENoteType.List>);
+            })}
+          </ul>
+        );
+      case ENoteType.Header:
+        return <CategoryHeader>{(e as INotes<ENoteType.Header>).data}</CategoryHeader>;
+      case ENoteType.String:
+      default:
+        return <p>{(e as INotes<ENoteType.String>).data}</p>;
+      // return note.data
+      //   .filter((e) => typeof e === 'string')
+      //   .map((e) => <p key={e as string}>{renderString(e as string)}</p>);
+    }
   });
 };
 
@@ -120,10 +143,10 @@ export const renderNotes = (device: IDevice): ReactElement | null => {
       <SmallHeader>Notes</SmallHeader>
       {Object.entries(device.notes).map((e) => {
         return (
-          <>
-            <ImportantCategoryHeader key={e[0]}>{e[0]}</ImportantCategoryHeader>
-            {typeof e[1] === 'object' ? renderNote(e[1]) : e[1]}
-          </>
+          <React.Fragment key={e[0]}>
+            <ImportantCategoryHeader>{e[0]}</ImportantCategoryHeader>
+            {renderNote(e[1])}
+          </React.Fragment>
         );
       })}
     </>

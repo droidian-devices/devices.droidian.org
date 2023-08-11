@@ -2,12 +2,12 @@ import type { ReactElement } from 'react';
 import React, { useState } from 'react';
 import type { NavigateFunction } from 'react-router';
 import { useNavigate } from 'react-router';
-import type { IDevice } from '../../../redux/types';
 import { HomeIcon } from '../../home/themed';
 import { Header, VisibleLik } from '../../customs';
 import { DevicesContainer } from '../themed';
 import * as animation from '../../../animation';
 import { EDeviceCategory } from '../../../enums';
+import type { IDevice } from '../../../types';
 
 const renderDevices = (devices: IDevice[], navigate: NavigateFunction): ReactElement[] | ReactElement => {
   return devices.length == 0 ? (

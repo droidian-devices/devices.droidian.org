@@ -9,8 +9,8 @@ import * as hooks from '../../../redux';
 import Loading from '../../generic/views/Loading';
 import { getDevices } from '../controller';
 import { EDeviceCategory } from '../../../enums';
-import type { IDevice } from '../../../redux/types';
 import { DevicesRenderer } from './Renderer';
+import type { IDevice } from '../../../types';
 
 const renderCategories = (
   devices: IDevice[],

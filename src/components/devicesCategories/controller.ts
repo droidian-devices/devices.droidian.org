@@ -1,5 +1,5 @@
-import type { IDevice } from '../../redux/types';
 import { EDeviceCategory, EFeaturesStatus, ENoteType } from '../../enums';
+import type { IDevice } from '../../types';
 
 const data: { devices: IDevice[] } = {
   devices: [
@@ -7,8 +7,7 @@ const data: { devices: IDevice[] } = {
       name: 'Google pixel 3a/xl (sargo)',
       category: EDeviceCategory.Official,
       code: 'sargo',
-      description:
-        'Device description is being rendered here. It says something about device itself, blah, blah, blah...',
+      description: 'Device description is being rendered here. It says something about device itself.',
       features: {
         Camera: {
           [EFeaturesStatus.Partly]: ['Switch camera', 'Photo'],
@@ -43,9 +42,18 @@ const data: { devices: IDevice[] } = {
         },
       },
       notes: {
-        'Before you proceed': 'Device has to be downgraded to stock Android 9 (PQ3B.190801.002) before installation',
-        'Device preparation': {
-          'Save your vpn': {
+        'Before you proceed': [
+          {
+            type: ENoteType.String,
+            data: 'Device has to be downgraded to stock Android 9 (PQ3B.190801.002) before installation',
+          },
+        ],
+        'Device preparation': [
+          {
+            type: ENoteType.Header,
+            data: 'Save your apn',
+          },
+          {
             type: ENoteType.List,
             data: [
               'The Access Point Name or APN can be found in the Settings menu of Android',
@@ -54,36 +62,74 @@ const data: { devices: IDevice[] } = {
               'APN settings can also be found at apn.how',
             ],
           },
-          'Unlock the bootloader (using a computer)': {
+          {
+            type: ENoteType.Header,
+            data: 'Unlock the bootloader (using a computer)',
+          },
+          {
             type: ENoteType.List,
             data: [
               'Refer to the instructions provided by the device manufacturer',
               'Other useful sources include the LineageOS wiki and xda-developers',
             ],
           },
-        },
-        'Droidian installation': {
-          Installation: {
+        ],
+        'Droidian installation': [
+          {
+            type: ENoteType.Header,
+            data: 'Installation',
+          },
+          {
             type: ENoteType.List,
             data: [
               'Extract the downloaded zip file',
               'Boot to fastboot (or fastbootd in TWRP or any recovery for Samsung devices) and run flash_all.sh to flash the image to your device. To flash each partition manually',
-              'Check the list of images in data/ and flash each image manually like so: fastboot flash partition_name partition_name.img',
-              'The following images might be included: boot.img, dtbo.img, vbmeta.img, userdata.img.',
+              {
+                type: ENoteType.List,
+                data: [
+                  'Check the list of images in data/ and flash each image manually like so: fastboot flash partition_name partition_name.img',
+                  'The following images might be included: boot.img, dtbo.img, vbmeta.img, userdata.img.',
+                ],
+              },
               'Reboot.',
             ],
           },
-        },
-        'Default password': 'The default password is 1234.',
-        APN: 'Mobile data needs an APN to be set up from Settings -> Mobile Network -> Access Point Names.',
-        Camera: 'Camera is currently only usable in Waydroid sudo apt install waydroid -y',
-        Applications: 'You can find a list of mobile-friendly Linux applications at LinuxPhoneApps',
-        Credit: {
-          Contributors: {
-            type: ENoteType.List,
-            data: ['FakeShell (Bardia Moshiri)', 'Droidian Project'],
+        ],
+        'Default password': [
+          {
+            type: ENoteType.String,
+            data: 'The default password is 1234.',
           },
-        },
+        ],
+        APN: [
+          {
+            type: ENoteType.String,
+            data: 'Mobile data needs an APN to be set up from Settings -> Mobile Network -> Access Point Names.',
+          },
+        ],
+        Camera: [
+          {
+            type: ENoteType.String,
+            data: 'Camera is currently only usable in Waydroid sudo apt install waydroid -y',
+          },
+        ],
+        Applications: [
+          {
+            type: ENoteType.String,
+            data: 'You can find a list of mobile-friendly Linux applications at LinuxPhoneApps',
+          },
+        ],
+        Credit: [
+          {
+            type: ENoteType.String,
+            data: 'Contributors',
+          },
+          {
+            type: ENoteType.String,
+            data: ['#{1} is tester for #{2}, who is also a tester', 'Droidian Project'],
+            links: [{ to: 'https://github.com/fakeshell', text: 'FakeShell (Bardia Moshiri)', id: 1 }],
+          },
+        ],
       },
     },
   ],

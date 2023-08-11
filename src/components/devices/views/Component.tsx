@@ -5,20 +5,20 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Container, Header } from '../../customs';
 import * as animation from '../../../animation';
 import * as hooks from '../../../redux';
-import type { IDevice } from '../../../redux/types';
 import { getDevices } from '../../devicesCategories/controller';
 import Loading from '../../generic/views/Loading';
-import { DeviceContainer } from '../themed';
+import { DeviceContainer, FeaturesContainer } from '../themed';
 import { renderDescription, renderFeatures, renderNotes } from './Renderer';
+import type { IDevice } from '../../../types';
 
 const renderDevice = (device: IDevice | undefined): ReactElement[] | ReactElement => {
   return device ? (
-    <span>
+    <>
       <Header>{device.name}</Header>
-      {renderDescription(device)}
-      {renderFeatures(device)}
-      {renderNotes(device)}
-    </span>
+      <FeaturesContainer>{renderDescription(device)}</FeaturesContainer>
+      <FeaturesContainer>{renderFeatures(device)}</FeaturesContainer>
+      <FeaturesContainer>{renderNotes(device)}</FeaturesContainer>
+    </>
   ) : (
     <Header>Selected device does not exist</Header>
   );

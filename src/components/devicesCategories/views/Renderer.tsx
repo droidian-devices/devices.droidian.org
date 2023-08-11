@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import type { NavigateFunction } from 'react-router';
 import { useNavigate } from 'react-router';
 import { HomeIcon } from '../../home/themed';
-import { Header, VisibleLik } from '../../customs';
+import { Header, VisibleLink } from '../../customs';
 import { DevicesContainer } from '../themed';
 import * as animation from '../../../animation';
 import { EDeviceCategory } from '../../../enums';
@@ -32,7 +32,7 @@ const renderDesc = (category: EDeviceCategory | undefined): ReactElement => {
           <p>
             Official devices are supported by members of the Droidian core team.They receive support and adaptation
             packages from the Droidian core team. You can ask for help at the{' '}
-            <VisibleLik to="https://t.me/DroidianLinux">Droidian Telegram group</VisibleLik>.
+            <VisibleLink to="https://t.me/DroidianLinux">Droidian Telegram group</VisibleLink>.
           </p>
         </span>
       );
@@ -43,7 +43,7 @@ const renderDesc = (category: EDeviceCategory | undefined): ReactElement => {
             These devices are supported by members of the Droidian community. Device-specific fixes are provided by the
             maintainers in various forms (flashable zips or runnable scripts). Please follow the guides corresponding to
             your device. You can ask for help at the{' '}
-            <VisibleLik to="https://t.me/DroidianLinux">Droidian Telegram group</VisibleLik> or device specific groups
+            <VisibleLink to="https://t.me/DroidianLinux">Droidian Telegram group</VisibleLink> or device specific groups
             created by maintainer.
           </p>
         </span>
@@ -56,8 +56,8 @@ const renderDesc = (category: EDeviceCategory | undefined): ReactElement => {
             These devices have had past support for Droidian, but may no longer have active maintenance and could be
             running outdated versions with broken packages. Installing on these devices may result in numerous issues
             and roadblocks. If you are interested in maintaining the device or contributing to its progress, please
-            reach out to the <VisibleLik to="https://t.me/DroidianLinux">Droidian Telegram group</VisibleLik> or submit
-            a merge request.
+            reach out to the <VisibleLink to="https://t.me/DroidianLinux">Droidian Telegram group</VisibleLink> or
+            submit a merge request.
           </p>
         </span>
       );

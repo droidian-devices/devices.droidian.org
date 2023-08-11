@@ -19,7 +19,7 @@ export interface IDevice {
   name: string;
   category: EDeviceCategory;
   code: string;
-  description?: string;
+  description?: INotes<ENoteType.String>;
   features?: Record<string, IFeature>;
   notes?: Record<string, INotes<ENoteType>[]>;
 }

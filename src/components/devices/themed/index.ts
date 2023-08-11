@@ -22,7 +22,7 @@ export const DeviceContainer = styled(motion.div)<IBrandsProps>`
 
   p {
     text-align: left;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 `;
 
@@ -30,6 +30,7 @@ export const DeviceFeature = styled(motion.div)<IBrandsProps>`
   min-height: fit-content;
   max-width: 400px;
   width: 100%;
+  font-size: 1.1rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -63,11 +64,6 @@ export const FeaturesContainer = styled(motion.div)<IBrandsProps>`
 export const FeatureContainer = styled(motion.div)<IBrandsProps>`
   width: 40%;
   min-width: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap;
 
   @media (min-width: 768px) {
     max-width: 300px;

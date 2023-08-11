@@ -41,7 +41,7 @@ export const Link = styled(ButtonLink)<localTypes.IDefaultChildren>`
   }
 `;
 
-export const VisibleLik = styled(ButtonLink)<localTypes.IDefaultChildren>`
+export const VisibleLink = styled(ButtonLink)<localTypes.IDefaultChildren>`
   color: ${(props): string => props.theme.colors.default};
   text-decoration: underline white;
 

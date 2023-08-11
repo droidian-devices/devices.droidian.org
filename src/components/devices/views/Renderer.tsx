@@ -1,10 +1,10 @@
-import type { ReactElement } from 'react';
+import type { ReactElement, ReactNode } from 'react';
 import React from 'react';
-import { CategoryHeader, Green, ImportantCategoryHeader, Red, SmallHeader } from '../../customs';
+import { CategoryHeader, Green, ImportantCategoryHeader, Red, SmallHeader, VisibleLink } from '../../customs';
 import { EFeaturesStatus, ENoteType } from '../../../enums';
 import { DeviceFeature, FeatureContainer } from '../themed';
 import { generateRandomName } from '../util';
-import type { IDevice, INotes } from '../../../types';
+import type { IDevice, ILink, INotes } from '../../../types';
 
 export const States: React.FC = () => {
   return (
@@ -86,29 +86,60 @@ export const renderFeatures = (device: IDevice): ReactElement | null => {
   );
 };
 
-export const renderString = (note: string): ReactElement => {
-  const splitted = note.split('#{');
-  const targets: string[] = [];
+export const renderString = (note: string, links: ILink[] | undefined): ReactElement | ReactNode[] | null | string => {
+  if (typeof note !== 'string') {
+    console.info(`Element ${String(note)} is not a string. Will not render it`);
+    return null;
+  }
 
-  for (let x = 0; x <= splitted.length; x++) {
-    if (x !== splitted.length && x !== 0) {
-      const target = splitted[x]!.split('}');
-      targets.push(target[0]!);
+  const hasLink = note.match(/#{/g);
+  if (!hasLink) return note;
+  if (!links) return note;
+
+  const splitted: string[] = [];
+  const components: React.ReactNode[] = [];
+
+  for (let i = 1; i < hasLink.length + 1; i++) {
+    const tag = `#{${i}}`;
+
+    if (splitted.length === 0) {
+      splitted.push(...note.split(tag));
+    } else {
+      const val = splitted[splitted.length - 1]!.split(tag);
+      splitted.pop();
+      splitted.push(...val);
     }
   }
 
-  console.log('note');
-  console.log(note);
-  console.log('targets');
-  console.log(targets);
+  for (let i = 0; i < splitted.length; i++) {
+    components.push(splitted[i]);
+    const link = links.find((e) => e.id === i + 1);
 
-  return <>{note}</>;
+    if (i !== splitted.length - 1) {
+      if (link) {
+        components.push(
+          <VisibleLink key={link.id} to={link.to}>
+            {link.text}
+          </VisibleLink>,
+        );
+      } else {
+        components.push(<Red>Missing link with id {i}</Red>);
+      }
+    }
+  }
+
+  return components;
 };
+
 export const renderList = (note: INotes<ENoteType.List>): ReactElement | ReactElement[] => {
   return (
     <ul key={generateRandomName()}>
       {note.data.map((e) => {
-        return typeof e === 'string' ? <li key={e}>{e}</li> : renderList(e as INotes<ENoteType.List>);
+        return typeof e === 'string' ? (
+          <li key={e}>{renderString(e, note.links)}</li>
+        ) : (
+          renderList(e as INotes<ENoteType.List>)
+        );
       })}
     </ul>
   );
@@ -119,20 +150,29 @@ export const renderNote = (note: INotes<ENoteType>[]): ReactElement | ReactEleme
     switch (e.type) {
       case ENoteType.List:
         return (
-          <ul key={generateRandomName()}>
-            {(e as INotes<ENoteType.List>).data.map((e) => {
-              return typeof e === 'string' ? <li key={e}>{e}</li> : renderList(e as INotes<ENoteType.List>);
+          <ul>
+            {(e as INotes<ENoteType.List>).data.map((l) => {
+              return typeof l === 'string' ? (
+                <li key={l}>{renderString(l, (e as INotes<ENoteType.List>).links)}</li>
+              ) : (
+                renderList(l as INotes<ENoteType.List>)
+              );
             })}
           </ul>
         );
       case ENoteType.Header:
-        return <CategoryHeader>{(e as INotes<ENoteType.Header>).data}</CategoryHeader>;
+        return (
+          <CategoryHeader key={(e as INotes<ENoteType.Header>).data}>
+            {renderString((e as INotes<ENoteType.Header>).data, (e as INotes<ENoteType.Header>).links)}
+          </CategoryHeader>
+        );
       case ENoteType.String:
       default:
-        return <p>{(e as INotes<ENoteType.String>).data}</p>;
-      // return note.data
-      //   .filter((e) => typeof e === 'string')
-      //   .map((e) => <p key={e as string}>{renderString(e as string)}</p>);
+        return (
+          <p key={(e as INotes<ENoteType.String>).data}>
+            {renderString((e as INotes<ENoteType.String>).data, (e as INotes<ENoteType.String>).links)}
+          </p>
+        );
     }
   });
 };
@@ -154,5 +194,5 @@ export const renderNotes = (device: IDevice): ReactElement | null => {
 };
 
 export const renderDescription = (device: IDevice): ReactElement | null => {
-  return !device.description ? null : <p>{device.description}</p>;
+  return !device.description ? null : <p>{renderString(device.description.data, device.description.links)}</p>;
 };

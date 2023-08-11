@@ -7,7 +7,10 @@ const data: { devices: IDevice[] } = {
       name: 'Google pixel 3a/xl (sargo)',
       category: EDeviceCategory.Official,
       code: 'sargo',
-      description: 'Device description is being rendered here. It says something about device itself.',
+      description: {
+        type: ENoteType.String,
+        data: 'Device description is being rendered here. It says something about device itself.',
+      },
       features: {
         Camera: {
           [EFeaturesStatus.Partly]: ['Switch camera', 'Photo'],
@@ -55,11 +58,12 @@ const data: { devices: IDevice[] } = {
           },
           {
             type: ENoteType.List,
+            links: [{ to: 'http://apn.how/', text: 'apn.how', id: 1 }],
             data: [
               'The Access Point Name or APN can be found in the Settings menu of Android',
               'Take a piece of paper or a text editor, and write down everything that you see on that screen',
               'These are likely to include a URL (e. g., internet.carrier.net), a username, and possibly a password',
-              'APN settings can also be found at apn.how',
+              'APN settings can also be found at #{1}',
             ],
           },
           {
@@ -68,9 +72,17 @@ const data: { devices: IDevice[] } = {
           },
           {
             type: ENoteType.List,
+            links: [
+              {
+                to: 'https://wiki.lineageos.org/devices/',
+                text: 'LineageOS wiki',
+                id: 1,
+              },
+              { to: 'https://forum.xda-developers.com/', text: 'xda-developers', id: 2 },
+            ],
             data: [
               'Refer to the instructions provided by the device manufacturer',
-              'Other useful sources include the LineageOS wiki and xda-developers',
+              'Other useful sources include the #{1} and #{2}',
             ],
           },
         ],
@@ -116,18 +128,26 @@ const data: { devices: IDevice[] } = {
         Applications: [
           {
             type: ENoteType.String,
-            data: 'You can find a list of mobile-friendly Linux applications at LinuxPhoneApps',
+            links: [{ to: 'https://linuxphoneapps.org', text: 'LinuxPhoneApps', id: 1 }],
+            data: 'You can find a list of mobile-friendly Linux applications at #{1}',
           },
         ],
-        Credit: [
+        Credits: [
           {
             type: ENoteType.String,
             data: 'Contributors',
           },
           {
             type: ENoteType.String,
-            data: ['#{1} is tester for #{2}, who is also a tester', 'Droidian Project'],
-            links: [{ to: 'https://github.com/fakeshell', text: 'FakeShell (Bardia Moshiri)', id: 1 }],
+            data: 'User #{1} is tester for #{2}, who is also a tester',
+            links: [
+              {
+                to: 'https://github.com/fakeshell',
+                text: 'FakeShell (Bardia Moshiri)',
+                id: 1,
+              },
+              { to: 'http://droidian.org/', text: 'Droidian project', id: 2 },
+            ],
           },
         ],
       },

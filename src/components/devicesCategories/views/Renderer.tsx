@@ -10,7 +10,7 @@ import { EDeviceCategory } from '../../../enums';
 import type { IDevice } from '../../../types';
 
 const renderDevices = (devices: IDevice[], navigate: NavigateFunction): ReactElement[] | ReactElement => {
-  return devices.length == 0 ? (
+  return devices.length === 0 ? (
     <Header>No devices in this category</Header>
   ) : (
     devices.map((d) => {

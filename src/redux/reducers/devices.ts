@@ -9,8 +9,12 @@ const devices = createSlice({
       state.devices = action.payload.devices;
       return state;
     },
+    clearDevices(state) {
+      state.devices = [];
+      return state;
+    },
   },
 });
 
-export const { addDevices } = devices.actions;
+export const { addDevices, clearDevices } = devices.actions;
 export default devices.reducer;

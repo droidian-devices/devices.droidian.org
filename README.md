@@ -9,7 +9,8 @@
    3.2 Additional keys
    3.3 Text object basics
    3.4 Features
-4. Example
+4. Testing json file
+5. Example
 
 ## 1. Prepare development environment
 
@@ -500,7 +501,13 @@ Example json, for `sargo` config. Written: 12.07.23. It might or might not be up
 }
 ```
 
-## 4. Additional notes:
+## 4. Testing json files
+
+This app has hidden route "/test". You can access it and provide json file with devices data. Page will try to load it
+and render data, based of it. Keep in mind that refreshing the page will wipe data from page. Move to home page, by
+using droidian logo inside navbar ( left top corner )
+
+## 5. Additional notes
 
 Data on "1-page device" will always render in this order:
 

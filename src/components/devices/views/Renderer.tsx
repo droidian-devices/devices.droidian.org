@@ -177,11 +177,14 @@ export const renderNote = (note: INotes<ENoteType>[]): ReactElement | ReactEleme
   });
 };
 
-export const renderNotes = (device: IDevice): ReactElement | null => {
-  return !device.notes || Object.entries(device.notes)?.length <= 0 ? null : (
+export const renderNotes = (
+  key: string,
+  notes: Record<string, INotes<ENoteType>[]> | undefined,
+): ReactElement | null => {
+  return !notes || Object.entries(notes)?.length <= 0 ? null : (
     <>
-      <SmallHeader>Notes</SmallHeader>
-      {Object.entries(device.notes).map((e) => {
+      <SmallHeader>{key}</SmallHeader>
+      {Object.entries(notes).map((e) => {
         return (
           <React.Fragment key={e[0]}>
             <ImportantCategoryHeader>{e[0]}</ImportantCategoryHeader>

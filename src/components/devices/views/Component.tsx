@@ -9,15 +9,25 @@ import { getDevices } from '../../devicesCategories/controller';
 import Loading from '../../generic/views/Loading';
 import { DeviceContainer, FeaturesContainer } from '../themed';
 import { renderDescription, renderFeatures, renderNotes } from './Renderer';
-import type { IDevice } from '../../../types';
+import type { IDevice, INotes } from '../../../types';
+import type { ENoteType } from '../../../enums';
 
 const renderDevice = (device: IDevice | undefined): ReactElement[] | ReactElement => {
+  const baseKeys = ['name', 'category', 'code', 'description', 'features'];
+  const data = device ? Object.keys(device).filter((e) => !baseKeys.includes(e)) : [];
+
   return device ? (
     <>
       <Header>{device.name}</Header>
       <FeaturesContainer>{renderDescription(device)}</FeaturesContainer>
       <FeaturesContainer>{renderFeatures(device)}</FeaturesContainer>
-      <FeaturesContainer>{renderNotes(device)}</FeaturesContainer>
+      {data.map((e) => {
+        return (
+          <FeaturesContainer key={e}>
+            {renderNotes(e, device[e] as Record<string, INotes<ENoteType>[]>)}
+          </FeaturesContainer>
+        );
+      })}
     </>
   ) : (
     <Header>Selected device does not exist</Header>

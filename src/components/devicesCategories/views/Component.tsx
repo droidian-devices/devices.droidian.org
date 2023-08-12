@@ -27,7 +27,9 @@ const renderCategories = (
           </Category>
         </CategoryContainer>
         <AnimatePresence mode="wait">
-          {active === d ? <DevicesRenderer devices={devices.filter((e) => e.category === d)} /> : null}
+          {active === d ? (
+            <DevicesRenderer devices={devices.filter((e) => e.category.trim().toLowerCase() === d.toLowerCase())} />
+          ) : null}
         </AnimatePresence>
       </>
     );

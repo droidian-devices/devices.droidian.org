@@ -147,9 +147,13 @@ export const renderList = (note: INotes<ENoteType.List>): ReactElement | ReactEl
 
 export const renderNote = (note: INotes<ENoteType>[]): ReactElement | ReactElement[] => {
   return note.map((e) => {
-    switch (e.type) {
+    switch (e.type.toLowerCase()) {
       case ENoteType.List:
-        return (
+        return typeof e.data === 'string' ? (
+          <p key={(e as INotes<ENoteType.String>).data}>
+            {renderString((e as INotes<ENoteType.String>).data, (e as INotes<ENoteType.String>).links)}
+          </p>
+        ) : (
           <ul>
             {(e as INotes<ENoteType.List>).data.map((l) => {
               return typeof l === 'string' ? (
@@ -170,7 +174,12 @@ export const renderNote = (note: INotes<ENoteType>[]): ReactElement | ReactEleme
       default:
         return (
           <p key={(e as INotes<ENoteType.String>).data}>
-            {renderString((e as INotes<ENoteType.String>).data, (e as INotes<ENoteType.String>).links)}
+            {renderString(
+              typeof (e as INotes<ENoteType.String>).data === 'string'
+                ? (e as INotes<ENoteType.String>).data
+                : ((e as INotes<ENoteType.String>).data as unknown as string[]).join(' '),
+              (e as INotes<ENoteType.String>).links,
+            )}
           </p>
         );
     }

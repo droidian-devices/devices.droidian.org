@@ -85,4 +85,4 @@ port_status:
   - id: "Encryption"
     value: "❌"
   - id: "Waydroid"
-    value: "❌"
+    value: "✅"

@@ -57,7 +57,7 @@ port_status:
   - id: "SD card"
     value: "✅"
   - id: "Bluetooth"
-    value: "🧩"
+    value: "✅"
   - id: "Flight mode"
     value: "✅"
   - id: "Hotspot"

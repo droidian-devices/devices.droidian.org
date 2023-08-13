@@ -21,7 +21,6 @@ export const DeviceContainer = styled(motion.div)<IBrandsProps>`
   }
 
   p {
-    text-align: left;
     font-size: 1.1rem;
   }
 `;
@@ -71,4 +70,30 @@ export const FeatureContainer = styled(motion.div)<IBrandsProps>`
 
   @media (max-width: 767px) {
     max-width: 100%;
+  }
+`;
+
+export const FeaturesBody = styled(motion.div)<IBrandsProps>`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  span {
+    display: inline-block;
+    padding: 0.2rem;
+  }
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
+`;
+
+export const Description = styled(motion.p)<IBrandsProps>`
+  text-align: center;
 `;

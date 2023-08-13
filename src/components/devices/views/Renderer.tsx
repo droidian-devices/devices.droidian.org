@@ -2,35 +2,35 @@ import type { ReactElement, ReactNode } from 'react';
 import React from 'react';
 import { CategoryHeader, Green, ImportantCategoryHeader, Red, SmallHeader, VisibleLink } from '../../customs';
 import { EFeaturesStatus, ENoteType } from '../../../enums';
-import { DeviceFeature, FeatureContainer } from '../themed';
+import { Description, DeviceFeature, FeatureContainer, FeaturesBody } from '../themed';
 import { generateRandomName } from '../util';
 import type { IDevice, ILink, INotes } from '../../../types';
 
 export const States: React.FC = () => {
   return (
-    <ul>
-      <li>
+    <FeaturesBody>
+      <span>
         <Green>
           <i className="icon-ok-squared" />
         </Green>
         Working
-      </li>
-      <li>
+      </span>
+      <span>
         <Green>
           <i className="icon-puzzle" />
         </Green>
         Partly working
-      </li>
-      <li>
+      </span>
+      <span>
         <Red>
           <i className="icon-cancel" />
         </Red>
         Not working
-      </li>
-      <li>
+      </span>
+      <span>
         <i className="icon-help" /> Untested
-      </li>
-    </ul>
+      </span>
+    </FeaturesBody>
   );
 };
 
@@ -68,7 +68,7 @@ export const renderFeatures = (device: IDevice): ReactElement | null => {
       {Object.entries(device.features).map(([category, features]) => {
         return (
           <FeatureContainer key={category}>
-            <CategoryHeader>{category}</CategoryHeader>
+            <CategoryHeader $center>{category}</CategoryHeader>
             {Object.entries(features).map((d) =>
               d[1].map((e) => {
                 return (
@@ -206,5 +206,7 @@ export const renderNotes = (
 };
 
 export const renderDescription = (device: IDevice): ReactElement | null => {
-  return !device.description ? null : <p>{renderString(device.description.data, device.description.links)}</p>;
+  return !device.description ? null : (
+    <Description>{renderString(device.description.data, device.description.links)}</Description>
+  );
 };

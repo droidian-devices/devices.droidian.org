@@ -15,6 +15,7 @@ export interface IHeaderProps extends IDefaultChildren {
 
 export interface ITextProps extends IDefaultChildren {
   $full?: boolean;
+  $center?: boolean;
 }
 
 export interface INavContentProps extends IContainerProps {

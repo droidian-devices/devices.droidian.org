@@ -21,16 +21,17 @@ export const SmallHeader = styled(motion.header)<localTypes.ITextProps>`
 
 export const CategoryHeader = styled(motion.header)<localTypes.ITextProps>`
   width: ${(props): number => (props.$full ? 100 : 50)}%;
-  text-align: left;
+  text-align: ${(props): string => (props.$center ? 'center' : 'left')};
   font-size: 1.4rem;
   font-weight: lighter;
   letter-spacing: 0.9px;
-  padding: 1rem;
+  padding: 1rem 0 0 0.6rem;
 `;
 
 export const ImportantCategoryHeader = styled(CategoryHeader)<localTypes.ITextProps>`
   font-weight: 500;
   border-left: 2px solid #3ddc84;
+  padding: 0 0 0 1rem;
 
   margin: 1rem 0 1rem 0;
 `;

@@ -64,6 +64,8 @@ export const FeatureContainer = styled(motion.div)<IBrandsProps>`
   width: 40%;
   min-width: 300px;
 
+  align-self: flex-start;
+
   @media (min-width: 768px) {
     max-width: 300px;
   }
@@ -96,4 +98,17 @@ export const FeaturesBody = styled(motion.div)<IBrandsProps>`
 
 export const Description = styled(motion.p)<IBrandsProps>`
   text-align: center;
+`;
+
+export const IdLink = styled(motion.i)<IBrandsProps>`
+  font-size: 0.8rem;
+  margin: 0 10px 0 0;
+  cursor: pointer;
+  transition: ${(props): string => props.theme.transition.default};
+  color: ${(props): string => (props.$active ? '#3ddc84' : props.theme.colors.default)};
+
+  &:hover {
+    color: #3ddc84;
+    transition: ${(props): string => props.theme.transition.default};
+  }
 `;

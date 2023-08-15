@@ -12,7 +12,11 @@ import { renderDescription, renderFeatures, renderNotes } from './Renderer';
 import type { IDevice, INotes } from '../../../types';
 import type { ENoteType } from '../../../enums';
 
-const renderDevice = (device: IDevice | undefined): ReactElement[] | ReactElement => {
+const renderDevice = (
+  device: IDevice | undefined,
+  clicked: string | null,
+  setClicked: React.Dispatch<React.SetStateAction<string | null>>,
+): ReactElement[] | ReactElement => {
   const baseKeys = ['name', 'category', 'code', 'description', 'features'];
   const data = device ? Object.keys(device).filter((e) => !baseKeys.includes(e)) : [];
 
@@ -24,7 +28,7 @@ const renderDevice = (device: IDevice | undefined): ReactElement[] | ReactElemen
       {data.map((e) => {
         return (
           <FeaturesContainer key={e}>
-            {renderNotes(e, device[e] as Record<string, INotes<ENoteType>[]>)}
+            {renderNotes(e, device[e] as Record<string, INotes<ENoteType>[]>, clicked, setClicked)}
           </FeaturesContainer>
         );
       })}
@@ -40,6 +44,7 @@ const Devices: React.FC = () => {
   const { devices } = useSelector(hooks.devicesState);
   const [loading, setLoading] = useState<boolean>(false);
   const [target, setTarget] = useState<IDevice | undefined>(undefined);
+  const [clicked, setClicked] = useState<string | null>(null);
 
   useEffect(() => {
     setTarget(devices.find((d) => d.code === device));
@@ -64,7 +69,7 @@ const Devices: React.FC = () => {
     <Loading finished={loading} />
   ) : (
     <Container variants={animation.slideRight} initial="init" animate="visible" exit="exit" $overflow>
-      <DeviceContainer $justify="space-evenly">{renderDevice(target)}</DeviceContainer>
+      <DeviceContainer $justify="space-evenly">{renderDevice(target, clicked, setClicked)}</DeviceContainer>
     </Container>
   );
 };

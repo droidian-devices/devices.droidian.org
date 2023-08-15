@@ -33,3 +33,10 @@ export interface IFooterProps extends IContainerProps {
 export interface IOuterContainerProps extends IContainerProps {
   $overflow?: boolean;
 }
+
+export interface ICategoryHeaderProps extends ITextProps {
+  $full?: boolean;
+  $center?: boolean;
+  $active?: boolean;
+  $border?: boolean;
+}

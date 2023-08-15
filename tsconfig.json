@@ -44,9 +44,6 @@
     "strictPropertyInitialization": true,
     "sourceMap": true
   },
-  "ts-node": {
-    "swc": true
-  },
   "include": [
     "src"
   ]

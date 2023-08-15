@@ -49,10 +49,16 @@
       "src": "fontawesome"
     },
     {
-      "uid": "3a230e539a4f3b904debd04c6c155034",
+      "uid": "ce3cf091d6ebd004dd0b52d24074e6e3",
       "css": "help",
+      "code": 61736,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "0ddd3e8201ccc7d41f7b7c9d27eca6c1",
+      "css": "link",
       "code": 59396,
-      "src": "entypo"
+      "src": "fontawesome"
     }
   ]
 }

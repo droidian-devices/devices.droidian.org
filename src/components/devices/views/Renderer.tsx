@@ -2,9 +2,10 @@ import type { ReactElement, ReactNode } from 'react';
 import React from 'react';
 import { CategoryHeader, Green, ImportantCategoryHeader, Red, SmallHeader, VisibleLink } from '../../customs';
 import { EFeaturesStatus, ENoteType } from '../../../enums';
-import { Description, DeviceFeature, FeatureContainer, FeaturesBody } from '../themed';
+import { Description, DeviceFeature, FeatureContainer, FeaturesBody, IdLink } from '../themed';
 import { generateRandomName } from '../util';
 import type { IDevice, ILink, INotes } from '../../../types';
+import { copyLink } from '../controller';
 
 export const States: React.FC = () => {
   return (
@@ -68,7 +69,9 @@ export const renderFeatures = (device: IDevice): ReactElement | null => {
       {Object.entries(device.features).map(([category, features]) => {
         return (
           <FeatureContainer key={category}>
-            <CategoryHeader $center>{category}</CategoryHeader>
+            <CategoryHeader $border $center>
+              {category}
+            </CategoryHeader>
             {Object.entries(features).map((d) =>
               d[1].map((e) => {
                 return (
@@ -189,14 +192,30 @@ export const renderNote = (note: INotes<ENoteType>[]): ReactElement | ReactEleme
 export const renderNotes = (
   key: string,
   notes: Record<string, INotes<ENoteType>[]> | undefined,
+  clicked: string | null,
+  setClicked: React.Dispatch<React.SetStateAction<string | null>>,
 ): ReactElement | null => {
+  const target = window.location.hash ? window.location.hash.split('#')[1]! : null;
+
   return !notes || Object.entries(notes)?.length <= 0 ? null : (
     <>
       <SmallHeader>{key}</SmallHeader>
       {Object.entries(notes).map((e) => {
+        const targetId = e[0].replaceAll(' ', '_');
+
         return (
           <React.Fragment key={e[0]}>
-            <ImportantCategoryHeader>{e[0]}</ImportantCategoryHeader>
+            <ImportantCategoryHeader $active={target === targetId} id={targetId}>
+              <IdLink
+                className="icon-link"
+                $active={clicked === targetId}
+                onClick={(): void => {
+                  copyLink(targetId);
+                  setClicked(targetId);
+                }}
+              />
+              {e[0]}
+            </ImportantCategoryHeader>
             {renderNote(e[1])}
           </React.Fragment>
         );

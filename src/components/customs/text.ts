@@ -19,19 +19,27 @@ export const SmallHeader = styled(motion.header)<localTypes.ITextProps>`
   padding: 1rem;
 `;
 
-export const CategoryHeader = styled(motion.header)<localTypes.ITextProps>`
+export const CategoryHeader = styled(motion.header)<localTypes.ICategoryHeaderProps>`
   width: ${(props): number => (props.$full ? 100 : 50)}%;
   text-align: ${(props): string => (props.$center ? 'center' : 'left')};
+  border-bottom: ${(props): string => (props.$border ? '0.1px solid white' : 'none')};
   font-size: 1.4rem;
   font-weight: lighter;
   letter-spacing: 0.9px;
-  padding: 1rem 0 0 0.6rem;
+  padding: ${(props): string => (props.$border ? '1rem 0 0.4rem 0.6rem' : '1rem 0 0 0.6rem')};
 `;
 
-export const ImportantCategoryHeader = styled(CategoryHeader)<localTypes.ITextProps>`
+export const ImportantCategoryHeader = styled(CategoryHeader)<localTypes.ICategoryHeaderProps>`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
   font-weight: 500;
   border-left: 2px solid #3ddc84;
   padding: 0 0 0 1rem;
+  background: ${(props): string => (props.$active ? '#3ddc84' : 'none')};
+  color: ${(props): string => (props.$active ? 'black' : props.theme.colors.default)};
 
   margin: 1rem 0 1rem 0;
 `;

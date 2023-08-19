@@ -1,7 +1,8 @@
 import type { ReactElement } from 'react';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
+import type { Dispatch } from '@reduxjs/toolkit';
 import { Container, Header } from '../../customs';
 import * as animation from '../../../animation';
 import * as hooks from '../../../redux';
@@ -11,12 +12,9 @@ import { DeviceContainer, FeaturesContainer } from '../themed';
 import { renderDescription, renderFeatures, renderNotes } from './Renderer';
 import type { IDevice, INotes } from '../../../types';
 import type { ENoteType } from '../../../enums';
+import { useMainDispatch } from '../../../redux/hooks';
 
-const renderDevice = (
-  device: IDevice | undefined,
-  clicked: string | null,
-  setClicked: React.Dispatch<React.SetStateAction<string | null>>,
-): ReactElement[] | ReactElement => {
+const renderDevice = (device: IDevice | undefined, dispatch: Dispatch): ReactElement[] | ReactElement => {
   const baseKeys = ['name', 'category', 'code', 'description', 'features'];
   const data = device ? Object.keys(device).filter((e) => !baseKeys.includes(e)) : [];
 
@@ -28,7 +26,7 @@ const renderDevice = (
       {data.map((e) => {
         return (
           <FeaturesContainer key={e}>
-            {renderNotes(e, device[e] as Record<string, INotes<ENoteType>[]>, clicked, setClicked)}
+            {renderNotes(e, device[e] as Record<string, INotes<ENoteType>[]>, dispatch)}
           </FeaturesContainer>
         );
       })}
@@ -39,12 +37,11 @@ const renderDevice = (
 };
 
 const Devices: React.FC = () => {
-  const dispatch = useDispatch();
+  const dispatch = useMainDispatch();
   const { device } = useParams();
   const { devices } = useSelector(hooks.devicesState);
   const [loading, setLoading] = useState<boolean>(false);
   const [target, setTarget] = useState<IDevice | undefined>(undefined);
-  const [clicked, setClicked] = useState<string | null>(null);
 
   useEffect(() => {
     setTarget(devices.find((d) => d.code === device));
@@ -69,7 +66,7 @@ const Devices: React.FC = () => {
     <Loading finished={loading} />
   ) : (
     <Container variants={animation.slideRight} initial="init" animate="visible" exit="exit" $overflow>
-      <DeviceContainer $justify="space-evenly">{renderDevice(target, clicked, setClicked)}</DeviceContainer>
+      <DeviceContainer $justify="space-evenly">{renderDevice(target, dispatch)}</DeviceContainer>
     </Container>
   );
 };

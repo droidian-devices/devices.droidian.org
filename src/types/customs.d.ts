@@ -40,3 +40,7 @@ export interface ICategoryHeaderProps extends ITextProps {
   $active?: boolean;
   $border?: boolean;
 }
+
+export interface INotificationProps extends IDefaultChildren {
+  $nth?: number;
+}

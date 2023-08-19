@@ -5,6 +5,7 @@ import theme from './components/customs/theme';
 import Navbar from './components/generic/views/Navbar';
 import Router from './Rotuer';
 import { Footer } from './components';
+import Notifications from './components/notifications/views/Component';
 
 const App: React.FC = () => {
   return (
@@ -12,6 +13,7 @@ const App: React.FC = () => {
       <BrowserRouter>
         <GlobalStyle />
         <BaseApp>
+          <Notifications />
           <Navbar />
           <Router />
         </BaseApp>

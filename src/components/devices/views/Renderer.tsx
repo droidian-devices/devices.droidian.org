@@ -1,5 +1,6 @@
 import type { ReactElement, ReactNode } from 'react';
 import React from 'react';
+import type { Dispatch } from '@reduxjs/toolkit';
 import { CategoryHeader, Green, ImportantCategoryHeader, Red, SmallHeader, VisibleLink } from '../../customs';
 import { EFeaturesStatus, ENoteType } from '../../../enums';
 import { Description, DeviceFeature, FeatureContainer, FeaturesBody, IdLink } from '../themed';
@@ -192,8 +193,7 @@ export const renderNote = (note: INotes<ENoteType>[]): ReactElement | ReactEleme
 export const renderNotes = (
   key: string,
   notes: Record<string, INotes<ENoteType>[]> | undefined,
-  clicked: string | null,
-  setClicked: React.Dispatch<React.SetStateAction<string | null>>,
+  dispatch: Dispatch,
 ): ReactElement | null => {
   const target = window.location.hash ? window.location.hash.split('#')[1]! : null;
 
@@ -208,10 +208,8 @@ export const renderNotes = (
             <ImportantCategoryHeader $active={target === targetId} id={targetId}>
               <IdLink
                 className="icon-link"
-                $active={clicked === targetId}
                 onClick={(): void => {
-                  copyLink(targetId);
-                  setClicked(targetId);
+                  copyLink(targetId, dispatch);
                 }}
               />
               {e[0]}

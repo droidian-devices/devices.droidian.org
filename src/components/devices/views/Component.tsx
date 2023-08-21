@@ -50,15 +50,9 @@ const Devices: React.FC = () => {
   useEffect(() => {
     if (devices.length === 0) {
       setLoading(true);
-      getDevices()
-        .then((devices) => {
-          setLoading(false);
-          return dispatch(hooks.addDevices(devices));
-        })
-        .catch((err) => {
-          console.info(err);
-          setLoading(false);
-        });
+      const devices = getDevices();
+      setLoading(false);
+      dispatch(hooks.addDevices(devices));
     }
   }, [devices.length, dispatch]);
 

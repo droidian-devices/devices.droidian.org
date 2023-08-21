@@ -28,7 +28,10 @@ const renderCategories = (
         </CategoryContainer>
         <AnimatePresence mode="wait">
           {active === d ? (
-            <DevicesRenderer devices={devices.filter((e) => e.category.trim().toLowerCase() === d.toLowerCase())} />
+            <DevicesRenderer
+              devices={devices.filter((e) => e.category.trim().toLowerCase() === d.toLowerCase())}
+              category={active}
+            />
           ) : null}
         </AnimatePresence>
       </>
@@ -45,15 +48,9 @@ const DevicesCategories: React.FC = () => {
   useEffect(() => {
     if (devices.length === 0) {
       setLoading(true);
-      getDevices()
-        .then((devices) => {
-          setLoading(false);
-          return dispatch(hooks.addDevices(devices));
-        })
-        .catch((err) => {
-          console.info(err);
-          setLoading(false);
-        });
+      const devices = getDevices();
+      setLoading(false);
+      dispatch(hooks.addDevices(devices));
     }
   }, [devices.length, dispatch]);
 

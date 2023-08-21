@@ -4,10 +4,6 @@
       "name": "Google pixel 3a/xl (sargo)",
       "category": "official",
       "code": "sargo",
-      "description": {
-        "type": "string",
-        "data": "Device description is being rendered here. It says something about device itself."
-      },
       "features": {
         "Camera": {
           "partly": [
@@ -194,6 +190,82 @@
             ]
           }
         ]
+      }
+    },
+    {
+      "name": "F(x)tec Pro1 (pro1)",
+      "category": "official",
+      "code": "pro1",
+      "features": {
+        "Camera": {
+          "working": [
+            "Photo"
+          ],
+          "notWorking": [
+            "Video"
+          ],
+          "partly": [
+            "Switch camera"
+          ]
+        },
+        "Sound": {
+          "working": [
+            "Headphones",
+            "Speaker",
+            "Microphone"
+          ]
+        },
+        "Sensors": {
+          "working": [
+            "Brightness control",
+            "Vibration",
+            "Proximity",
+            "Rotation",
+            "Touchscreen"
+          ],
+          "partly": [
+            "Carrier info"
+          ]
+        },
+        "Network": {
+          "working": [
+            "Data",
+            "Flight mode"
+          ],
+          "partly": [
+            "Hotspot"
+          ]
+        },
+        "Telephony": {
+          "working": [
+            "Flashlight",
+            "Calls",
+            "SMS",
+            "Volume control",
+            "Battery percentage",
+            "Charging",
+            "SD card",
+            "Bluetooth",
+            "WiFi",
+            "Auto brightness",
+            "Fingerprint",
+            "GPS",
+            "Encryption"
+          ],
+          "notWorking": [
+            "Dual sim"
+          ],
+          "notTested": [
+            "NFC",
+            "MTP"
+          ]
+        },
+        "Additional": {
+          "working": [
+            "Hardware keyboard",
+            "Waydroid"
+          ]
+        }
       }
     }
   ]

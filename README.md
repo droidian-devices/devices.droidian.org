@@ -11,6 +11,7 @@
    3.4 Features
 4. Testing json file
 5. Example
+6. Important notes
 
 ## 1. Prepare development environment
 
@@ -125,7 +126,7 @@ You can add device description like this
 ```
 
 Data is device description you want to provide, where links are links, you want to place in this string. More on links
-in next point
+in next points
 
 ### 3.3 Text object basics
 
@@ -515,3 +516,8 @@ Data on "1-page device" will always render in this order:
 - Device description
 - Device features
 - Everything else, sorted by order in json
+
+## 6. Important notes:
+
+Keep in mind that this app uses "device codename" as url path for that device. Each device requires UNIQUE codename
+without spaces in name

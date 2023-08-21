@@ -1,5 +1,5 @@
 import type { ReactElement } from 'react';
-import React, { useState } from 'react';
+import React from 'react';
 import type { NavigateFunction } from 'react-router';
 import { useNavigate } from 'react-router';
 import { HomeIcon } from '../../home/themed';
@@ -25,8 +25,8 @@ const renderDevices = (devices: IDevice[], navigate: NavigateFunction): ReactEle
 };
 
 const renderDesc = (category: EDeviceCategory | undefined): ReactElement => {
-  switch (category) {
-    case EDeviceCategory.Official:
+  switch (category?.toLowerCase()) {
+    case EDeviceCategory.Official.toLowerCase():
       return (
         <span>
           <p>
@@ -36,7 +36,7 @@ const renderDesc = (category: EDeviceCategory | undefined): ReactElement => {
           </p>
         </span>
       );
-    case EDeviceCategory.Community:
+    case EDeviceCategory.Community.toLowerCase():
       return (
         <span>
           <p>
@@ -48,7 +48,7 @@ const renderDesc = (category: EDeviceCategory | undefined): ReactElement => {
           </p>
         </span>
       );
-    case EDeviceCategory.Potential:
+    case EDeviceCategory.Potential.toLowerCase():
     default:
       return (
         <span>
@@ -65,13 +65,15 @@ const renderDesc = (category: EDeviceCategory | undefined): ReactElement => {
 };
 
 // eslint-disable-next-line import/prefer-default-export
-export const DevicesRenderer: React.FC<{ devices: IDevice[] }> = ({ devices }) => {
+export const DevicesRenderer: React.FC<{ devices: IDevice[]; category: EDeviceCategory | undefined }> = ({
+  devices,
+  category,
+}) => {
   const navigate = useNavigate();
-  const [desc] = useState<EDeviceCategory | undefined>(devices[0]?.category);
 
   return (
     <DevicesContainer variants={animation.opacity} initial="init" animate="visible" exit="exit">
-      {renderDesc(desc)}
+      {renderDesc(category)}
       {renderDevices(devices, navigate)}
     </DevicesContainer>
   );

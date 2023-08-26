@@ -6,13 +6,13 @@ import type { Dispatch } from '@reduxjs/toolkit';
 import { Container, Header } from '../../customs';
 import * as animation from '../../../animation';
 import * as hooks from '../../../redux';
-import { getDevices } from '../../devicesCategories/controller';
 import Loading from '../../generic/views/Loading';
 import { DeviceContainer, FeaturesContainer } from '../themed';
 import { renderDescription, renderFeatures, renderNotes } from './Renderer';
 import type { IDevice, INotes } from '../../../types';
 import type { ENoteType } from '../../../enums';
 import { useMainDispatch } from '../../../redux/hooks';
+import { getDevices } from '../../../devices/controller';
 
 const renderDevice = (device: IDevice | undefined, dispatch: Dispatch): ReactElement[] | ReactElement => {
   const baseKeys = ['name', 'category', 'code', 'description', 'features'];

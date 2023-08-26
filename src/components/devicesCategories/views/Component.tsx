@@ -7,7 +7,7 @@ import * as animation from '../../../animation';
 import { Category, CategoryContainer, CategoryOuterContainer } from '../themed';
 import * as hooks from '../../../redux';
 import Loading from '../../generic/views/Loading';
-import { getDevices } from '../controller';
+import { getDevices } from '../../../devices/controller';
 import { EDeviceCategory } from '../../../enums';
 import { DevicesRenderer } from './Renderer';
 import type { IDevice } from '../../../types';

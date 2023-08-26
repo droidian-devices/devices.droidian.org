@@ -9,24 +9,20 @@
    3.2 Additional keys
    3.3 Text object basics
    3.4 Features
-4. Testing json file
-5. Example
-6. Important notes
+4. Example
+5. Testing json file
+6. Additional notes
+7. Important notes
 
 ## 1. Prepare development environment
 
-The page will reload if you make edits.
-You will also see any lint errors in the console.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.
-Your app is ready to be deployed!
-
 ## Prepare environment
+
+Install dependencies
+
+```shell
+npm install
+```
 
 This will update husky ( git hooks ), which run after commit, cleaning your app from possible eslint errors and breaking
 commit process if any error occur
@@ -54,17 +50,18 @@ Build production ready version of this app
 
 ## 3, Prepare new device/edit existing
 
-This page renders devices, based on json, it can fetch from server. Json should look like this
+Json files location is in `src/devices/"
+
+If you want to add new device, create new json file with data, then import it in controller.ts file in the same
+location.
+
+This page renders devices, based on json. Json require this keys
 
 ```json
 {
-  "devices": [
-    {
-      "name": "Device name",
-      "category": "Device category",
-      "code": "Device code"
-    }
-  ]
+  "name": "Device name",
+  "category": "Device category",
+  "code": "Device code"
 }
 ```
 
@@ -76,17 +73,9 @@ This example represents required keys. Those elements are required. Let's break 
 
 Device name, rendered under device icon and on top of "1 device page"
 
-```text
-name 
-```
-
 #### Category
 
 Device category, which applies device to available categories
-
-```text
-category 
-```
 
 Available categories are:
 
@@ -127,6 +116,10 @@ You can add device description like this
 
 Data is device description you want to provide, where links are links, you want to place in this string. More on links
 in next points
+
+#### *
+
+Any other key you provide will be rendered as 1 in point 3.3
 
 ### 3.3 Text object basics
 
@@ -225,7 +218,7 @@ instead of string. Example:
 Additional key, you can provide in text object is `links`. Example usage
 
 ```json
-         {
+{
   "type": "string",
   "links": [
     {
@@ -300,215 +293,211 @@ There are 4 states of elements
 Example json, for `sargo` config. Written: 12.07.23. It might or might not be up-to-date
 
 ```json
-{
-  "devices": [
     {
-      "name": "Google pixel 3a/xl (sargo)",
-      "category": "official",
-      "code": "sargo",
-      "description": {
+  "name": "Google pixel 3a/xl (sargo)",
+  "category": "official",
+  "code": "sargo",
+  "description": {
+    "type": "string",
+    "data": "Device description is being rendered here. It says something about device itself."
+  },
+  "features": {
+    "Camera": {
+      "partly": [
+        "Switch camera",
+        "Photo"
+      ],
+      "notWorking": [
+        "Video"
+      ]
+    },
+    "Sound": {
+      "working": [
+        "Headphones",
+        "Volume control",
+        "Speaker"
+      ]
+    },
+    "Sensors": {
+      "working": [
+        "Brightness control",
+        "Auto brightness",
+        "Rotation",
+        "Proximity"
+      ]
+    },
+    "Network": {
+      "working": [
+        "Flight mode",
+        "Calls",
+        "Hotspot",
+        "Data",
+        "WiFi"
+      ]
+    },
+    "Telephony": {
+      "working": [
+        "Battery percentage",
+        "Microphone",
+        "Flashlight",
+        "Charging",
+        "Fingerprint",
+        "SMS",
+        "SD card",
+        "NFC",
+        "GPS",
+        "Bluetooth",
+        "Waydroid"
+      ],
+      "partly": [
+        "Carrier info"
+      ],
+      "notWorking": [
+        "Dual sim",
+        "Encryption"
+      ],
+      "untested": [
+        "MTP"
+      ]
+    }
+  },
+  "notes": {
+    "Before you proceed": [
+      {
         "type": "string",
-        "data": "Device description is being rendered here. It says something about device itself."
+        "data": "Device has to be downgraded to stock Android 9 (PQ3B.190801.002) before installation"
+      }
+    ],
+    "Device preparation": [
+      {
+        "type": "header",
+        "data": "Save your apn"
       },
-      "features": {
-        "Camera": {
-          "partly": [
-            "Switch camera",
-            "Photo"
-          ],
-          "notWorking": [
-            "Video"
-          ]
-        },
-        "Sound": {
-          "working": [
-            "Headphones",
-            "Volume control",
-            "Speaker"
-          ]
-        },
-        "Sensors": {
-          "working": [
-            "Brightness control",
-            "Auto brightness",
-            "Rotation",
-            "Proximity"
-          ]
-        },
-        "Network": {
-          "working": [
-            "Flight mode",
-            "Calls",
-            "Hotspot",
-            "Data",
-            "WiFi"
-          ]
-        },
-        "Telephony": {
-          "working": [
-            "Battery percentage",
-            "Microphone",
-            "Flashlight",
-            "Charging",
-            "Fingerprint",
-            "SMS",
-            "SD card",
-            "NFC",
-            "GPS",
-            "Bluetooth",
-            "Waydroid"
-          ],
-          "partly": [
-            "Carrier info"
-          ],
-          "notWorking": [
-            "Dual sim",
-            "Encryption"
-          ],
-          "untested": [
-            "MTP"
-          ]
-        }
+      {
+        "type": "list",
+        "links": [
+          {
+            "to": "http://apn.how/",
+            "text": "apn.how",
+            "id": 1
+          }
+        ],
+        "data": [
+          "The Access Point Name or APN can be found in the Settings menu of Android",
+          "Take a piece of paper or a text editor, and write down everything that you see on that screen",
+          "These are likely to include a URL (e. g., internet.carrier.net), a username, and possibly a password",
+          "APN settings can also be found at #{1}"
+        ]
       },
-      "notes": {
-        "Before you proceed": [
+      {
+        "type": "header",
+        "data": "Unlock the bootloader (using a computer)"
+      },
+      {
+        "type": "list",
+        "links": [
           {
-            "type": "string",
-            "data": "Device has to be downgraded to stock Android 9 (PQ3B.190801.002) before installation"
+            "to": "https://wiki.lineageos.org/devices/",
+            "text": "LineageOS wiki",
+            "id": 1
+          },
+          {
+            "to": "https://forum.xda-developers.com/",
+            "text": "xda-developers",
+            "id": 2
           }
         ],
-        "Device preparation": [
-          {
-            "type": "header",
-            "data": "Save your apn"
-          },
-          {
-            "type": "list",
-            "links": [
-              {
-                "to": "http://apn.how/",
-                "text": "apn.how",
-                "id": 1
-              }
-            ],
-            "data": [
-              "The Access Point Name or APN can be found in the Settings menu of Android",
-              "Take a piece of paper or a text editor, and write down everything that you see on that screen",
-              "These are likely to include a URL (e. g., internet.carrier.net), a username, and possibly a password",
-              "APN settings can also be found at #{1}"
-            ]
-          },
-          {
-            "type": "header",
-            "data": "Unlock the bootloader (using a computer)"
-          },
-          {
-            "type": "list",
-            "links": [
-              {
-                "to": "https://wiki.lineageos.org/devices/",
-                "text": "LineageOS wiki",
-                "id": 1
-              },
-              {
-                "to": "https://forum.xda-developers.com/",
-                "text": "xda-developers",
-                "id": 2
-              }
-            ],
-            "data": [
-              "Refer to the instructions provided by the device manufacturer",
-              "Other useful sources include the #{1} and #{2}"
-            ]
-          }
-        ],
-        "Droidian installation": [
-          {
-            "type": "header",
-            "data": "Installation"
-          },
+        "data": [
+          "Refer to the instructions provided by the device manufacturer",
+          "Other useful sources include the #{1} and #{2}"
+        ]
+      }
+    ],
+    "Droidian installation": [
+      {
+        "type": "header",
+        "data": "Installation"
+      },
+      {
+        "type": "list",
+        "data": [
+          "Extract the downloaded zip file",
+          "Boot to fastboot (or fastbootd in TWRP or any recovery for Samsung devices) and run flash_all.sh to flash the image to your device. To flash each partition manually",
           {
             "type": "list",
             "data": [
-              "Extract the downloaded zip file",
-              "Boot to fastboot (or fastbootd in TWRP or any recovery for Samsung devices) and run flash_all.sh to flash the image to your device. To flash each partition manually",
-              {
-                "type": "list",
-                "data": [
-                  "Check the list of images in data/ and flash each image manually like so: fastboot flash partition_name partition_name.img",
-                  "The following images might be included: boot.img, dtbo.img, vbmeta.img, userdata.img."
-                ]
-              },
-              "Reboot."
+              "Check the list of images in data/ and flash each image manually like so: fastboot flash partition_name partition_name.img",
+              "The following images might be included: boot.img, dtbo.img, vbmeta.img, userdata.img."
             ]
+          },
+          "Reboot."
+        ]
+      }
+    ],
+    "Default password": [
+      {
+        "type": "string",
+        "data": "The default password is 1234."
+      }
+    ],
+    "APN": [
+      {
+        "type": "string",
+        "data": "Mobile data needs an APN to be set up from Settings -> Mobile Network -> Access Point Names."
+      }
+    ],
+    "Camera": [
+      {
+        "type": "string",
+        "data": "Camera is currently only usable in Waydroid sudo apt install waydroid -y"
+      }
+    ],
+    "Applications": [
+      {
+        "type": "string",
+        "links": [
+          {
+            "to": "https://linuxphoneapps.org",
+            "text": "LinuxPhoneApps",
+            "id": 1
           }
         ],
-        "Default password": [
+        "data": "You can find a list of mobile-friendly Linux applications at #{1}"
+      }
+    ],
+    "Credits": [
+      {
+        "type": "string",
+        "data": "Contributors"
+      },
+      {
+        "type": "string",
+        "data": "User #{1} is tester for #{2}, who is also a tester",
+        "links": [
           {
-            "type": "string",
-            "data": "The default password is 1234."
-          }
-        ],
-        "APN": [
-          {
-            "type": "string",
-            "data": "Mobile data needs an APN to be set up from Settings -> Mobile Network -> Access Point Names."
-          }
-        ],
-        "Camera": [
-          {
-            "type": "string",
-            "data": "Camera is currently only usable in Waydroid sudo apt install waydroid -y"
-          }
-        ],
-        "Applications": [
-          {
-            "type": "string",
-            "links": [
-              {
-                "to": "https://linuxphoneapps.org",
-                "text": "LinuxPhoneApps",
-                "id": 1
-              }
-            ],
-            "data": "You can find a list of mobile-friendly Linux applications at #{1}"
-          }
-        ],
-        "Credits": [
-          {
-            "type": "string",
-            "data": "Contributors"
+            "to": "https://github.com/fakeshell",
+            "text": "FakeShell (Bardia Moshiri)",
+            "id": 1
           },
           {
-            "type": "string",
-            "data": "User #{1} is tester for #{2}, who is also a tester",
-            "links": [
-              {
-                "to": "https://github.com/fakeshell",
-                "text": "FakeShell (Bardia Moshiri)",
-                "id": 1
-              },
-              {
-                "to": "http://droidian.org/",
-                "text": "Droidian project",
-                "id": 2
-              }
-            ]
+            "to": "http://droidian.org/",
+            "text": "Droidian project",
+            "id": 2
           }
         ]
       }
-    }
-  ]
+    ]
+  }
 }
 ```
 
-## 4. Testing json files
+## 5. Testing json files
 
 This app has hidden route "/test". You can access it and provide json file with devices data. Page will try to load it
 and render data, based of it. Keep in mind that refreshing the page will wipe data from page. Move to home page, by
 using droidian logo inside navbar ( left top corner )
 
-## 5. Additional notes
+## 6. Additional notes
 
 Data on "1-page device" will always render in this order:
 
@@ -517,7 +506,7 @@ Data on "1-page device" will always render in this order:
 - Device features
 - Everything else, sorted by order in json
 
-## 6. Important notes:
+## 7. Important notes:
 
 Keep in mind that this app uses "device codename" as url path for that device. Each device requires UNIQUE codename
 without spaces in name

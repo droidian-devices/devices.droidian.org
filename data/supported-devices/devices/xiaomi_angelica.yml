@@ -35,7 +35,7 @@ port_status:
   - id: "Photo"
     value: "✅"
   - id: "Video"
-    value: "❌"
+    value: "✅"
   - id: "Switch camera"
     value: "✅"
   - id: "Carrier info"

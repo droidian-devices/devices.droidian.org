@@ -1,7 +1,7 @@
 {
-  "name": "Google pixel 3a/xl (sargo)",
-  "category": "official",
-  "code": "sargo",
+  "name": "Samsung Galaxy S9+ (Exynos) (star2lte)",
+  "category": "community",
+  "code": "star2lte",
   "features": {
     "Camera": {
       "partly": [
@@ -14,8 +14,10 @@
     },
     "Sound": {
       "working": [
+        "Volume control"
+      ],
+      "partly": [
         "Headphones",
-        "Volume control",
         "Speaker"
       ]
     },
@@ -24,7 +26,13 @@
         "Brightness control",
         "Auto brightness",
         "Rotation",
-        "Proximity"
+        "Proximity",
+        "Notification LED",
+        "Vibration",
+        "Touchscreen"
+      ],
+      "notWorking": [
+        "External display"
       ]
     },
     "Network": {
@@ -39,7 +47,6 @@
     "Telephony": {
       "working": [
         "Battery percentage",
-        "Microphone",
         "Flashlight",
         "Charging",
         "Fingerprint",
@@ -51,7 +58,8 @@
         "Waydroid"
       ],
       "partly": [
-        "Carrier info"
+        "Carrier info",
+        "Microphone"
       ],
       "notWorking": [
         "Dual sim",
@@ -66,10 +74,27 @@
     "Before you proceed": [
       {
         "type": "string",
-        "data": "Device has to be downgraded to stock Android 9 (PQ3B.190801.002) before installation"
+        "data": "Device has to be downgraded to stock Android 10 before installation"
       }
     ],
     "Device preparation": [
+      {
+        "type": "header",
+        "data": "Please download the mentioned needed files and tools:"
+      },
+      {
+        "type": "list",
+        "links": [
+          {
+            "to": "https://samfw.com/firmware/SM-G960F/bit/all/av/Q(Android%2010)",
+            "text": "Android 10 (Q) stock firmware",
+            "id": 1
+          }
+        ],
+        "data": [
+          "#{1}"
+        ]
+      },
       {
         "type": "header",
         "data": "Save your apn"
@@ -147,10 +172,28 @@
         "data": "Mobile data needs an APN to be set up from Settings -> Mobile Network -> Access Point Names."
       }
     ],
+    "Audio": [
+      {
+        "type": "string",
+        "data": "Audio is inconsistent and does not work on all boots"
+      }
+    ],
+    "Calls": [
+      {
+        "type": "string",
+        "data": "Because of the audio issue user might not be able to hear audio in calls either."
+      }
+    ],
     "Camera": [
       {
         "type": "string",
-        "data": "Camera is currently only usable in Waydroid sudo apt install waydroid -y"
+        "data": "Camera currently works in Waydroid only. sudo apt install waydroid"
+      }
+    ],
+    "Apps": [
+      {
+        "type": "string",
+        "data": "Apps are slow and some freeze at times. this is an issue with the exynos chipset."
       }
     ],
     "Applications": [
@@ -172,7 +215,8 @@
         "data": "Contributors"
       },
       {
-        "type": "list",
+        "type": "string",
+        "data": "#{1} #{2} #{3}",
         "links": [
           {
             "to": "https://github.com/fakeshell",
@@ -180,14 +224,15 @@
             "id": 1
           },
           {
+            "to": "https://github.com/JeyKul",
+            "text": "JeyKul",
+            "id": 2
+          },
+          {
             "to": "http://droidian.org/",
             "text": "Droidian project",
-            "id": 2
+            "id": 3
           }
-        ],
-        "data": [
-          "#{1}",
-          "#{2}"
         ]
       }
     ]

@@ -1,0 +1,215 @@
+{
+  "name": "Device name ( codename )",
+  "category": "device category",
+  "code": "device codename",
+  "features": {
+    "Camera": {
+      "working": [
+
+      ],
+      "notWorking": [
+
+      ],
+      "partly": [
+
+      ],
+      "untested": [
+
+      ]
+    },
+    "Sound": {
+      "working": [
+
+      ],
+      "notWorking": [
+
+      ],
+      "partly": [
+
+      ],
+      "untested": [
+
+      ]
+    },
+    "Sensors": {
+      "working": [
+
+      ],
+      "notWorking": [
+
+      ],
+      "partly": [
+
+      ],
+      "untested": [
+
+      ]
+    },
+    "Network": {
+      "working": [
+
+      ],
+      "notWorking": [
+
+      ],
+      "partly": [
+
+      ],
+      "untested": [
+
+      ]
+    },
+    "Telephony": {
+      "working": [
+
+      ],
+      "notWorking": [
+
+      ],
+      "partly": [
+
+      ],
+      "untested": [
+
+      ]
+    }
+  },
+  "notes": {
+  "Before you proceed": [
+    {
+      "type": "string",
+      "data": "You need to upgrade or revert to latest stock version (Android 9, PKQ1.190723.001) first."
+    }
+  ],
+  "Device preparation": [
+    {
+      "type": "header",
+      "data": "Save your apn"
+    },
+    {
+      "type": "list",
+      "links": [
+        {
+          "to": "http://apn.how/",
+          "text": "apn.how",
+          "id": 1
+        }
+      ],
+      "data": [
+        "The Access Point Name or APN can be found in the Settings menu of Android",
+        "Take a piece of paper or a text editor, and write down everything that you see on that screen",
+        "These are likely to include a URL (e. g., internet.carrier.net), a username, and possibly a password",
+        "APN settings can also be found at #{1}"
+      ]
+    },
+    {
+      "type": "header",
+      "data": "Unlock the bootloader (using a computer)"
+    },
+    {
+      "type": "list",
+      "links": [
+        {
+          "to": "https://wiki.lineageos.org/devices/",
+          "text": "LineageOS wiki",
+          "id": 1
+        },
+        {
+          "to": "https://forum.xda-developers.com/",
+          "text": "xda-developers",
+          "id": 2
+        }
+      ],
+      "data": [
+        "Refer to the instructions provided by the device manufacturer",
+        "Other useful sources include the #{1} and #{2}"
+      ]
+    }
+  ],
+  "Droidian installation": [
+    {
+      "type": "header",
+      "data": "Installation"
+    },
+    {
+      "type": "list",
+      "data": [
+        "Extract the downloaded zip file",
+        "Boot to fastboot (or fastbootd in TWRP or any recovery for Samsung devices) and run flash_all.sh to flash the image to your device. To flash each partition manually",
+        {
+          "type": "list",
+          "data": [
+            "Check the list of images in data/ and flash each image manually like so: fastboot flash partition_name partition_name.img",
+            "The following images might be included: boot.img, dtbo.img, vbmeta.img, userdata.img."
+          ]
+        },
+        "Reboot."
+      ]
+    }
+  ],
+  "Default password": [
+    {
+      "type": "string",
+      "data": "The default password is 1234."
+    }
+  ],
+  "APN": [
+    {
+      "type": "string",
+      "data": "Mobile data needs an APN to be set up from Settings -> Mobile Network -> Access Point Names."
+    }
+  ],
+  "Encryption unlock UI doesn’t rotate": [
+    {
+      "type": "string",
+      "data": "The encryption unlock UI doesn’t rotate if the keyboard has been opened."
+    }
+  ],
+  "Keyboard backlight disabled in encryption unlock UI": [
+    {
+      "type": "string",
+      "data": "The keyboard backlight is disabled in the encryption unlock UI."
+    }
+  ],
+  "Applications": [
+    {
+      "type": "string",
+      "links": [
+        {
+          "to": "https://linuxphoneapps.org",
+          "text": "LinuxPhoneApps",
+          "id": 1
+        }
+      ],
+      "data": "You can find a list of mobile-friendly Linux applications at #{1}"
+    }
+  ],
+  "Credits": [
+    {
+      "type": "string",
+      "data": "Contributors"
+    },
+    {
+      "type": "string",
+      "data": "#{1} #{2} #{3}",
+      "links": [
+        {
+          "to": "https://github.com/g7",
+          "text": "Eugenio Paolantonio",
+          "id": 1
+        },
+        {
+          "to": "https://github.com/r3vn",
+          "text": "Giuseppe Corti",
+          "id": 2
+        },
+        {
+          "to": "http://droidian.org/",
+          "text": "Droidian project",
+          "id": 3
+        }
+      ]
+    }
+  ]
+}
+}

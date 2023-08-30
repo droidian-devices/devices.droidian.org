@@ -1,64 +1,67 @@
 {
-  "name": "Google pixel 3a/xl (sargo)",
+  "name": "F(x)tec Pro1 (pro1)",
   "category": "official",
-  "code": "sargo",
+  "code": "pro1",
   "features": {
     "Camera": {
-      "partly": [
-        "Switch camera",
+      "working": [
+        "Flashlight",
         "Photo"
       ],
       "notWorking": [
         "Video"
-      ]
-    },
-    "Sound": {
-      "working": [
-        "Headphones",
-        "Volume control",
-        "Speaker"
+      ],
+      "partly": [
+        "Switch camera"
       ]
     },
     "Sensors": {
       "working": [
+        "Hardware keyboard",
         "Brightness control",
+        "Vibration",
+        "Volume control",
+        "Battery percentage",
+        "Charging",
+        "SD card",
+        "Bluetooth",
+        "Flight mode",
+        "WiFi",
         "Auto brightness",
+        "Fingerprint",
+        "GPS",
+        "Proximity",
         "Rotation",
-        "Proximity"
+        "Touchscreen",
+        "Headphones",
+        "Speaker",
+        "Microphone",
+        "Encryption",
+        "Waydroid"
+      ],
+      "partly": [
+        "Hotspot"
+      ],
+      "untested": [
+        "NFC",
+        "MTP"
       ]
     },
     "Network": {
       "working": [
-        "Flight mode",
-        "Calls",
-        "Hotspot",
-        "Data",
-        "WiFi"
+        "Data"
+      ],
+      "notWorking": [
+        "Dual sim"
       ]
     },
     "Telephony": {
       "working": [
-        "Battery percentage",
-        "Microphone",
-        "Flashlight",
-        "Charging",
-        "Fingerprint",
-        "SMS",
-        "SD card",
-        "NFC",
-        "GPS",
-        "Bluetooth",
-        "Waydroid"
+        "Calls",
+        "SMS"
       ],
       "partly": [
         "Carrier info"
-      ],
-      "notWorking": [
-        "Dual sim",
-        "Encryption"
-      ],
-      "untested": [
-        "MTP"
       ]
     }
   },
@@ -66,7 +69,7 @@
     "Before you proceed": [
       {
         "type": "string",
-        "data": "Device has to be downgraded to stock Android 9 (PQ3B.190801.002) before installation"
+        "data": "You need to upgrade or revert to latest stock version (Android 9, PKQ1.190723.001) first."
       }
     ],
     "Device preparation": [
@@ -147,10 +150,16 @@
         "data": "Mobile data needs an APN to be set up from Settings -> Mobile Network -> Access Point Names."
       }
     ],
-    "Camera": [
+    "Encryption unlock UI doesn’t rotate": [
       {
         "type": "string",
-        "data": "Camera is currently only usable in Waydroid sudo apt install waydroid -y"
+        "data": "The encryption unlock UI doesn’t rotate if the keyboard has been opened."
+      }
+    ],
+    "Keyboard backlight disabled in encryption unlock UI": [
+      {
+        "type": "string",
+        "data": "The keyboard backlight is disabled in the encryption unlock UI."
       }
     ],
     "Applications": [
@@ -172,22 +181,24 @@
         "data": "Contributors"
       },
       {
-        "type": "list",
+        "type": "string",
+        "data": "#{1} #{2} #{3}",
         "links": [
           {
-            "to": "https://github.com/fakeshell",
-            "text": "FakeShell (Bardia Moshiri)",
+            "to": "https://github.com/g7",
+            "text": "Eugenio Paolantonio",
             "id": 1
+          },
+          {
+            "to": "https://github.com/r3vn",
+            "text": "Giuseppe Corti",
+            "id": 2
           },
           {
             "to": "http://droidian.org/",
             "text": "Droidian project",
-            "id": 2
+            "id": 3
           }
-        ],
-        "data": [
-          "#{1}",
-          "#{2}"
         ]
       }
     ]

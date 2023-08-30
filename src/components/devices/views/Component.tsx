@@ -12,7 +12,7 @@ import { renderDescription, renderFeatures, renderNotes } from './Renderer';
 import type { IDevice, INotes } from '../../../types';
 import type { ENoteType } from '../../../enums';
 import { useMainDispatch } from '../../../redux/hooks';
-import { getDevices } from '../../../devices/controller';
+import getDevices from '../../../devices/controller';
 
 const renderDevice = (device: IDevice | undefined, dispatch: Dispatch): ReactElement[] | ReactElement => {
   const baseKeys = ['name', 'category', 'code', 'description', 'features'];

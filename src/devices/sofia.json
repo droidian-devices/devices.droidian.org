@@ -1,0 +1,26 @@
+{
+  "name": "Moto G Power (sofia)",
+  "category": "community",
+  "code": "sofia",
+  "notes": {
+    "Droidian installation": [
+      {
+        "type": "header",
+        "data": "Installation"
+      },
+      {
+        "type": "list",
+        "links": [
+          {
+            "to": "https://github.com/arpio23/droidian-images",
+            "text": "github",
+            "id": 1
+          }
+        ],
+        "data": [
+          "Device is available on #{1}"
+        ]
+      }
+    ]
+  }
+}

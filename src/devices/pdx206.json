@@ -1,0 +1,26 @@
+{
+  "name": "Sony Xperia 5 II (pdx206)",
+  "category": "community",
+  "code": "pdx206",
+  "notes": {
+    "Droidian installation": [
+      {
+        "type": "header",
+        "data": "Installation"
+      },
+      {
+        "type": "list",
+        "links": [
+          {
+            "to": "https://github.com/PeterCxy/droidian-recipes",
+            "text": "github releases",
+            "id": 1
+          }
+        ],
+        "data": [
+          "Device is available on #{1}"
+        ]
+      }
+    ]
+  }
+}

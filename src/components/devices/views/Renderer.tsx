@@ -103,21 +103,29 @@ export const renderString = (note: string, links: ILink[] | undefined): ReactEle
   const splitted: string[] = [];
   const components: React.ReactNode[] = [];
 
-  for (let i = 1; i < hasLink.length + 1; i++) {
-    const tag = `#{${i}}`;
+  if (hasLink.length === 1) {
+    const split = note.split('#{');
+    const id = split[split.length - 1]!.split('}')[0]!;
+    if (split.length > 1) splitted.push(...note.split(`#{${id}}`));
+  } else {
+    for (let i = 1; i < hasLink.length + 1; i++) {
+      const tag = `#{${i}}`;
 
-    if (splitted.length === 0) {
-      splitted.push(...note.split(tag));
-    } else {
-      const val = splitted[splitted.length - 1]!.split(tag);
-      splitted.pop();
-      splitted.push(...val);
+      if (splitted.length === 0) {
+        splitted.push(...note.split(tag));
+      } else {
+        const val = splitted[splitted.length - 1]!.split(tag);
+        splitted.pop();
+        splitted.push(...val);
+      }
     }
   }
 
   for (let i = 0; i < splitted.length; i++) {
     components.push(splitted[i]);
-    const link = links.find((e) => e.id === i + 1);
+    const split = note.split('#{');
+    const ids = split.filter((e) => e.includes('}')).map((e) => e.split('}')[0]);
+    const link = links.find((e) => e.id === Number(ids[i]));
 
     if (i !== splitted.length - 1) {
       if (link) {
@@ -127,7 +135,7 @@ export const renderString = (note: string, links: ILink[] | undefined): ReactEle
           </VisibleLink>,
         );
       } else {
-        components.push(<Red>Missing link with id {i}</Red>);
+        components.push(<Red>Missing link with id {ids[i]}</Red>);
       }
     }
   }

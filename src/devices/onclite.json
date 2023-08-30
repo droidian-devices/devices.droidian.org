@@ -1,64 +1,63 @@
 {
-  "name": "Google pixel 3a/xl (sargo)",
+  "name": "Xiaomi Redmi 7 (onclite)",
   "category": "official",
-  "code": "sargo",
+  "code": "onclite",
   "features": {
     "Camera": {
-      "partly": [
-        "Switch camera",
-        "Photo"
-      ],
-      "notWorking": [
-        "Video"
+      "working": [
+        "Photo",
+        "Video",
+        "Switch camera"
       ]
     },
     "Sound": {
       "working": [
         "Headphones",
-        "Volume control",
-        "Speaker"
+        "Speaker",
+        "Microphone"
       ]
     },
     "Sensors": {
       "working": [
         "Brightness control",
+        "Flashlight",
+        "Vibration",
+        "Data",
+        "Volume control",
+        "Battery percentage",
+        "Charging",
+        "SD card",
+        "Bluetooth",
+        "Flight mode",
         "Auto brightness",
+        "Fingerprint",
+        "GPS",
+        "Proximity",
         "Rotation",
-        "Proximity"
+        "Touchscreen",
+        "Encryption"
+      ],
+      "notWorking": [
+        "Dual sim"
+      ],
+      "partly": [
+        "Carrier info"
+      ],
+      "untested": [
+        "MTP",
+        "Waydroid"
       ]
     },
     "Network": {
       "working": [
-        "Flight mode",
-        "Calls",
         "Hotspot",
-        "Data",
         "WiFi"
       ]
     },
     "Telephony": {
       "working": [
-        "Battery percentage",
-        "Microphone",
-        "Flashlight",
-        "Charging",
-        "Fingerprint",
-        "SMS",
-        "SD card",
-        "NFC",
-        "GPS",
-        "Bluetooth",
-        "Waydroid"
-      ],
-      "partly": [
-        "Carrier info"
-      ],
-      "notWorking": [
-        "Dual sim",
-        "Encryption"
-      ],
-      "untested": [
-        "MTP"
+        "Calls",
+        "SMS"
       ]
     }
   },
@@ -66,7 +65,7 @@
     "Before you proceed": [
       {
         "type": "string",
-        "data": "Device has to be downgraded to stock Android 9 (PQ3B.190801.002) before installation"
+        "data": "Device has to be downgraded to stock Android 9"
       }
     ],
     "Device preparation": [
@@ -116,10 +115,6 @@
     ],
     "Droidian installation": [
       {
-        "type": "header",
-        "data": "Installation"
-      },
-      {
         "type": "list",
         "data": [
           "Extract the downloaded zip file",
@@ -131,8 +126,12 @@
               "The following images might be included: boot.img, dtbo.img, vbmeta.img, userdata.img."
             ]
           },
-          "Reboot."
+          "Reboot"
         ]
+      },
+      {
+        "type": "header",
+        "data": "Congratulations, if everything went well you should be booted into Droidian."
       }
     ],
     "Default password": [
@@ -145,12 +144,6 @@
       {
         "type": "string",
         "data": "Mobile data needs an APN to be set up from Settings -> Mobile Network -> Access Point Names."
-      }
-    ],
-    "Camera": [
-      {
-        "type": "string",
-        "data": "Camera is currently only usable in Waydroid sudo apt install waydroid -y"
       }
     ],
     "Applications": [
@@ -172,10 +165,11 @@
         "data": "Contributors"
       },
       {
-        "type": "list",
+        "type": "string",
+        "data": "#{1} #{2}",
         "links": [
           {
-            "to": "https://github.com/fakeshell",
+            "to": "https://github.com/FakeShell",
             "text": "FakeShell (Bardia Moshiri)",
             "id": 1
           },
@@ -184,10 +178,6 @@
             "text": "Droidian project",
             "id": 2
           }
-        ],
-        "data": [
-          "#{1}",
-          "#{2}"
         ]
       }
     ]

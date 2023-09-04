@@ -81,7 +81,7 @@ port_status:
   - id: "Microphone"
     value: "✅"
   - id: "MTP"
-    value: "❔"
+    value: "✅"
   - id: "Encryption"
     value: "❌"
   - id: "Waydroid"

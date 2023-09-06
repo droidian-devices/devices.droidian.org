@@ -22,6 +22,7 @@ export const DeviceContainer = styled(motion.div)<IBrandsProps>`
 
   p {
     font-size: 1.1rem;
+    margin-bottom: 1rem;
   }
 `;
 
@@ -64,13 +65,13 @@ export const FeatureContainer = styled(motion.div)<IBrandsProps>`
   width: 40%;
   min-width: 300px;
 
-  align-self: flex-start;
-
   @media (min-width: 768px) {
+    align-self: flex-start;
     max-width: 300px;
   }
 
   @media (max-width: 767px) {
+    margin: 0 auto;
     max-width: 100%;
   }
 `;

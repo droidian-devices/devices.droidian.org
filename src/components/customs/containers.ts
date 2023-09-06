@@ -10,6 +10,19 @@ export const Container = styled(motion.div)<localTypes.IOuterContainerProps>`
   height: 100vh;
   overflow-y: ${(props): string => (props.$overflow ? 'scroll' : 'hidden')};
   overflow-x: hidden;
+
+  @media (min-width: 768px) {
+    &::-webkit-scrollbar {
+      width: 15px;
+      border-radius: 50px;
+      background: ${(props): string => props.theme.background.semiTransparent};
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #3ddc84;
+      border-radius: 50px;
+    }
+  }
 `;
 
 /**

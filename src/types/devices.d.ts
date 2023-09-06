@@ -10,7 +10,7 @@ export interface ILink {
 }
 
 export interface INoteData {
-  [ENoteType.String]: string;
+  [ENoteType.String]: string | string[];
   [ENoteType.Header]: string;
   [ENoteType.List]: (string | INotes<ENoteType>)[];
 }

@@ -162,8 +162,8 @@ export const renderNote = (note: INotes<ENoteType>[]): ReactElement | ReactEleme
     switch (e.type.toLowerCase()) {
       case ENoteType.List:
         return typeof e.data === 'string' ? (
-          <p key={(e as INotes<ENoteType.String>).data}>
-            {renderString((e as INotes<ENoteType.String>).data, (e as INotes<ENoteType.String>).links)}
+          <p key={(e as INotes<ENoteType.String>).data as string}>
+            {renderString(Array.isArray(e.data) ? e.data.join(' ') : e.data, (e as INotes<ENoteType.String>).links)}
           </p>
         ) : (
           <ul>
@@ -184,15 +184,16 @@ export const renderNote = (note: INotes<ENoteType>[]): ReactElement | ReactEleme
         );
       case ENoteType.String:
       default:
-        return (
-          <p key={(e as INotes<ENoteType.String>).data}>
-            {renderString(
-              typeof (e as INotes<ENoteType.String>).data === 'string'
-                ? (e as INotes<ENoteType.String>).data
-                : ((e as INotes<ENoteType.String>).data as unknown as string[]).join(' '),
-              (e as INotes<ENoteType.String>).links,
-            )}
+        return !Array.isArray(e.data) ? (
+          <p key={(e as INotes<ENoteType.String>).data as string}>
+            {renderString((e as INotes<ENoteType.String>).data as string, (e as INotes<ENoteType.String>).links)}
           </p>
+        ) : (
+          <>
+            {(e.data as string[]).map((l) => (
+              <p key={l}>{renderString(l, (e as INotes<ENoteType.String>).links)}</p>
+            ))}
+          </>
         );
     }
   });
@@ -232,6 +233,11 @@ export const renderNotes = (
 
 export const renderDescription = (device: IDevice): ReactElement | null => {
   return !device.description ? null : (
-    <Description>{renderString(device.description.data, device.description.links)}</Description>
+    <Description>
+      {renderString(
+        Array.isArray(device.description.data) ? device.description.data.join(' ') : device.description.data,
+        device.description.links,
+      )}
+    </Description>
   );
 };

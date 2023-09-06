@@ -2,18 +2,18 @@
   "name": "Xiaomi 6X (wayne)",
   "category": "Potential",
   "code": "wayne",
-  "notes": {
+  "Notes": {
     "Notes": [
       {
         "links": [
           {
             "to": "https://t.me/DroidianLinux",
-            "text": "apn.how",
+            "text": "our Telegram group",
             "id": 1
           }
         ],
         "type": "string",
-        "data": "Device currently unsupported. If you are interested in maintaining the device or contributing to its progress, please reach out to the #{1} or submit a merge request."
+        "data": "This device is currently unsupported. If you are interested in maintaining the device or contributing to its progress, please reach out to #{1} to get information about the status."
       }
     ]
   }

@@ -56,8 +56,7 @@ const renderDesc = (category: EDeviceCategory | undefined): ReactElement => {
             These devices have had past support for Droidian, but may no longer have active maintenance and could be
             running outdated versions with broken packages. Installing on these devices may result in numerous issues
             and roadblocks. If you are interested in maintaining the device or contributing to its progress, please
-            reach out to the <VisibleLink to="https://t.me/DroidianLinux">Droidian Telegram group</VisibleLink> or
-            submit a merge request.
+            reach out to the <VisibleLink to="https://t.me/DroidianLinux">Droidian Telegram group</VisibleLink>
           </p>
         </span>
       );

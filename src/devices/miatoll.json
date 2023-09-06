@@ -5,60 +5,65 @@
   "features": {
     "Camera": {
       "working": [
-        "Flashlight",
         "Photo",
         "Video",
-        "Switch camera"
+        "Switch camera",
+        "Flashlight"
+      ]
+    },
+    "Sound": {
+      "working": [
+        "Speaker",
+        "Microphone",
+        "Headphones",
+        "Volume control"
       ]
     },
     "Sensors": {
       "working": [
         "Brightness control",
-        "Vibration",
-        "Volume control",
-        "Battery percentage",
-        "Charging",
-        "SD card",
-        "Bluetooth",
-        "Flight mode",
-        "WiFi",
-        "Auto brightness",
-        "Fingerprint",
-        "GPS",
-        "Proximity",
-        "Touchscreen",
         "Rotation",
-        "Speaker",
-        "Microphone",
-        "Hotspot",
-        "Headphones",
-        "Encryption",
-        "Waydroid",
-        "NFC"
-      ],
-      "notWorking": [
-        "MTP"
+        "Fingerprint",
+        "Auto brightness",
+        "Proximity",
+        "Vibration"
       ]
     },
     "Network": {
       "working": [
-        "Data"
-      ],
-      "notWorking": [
-        "Dual sim"
+        "WiFi",
+        "Hotspot",
+        "NFC",
+        "Bluetooth"
       ]
     },
-    "Telephony": {
+    "Cellular": {
       "working": [
         "Calls",
+        "Data",
         "SMS"
       ],
       "partly": [
         "Carrier info"
+      ],
+      "notWorking": [
+        "Dual sim",
+        "MMS"
+      ]
+    },
+    "Misc": {
+      "working": [
+        "SD card",
+        "Waydroid",
+        "MTP",
+        "GPS"
+      ],
+      "partly": [
+        "Encryption"
       ]
     }
   },
-  "notes": {
+  "Notes": {
     "Before you proceed": [
       {
         "type": "string",
@@ -84,7 +89,7 @@
     "Device preparation": [
       {
         "type": "header",
-        "data": "Save your apn"
+        "data": "Save your APN"
       },
       {
         "type": "list",
@@ -104,7 +109,7 @@
       },
       {
         "type": "header",
-        "data": "Unlock the bootloader (using a computer)"
+        "data": "Unlock the bootloader"
       },
       {
         "type": "list",
@@ -129,13 +134,41 @@
     "Droidian installation": [
       {
         "type": "header",
-        "data": "Installation"
+        "data": "Droidian Installer"
       },
       {
         "type": "list",
+        "links": [
+          {
+            "to": "https://github.com/droidian-releng/droidian-installer/releases/tag/0.0.2",
+            "text": "Droidian's installer",
+            "id": 1
+          }
+        ],
         "data": [
-          "Extract the downloaded zip file",
-          "Boot to fastboot (or fastbootd in TWRP or any recovery for Samsung devices) and run flash_all.sh to flash the image to your device. To flash each partition manually",
+          "Download and run #{1}",
+          "Boot to fastboot and wait for the installer to detect your device.",
+          "In case the device does not get recognized correctly, you can select your device from the list manually.",
+          "Select your desktop environment and wait for the installer to finish.",
+          "Reboot."
+        ]
+      },
+      {
+        "type": "header",
+        "data": "Manual Installation"
+      },
+      {
+        "type": "list",
+        "links": [
+          {
+            "to": "https://images.droidian.org/droidian/nightly/arm64/xiaomi/image-fastboot-xiaomi.zip",
+            "text": "Droidian's image",
+            "id": 1
+          }
+        ],
+        "data": [
+          "Download and extract #{1}",
+          "Boot to fastboot and run flash_all.sh to flash the image to your device. To flash each partition manually",
           {
             "type": "list",
             "data": [
@@ -159,6 +192,12 @@
         "data": "Mobile data needs an APN to be set up from Settings -> Mobile Network -> Access Point Names."
       }
     ],
+    "Encryption": [
+      {
+        "type": "string",
+        "data": "System encryption does not work and has been disabled for now."
+      }
+    ],
     "Applications": [
       {
         "type": "string",
@@ -175,11 +214,7 @@
     "Credits": [
       {
         "type": "string",
-        "data": "Contributors"
-      },
-      {
-        "type": "string",
-        "data": "#{1} #{2}",
+        "data": "#{1}, #{2}",
         "links": [
           {
             "to": "https://github.com/fakeshell",

@@ -4,12 +4,15 @@
   "code": "crownlte",
   "features": {
     "Camera": {
-      "partly": [
-        "Switch camera",
-        "Photo"
+      "working": [
+        "Flashlight"
       ],
       "notWorking": [
         "Video"
+      ],
+      "partly": [
+        "Photo",
+        "Switch camera"
       ]
     },
     "Sound": {
@@ -17,60 +20,59 @@
         "Volume control"
       ],
       "partly": [
-        "Headphones",
-        "Speaker"
+        "Speaker",
+        "Microphone",
+        "Headphones"
       ]
     },
     "Sensors": {
       "working": [
         "Brightness control",
-        "Auto brightness",
         "Rotation",
+        "Fingerprint",
+        "Auto brightness",
         "Proximity",
-        "Notification LED",
-        "Vibration",
-        "Touchscreen"
-      ],
-      "notWorking": [
-        "External display"
+        "Vibration"
       ]
     },
     "Network": {
       "working": [
-        "Flight mode",
-        "Calls",
+        "WiFi",
         "Hotspot",
-        "Data",
-        "WiFi"
+        "NFC",
+        "Bluetooth"
       ]
     },
-    "Telephony": {
+    "Cellular": {
       "working": [
-        "Battery percentage",
-        "Flashlight",
-        "Charging",
-        "Fingerprint",
-        "SMS",
-        "SD card",
-        "NFC",
-        "GPS",
-        "Bluetooth",
-        "Waydroid"
+        "Calls",
+        "Data",
+        "SMS"
       ],
       "partly": [
-        "Carrier info",
-        "Microphone"
+        "Carrier info"
       ],
       "notWorking": [
         "Dual sim",
-        "Encryption"
+        "MMS"
+      ]
+    },
+    "Misc": {
+      "working": [
+        "SD card",
+        "Waydroid",
+        "GPS"
+      ],
+      "notWorking": [
+        "Encryption",
+        "External display"
       ],
       "untested": [
         "MTP"
       ]
     }
   },
-  "notes": {
+  "Notes": {
     "Before you proceed": [
       {
         "type": "string",
@@ -142,13 +144,20 @@
     "Droidian installation": [
       {
         "type": "header",
-        "data": "Installation"
+        "data": "Manual Installation"
       },
       {
         "type": "list",
+        "links": [
+          {
+            "to": "https://github.com/Sexynos/droidian-images-starlte/releases/tag/nightly",
+            "text": "Droidian's image",
+            "id": 1
+          }
+        ],
         "data": [
-          "Extract the downloaded zip file",
-          "Boot to fastboot (or fastbootd in TWRP or any recovery for Samsung devices) and run flash_all.sh to flash the image to your device. To flash each partition manually",
+          "Download and extract #{1}",
+          "Boot to fastbootd in AOSP recovery and run flash_all.sh to flash the image to your device. To flash each partition manually",
           {
             "type": "list",
             "data": [

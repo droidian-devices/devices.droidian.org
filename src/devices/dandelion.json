@@ -4,78 +4,80 @@
   "code": "dandelion",
   "features": {
     "Camera": {
-      "partly": [
-        "Switch camera",
+      "working": [
         "Photo",
-        "Video"
+        "Video",
+        "Switch camera",
+        "Flashlight"
       ]
     },
     "Sound": {
       "working": [
+        "Speaker",
+        "Microphone",
         "Headphones",
-        "Volume control",
-        "Speaker"
+        "Volume control"
       ]
     },
     "Sensors": {
       "working": [
         "Brightness control",
         "Auto brightness",
-        "Proximity",
-        "Vibration",
-        "Touchscreen"
+        "Proximity"
       ],
-      "partly": [
-        "Rotation"
+      "notWorking": [
+        "Rotation",
+        "Vibration"
       ]
     },
     "Network": {
       "working": [
-        "Flight mode",
-        "Calls",
-        "Data",
-        "WiFi"
+        "WiFi",
+        "Bluetooth"
       ],
       "notWorking": [
         "Hotspot"
       ]
     },
-    "Telephony": {
+    "Cellular": {
       "working": [
-        "Battery percentage",
-        "Microphone",
-        "Flashlight",
-        "Charging",
-        "Fingerprint",
-        "SMS",
-        "SD card",
-        "GPS",
-        "Bluetooth"
+        "Calls",
+        "Data",
+        "SMS"
       ],
       "partly": [
         "Carrier info"
       ],
       "notWorking": [
         "Dual sim",
-        "Encryption",
-        "Waydroid"
+        "MMS"
+      ]
+    },
+    "Others": {
+      "working": [
+        "SD card",
+        "GPS"
+      ],
+      "notWorking": [
+        "Waydroid",
+        "Encryption"
       ],
       "untested": [
         "MTP"
       ]
     }
   },
-  "notes": {
+  "Notes": {
     "Before you proceed": [
       {
         "type": "string",
-        "data": "Device has to be downgraded to stock Android 10"
+        "data": "Device has to be downgraded to stock Android 10 before installation"
       }
     ],
     "Device preparation": [
       {
         "type": "header",
-        "data": "Save your apn"
+        "data": "Save your APN"
       },
       {
         "type": "list",
@@ -95,7 +97,7 @@
       },
       {
         "type": "header",
-        "data": "Unlock the bootloader (using a computer)"
+        "data": "Unlock the bootloader"
       },
       {
         "type": "list",
@@ -120,13 +122,20 @@
     "Droidian installation": [
       {
         "type": "header",
-        "data": "Installation"
+        "data": "Manual Installation"
       },
       {
         "type": "list",
+        "links": [
+          {
+            "to": "https://github.com/droidian-mt6765/droidian-images-dandelion/releases/download/ubports-installer/droidian-UNOFFICIAL_xiaomi_dandelion-armhf-phosh-phone-29.zip",
+            "text": "Droidian's image",
+            "id": 1
+          }
+        ],
         "data": [
-          "Extract the downloaded zip file",
-          "Boot to fastboot (or fastbootd in TWRP or any recovery for Samsung devices) and run flash_all.sh to flash the image to your device. To flash each partition manually",
+          "Download and extract #{1}",
+          "Boot to fastboot and run flash_all.sh to flash the image to your device. To flash each partition manually",
           {
             "type": "list",
             "data": [
@@ -150,12 +159,6 @@
         "data": "Mobile data needs an APN to be set up from Settings -> Mobile Network -> Access Point Names."
       }
     ],
-    "Rotation": [
-      {
-        "type": "string",
-        "data": "Rotation is currently broken and after rotation touch will be inverted."
-      }
-    ],
     "Applications": [
       {
         "type": "string",
@@ -172,11 +175,7 @@
     "Credits": [
       {
         "type": "string",
-        "data": "Contributors"
-      },
-      {
-        "type": "string",
-        "data": "#{1} #{2}",
+        "data": "#{1}, #{2}",
         "links": [
           {
             "to": "https://github.com/fakeshell",

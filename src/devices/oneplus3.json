@@ -8,24 +8,26 @@
         "Flashlight"
       ],
       "notWorking": [
-        "Video",
         "Photo",
-        "Switch camera"
+        "Switch camera",
+        "Video"
+      ]
+    },
+    "Sound": {
+      "working": [
+        "Speaker",
+        "Microphone",
+        "Headphones",
+        "Volume control"
       ]
     },
     "Sensors": {
       "working": [
         "Brightness control",
-        "Notification LED",
-        "Vibration",
-        "Volume control",
-        "Battery percentage",
-        "Charging",
-        "Waydroid",
-        "Hotspot",
-        "NFC",
-        "Proximity sensor",
-        "Auto rotation"
+        "Rotation",
+        "Auto brightness",
+        "Proximity",
+        "Vibration"
       ],
       "partly": [
         "Fingerprint"
@@ -33,24 +35,40 @@
     },
     "Network": {
       "working": [
-        "Data"
-      ],
-      "notWorking": [
-        "Dual sim"
+        "WiFi",
+        "Hotspot",
+        "NFC",
+        "Bluetooth"
       ]
     },
-    "Telephony": {
+    "Cellular": {
       "working": [
         "Calls",
-        "SMS",
-        "Tristate switch"
+        "Data",
+        "SMS"
       ],
       "partly": [
         "Carrier info"
+      ],
+      "notWorking": [
+        "Dual sim",
+        "MMS"
+      ]
+    },
+    "Misc": {
+      "working": [
+        "SD card",
+        "Waydroid",
+        "MTP",
+        "GPS"
+      ],
+      "notWorking": [
+        "Encryption",
+        "MTP"
       ]
     }
   },
-  "notes": {
+  "Notes": {
     "Before you proceed": [
       {
         "type": "string",
@@ -71,7 +89,15 @@
             "id": 3
           }
         ],
-        "data": "As a prerequesite, the device needs to be treblized. Instructions from #{1} Flash and boot the custom twrp recovery #{2}, then in recovery, go to Advanced -> Terminal and run the command `treblize` You will then need to flash the latest firmware in recovery (9.0.6). It is important to note that firmware is device specific, so be sure to pick the correct one from `https://github.com/nvertigo/firmware-3t/tree/master/archive` Now in recovery, flash the LineageOS 16 treble build from #{3}. After installed, boot into LineageOS and confirm everything is working. Lastly, boot back into recovery, go to `Wipe` -> `Advanced Wipe` -> Select everything except `Vendor` and `USB-OTG`, then `Swipe to Wipe`. Then reboot back into recovery. Now your device is treblized and you can proceed to install Droidian."
+        "data": [
+          "As a prerequesite, the device needs to be treblized.",
+          "Instructions from #{1} Flash and boot the custom twrp recovery #{2}, then in recovery, go to Advanced -> Terminal and run the command `treblize`.",
+          "You will then need to flash the latest firmware in recovery (9.0.6). It is important to note that firmware is device specific, so be sure to pick the correct one from `https://github.com/nvertigo/firmware-3t/tree/master/archive`.",
+          " Now in recovery, flash the LineageOS 16 treble build from #{3}.",
+          "After installed, boot into LineageOS and confirm everything is working.",
+          "Lastly, boot back into recovery, go to `Wipe` -> `Advanced Wipe` -> Select everything except `Vendor` and `USB-OTG`, then `Swipe to Wipe`.",
+          "Then reboot back into recovery. Now your device is treblized and you can proceed to install Droidian."
+        ]
       }
     ],
     "Device preparation": [
@@ -83,8 +109,8 @@
         "type": "list",
         "links": [
           {
-            "to": "https://github.com/droidian-images/droidian/releases",
-            "text": "Droidian rootfs and devtools",
+            "to": "https://images.droidian.org/droidian/nightly/arm64/oneplus/image-fastboot-oneplus3.zip",
+            "text": "Droidian's image",
             "id": 1
           },
           {
@@ -95,11 +121,11 @@
           {
             "to": "https://github.com/Droidian-oneplus3/device-page/releases/tag/twrp-op3treble",
             "text": "Custom TWRP recovery with /vendor partition support",
-            "id": 2
+            "id": 3
           }
         ],
         "data": [
-          "#{1} for arm64 (nightly releases include devtools)",
+          "#{1}",
           "#{2}",
           "#{3}"
         ]
@@ -225,7 +251,7 @@
           "Go to the Reboot menu and choose System",
           "twrp-op3treble-3.3.1-1.img might complain that there is no OS installed, but that’s fine",
           "The first boot may take longer, and at least one spontaneous reboot is expected during the process",
-          "You should be greeted with the lock screen, the default password is 1234"
+          "You should be greeted with the lock screen."
         ]
       },
       {
@@ -251,18 +277,6 @@
         "data": "If you get an empty Access Points window even after you have entered the info, ofono is not working properly. Run the command ‘sudo systemctl restart ofono.service’ to solve the issue."
       }
     ],
-    "Dual SIM": [
-      {
-        "type": "string",
-        "data": "Dual SIM functionality is currently not implemented in Phosh so only one SIM works at the moment."
-      }
-    ],
-    "Offline Charging": [
-      {
-        "type": "string",
-        "data": "When powered off, plugging in a charger will power on the device. If you experience a flashing screen, reboot to solve the issue. If the phone is powered on manually or rebooted, there won’t be any screen flashing."
-      }
-    ],
     "Camera": [
       {
         "type": "string",
@@ -273,19 +287,6 @@
       {
         "type": "string",
         "data": "Currently GPU only works partially in Droidian, but in Waydroid it works perfectly."
-      }
-    ],
-    "SSH access": [
-      {
-        "type": "string",
-        "links": [
-          {
-            "to": "https://www.chiark.greenend.org.uk/~sgtatham/putty/",
-            "text": "PuTTY",
-            "id": 1
-          }
-        ],
-        "data": "Flashing the devtools zip enables SSH over USB. To use it, connect your phone to your computer and type ssh droidian@10.15.19.82, the password is 1234 (on Windows, you may need #{1})"
       }
     ],
     "Applications": [

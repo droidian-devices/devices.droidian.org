@@ -37,7 +37,7 @@ export const HomeIcon = styled(motion.div)<IDefaultChildren>`
   width: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
   flex-wrap: nowrap;
   overflow-x: hidden;

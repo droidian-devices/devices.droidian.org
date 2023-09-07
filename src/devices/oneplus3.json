@@ -84,16 +84,21 @@
             "id": 2
           },
           {
+              "to": "https://github.com/nvertigo/firmware-3t/tree/master/archive",
+              "text": "here",
+              "id": 3
+          },
+          {
             "to": "https://drive.google.com/uc?export=download&id=15cy1Pxjl3DIXzGhwEpiCiu3BqlE6ZkaW&confirm=true",
             "text": "lineage-16.0-20200522-UNOFFICIAL-oneplus3.zip",
-            "id": 3
+            "id": 4
           }
         ],
         "data": [
           "As a prerequesite, the device needs to be treblized.",
           "Instructions from #{1} Flash and boot the custom twrp recovery #{2}, then in recovery, go to Advanced -> Terminal and run the command `treblize`.",
-          "You will then need to flash the latest firmware in recovery (9.0.6). It is important to note that firmware is device specific, so be sure to pick the correct one from `https://github.com/nvertigo/firmware-3t/tree/master/archive`.",
-          " Now in recovery, flash the LineageOS 16 treble build from #{3}.",
+          "You will then need to flash the latest firmware in recovery (9.0.6). It is important to note that firmware is device specific, so be sure to pick the correct one from #{3}.",
+          " Now in recovery, flash the LineageOS 16 treble build from #{4}.",
           "After installed, boot into LineageOS and confirm everything is working.",
           "Lastly, boot back into recovery, go to `Wipe` -> `Advanced Wipe` -> Select everything except `Vendor` and `USB-OTG`, then `Swipe to Wipe`.",
           "Then reboot back into recovery. Now your device is treblized and you can proceed to install Droidian."
@@ -132,7 +137,7 @@
       },
       {
         "type": "header",
-        "data": "Save your apn"
+        "data": "Save your APN"
       },
       {
         "type": "list",
@@ -185,10 +190,8 @@
         "data": [
           "Go to the Wipe menu",
           "Select Advanced wipe",
-          "Tick the boxes called Dalvik / ART cache, Cache, System, Data",
+          "Tick all the boxes except Vendor and USB-OTG",
           "Swipe to Wipe",
-          "Go back to the previous menu",
-          "Choose Format data and type yes",
           "Go back to the main menu and select Reboot",
           "Choose Recovery"
         ]
@@ -230,17 +233,6 @@
       }
     ],
     "Finalizing the installation": [
-      {
-        "type": "header",
-        "data": "Install adaptation package as a flashable zip (twrp-op3treble-3.3.1-1.img)"
-      },
-      {
-        "type": "list",
-        "data": [
-          "Install the file called `` as a Zip file",
-          "Alternatively, you can enter ADB sideload mode and run adb sideload"
-        ]
-      },
       {
         "type": "header",
         "data": "Boot your device"
@@ -308,8 +300,13 @@
         "data": "Contributors"
       },
       {
-        "type": "string",
-        "data": "#{1} #{2} #{3} #{4}",
+        "type": "list",
+        "data": [
+            "#{1}",
+            "#{2}",
+            "#{3}",
+            "#{4}"
+        ],
         "links": [
           {
             "to": "https://github.com/Bettehem",

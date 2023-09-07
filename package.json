@@ -2,6 +2,7 @@
   "name": "droidian-client",
   "version": "0.0.1",
   "private": true,
+  "homepage": "https://devices.droidian.org",
   "scripts": {
     "start": "PORT=3005 react-scripts start -FAST_REFRESH=true",
     "build": "react-scripts build",

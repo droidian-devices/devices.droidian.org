@@ -63,8 +63,7 @@
         "GPS"
       ],
       "notWorking": [
-        "Encryption",
-        "MTP"
+        "Encryption"
       ]
     }
   },

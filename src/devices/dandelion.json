@@ -56,14 +56,12 @@
     "Others": {
       "working": [
         "SD card",
+        "MTP",
         "GPS"
       ],
       "notWorking": [
         "Waydroid",
         "Encryption"
-      ],
-      "untested": [
-        "MTP"
       ]
     }
   },

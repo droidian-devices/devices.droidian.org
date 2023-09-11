@@ -204,7 +204,8 @@ export const renderNotes = (
   notes: Record<string, INotes<ENoteType>[]> | undefined,
   dispatch: Dispatch,
 ): ReactElement | null => {
-  const target = window.location.hash ? window.location.hash.split('#')[1]! : null;
+  const splitted = window.location.hash ? window.location.hash.split('#') : null;
+  const target = splitted ? splitted[splitted.length - 1]! : null;
 
   return !notes || Object.entries(notes)?.length <= 0 ? null : (
     <>

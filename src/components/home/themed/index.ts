@@ -33,7 +33,7 @@ export const HomeHeader = styled(motion.div)<IDefaultChildren>`
 
 export const HomeIcon = styled(motion.div)<IDefaultChildren>`
   min-height: 300px;
-  height: fit-content;
+  height: 450px;
   width: 300px;
   display: flex;
   flex-direction: column;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import Theme, { App as BaseApp, GlobalStyle } from './components/customs';
 import theme from './components/customs/theme';
 import Navbar from './components/generic/views/Navbar';
@@ -10,14 +10,14 @@ import Notifications from './components/notifications/views/Component';
 const App: React.FC = () => {
   return (
     <Theme theme={theme}>
-      <BrowserRouter>
+      <HashRouter>
         <GlobalStyle />
         <BaseApp>
           <Notifications />
           <Navbar />
           <Router />
         </BaseApp>
-      </BrowserRouter>
+      </HashRouter>
       <Footer />
     </Theme>
   );

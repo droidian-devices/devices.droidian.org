@@ -1,4 +1,4 @@
-# Droidian react client
+# Droidian-devices react client
 
 ## TLDR
 

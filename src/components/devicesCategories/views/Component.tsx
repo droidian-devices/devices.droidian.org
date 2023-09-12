@@ -19,8 +19,8 @@ const renderCategories = (
 ): ReactElement[] => {
   return Object.values(EDeviceCategory).map((d) => {
     return (
-      <>
-        <CategoryContainer key={d} $active={active === d}>
+      <React.Fragment key={d}>
+        <CategoryContainer $active={active === d}>
           <Category $active={active === d} onClick={(): void => (active === d ? setActive(undefined) : setActive(d))}>
             <Header>{d}</Header>
             <i className="icon-down-dir" />
@@ -34,7 +34,7 @@ const renderCategories = (
             />
           ) : null}
         </AnimatePresence>
-      </>
+      </React.Fragment>
     );
   });
 };

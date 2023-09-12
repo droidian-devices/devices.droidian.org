@@ -19,7 +19,7 @@ const renderDevice = (device: IDevice | undefined, dispatch: Dispatch): ReactEle
   const data = device ? Object.keys(device).filter((e) => !baseKeys.includes(e)) : [];
 
   return device ? (
-    <>
+    <React.Fragment key={device.name}>
       <Header>{device.name}</Header>
       <FeaturesContainer>{renderDescription(device)}</FeaturesContainer>
       <FeaturesContainer>{renderFeatures(device)}</FeaturesContainer>
@@ -30,7 +30,7 @@ const renderDevice = (device: IDevice | undefined, dispatch: Dispatch): ReactEle
           </FeaturesContainer>
         );
       })}
-    </>
+    </React.Fragment>
   ) : (
     <Header>Selected device does not exist</Header>
   );

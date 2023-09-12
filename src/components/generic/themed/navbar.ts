@@ -1,24 +1,33 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { ContainerBody, OverlayContainer } from '../../customs';
-import type { IDefaultChildren, INavContentProps } from '../../../types';
+import { OverlayContainer } from '../../customs';
+import type * as types from '../../../types';
 
-export const NavbarContainer = styled(OverlayContainer)<IDefaultChildren>`
+export const NavbarContainer = styled(OverlayContainer)<types.IDefaultChildren>`
   height: 50px;
   width: 100%;
   background: url('/bookworm.png');
   background-size: cover;
 `;
 
-export const NavbarBody = styled(ContainerBody)<IDefaultChildren>`
+export const NavbarBody = styled(motion.div)<types.IOuterContainerProps>`
   height: 100%;
   width: 100%;
+  display: flex;
   background: rgba(0, 0, 0, 0.6);
   padding-left: 2rem;
   padding-right: 2rem;
+  flex-direction: ${(props): string => props.$direction ?? 'column'};
+  justify-content: ${(props): string => props.$justify ?? 'center'};
+  align-items: ${(props): string => props.$align ?? 'center'};
+  flex-wrap: ${(props): string => props.$wrap ?? 'wrap'};
+  overflow-y: ${(props): string => (props.$noScroll ? 'hidden' : 'auto')};
+  overflow-x: hidden;
+  color: ${(props): string => props.theme.colors.default};
+  transition: ${(props): string => props.theme.transition.semiSlow};
 `;
 
-export const HomeButton = styled(motion.div)<IDefaultChildren>`
+export const HomeButton = styled(motion.div)<types.IDefaultChildren>`
   height: 25px;
   width: 25px;
   background: url('/droidian.svg');
@@ -26,7 +35,7 @@ export const HomeButton = styled(motion.div)<IDefaultChildren>`
   filter: sepia(100%) saturate(0%) contrast(100%);
 `;
 
-export const NavLinks = styled(ContainerBody)<INavContentProps>`
+export const NavLinks = styled(motion.div)<types.INavContentProps>`
   position: fixed;
   right: 0;
   padding-left: 2rem;
@@ -34,6 +43,15 @@ export const NavLinks = styled(ContainerBody)<INavContentProps>`
   font-size: 1.4rem;
   font-weight: 400;
   background: #0d1117;
+  display: flex;
+  flex-direction: ${(props): string => props.$direction ?? 'column'};
+  justify-content: ${(props): string => props.$justify ?? 'center'};
+  align-items: ${(props): string => props.$align ?? 'center'};
+  flex-wrap: ${(props): string => props.$wrap ?? 'wrap'};
+  overflow-y: ${(props): string => (props.$noScroll ? 'hidden' : 'auto')};
+  overflow-x: hidden;
+  color: ${(props): string => props.theme.colors.default};
+  transition: ${(props): string => props.theme.transition.semiSlow};
 
   @media (min-width: 768px) {
     height: 400px;
@@ -48,7 +66,7 @@ export const NavLinks = styled(ContainerBody)<INavContentProps>`
   }
 `;
 
-export const NavToggle = styled(motion.div)<INavContentProps>`
+export const NavToggle = styled(motion.div)<types.INavContentProps>`
   width: 40px;
   height: 25px;
   display: flex;

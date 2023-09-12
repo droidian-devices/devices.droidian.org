@@ -1,12 +1,12 @@
 import React from 'react';
-import { Container, Header, Link, OverflowContainerBody, PanelHeader } from '../../customs';
+import { Container, ContainerBody, Header, Link, PanelHeader } from '../../customs';
 import * as animation from '../../../animation';
 import { HomeHeader, HomeIcon } from '../themed';
 
 const Home: React.FC = () => {
   return (
     <Container variants={animation.slideRight} initial="init" animate="visible" exit="exit">
-      <OverflowContainerBody $justify="space-evenly" $direction="row" $align="flex-start">
+      <ContainerBody $justify="space-evenly" $direction="row" $align="flex-start">
         <HomeHeader>
           <div>
             <PanelHeader>Droidian devices</PanelHeader>
@@ -35,7 +35,7 @@ const Home: React.FC = () => {
             <p>Latest images from CI</p>
           </HomeIcon>
         </Link>
-      </OverflowContainerBody>
+      </ContainerBody>
     </Container>
   );
 };

@@ -2,9 +2,9 @@ import type { ReactElement } from 'react';
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { AnimatePresence } from 'framer-motion';
-import { Container, Header, OverflowContainerBody } from '../../customs';
+import { ContainerBody, Header } from '../../customs';
 import * as animation from '../../../animation';
-import { Category, CategoryContainer, CategoryOuterContainer } from '../themed';
+import { Category, CategoryContainer, DeviceCategoryContainer } from '../themed';
 import * as hooks from '../../../redux';
 import Loading from '../../generic/views/Loading';
 import getDevices from '../../../devices/controller';
@@ -57,11 +57,11 @@ const DevicesCategories: React.FC = () => {
   return loading ? (
     <Loading finished={loading} />
   ) : (
-    <Container variants={animation.slideRight} initial="init" animate="visible" exit="exit">
-      <OverflowContainerBody $direction="row" $justify="space-evenly">
-        <CategoryOuterContainer>{renderCategories(devices, active, setActive)}</CategoryOuterContainer>
-      </OverflowContainerBody>
-    </Container>
+    <DeviceCategoryContainer variants={animation.slideRight} initial="init" animate="visible" exit="exit">
+      <ContainerBody $direction="row" $justify="space-evenly">
+        {renderCategories(devices, active, setActive)}
+      </ContainerBody>
+    </DeviceCategoryContainer>
   );
 };
 

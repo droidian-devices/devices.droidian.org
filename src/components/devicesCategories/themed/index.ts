@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import type { IBrandsProps } from '../../../types';
+import { Container } from '../../customs';
 
 export const CategoryContainer = styled(motion.div)<IBrandsProps>`
   display: flex;
@@ -10,12 +11,11 @@ export const CategoryContainer = styled(motion.div)<IBrandsProps>`
   flex-wrap: wrap;
   padding: 5px;
   margin-top: 50px;
-  margin-bottom: 40px;
   color: ${(props): string => props.theme.colors.default};
   transition: ${(props): string => props.theme.transition.default};
 
   @media (min-width: 768px) {
-    height: 40%;
+    height: 10%;
     width: 100%;
   }
 
@@ -70,7 +70,7 @@ export const Category = styled(motion.div)<IBrandsProps>`
     width: 40%;
 
     header {
-      font-size: 2vw;
+      font-size: 2.5vw;
     }
   }
 
@@ -84,7 +84,7 @@ export const DevicesContainer = styled(motion.div)<IBrandsProps>`
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
 
   header {
@@ -102,9 +102,13 @@ export const DevicesContainer = styled(motion.div)<IBrandsProps>`
   }
 
   p {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     padding: 15px;
-    max-width: 700px;
+    max-width: 800px;
     margin: 0 auto;
   }
+`;
+
+export const DeviceCategoryContainer = styled(Container)<IBrandsProps>`
+  margin-bottom: 75px;
 `;

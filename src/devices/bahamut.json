@@ -77,7 +77,7 @@
     "Before you proceed": [
       {
         "type": "string",
-        "data": "You need to upgrade or revert to latest stock version (Android 9, PKQ1.190723.001) first."
+        "data": "You need to upgrade to the latest available stock Android 11 release (55.2.A.4.332)"
       }
     ],
     "Device preparation": [

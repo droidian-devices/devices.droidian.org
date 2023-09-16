@@ -1,5 +1,5 @@
 {
-  "name": "Xiaomi Redmi Note 7 (lavender)",
+  "name": "Xiaomi Redmi Note 7/7S (lavender)",
   "category": "official",
   "code": "lavender",
   "features": {
@@ -58,7 +58,9 @@
         "Encryption"
       ],
       "partly": [
-        "Waydroid",
+        "Waydroid"
+      ],
+      "notWorking": [
         "Encryption"
       ]
     }

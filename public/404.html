@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Droidian devices</title>
+  <script type="text/javascript">
+    const l = window.location;
+    console.log(l);
+
+    if (!l.hash.startsWith("#/")) {
+      const newLocation = `${l.protocol}//${l.hostname}/#/${l.pathname.substring(1)}${l.search}${l.hash}`;
+      l.replace(newLocation);
+    }
+  </script>
+</head>
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+</body>
+</html>

@@ -147,7 +147,7 @@
         "type": "list",
         "links": [
           {
-            "to": "https://images.droidian.org/droidian/nightly/arm64/samsung/image-fastboot-starqlte.zip",
+            "to": "https://images.droidian.org/droidian/nightly/arm64/google/image-fastboot-sargo.zip",
             "text": "Droidian's image",
             "id": 1
           }

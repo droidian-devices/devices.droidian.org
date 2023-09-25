@@ -22,13 +22,11 @@
     "Sensors": {
       "working": [
         "Brightness control",
+        "Rotation",
         "Fingerprint",
         "Auto brightness",
         "Proximity",
         "Vibration"
-      ],
-      "notWorking": [
-        "Rotation"
       ]
     },
     "Network": {

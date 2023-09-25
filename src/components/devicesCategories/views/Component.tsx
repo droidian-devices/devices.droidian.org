@@ -1,6 +1,6 @@
 import type { ReactElement } from 'react';
 import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { AnimatePresence } from 'framer-motion';
 import { Container, Header, OverflowContainerBody } from '../../customs';
 import * as animation from '../../../animation';
@@ -11,17 +11,23 @@ import getDevices from '../../../devices/controller';
 import { EDeviceCategory } from '../../../enums';
 import { DevicesRenderer } from './Renderer';
 import type { IDevice } from '../../../types';
+import { useMainSelector } from '../../../redux/hooks';
+import type { MainDispatch } from '../../../store/types';
 
 const renderCategories = (
   devices: IDevice[],
-  active: EDeviceCategory | undefined,
-  setActive: React.Dispatch<React.SetStateAction<EDeviceCategory | undefined>>,
+  active: EDeviceCategory | null,
+  dispatch: MainDispatch,
 ): ReactElement[] => {
+  const setActive = (active: EDeviceCategory | null): void => {
+    dispatch(hooks.changeCategory({ active }));
+  };
+
   return Object.values(EDeviceCategory).map((d) => {
     return (
       <>
         <CategoryContainer key={d} $active={active === d}>
-          <Category $active={active === d} onClick={(): void => (active === d ? setActive(undefined) : setActive(d))}>
+          <Category $active={active === d} onClick={(): void => (active === d ? setActive(null) : setActive(d))}>
             <Header>{d}</Header>
             <i className="icon-down-dir" />
           </Category>
@@ -40,10 +46,11 @@ const renderCategories = (
 };
 
 const DevicesCategories: React.FC = () => {
-  const { devices } = useSelector(hooks.devicesState);
+  const { devices } = useMainSelector(hooks.devicesState);
+  const categories = useMainSelector(hooks.categoriesState);
   const dispatch = useDispatch();
   const [loading, setLoading] = useState<boolean>(false);
-  const [active, setActive] = useState<EDeviceCategory | undefined>(EDeviceCategory.Official);
+  const [active, setActive] = useState<EDeviceCategory | null>(EDeviceCategory.Official);
 
   useEffect(() => {
     if (devices.length === 0) {
@@ -54,12 +61,16 @@ const DevicesCategories: React.FC = () => {
     }
   }, [devices.length, dispatch]);
 
+  useEffect(() => {
+    setActive(categories.active);
+  }, [categories]);
+
   return loading ? (
     <Loading finished={loading} />
   ) : (
     <Container variants={animation.slideRight} initial="init" animate="visible" exit="exit">
       <OverflowContainerBody $direction="row" $justify="space-evenly">
-        <CategoryOuterContainer>{renderCategories(devices, active, setActive)}</CategoryOuterContainer>
+        <CategoryOuterContainer>{renderCategories(devices, active, dispatch)}</CategoryOuterContainer>
       </OverflowContainerBody>
     </Container>
   );

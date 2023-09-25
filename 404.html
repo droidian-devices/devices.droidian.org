@@ -6,10 +6,14 @@
   <script type="text/javascript">
     const l = window.location;
     console.log(l);
-    l.replace("devices.droidian.org", "devices.droidian.org/#/");
+
+    if (!l.hash.startsWith("#/")) {
+      const newLocation = `${l.protocol}//${l.hostname}/#/${l.pathname.substring(1)}${l.search}${l.hash}`;
+      l.replace(newLocation);
+    }
   </script>
 </head>
 <body>
-<noscript>You need to enable JavaScript to run this app.</noscript>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
 </body>
 </html>

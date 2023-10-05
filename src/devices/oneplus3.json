@@ -27,9 +27,7 @@
         "Rotation",
         "Auto brightness",
         "Proximity",
-        "Vibration"
-      ],
-      "partly": [
+        "Vibration",
         "Fingerprint"
       ]
     },
@@ -60,7 +58,8 @@
         "SD card",
         "Waydroid",
         "MTP",
-        "GPS"
+        "GPS",
+        "Tristate switch"
       ],
       "notWorking": [
         "Encryption"

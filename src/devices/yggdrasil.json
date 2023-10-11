@@ -2,6 +2,68 @@
   "name": "Volla Phone (yggdrasil)",
   "category": "official",
   "code": "yggdrasil",
+  "features": {
+    "Camera": {
+      "working": [
+        "Photo",
+        "Switch camera",
+        "Flashlight"
+      ],
+      "notWorking": [
+        "Video"
+      ]
+    },
+    "Sound": {
+      "working": [
+        "Speaker",
+        "Microphone",
+        "Headphones",
+        "Volume control"
+      ]
+    },
+    "Sensors": {
+      "working": [
+        "Rotation",
+        "Proximity",
+        "Vibration",
+        "Brightness control"
+      ],
+      "partly": [
+        "Auto brightness"
+      ]
+    },
+    "Network": {
+      "working": [
+        "WiFi",
+        "Bluetooth"
+      ]
+    },
+    "Cellular": {
+      "working": [
+        "Calls",
+        "Data",
+        "SMS"
+      ],
+      "partly": [
+        "Carrier info"
+      ],
+      "notWorking": [
+        "Dual sim",
+        "MMS"
+      ]
+    },
+    "Misc": {
+      "working": [
+        "SD card",
+        "Waydroid",
+        "MTP",
+        "GPS"
+      ],
+      "notWorking": [
+        "Encryption"
+      ]
+    }
+  },
   "notes": {
     "Download files": [
       {

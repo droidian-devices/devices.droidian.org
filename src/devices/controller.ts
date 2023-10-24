@@ -16,13 +16,13 @@ import yggdrasil from './yggdrasil.json';
 import mimameid from './mimameid.json';
 import starqlte from './starqlte.json';
 import sofia from './sofia.json';
+import enchilada from './enchilada.json';
 import dandelion from './dandelion.json';
 import starlte from './starlte.json';
 import star2lte from './star2lte.json';
 import crownlte from './crownlte.json';
 import griffin from './griffin.json';
 import X01BD from './X01BD.json';
-import enchilada from './enchilada.json';
 import beryllium from './beryllium.json';
 import jasmine from './jasmine.json';
 import davinci from './davinci.json';
@@ -49,12 +49,12 @@ const getDevices = (): { devices: IDevice[] } => {
       mimameid,
       griffin,
       sofia,
+      enchilada,
       dandelion,
       starlte,
       star2lte,
       crownlte,
       X01BD,
-      enchilada,
       beryllium,
       jasmine,
       davinci,

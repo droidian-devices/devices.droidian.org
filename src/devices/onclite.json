@@ -121,7 +121,7 @@
         "type": "list",
         "links": [
           {
-            "to": "https://github.com/droidian-releng/droidian-installer/releases/tag/0.0.4",
+            "to": "https://github.com/droidian-releng/droidian-installer/releases/tag/0.0.5",
             "text": "Droidian's installer",
             "id": 1
           }

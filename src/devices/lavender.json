@@ -40,9 +40,7 @@
       "working": [
         "Calls",
         "Data",
-        "SMS"
-      ],
-      "partly": [
+        "SMS",
         "Carrier info"
       ],
       "notWorking": [

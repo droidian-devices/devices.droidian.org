@@ -6,11 +6,9 @@
     "Camera": {
       "working": [
         "Photo",
+        "Video",
         "Switch camera",
         "Flashlight"
-      ],
-      "notWorking": [
-        "Video"
       ]
     },
     "Sound": {

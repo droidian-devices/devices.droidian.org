@@ -71,136 +71,68 @@
       {
       "type": "list",
       "links": [
-      {
-      "to": "https://github.com/droidian-images/droidian#droidian",
-      "text": "github releases",
-      "id": 1
-      }
+        {
+          "to": "https://images.droidian.org/droidian/nightly/arm64/volla/image-fastboot-yggdrasil.zip",
+          "text": "Droidian's image",
+          "id": 1
+        },
+        {
+          "to": "https://volla.tech/filedump/volla-yggdrasil-9.0-ubports-installer-bootstrap.zip",
+          "text": "Halium 9 Bootstrap",
+          "id": 2
+        },
+        {
+          "to": "http://deb.cutie-shell.org/twrp-yggdrasil.img",
+          "text": "TWRP recovery (not needed)",
+          "id": 3
+        }
       ],
       "data": [
-      "Files are available on #{1}"
+        "#{1}",
+        "#{2}",
+        "#{3}"
       ]
-      },
-      {
-        "type": "header",
-        "data": "Which image to get"
-      },
-      {
-      "type": "list",
-      "data": [
-        "Fastboot-flashable images are, instead, the recommended way to install Droidian. These images are device specific, so if you want one for your device you should create one yourself.\nFastboot-flashable images support Full Disk Encryption, and make use of the whole userdata partition.",
-        "The recovery flashable zipfile needs to be flashed via a suitable Android recovery (such as TWRP). Recovery flashable zipfiles are generic, and are useful to test drive Droidian or in early device porting stages.\nYou should pick up the correct zipfile for your specific device:",
-        {
-          "type": "list",
-          "data": [
-            "Device with an Android 9 vendor: api28",
-            "Device with an Android 10 vendor: api29",
-            "Device with an Android 11 vendor: api30"
-          ]
-        },
-        "If you're in doubt, and there is a fastboot-flashable image available for your device, it's recommended to use that."
-        ]
-      },
-      {
-        "type": "header",
-        "data": "Recovery-flashable zipfile: bundles"
-      },
-      {
-        "type": "string",
-        "data": "Recovery flashable zipfiles support the addition of bundles, which allow to add functionality directly during the flashing process. Currently available bundles:"
-      },
-      {
-      "type": "list",
-      "data": [
-        "Devtools: Useful development tools for porters, not available in nightlies as they're embedded in the rootfs",
-        "Adaptation bundle: Device specific bundle (containing kernel, device-specific settings, etc)"
-        ]
-      },
-      {
-        "type": "string",
-        "data": "Keep in mind that is still recommended using fastboot-flashable images if available for your device."
       }
     ],
-    "Fastboot-flashable image: installation instructions": [
+    "Droidian installation": [
       {
         "type": "header",
-        "data": "Preparations"
+        "data": "Droidian Installer"
       },
       {
-        "type": "string",
-        "data": "If your device is A/B device, it is necessary to have both slots on same Android version. Ensure you have fastboot installed."
-      },
-      {
-        "type": "header",
-        "data": "Installation"
-      },
-      {
-        "type": "string",
-        "data": "Extract the downloaded archive, then run:"
-      },
-      {
-        "type": "string",
-        "data": "./flash_all.sh"
-      },
-      {
-        "type": "string",
-        "data": "You might need to execute that at root depending on how your system is configured."
+        "type": "list",
+        "links": [
+          {
+            "to": "https://github.com/droidian-releng/droidian-installer/releases/tag/0.0.5",
+            "text": "Droidian's installer",
+            "id": 1
+          }
+        ],
+        "data": [
+          "Download and run #{1}",
+          "Boot to fastboot and wait for the installer to detect your device.",
+          "In case the device does not get recognized correctly, you can select your device from the list manually.",
+          "Select your desktop environment and wait for the installer to finish.",
+          "Reboot."
+        ]
       },
       {
         "type": "header",
-        "data": "Finalizing installation"
-      },
-      {
-        "type": "string",
-        "data": "The device will reboot automatically. When the device has booted, you can unlock the device with the default passcode 1234."
-      }
-    ],
-    "Recovery-flashable zipfile: installation instructions": [
-      {
-        "type": "header",
-        "data": "Preparations"
-      },
-      {
-        "type": "string",
-        "data": "If your device is A/B device, it is necessary to have both slots on same Android version. Then, boot your favourite Android recovery."
-      },
-      {
-        "type": "header",
-        "data": "Installation"
-      },
-      {
-        "type": "string",
-        "data": "From recovery open adb sideload mode (under advanced on TWRP) and run following commands on your computer replacing ARCH_YYYYMMDD with the version of Droidian and vendor-device with the vendor and device codenames:"
+        "data": "Manual Installation"
       },
       {
         "type": "list",
         "data": [
-          "adb sideload droidian-OFFICIAL-phosh-phone-rootfs-apiXX-ARCH-VERSION_DATE.zip"
+          "Boot to fastboot and run flash_all.sh to flash the image to your device. To flash each partition manually",
+          {
+            "type": "list",
+            "data": [
+              "Check the list of images in data/ and flash each image manually like so: fastboot flash partition_name partition_name.img",
+              "The following images might be included: boot.img, dtbo.img, userdata.img."
+            ]
+          },
+          "Reboot."
         ]
-      },
-      {
-        "type": "string",
-        "data": "If you want to sideload devtools:"
-      },
-      {
-        "type": "list",
-        "data": [
-          "adb sideload droidian-devtools-ARCH_YYYYMMDD.zip"
-        ]
-      },
-      {
-        "type": "string",
-        "data": "If you want to sideload an adaptation bundle:"
-      },
-      {
-        "type": "list",
-        "data": [
-          "adb sideload droidian-adapatation-vendor-device-ARCH_YYYYMMDD.zip"
-        ]
-      },
-      {
-        "type": "string",
-        "data": "Note that you have to restart the sideload mode by tapping back and starting sideload again before every adb sideload command."
       }
     ],
     "Finalizing installation": [

@@ -86,7 +86,7 @@
         "type": "list",
         "links": [
           {
-            "to": "https://samfw.com/firmware/SM-G960F/bit/all/av/Q(Android%2010)",
+            "to": "https://samfw.com/firmware/SM-G965F/bit/all/av/Q(Android%2010)",
             "text": "Android 10 (Q) stock firmware",
             "id": 1
           }
@@ -148,7 +148,7 @@
         "type": "list",
         "links": [
           {
-            "to": "https://github.com/Sexynos/droidian-images-starlte/releases/tag/nightly",
+            "to": "https://github.com/Sexynos/droidian-images-star2lte/releases/tag/nightly",
             "text": "Droidian's image",
             "id": 1
           }

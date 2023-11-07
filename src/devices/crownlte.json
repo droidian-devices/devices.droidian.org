@@ -148,7 +148,7 @@
         "type": "list",
         "links": [
           {
-            "to": "https://github.com/Sexynos/droidian-images-starlte/releases/tag/nightly",
+            "to": "https://github.com/Sexynos/droidian-images-crownlte/releases/tag/nightly",
             "text": "Droidian's image",
             "id": 1
           }

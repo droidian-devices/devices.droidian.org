@@ -159,7 +159,7 @@ export const renderList = (note: INotes<ENoteType.List>): ReactElement | ReactEl
 
 export const renderNote = (note: INotes<ENoteType>[]): ReactElement | ReactElement[] => {
   return note.map((e) => {
-    switch (e.type.toLowerCase()) {
+    switch (e.type.toLowerCase() as ENoteType) {
       case ENoteType.List:
         return typeof e.data === 'string' ? (
           <p key={(e as INotes<ENoteType.String>).data as string}>

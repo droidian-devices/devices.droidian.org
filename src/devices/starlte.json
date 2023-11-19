@@ -17,11 +17,11 @@
     },
     "Sound": {
       "working": [
-        "Volume control"
+        "Volume control",
+        "Microphone"
       ],
       "partly": [
         "Speaker",
-        "Microphone",
         "Headphones"
       ]
     },
@@ -63,9 +63,7 @@
       ],
       "notWorking": [
         "Encryption",
-        "External display"
-      ],
-      "untested": [
+        "External display",
         "MTP"
       ]
     }
@@ -195,12 +193,6 @@
       {
         "type": "string",
         "data": "Camera currently works in Waydroid only. sudo apt install waydroid"
-      }
-    ],
-    "Apps": [
-      {
-        "type": "string",
-        "data": "Apps are slow and some freeze at times. this is an issue with the exynos chipset."
       }
     ],
     "Applications": [

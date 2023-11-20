@@ -5,13 +5,9 @@
   "features": {
     "Camera": {
       "working": [
-        "Flashlight"
-      ],
-      "notWorking": [
-        "Video"
-      ],
-      "partly": [
         "Photo",
+        "Video",
+        "Flashlight",
         "Switch camera"
       ]
     },
@@ -175,12 +171,6 @@
       {
         "type": "string",
         "data": "Mobile data needs an APN to be set up from Settings -> Mobile Network -> Access Point Names."
-      }
-    ],
-    "Camera": [
-      {
-        "type": "string",
-        "data": "Camera currently works in Waydroid only. sudo apt install waydroid"
       }
     ],
     "Applications": [

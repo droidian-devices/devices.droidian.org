@@ -5,13 +5,9 @@
   "features": {
     "Camera": {
       "working": [
-        "Flashlight"
-      ],
-      "notWorking": [
-        "Video"
-      ],
-      "partly": [
         "Photo",
+        "Video",
+        "Flashlight",
         "Switch camera"
       ]
     },

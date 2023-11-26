@@ -1,6 +1,6 @@
 {
   "name": "Samsung Galaxy Note 9 (Exynos) (crownlte)",
-  "category": "community",
+  "category": "official",
   "code": "crownlte",
   "features": {
     "Camera": {
@@ -142,18 +142,24 @@
         "type": "list",
         "links": [
           {
-            "to": "https://github.com/Sexynos/droidian-images-crownlte/releases/tag/nightly",
+            "to": "https://images.droidian.org/droidian/nightly/arm64/samsung/image-fastboot-star2lte.zip",
             "text": "Droidian's image",
             "id": 1
+          },
+          {
+            "to": "",
+            "text": "recovery.img",
+            "id": 2
           }
         ],
         "data": [
           "Download and extract #{1}",
-          "Boot to fastbootd in AOSP recovery and run flash_all.sh to flash the image to your device. To flash each partition manually",
+          "Download and flash #{2}",
+          "Enter fastboot in recovery and run flash_all.sh to flash the image to your device. To flash each partition manually",
           {
             "type": "list",
             "data": [
-              "Check the list of images in data/ and flash each image manually like so: fastboot flash partition_name partition_name.img",
+              "Check the list of images in data/ and flash each image manually like so: fastboot flash PARTITION_NAME partition_name.img",
               "The following images might be included: boot.img, dtbo.img, vbmeta.img, userdata.img."
             ]
           },
@@ -171,12 +177,6 @@
       {
         "type": "string",
         "data": "Mobile data needs an APN to be set up from Settings -> Mobile Network -> Access Point Names."
-      }
-    ],
-    "Camera": [
-      {
-        "type": "string",
-        "data": "Camera currently works in Waydroid only. sudo apt install waydroid"
       }
     ],
     "Applications": [

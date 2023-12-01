@@ -253,18 +253,6 @@
         "data": "The default password is 1234."
       }
     ],
-    "Unlocking SIM": [
-      {
-        "type": "string",
-        "data": "After entering a pin code to unlock your SIM card, you need to restart the Settings application to get access to the Mobile Network settings because the menu doesn’t update automatically."
-      }
-    ],
-    "Empty APN dialog": [
-      {
-        "type": "string",
-        "data": "If you get an empty Access Points window even after you have entered the info, ofono is not working properly. Run the command ‘sudo systemctl restart ofono.service’ to solve the issue."
-      }
-    ],
     "Camera": [
       {
         "type": "string",

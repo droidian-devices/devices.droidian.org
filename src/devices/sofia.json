@@ -1,26 +1,33 @@
 {
   "name": "Moto G Power (sofia)",
-  "category": "community",
+  "category": "Potential",
   "code": "sofia",
-  "notes": {
-    "Droidian installation": [
+  "Notes": {
+    "Notes": [
       {
-        "type": "header",
-        "data": "Installation"
-      },
-      {
-        "type": "list",
         "links": [
           {
-            "to": "https://github.com/arpio23/droidian-images",
-            "text": "github",
+            "to": "https://t.me/DroidianLinux",
+            "text": "our Telegram group",
             "id": 1
+          },
+          {
+            "to": "https://github.com/arpio23/droidian-images/tree/sofia",
+            "text": "images",
+            "id": 2
+          },
+          {
+            "to": "https://github.com/arpio23/kernel_motorola_sm6125",
+            "text": "kernel",
+            "id": 3
           }
         ],
+        "type": "string",
         "data": [
-          "Device is available on #{1}"
+          "This device is currently unsupported. If you are interested in maintaining the device or contributing to its progress, please reach out to #{1} to get information about the status. On github you can find old #{2} and the #{3}"
         ]
       }
     ]
   }
 }
+

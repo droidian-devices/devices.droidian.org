@@ -57,9 +57,8 @@
         "Waydroid",
         "MTP",
         "GPS",
-        "Tristate switch"
-      ],
-      "notWorking": [
+        "Tristate switch",
+        "Capacitive buttons",
         "Encryption"
       ]
     }
@@ -97,7 +96,8 @@
           " Now in recovery, flash the LineageOS 16 treble build from #{4}.",
           "After installed, boot into LineageOS and confirm everything is working.",
           "Lastly, boot back into recovery, go to `Wipe` -> `Advanced Wipe` -> Select everything except `Vendor` and `USB-OTG`, then `Swipe to Wipe`.",
-          "Then reboot back into recovery. Now your device is treblized and you can proceed to install Droidian."
+          "If Advanced Wipe gives you errors, choose Format Data in the wipe menu first.",
+          "Now your device is treblized and you can proceed to install Droidian."
         ]
       }
     ],
@@ -179,7 +179,7 @@
       },
       {
         "type": "header",
-        "data": "Wipe the device (using twrp-op3treble-3.3.1-1.img)"
+        "data": "Wipe the device (using TWRP)"
       },
       {
         "type": "list",
@@ -188,19 +188,9 @@
           "Select Advanced wipe",
           "Tick all the boxes except Vendor and USB-OTG",
           "Swipe to Wipe",
+          "If Advanced Wipe gives you errors, first do Format Data in the Wipe menu before Advanced Wipe.",
           "Go back to the main menu and select Reboot",
-          "Choose Recovery"
-        ]
-      },
-      {
-        "type": "header",
-        "data": "Copy the files to the device (computer)"
-      },
-      {
-        "type": "list",
-        "data": [
-          "When twrp-op3treble-3.3.1-1.img is booted, open the device’s Internal storage from your computer",
-          "Copy all of the files you downloaded to this folder"
+          "Choose Bootloader"
         ]
       }
     ],
@@ -212,7 +202,7 @@
       {
         "type": "list",
         "data": [
-          "Install the file called lineage-16.0-20200522-UNOFFICIAL-oneplus3 as a Zip file using twrp-op3treble-3.3.1-1.img",
+          "Install the file called lineage-16.0-20200522-UNOFFICIAL-oneplus3 as a Zip file using TWRP",
           "Alternatively, you can enter ADB sideload mode and run adb sideload lineage-16.0-20200522-UNOFFICIAL-oneplus3"        ]
       },
       {
@@ -222,9 +212,7 @@
       {
         "type": "list",
         "data": [
-          "Install the file called droidian-rootfs-arm64_YYYYMMDD.zip as a Zip file",
-          "Alternatively, you can enter ADB sideload mode and run adb sideload droidian-OFFICIAL-phosh-phone-rootfs-apiXX-arm64_YYYYMMDD.zip",
-          "devtools is already included in nightly builds."
+            "Unzip the droidian zip you just downloaded, then run the flash_all.sh script."
         ]
       }
     ],
@@ -236,10 +224,10 @@
       {
         "type": "list",
         "data": [
-          "Go to the Reboot menu and choose System",
-          "twrp-op3treble-3.3.1-1.img might complain that there is no OS installed, but that’s fine",
-          "The first boot may take longer, and at least one spontaneous reboot is expected during the process",
-          "You should be greeted with the lock screen."
+          "After the flash_all script is completed, the device will reboot.",
+          "Booting droidian will show you the Droidian logo, followed by a black screen for about 30 seconds.",
+          "Do NOT press the power button during this time, or the phone will turn off. Wait patiently.",
+          "You should be greeted with the Phosh lock screen after booting is done."
         ]
       },
       {
@@ -264,6 +252,21 @@
         "type": "string",
         "data": "Currently GPU only works partially in Droidian, but in Waydroid it works perfectly."
       }
+    ],
+    "Encryption": [
+        {
+            "type": "string",
+            "data": [
+                "Encryption is disabled by default and can be enabled in Settings.",
+                "Encryption cannot be disabled after it has been enabled.",
+                "If you want to remove encryption, you will need to wipe your data and reinstall the OS.",
+                "After setting up an encryption password, you will be instructed to reboot the device.",
+                "This reboot will take significantly longer than usual, so just wait patiently.",
+                "You should be greeted with the Phosh lock screen after booting is done.",
+                "Encryption will continue to be set up in the background after you have rebooted.",
+                "Expect your device to feel slower for a few minutes until the encryption process has completed."
+            ]
+        }
     ],
     "Applications": [
       {

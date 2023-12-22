@@ -51,13 +51,11 @@
     },
     "Misc": {
       "working": [
+        "Encryption",
         "SD card",
         "Waydroid",
         "MTP",
         "GPS"
-      ],
-      "notWorking": [
-        "Encryption"
       ]
     }
   },

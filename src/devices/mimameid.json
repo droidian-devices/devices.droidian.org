@@ -6,11 +6,9 @@
     "Camera": {
       "working": [
         "Photo",
+        "Video",
         "Switch camera",
         "Flashlight"
-      ],
-      "notWorking": [
-        "Video"
       ]
     },
     "Sound": {
@@ -34,10 +32,12 @@
     },
     "Network": {
       "working": [
-        "WiFi"
+        "WiFi",
+        "Bluetooth",
+        "NFC"
       ],
       "notWorking": [
-        "Bluetooth"
+        "Hotspot"
       ]
     },
     "Cellular": {

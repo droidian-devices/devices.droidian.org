@@ -193,7 +193,7 @@
     "Credits": [
       {
         "type": "string",
-        "data": "#{1}, #{2}, #{3}",
+        "data": "#{1}, #{2}",
         "links": [
           {
             "to": "https://github.com/mathew-dennis",

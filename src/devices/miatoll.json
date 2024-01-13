@@ -159,7 +159,7 @@
         "type": "list",
         "links": [
           {
-            "to": "https://images.droidian.org/droidian/nightly/arm64/xiaomi/image-fastboot-xiaomi.zip",
+            "to": "https://images.droidian.org/droidian/nightly/arm64/xiaomi/image-fastboot-miatoll.zip",
             "text": "Droidian's image",
             "id": 1
           }

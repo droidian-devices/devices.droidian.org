@@ -56,9 +56,7 @@
         "SD card",
         "Waydroid",
         "MTP",
-        "GPS"
-      ],
-      "notWorking": [
+        "GPS",
         "Encryption"
       ]
     }
@@ -162,12 +160,6 @@
           },
           "Reboot."
         ]
-      }
-    ],
-    "Notification LED": [
-      {
-        "type": "string",
-        "data": "The notification LED does not work at the moment"
       }
     ],
     "Default password": [

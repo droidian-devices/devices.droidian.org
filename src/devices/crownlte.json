@@ -56,11 +56,11 @@
         "SD card",
         "Waydroid",
         "Encryption",
+        "MTP",
         "GPS"
       ],
       "notWorking": [
-        "External display",
-        "MTP"
+        "External display"
       ]
     }
   },

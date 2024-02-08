@@ -55,10 +55,10 @@
       "working": [
         "SD card",
         "Waydroid",
+        "Encryption",
         "GPS"
       ],
       "notWorking": [
-        "Encryption",
         "External display",
         "MTP"
       ]

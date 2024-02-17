@@ -142,7 +142,7 @@
         "type": "list",
         "links": [
           {
-            "to": "https://images.droidian.org/droidian/nightly/arm64/samsung/image-fastboot-star2lte.zip",
+            "to": "https://images.droidian.org/droidian/nightly/arm64/samsung/image-fastboot-crownlte.zip",
             "text": "Droidian's image",
             "id": 1
           },

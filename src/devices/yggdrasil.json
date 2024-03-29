@@ -25,11 +25,13 @@
       "working": [
         "Rotation",
         "Proximity",
-        "Vibration",
         "Brightness control"
       ],
       "partly": [
         "Auto brightness"
+      ],
+      "notWorking": [
+        "Vibration"
       ]
     },
     "Network": {
@@ -73,24 +75,30 @@
       "links": [
         {
           "to": "https://images.droidian.org/droidian/nightly/arm64/volla/image-fastboot-yggdrasil.zip",
-          "text": "Droidian's image",
+          "text": "Droidian (phosh) image",
           "id": 1
+        },
+        {
+          "to": "https://github.com/cutie-shell/droidian/releases/download/nightly/droidian-OFFICIAL_volla_yggdrasil-arm64-cutie-phone-28.zip",
+          "text": "Droidian (Cutie) image",
+          "id": 2
         },
         {
           "to": "https://volla.tech/filedump/volla-yggdrasil-9.0-ubports-installer-bootstrap.zip",
           "text": "Halium 9 Bootstrap",
-          "id": 2
+          "id": 3
         },
         {
           "to": "http://deb.cutie-shell.org/twrp-yggdrasil.img",
           "text": "TWRP recovery (not needed)",
-          "id": 3
+          "id": 4
         }
       ],
       "data": [
         "#{1}",
         "#{2}",
-        "#{3}"
+        "#{3}",
+        "#{4}"
       ]
       }
     ],
@@ -103,7 +111,7 @@
         "type": "list",
         "links": [
           {
-            "to": "https://github.com/droidian-releng/droidian-installer/releases/tag/0.0.5",
+            "to": "https://github.com/droidian-releng/droidian-installer/releases/tag/0.0.6",
             "text": "Droidian's installer",
             "id": 1
           }
@@ -138,7 +146,7 @@
     "Finalizing installation": [
       {
         "type": "string",
-        "data": "Now, you have to reboot the device. It should boot to phosh (a graphical user interface used by Droidian) after rebooting once more automatically. When the device has booted, you can unlock the device with the default passcode 1234."
+        "data": "Now, you have to reboot the device. It should boot to the graphical user interface of your choice after rebooting once more automatically. When the device has booted, you can unlock the device with the default passcode 1234."
       }
     ],
     "Troubleshooting": [

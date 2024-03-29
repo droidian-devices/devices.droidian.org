@@ -33,10 +33,10 @@
     "Network": {
       "working": [
         "WiFi",
-        "Bluetooth",
         "NFC"
       ],
-      "notWorking": [
+      "partly": [
+        "Bluetooth",
         "Hotspot"
       ]
     },
@@ -64,6 +64,12 @@
     }
   },
   "notes": {
+    "Warning": [
+      {
+        "type": "string",
+        "data": "Droidian requires Android 11 firmware which does NOT support Volla Phone 22 devices with replaced display panels. Trying to install Droidian onto a Volla Phone 22 device with replaced display panel will soft-brick your device."
+      }
+    ],
     "Download files": [
       {
         "type": "header",
@@ -74,31 +80,58 @@
       "links": [
         {
           "to": "https://images.droidian.org/droidian/nightly/arm64/volla/image-fastboot-mimameid.zip",
-          "text": "Droidian's image",
+          "text": "Droidian (phosh) image",
           "id": 1
+        },
+        {
+          "to": "https://github.com/cutie-shell/droidian/releases/download/nightly/droidian-OFFICIAL_volla_mimameid-arm64-cutie-phone-30.zip",
+          "text": "Droidian (cutie) image",
+          "id": 2
         },
         {
           "to": "http://deb.cutie-shell.org/twrp-mimameid.img",
           "text": "TWRP recovery",
-          "id": 2
+          "id": 3
         },
         {
-          "to": "https://volla.tech/filedump/volla-mimameid-11.0-ubports-installer-bootstrap-v2.zip",
+          "to": "https://volla.tech/filedump/volla-mimameid-11.0-ubports-installer-bootstrap-v3.zip",
           "text": "Halium 11 Bootstrap",
-          "id": 3
+          "id": 4
         }
       ],
       "data": [
         "#{1}",
         "#{2}",
-        "#{3}"
+        "#{3}",
+        "#{4}"
       ]
       }
     ],
-    "Installation instructions": [
+    "Droidian installation": [
       {
         "type": "header",
-        "data": "Preparations"
+        "data": "Droidian Installer"
+      },
+      {
+        "type": "list",
+        "links": [
+          {
+            "to": "https://github.com/droidian-releng/droidian-installer/releases/tag/0.0.6",
+            "text": "Droidian's installer",
+            "id": 1
+          }
+        ],
+        "data": [
+          "Download and run #{1}",
+          "Boot to fastboot and wait for the installer to detect your device.",
+          "In case the device does not get recognized correctly, you can select your device from the list manually.",
+          "Select your desktop environment and wait for the installer to finish.",
+          "Reboot."
+        ]
+      },
+      {
+        "type": "header",
+        "data": "Manual Installation"
       },
       {
         "type": "string",
@@ -114,10 +147,6 @@
         ]
       },
       {
-        "type": "header",
-        "data": "Installation"
-      },
-      {
         "type": "string",
         "data": "From recovery open adb sideload mode (under advanced on TWRP) and run following commands on your computer replacing the file name with the downloaded file:"
       },
@@ -131,7 +160,7 @@
     "Finalizing installation": [
       {
         "type": "string",
-        "data": "Now, you have to reboot the device. It should boot to phosh (a graphical user interface used by Droidian) after rebooting once more automatically. When the device has booted, you can unlock the device with the default passcode 1234."
+        "data": "Now, you have to reboot the device. It should boot to the graphical user interface of your choice after rebooting once more automatically. When the device has booted, you can unlock the device with the default passcode 1234."
       }
     ],
     "Applications": [

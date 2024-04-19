@@ -7,7 +7,7 @@
       "working": [
         "Flashlight"
       ],
-      "notWorking": [
+      "partly": [
         "Photo",
         "Switch camera",
         "Video"
@@ -110,8 +110,8 @@
         "type": "list",
         "links": [
           {
-            "to": "https://images.droidian.org/droidian/nightly/arm64/oneplus/image-fastboot-oneplus3.zip",
-            "text": "Droidian's image",
+            "to": "https://github.com/Droidian-oneplus3/droidian-images/releases/tag/nightly",
+            "text": "Droidian images",
             "id": 1
           },
           {
@@ -212,7 +212,8 @@
       {
         "type": "list",
         "data": [
-            "Unzip the droidian zip you just downloaded, then run the flash_all.sh script."
+            "If using an LVM image, unzip the droidian zip you just downloaded, then run the flash_all.sh script.",
+            "If using a rootfs image, do not unzip the file. Just flash it in the device's recovery or by using adb sideload."
         ]
       }
     ],
@@ -244,7 +245,7 @@
     "Camera": [
       {
         "type": "string",
-        "data": "Camera doesn’t yet work in Droidian or Waydroid."
+        "data": "Camera currently works only if you use Cutie shell, in Phosh it doesn't yet work."
       }
     ],
     "GPU": [
@@ -264,7 +265,8 @@
                 "This reboot will take significantly longer than usual, so just wait patiently.",
                 "You should be greeted with the Phosh lock screen after booting is done.",
                 "Encryption will continue to be set up in the background after you have rebooted.",
-                "Expect your device to feel slower for a few minutes until the encryption process has completed."
+                "Expect your device to feel slower for a few minutes until the encryption process has completed.",
+                "NOTE: Encryption currently only works in LVM images"
             ]
         }
     ],

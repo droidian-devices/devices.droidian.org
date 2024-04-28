@@ -34,7 +34,6 @@ import violet from './violet.json';
 const getDevices = (): { devices: IDevice[] } => {
   return {
     devices: [
-      miatoll,
       pro1,
       pro1x,
       bahamut,
@@ -43,12 +42,13 @@ const getDevices = (): { devices: IDevice[] } => {
       mimameid,
       griffin,
       sofia,
-      enchilada,
       X01BD,
       beryllium,
       jasmine,
       davinci,
       wayne,
+      miatoll,
+      enchilada,
       starqlte,
       starlte,
       star2lte,

@@ -25,13 +25,11 @@
       "working": [
         "Rotation",
         "Proximity",
-        "Brightness control"
+        "Brightness control",
+        "Vibration"
       ],
       "partly": [
         "Auto brightness"
-      ],
-      "notWorking": [
-        "Vibration"
       ]
     },
     "Network": {

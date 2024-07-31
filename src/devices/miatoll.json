@@ -1,19 +1,235 @@
 {
   "name": "Xiaomi Poco M2 Pro / Redmi Note 9 Pro / Pro Max / 9S (miatoll)",
-  "category": "Potential",
+  "category": "official",
   "code": "miatoll",
+  "features": {
+    "Camera": {
+      "working": [
+        "Photo",
+        "Video",
+        "Switch camera",
+        "Flashlight"
+      ]
+    },
+    "Sound": {
+      "working": [
+        "Speaker",
+        "Microphone",
+        "Headphones",
+        "Volume control"
+      ]
+    },
+    "Sensors": {
+      "working": [
+        "Brightness control",
+        "Rotation",
+        "Fingerprint",
+        "Auto brightness",
+        "Proximity",
+        "Vibration"
+      ]
+    },
+    "Network": {
+      "working": [
+        "WiFi",
+        "Hotspot",
+        "NFC",
+        "Bluetooth"
+      ]
+    },
+    "Cellular": {
+      "working": [
+        "Calls",
+        "Data",
+        "SMS",
+        "Carrier info"
+      ],
+      "notWorking": [
+        "Dual sim",
+        "MMS"
+      ]
+    },
+    "Misc": {
+      "working": [
+        "SD card",
+        "Waydroid",
+        "MTP",
+        "GPS"
+      ],
+      "partly": [
+        "Encryption"
+      ]
+    }
+  },
   "Notes": {
-    "Notes": [
+    "Before you proceed": [
       {
+        "type": "string",
+        "data": "Device has to be downgraded to stock Android 10"
+      },
+      {
+        "type": "string",
+        "data": "For Redmi Note 9 Pro (Global) requires stock MIUI 12.0.2"
+      },
+      {
+        "type": "string",
+        "data": "Redmi Note 9S and 9 Pro (India variant) require stock MIUI 12.0.4"
+      },
+      {
+        "type": "string",
+        "data": "Redmi Note 9 Pro Max requires stock MIUI 12.0.3"
+      },
+      {
+        "type": "string",
+        "data": "Poco M2 Pro requires stock MIUI 12.0.3"
+      }
+    ],
+    "Device preparation": [
+      {
+        "type": "header",
+        "data": "Save your APN"
+      },
+      {
+        "type": "list",
         "links": [
           {
-            "to": "https://t.me/DroidianLinux",
-            "text": "our Telegram group",
+            "to": "http://apn.how/",
+            "text": "apn.how",
             "id": 1
           }
         ],
+        "data": [
+          "The Access Point Name or APN can be found in the Settings menu of Android",
+          "Take a piece of paper or a text editor, and write down everything that you see on that screen",
+          "These are likely to include a URL (e. g., internet.carrier.net), a username, and possibly a password",
+          "APN settings can also be found at #{1}"
+        ]
+      },
+      {
+        "type": "header",
+        "data": "Unlock the bootloader"
+      },
+      {
+        "type": "list",
+        "links": [
+          {
+            "to": "https://wiki.lineageos.org/devices/",
+            "text": "LineageOS wiki",
+            "id": 1
+          },
+          {
+            "to": "https://forum.xda-developers.com/",
+            "text": "xda-developers",
+            "id": 2
+          }
+        ],
+        "data": [
+          "Refer to the instructions provided by the device manufacturer",
+          "Other useful sources include the #{1} and #{2}"
+        ]
+      }
+    ],
+    "Droidian installation": [
+      {
+        "type": "header",
+        "data": "Droidian Installer"
+      },
+      {
+        "type": "list",
+        "links": [
+          {
+            "to": "https://github.com/droidian-releng/droidian-installer/releases/tag/0.0.5",
+            "text": "Droidian's installer",
+            "id": 1
+          }
+        ],
+        "data": [
+          "Download and run #{1}",
+          "Boot to fastboot and wait for the installer to detect your device.",
+          "In case the device does not get recognized correctly, you can select your device from the list manually.",
+          "Select your desktop environment and wait for the installer to finish.",
+          "Reboot."
+        ]
+      },
+      {
+        "type": "header",
+        "data": "Manual Installation"
+      },
+      {
+        "type": "list",
+        "links": [
+          {
+            "to": "https://images.droidian.org/droidian/nightly/arm64/xiaomi/image-fastboot-miatoll.zip",
+            "text": "Droidian's image",
+            "id": 1
+          }
+        ],
+        "data": [
+          "Download and extract #{1}",
+          "Boot to fastboot and run flash_all.sh to flash the image to your device. To flash each partition manually",
+          {
+            "type": "list",
+            "data": [
+              "Check the list of images in data/ and flash each image manually like so: fastboot flash partition_name partition_name.img",
+              "The following images might be included: boot.img, dtbo.img, vbmeta.img, userdata.img."
+            ]
+          },
+          "Reboot."
+        ]
+      }
+    ],
+    "Default password": [
+      {
         "type": "string",
-        "data": "This device is currently unsupported. If you are interested in maintaining the device or contributing to its progress, please reach out to #{1} to get information about the status."
+        "data": "The default password is 1234."
+      }
+    ],
+    "APN": [
+      {
+        "type": "string",
+        "data": "Mobile data needs an APN to be set up from Settings -> Mobile Network -> Access Point Names."
+      }
+    ],
+    "Encryption": [
+      {
+        "type": "string",
+        "data": "System encryption does not work and has been disabled for now."
+      }
+    ],
+    "Applications": [
+      {
+        "type": "string",
+        "links": [
+          {
+            "to": "https://linuxphoneapps.org",
+            "text": "LinuxPhoneApps",
+            "id": 1
+          }
+        ],
+        "data": "You can find a list of mobile-friendly Linux applications at #{1}"
+      }
+    ],
+    "Credits": [
+      {
+        "type": "string",
+        "data": "#{1}, #{2}",
+        "links": [
+          {
+            "to": "https://github.com/fakeshell",
+            "text": "FakeShell (Bardia Moshiri)",
+            "id": 1
+          },
+          {
+            "to": "http://droidian.org/",
+            "text": "Droidian project",
+            "id": 2
+          },
+          {
+            "to": "https://github.com/bellegarde-c",
+            "text": "gnumdk (Cédric Bellegarde)",
+            "id": 3
+          }
+        ]
       }
     ]
   }

@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
   return (
     <FooterContainer variants={animation.slowSlideRight} initial="init" animate="visible" exit="exit">
       <FooterBody>
-        <HomeButton /> Droidian 2023
+        <HomeButton /> Droidian 2025
       </FooterBody>
     </FooterContainer>
   );

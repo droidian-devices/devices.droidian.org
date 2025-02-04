@@ -73,7 +73,7 @@
       },
       {
         "type": "string",
-        "data": "Redmi Note 9S and 9 Pro (India variant) require stock MIUI 12.0.4"
+        "data": "Redmi Note 9S and 9 Pro (India variant) require stock MIUI 12.0.3"
       },
       {
         "type": "string",
@@ -212,7 +212,7 @@
     "Credits": [
       {
         "type": "string",
-        "data": "#{1}, #{2}",
+        "data": "#{1}, #{2}, #{3}",
         "links": [
           {
             "to": "https://github.com/fakeshell",

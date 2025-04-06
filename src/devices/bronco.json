@@ -71,7 +71,7 @@
       {
         "type": "string",
         "data": ["You need the official Motorola Android 13 fw flashed on the device.",
-          "Android 14 fw has not been tested.",
+          "Android 14 fw has not been tested."
         ]
       }
     ],

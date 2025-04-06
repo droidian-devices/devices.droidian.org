@@ -30,6 +30,7 @@ import karna from './karna.json';
 import surya from './surya.json';
 import perseus from './perseus.json';
 import violet from './violet.json';
+import bronco from './bronco.json';
 
 const getDevices = (): { devices: IDevice[] } => {
   return {
@@ -61,6 +62,7 @@ const getDevices = (): { devices: IDevice[] } => {
       surya,
       perseus,
       violet,
+      bronco,
     ],
   };
 };

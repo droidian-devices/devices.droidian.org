@@ -15,8 +15,10 @@
       "working": [
         "Speaker",
         "Microphone",
-        "Headphones",
         "Volume control"
+      ],
+      "notWorking": [
+        "Headphones"
       ]
     },
     "Sensors": {
@@ -24,19 +26,18 @@
         "Rotation",
         "Proximity",
         "Vibration",
-        "Brightness control"
-      ],
-      "partly": [
+        "Fingerprint",
+        "Brightness control",
         "Auto brightness"
       ]
     },
     "Network": {
       "working": [
         "WiFi",
+        "Bluetooth",
         "NFC"
       ],
       "partly": [
-        "Bluetooth",
         "Hotspot"
       ]
     },
@@ -55,12 +56,14 @@
     "Misc": {
       "working": [
         "SD card",
-        "Waydroid",
-	"MTP",
+	      "MTP",
         "GPS"
       ],
       "notWorking": [
         "Encryption"
+      ],
+      "untested": [
+        "Waydroid"
       ]
     }
   },
@@ -68,7 +71,7 @@
     "Warning": [
       {
         "type": "string",
-        "data": "Droidian requires Android 11 firmware which does NOT support Volla Phone 22 devices with replaced display panels. Trying to install Droidian onto a Volla Phone 22 device with replaced display panel will soft-brick your device."
+        "data": "Older Droidian images, which are no longer supported, were based on Halium 11 firmware. Newer images are based on Halium 12 firmware, which is not compatible with the older ones. If you have an older image installed, you need to wipe the device and install Halium 12 firmware before installing a newer one."
       }
     ],
     "Download files": [
@@ -85,26 +88,14 @@
           "id": 1
         },
         {
-          "to": "https://github.com/cutie-shell/droidian/releases/download/nightly/droidian-OFFICIAL_volla_mimameid-arm64-cutie-phone-30.zip",
-          "text": "Droidian (cutie) image",
+          "to": "https://volla.tech/filedump/volla-mimameid-12.0-ubports-installer-bootstrap.zip",
+          "text": "Halium 12 Bootstrap",
           "id": 2
-        },
-        {
-          "to": "http://deb.cutie-shell.org/twrp-mimameid.img",
-          "text": "TWRP recovery",
-          "id": 3
-        },
-        {
-          "to": "https://volla.tech/filedump/volla-mimameid-11.0-ubports-installer-bootstrap-v3.zip",
-          "text": "Halium 11 Bootstrap",
-          "id": 4
         }
       ],
       "data": [
         "#{1}",
-        "#{2}",
-        "#{3}",
-        "#{4}"
+        "#{2}"
       ]
       }
     ],
@@ -135,26 +126,17 @@
         "data": "Manual Installation"
       },
       {
-        "type": "string",
-        "data": "Boot to fastboot by holding volume-up key when powering on the device and then selecting \"Fastboot mode\" with volume and power keys. In fastboot-mode run the following commands on your computer (The TWRP image and the bootstrap archive contents extracted should be in the current working diresctory when running these commands.):"
-      },
-      {
         "type": "list",
         "data": [
-          "fastboot format:ext4 userdata",
-          "fastboot flash lk lk.img",
-          "fastboot flash super super.img",
-          "fastboot flash boot twrp-mimameid.img"
-        ]
-      },
-      {
-        "type": "string",
-        "data": "From recovery open adb sideload mode (under advanced on TWRP) and run following commands on your computer replacing the file name with the downloaded file:"
-      },
-      {
-        "type": "list",
-        "data": [
-          "adb sideload droidian-OFFICIAL-phosh-phone-volla_mimameid-api30-arm64-VERSION_DATE.zip"
+          "Boot to fastboot and run flash_all.sh to flash the image to your device. To flash each partition manually",
+          {
+            "type": "list",
+            "data": [
+              "Check the list of images in data/ and flash each image manually like so: fastboot flash partition_name partition_name.img",
+              "The following images might be included: boot.img, dtbo.img, userdata.img."
+            ]
+          },
+          "Reboot."
         ]
       }
     ],

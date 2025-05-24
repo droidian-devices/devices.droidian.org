@@ -13,6 +13,7 @@ import lavender from './lavender.json';
 import angelica from './angelica.json';
 import miatoll from './miatoll.json';
 import yggdrasil from './yggdrasil.json';
+import yggdrasilx from './yggdrasilx.json';
 import mimameid from './mimameid.json';
 import starqlte from './starqlte.json';
 import sofia from './sofia.json';
@@ -41,6 +42,7 @@ const getDevices = (): { devices: IDevice[] } => {
       bahamut,
       sargo,
       yggdrasil,
+      yggdrasilx,
       mimameid,
       griffin,
       sofia,

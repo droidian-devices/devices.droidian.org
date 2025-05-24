@@ -30,12 +30,19 @@
       ],
       "partly": [
         "Auto brightness"
+      ],
+      "untested": [
+        "Fingerprint"
       ]
     },
     "Network": {
       "working": [
         "WiFi",
         "Bluetooth"
+      ],
+      "untested": [
+        "Hotspot",
+        "NFC"
       ]
     },
     "Cellular": {

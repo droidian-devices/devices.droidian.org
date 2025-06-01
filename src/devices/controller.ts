@@ -16,6 +16,7 @@ import yggdrasil from './yggdrasil.json';
 import yggdrasilx from './yggdrasilx.json';
 import mimameid from './mimameid.json';
 import vidofnir from './vidofnir.json';
+import algiz from './algiz.json';
 import starqlte from './starqlte.json';
 import sofia from './sofia.json';
 import enchilada from './enchilada.json';
@@ -46,6 +47,7 @@ const getDevices = (): { devices: IDevice[] } => {
       yggdrasilx,
       mimameid,
       vidofnir,
+      algiz,
       griffin,
       sofia,
       enchilada,

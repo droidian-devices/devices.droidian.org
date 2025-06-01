@@ -1,0 +1,170 @@
+{
+  "name": "Volla Phone Quintus (algiz)",
+  "category": "official",
+  "code": "algiz",
+  "features": {
+    "Camera": {
+      "notWorking": [
+        "Photo",
+        "Switch camera",
+        "Flashlight",
+        "Video"
+      ]
+    },
+    "Sound": {
+      "working": [
+        "Speaker",
+        "Microphone",
+        "Volume control"
+      ],
+      "untested": [
+        "Headphones"
+      ]
+    },
+    "Sensors": {
+      "working": [
+        "Rotation",
+        "Proximity",
+        "Brightness control",
+        "Vibration"
+      ],
+      "notWorking": [
+        "Auto brightness",
+        "Fingerprint"
+      ]
+    },
+    "Network": {
+      "working": [
+        "WiFi",
+        "Bluetooth"
+      ],
+      "untested": [
+        "Hotspot",
+        "NFC"
+      ]
+    },
+    "Cellular": {
+      "working": [
+        "Calls",
+        "Data",
+        "SMS",
+        "Carrier info"
+      ],
+      "notWorking": [
+        "Dual sim",
+        "MMS"
+      ]
+    },
+    "Misc": {
+      "working": [
+        "MTP",
+        "GPS"
+      ],
+      "notWorking": [
+        "Encryption"
+      ],
+      "untested": [
+        "Waydroid"
+      ]
+    }
+  },
+  "notes": {
+    "Download files": [
+      {
+        "type": "header",
+        "data": "Installation"
+      },
+      {
+      "type": "list",
+      "links": [
+        {
+          "to": "https://images.droidian.org/droidian/nightly/arm64/volla/image-fastboot-algiz.zip",
+          "text": "Droidian (phosh) image",
+          "id": 1
+        },
+        {
+          "to": "https://volla.tech/filedump/volla-algiz-13.0-ubports-installer-bootstrap.zip",
+          "text": "Halium 13 Bootstrap",
+          "id": 2
+        }
+      ],
+      "data": [
+        "#{1}",
+        "#{2}"
+      ]
+      }
+    ],
+    "Droidian installation": [
+      {
+        "type": "header",
+        "data": "Droidian Installer"
+      },
+      {
+        "type": "list",
+        "links": [
+          {
+            "to": "https://github.com/droidian-releng/droidian-installer/releases/tag/0.0.6",
+            "text": "Droidian's installer",
+            "id": 1
+          }
+        ],
+        "data": [
+          "Download and run #{1}",
+          "Boot to fastboot and wait for the installer to detect your device.",
+          "In case the device does not get recognized correctly, you can select your device from the list manually.",
+          "Select your desktop environment and wait for the installer to finish.",
+          "Reboot."
+        ]
+      },
+      {
+        "type": "header",
+        "data": "Manual Installation"
+      },
+      {
+        "type": "list",
+        "data": [
+          "Boot to fastboot and run flash_all.sh to flash the image to your device. To flash each partition manually",
+          {
+            "type": "list",
+            "data": [
+              "Check the list of images in data/ and flash each image manually like so: fastboot flash partition_name partition_name.img",
+              "The following images might be included: boot.img, dtbo.img, userdata.img."
+            ]
+          },
+          "Reboot."
+        ]
+      }
+    ],
+    "Finalizing installation": [
+      {
+        "type": "string",
+        "data": "Now, you have to reboot the device. It should boot to the graphical user interface of your choice after rebooting once more automatically. When the device has booted, you can unlock the device with the default passcode 1234."
+      }
+    ],
+    "Troubleshooting": [
+      {
+        "type": "string",
+        "data": "If the image does not boot and your userdata is not an ext4 partition, you might try formatting it. Note that this is a destructive operation, you cannot recover files from userdata afterwards!"
+      },
+      {
+        "type": "list",
+        "data": [
+          "fastboot format:ext4 userdata"
+        ]
+      }
+    ],
+    "Applications": [
+      {
+        "type": "string",
+        "links": [
+          {
+            "to": "https://linuxphoneapps.org",
+            "text": "LinuxPhoneApps",
+            "id": 1
+          }
+        ],
+        "data": "You can find a list of mobile-friendly Linux applications at #{1}"
+      }
+    ]
+  }
+}

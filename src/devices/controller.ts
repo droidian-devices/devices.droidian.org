@@ -34,6 +34,7 @@ import surya from './surya.json';
 import perseus from './perseus.json';
 import violet from './violet.json';
 import bronco from './bronco.json';
+import mimir from './mimir.json';
 
 const getDevices = (): { devices: IDevice[] } => {
   return {
@@ -69,6 +70,7 @@ const getDevices = (): { devices: IDevice[] } => {
       perseus,
       violet,
       bronco,
+      mimir,
     ],
   };
 };

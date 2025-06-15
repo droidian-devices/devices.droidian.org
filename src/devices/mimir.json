@@ -1,0 +1,178 @@
+{
+  "name": "Volla Tablet (mimir)",
+  "category": "official",
+  "code": "mimir",
+  "features": {
+    "Camera": {
+      "working": [
+        "Photo",
+        "Switch camera",
+        "Flashlight"
+      ]
+    },
+    "Sound": {
+      "working": [
+        "Speaker",
+        "Microphone",
+        "Volume control",
+        "Headphones"
+      ]
+    },
+    "Sensors": {
+      "working": [
+        "Rotation",
+        "Proximity",
+        "Brightness control",
+        "Vibration",
+        "Auto brightness"
+      ]
+    },
+    "Network": {
+      "working": [
+        "WiFi",
+        "Bluetooth"
+      ],
+      "untested": [
+        "Hotspot"
+      ]
+    },
+    "Cellular": {
+      "working": [
+        "Calls",
+        "Data",
+        "SMS",
+        "Carrier info"
+      ],
+      "notWorking": [
+        "Dual sim",
+        "MMS"
+      ]
+    },
+    "Misc": {
+      "working": [
+        "MTP",
+        "GPS",
+        "Encryption"
+      ],
+      "notWorking": [
+        "Waydroid"
+      ]
+    }
+  },
+  "notes": {
+    "Download files": [
+      {
+        "type": "header",
+        "data": "Installation"
+      },
+      {
+      "type": "list",
+      "links": [
+        {
+          "to": "https://images.droidian.org/droidian/nightly/arm64/volla/image-fastboot-mimir.zip",
+          "text": "Droidian (phosh) image",
+          "id": 1
+        },
+        {
+          "to": "https://volla.tech/filedump/volla-mimir-13.0-ubports-installer-bootstrap.zip",
+          "text": "Halium 13 Bootstrap",
+          "id": 2
+        }
+      ],
+      "data": [
+        "#{1}",
+        "#{2}"
+      ]
+      }
+    ],
+    "Droidian installation": [
+      {
+        "type": "header",
+        "data": "UBPorts Installer"
+      },
+      {
+        "type": "list",
+        "data": [
+          "Coming soon."
+        ]
+      },
+      {
+        "type": "header",
+        "data": "Manual Installation"
+      },
+      {
+        "type": "list",
+        "links": [
+          {
+            "to": "https://images.droidian.org/droidian/nightly/arm64/volla/image-fastboot-mimir.zip",
+            "text": "Droidian (phosh) image",
+            "id": 1
+          },
+          {
+            "to": "https://volla.tech/filedump/volla-mimir-13.0-ubports-installer-bootstrap.zip",
+            "text": "Halium 13 Bootstrap",
+            "id": 2
+          }
+        ],
+        "data": [
+          "Ensure the Halium 13 bootstrap is installed. The easiest way to do this is to install Ubuntu Touch first.",
+          "The UBports Installer method will take care of doing that too.",
+          "Boot to fastboot mode (Power + Volume up), and flash the bootstrap (#{2}) manually (this assumes that it is extracted in the 'bootstrap/' directory)",
+          {
+            "type": "list",
+            "data": [
+              "fastboot flash preloader_a bootstrap/preloader_tb8781p1_64.bin",
+              "fastboot flash --disable-verity vbmeta_a bootstrap/vbmeta.img",
+              "fastboot flash md1img_a bootstrap/md1img.img",
+              "fastboot flash spmfw_a bootstrap/spmfw.img",
+              "fastboot flash pi_img_a bootstrap/pi_img.img",
+              "fastboot flash dpm_a bootstrap/dpm.img",
+              "fastboot flash scp_a bootstrap/scp.img",
+              "fastboot flash sspm_a bootstrap/sspm.img",
+              "fastboot flash mcupm_a bootstrap/mcupm.img",
+              "fastboot flash gz_a bootstrap/gz.img",
+              "fastboot flash lk_a bootstrap/lk.img",
+              "fastboot flash tee_a bootstrap/tee.img",
+              "fastboot flash csci bootstrap/csci.ini",
+              "fastboot flash logo bootstrap/logo.bin",
+              "fastboot flash super bootstrap/super.img"
+            ]
+          },
+          "Then, extract the Droidian image (#{1}) and run the flash_all.sh to flash the image to your device. If you have trouble flashing, try connecting the tablet to an USB 2.0 port.",
+          "Reboot."
+        ]
+      }
+    ],
+    "Finalizing installation": [
+      {
+        "type": "string",
+        "data": "Now, you have to reboot the device. It should boot to the graphical user interface of your choice after rebooting once more automatically. When the device has booted, you can unlock the device with the default passcode 1234."
+      }
+    ],
+    "Troubleshooting": [
+      {
+        "type": "string",
+        "data": "If the image does not boot and your userdata is not an ext4 partition, you might try formatting it. Note that this is a destructive operation, you cannot recover files from userdata afterwards!"
+      },
+      {
+        "type": "list",
+        "data": [
+          "fastboot format:ext4 userdata"
+        ]
+      }
+    ],
+    "Applications": [
+      {
+        "type": "string",
+        "links": [
+          {
+            "to": "https://linuxphoneapps.org",
+            "text": "LinuxPhoneApps",
+            "id": 1
+          }
+        ],
+        "data": "You can find a list of mobile-friendly Linux applications at #{1}"
+      }
+    ]
+  }
+}

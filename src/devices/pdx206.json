@@ -2,7 +2,118 @@
   "name": "Sony Xperia 5 II (pdx206)",
   "category": "community",
   "code": "pdx206",
-  "notes": {
+  "features": {
+    "Camera": {
+      "working": [
+        "Photo",
+        "Flashlight",
+        "Video"
+      ],
+      "partly": [
+        "Switch camera"
+      ],
+      "notWorking": [
+        "telephoto camera",
+        "Physical Shutter Button"
+      ]
+    },
+    "Sound": {
+      "working": [
+        "Headphones",
+        "Speaker",
+        "Bluetooth Audio",
+        "Microphone",
+        "Volume control"
+      ],
+      "notWorking": [
+        "HDMI Audio Output",
+        "Smartisan TNT go Speaker"
+      ]
+    },
+    "Sensors": {
+      "working": [
+        "Brightness control",
+        "Rotation",
+        "Auto brightness",
+        "Proximity",
+        "Vibration"
+      ],
+      "partly": [
+        "Fingerprint"
+      ]
+    },
+    "Network": {
+      "working": [
+        "WiFi",
+        "Bluetooth",
+        "Hotspot"
+      ],
+      "partly": [
+      ],
+      "untested": [
+        "NFC"
+      ]
+    },
+    "Cellular": {
+      "working": [
+        "Calls",
+        "Data",
+        "SMS",
+        "MMS",
+        "Carrier info"
+      ],
+      "notWorking": [
+        "Dual sim"
+      ]
+    },
+    "Misc": {
+      "working": [
+        "SD card",
+        "Waydroid",
+        "GPS",
+        "Multi-monitor"
+      ],
+      "partly": [
+        "Vulkan"
+      ],
+      "untested": [
+        "MTP",
+        "Encryption"
+      ]
+    }
+  },
+  "Notes": {
+    "Before you proceed": [
+      {
+        "type": "string",
+        "data": "You need to upgrade to the latest available stock Android 11 release according to your smartphone version."
+      }
+    ],
+    "Device preparation": [
+      {
+        "type": "header",
+        "data": "Unlock the bootloader (using a computer)"
+      },
+      {
+        "type": "list",
+        "links": [
+          {
+            "to": "https://wiki.lineageos.org/devices/",
+            "text": "LineageOS wiki",
+            "id": 1
+          },
+          {
+            "to": "https://forum.xda-developers.com/",
+            "text": "xda-developers",
+            "id": 2
+          }
+        ],
+        "data": [
+          "Refer to the instructions provided by the device manufacturer",
+          "Other useful sources include the #{1} and #{2}"
+        ]
+      }
+    ],
     "Droidian installation": [
       {
         "type": "header",
@@ -12,13 +123,93 @@
         "type": "list",
         "links": [
           {
-            "to": "https://github.com/PeterCxy/droidian-recipes",
+            "to": "https://github.com/ArchieMeng/droidian-recipes/tags",
             "text": "github releases",
             "id": 1
           }
         ],
         "data": [
-          "Device is available on #{1}"
+          "Download and extract #{1}",
+          "Boot to fastboot and run flash_all.sh to flash the image to your device. To flash each partition manually",
+          {
+            "type": "list",
+            "data": [
+              "Check the list of images in data/ and flash each image manually like so: fastboot flash partition_name partition_name.img",
+              "The following images might be included: boot.img, dtbo.img, vbmeta.img, userdata.img."
+            ]
+          },
+          "Reboot."
+        ]
+      }
+    ],
+    "Default Password": [
+      {
+        "type": "string",
+        "data": "The default password is 1234."
+      }
+    ],
+    "Powersave related performance issues": [
+      {
+        "type": "string",
+        "data": "After turning off screen, the device will turn off all the big cluster cores. Even after screen on, they may not back online as expected if you need high performance at once. You can use command like \"sudo bash -c \"echo 3 > /sys/devices/system/cpu/cpu4/core_ctl/max_cpus\"\" to turn on some of the big cores."
+      }
+    ],
+    "Partly supported Fingerprint functions": [
+      {
+        "type": "string",
+        "data": "By now, you can only register one Fingerprint. Any newly registed fingerprint will replace all the old ones. This is a known device specific issue as far as I know. It requires more debugging to resolve."
+      }
+    ],
+    "Partly supported Vulkan functions": [
+      {
+        "type": "list",
+        "data": [
+          "The vendored mesa packages provide freedreno GPU driver which provides Vulkan functions for this device.",
+          "The Vulkan functionality inside Waydroid works fine. You can even run Vulkan apps and games without crashes.",
+          "The Vulkan rendering on native Linux part seems broken. The rasterization pipeline needs to be run on CPU. Thus, you need environment variable \"MESA_VK_WSI_DEBUG=sw\" for it to be properly functioning."
+        ]
+      }
+    ],
+    "Applications": [
+      {
+        "type": "list",
+        "links": [
+          {
+            "to": "https://linuxphoneapps.org",
+            "text": "LinuxPhoneApps",
+            "id": 1
+          }
+        ],
+        "data": [
+          "You can find a list of mobile-friendly Linux applications at #{1}",
+          "For getting device optimized version of box64, you can install the box64-sd865 package which is provided by the device specific repository."
+        ]
+      }
+    ],
+    "Credits": [
+      {
+        "type": "string",
+        "data": "Contributors"
+      },
+      {
+        "type": "string",
+        "data": "#{1} #{2} #{3}",
+        "links": [
+          {
+            "to": "https://github.com/ArchieMeng",
+            "text": "Archie Meng",
+            "id": 1
+          },
+          {
+            "to": "https://github.com/PeterCxy",
+            "text": "Peter Cai",
+            "id": 2
+          },
+          {
+            "to": "http://droidian.org/",
+            "text": "Droidian project",
+            "id": 3
+          }
         ]
       }
     ]

@@ -35,6 +35,7 @@ import perseus from './perseus.json';
 import violet from './violet.json';
 import bronco from './bronco.json';
 import mimir from './mimir.json';
+import pdx206 from './pdx206.json';
 
 const getDevices = (): { devices: IDevice[] } => {
   return {
@@ -71,6 +72,7 @@ const getDevices = (): { devices: IDevice[] } => {
       violet,
       bronco,
       mimir,
+      pdx206,
     ],
   };
 };

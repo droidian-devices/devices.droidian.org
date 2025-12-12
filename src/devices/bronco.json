@@ -135,7 +135,7 @@
         "type": "list",
         "links": [
           {
-            "to": "https://images.droidian.org/droidian/nightly/arm64/lenovo/image-fastboot-bronco.zip",
+            "to": "https://images.droidian.org/droidian/droidian-stable-latest/arm64/lenovo/image-fastboot-bronco.zip",
             "text": "Droidian's image",
             "id": 1
           }

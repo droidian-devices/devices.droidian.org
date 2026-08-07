@@ -7,9 +7,7 @@
       "working": [
         "Photo",
         "Flashlight",
-        "Switch camera"
-      ],
-      "notWorking": [
+        "Switch camera",
         "Video"
       ]
     },
@@ -47,7 +45,8 @@
         "Calls",
         "Data",
         "SMS",
-        "Carrier info"
+        "Carrier info",
+        "VoLTE"
       ],
       "notWorking": [
         "MMS"
@@ -55,11 +54,10 @@
     },
     "Misc": {
       "working": [
-        "GPS"
-      ],
-      "notWorking": [
+        "GPS",
         "Waydroid",
-        "Encryption"
+        "Encryption",
+        "DP-OUT"
       ],
       "untested": [
         "MTP"
@@ -70,8 +68,8 @@
     "Before you proceed": [
       {
         "type": "string",
-        "data": ["You need the official Motorola Android 13 fw flashed on the device.",
-          "Android 14 fw has not been tested."
+        "data": ["Developement and testing is done with the official Motorola Android 14.",
+          "Any other fw might work but is not tested."
         ]
       }
     ],
@@ -142,7 +140,7 @@
         ],
         "data": [
           "Download and extract #{1}",
-          "Boot to fastboot (bootloader) and run 'fasboot reboot fastboot'. The device will boot to fastbootd",
+          "Boot to fastboot (bootloader) and run 'fastboot reboot fastboot'. The device will boot to fastbootd",
           "Run flash_all.sh to flash the image to your device. To flash each partition manually",
           {
             "type": "list",

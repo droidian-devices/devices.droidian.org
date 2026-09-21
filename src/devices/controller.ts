@@ -36,6 +36,7 @@ import violet from './violet.json';
 import bronco from './bronco.json';
 import mimir from './mimir.json';
 import pdx206 from './pdx206.json';
+import marble from './marble.json';
 
 const getDevices = (): { devices: IDevice[] } => {
   return {
@@ -73,6 +74,7 @@ const getDevices = (): { devices: IDevice[] } => {
       bronco,
       mimir,
       pdx206,
+      marble,
     ],
   };
 };

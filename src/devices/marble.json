@@ -1,0 +1,161 @@
+{
+  "name": "Xiaomi POCO F5 / Redmi Note 12 Turbo (marble)",
+  "category": "community",
+  "code": "marble",
+  "features": {
+    "Camera": {
+      "working": [
+        "Photo",
+        "Video",
+        "Flashlight",
+        "Switch camera"
+      ]
+    },
+    "Sound": {
+      "working": [
+        "Speaker",
+        "Microphone",
+        "Headphones",
+        "Volume control",
+        "Bluetooth Audio"
+      ]
+    },
+    "Sensors": {
+      "working": [
+        "Brightness control",
+        "Rotation",
+        "Proximity",
+        "Vibration"
+      ],
+      "partly": [
+        "Fingerprint"
+      ],
+      "notWorking": [
+        "Auto brightness"
+      ]
+    },
+    "Network": {
+      "working": [
+        "WiFi",
+        "Bluetooth",
+        "Hotspot",
+        "NFC"
+      ]
+    },
+    "Cellular": {
+      "working": [
+        "Calls",
+        "Data",
+        "SMS",
+        "Carrier info"
+      ],
+      "partly": [
+        "Dual sim"
+      ],
+      "untested": [
+        "MMS"
+      ]
+    },
+    "Misc": {
+      "working": [
+        "Waydroid",
+        "GPS"
+      ],
+      "partly": [
+        "MTP"
+      ],
+      "untested": [
+        "Encryption"
+      ]
+    }
+  },
+  "Notes": {
+    "Known issues": [
+      {
+        "type": "list",
+        "data": [
+          "If the SIM card does not appear, restart the ofono and ModemManager services.",
+          "Fingerprint is partially working but still has reliability issues.",
+          "USB connectivity works, but MTP is only partially supported."
+        ]
+      }
+    ],
+    "Plymouth": [
+      {
+        "type": "string",
+        "links": [
+          {
+            "to": "https://github.com/droidian/initramfs-tools-halium/pull/8",
+            "text": "upstream PR",
+            "id": 1
+          },
+          {
+            "to": "https://t.me/linuxonmarble",
+            "text": "support group",
+            "id": 2
+          }
+        ],
+        "data": "Plymouth requires a kernel with the patched initramfs setup for the required display modules. The #{1} is still pending. Until it is merged, ask in the #{2} for a kernel with the patched initramfs."
+      }
+    ],
+    "Default password": [
+      {
+        "type": "string",
+        "data": "The default password is 1234."
+      }
+    ],
+    "Support": [
+      {
+        "type": "string",
+        "links": [
+          {
+            "to": "https://t.me/linuxonmarble",
+            "text": "Linux on Marble Telegram group",
+            "id": 1
+          },
+          {
+            "to": "https://github.com/droidian-marble",
+            "text": "droidian-marble GitHub organization",
+            "id": 2
+          }
+        ],
+        "data": "For device-specific support, visit the #{1}. Source code and related projects are available in the #{2}."
+      }
+    ],
+    "Credits": [
+      {
+        "type": "string",
+        "data": "Contributors"
+      },
+      {
+        "type": "string",
+        "links": [
+          {
+            "to": "https://github.com/Halhadus",
+            "text": "Halhadus",
+            "id": 1
+          },
+          {
+            "to": "https://droidian.org/",
+            "text": "Droidian project",
+            "id": 2
+          }
+        ],
+        "data": "#{1} (main porter), #{2}"
+      }
+    ],
+    "Droidian installation": [
+      {
+        "type": "string",
+        "links": [
+          {
+            "to": "https://halhadus.rocks/projects/droidian-for-marble.html",
+            "text": "installation guide",
+            "id": 1
+          }
+        ],
+        "data": "Follow the #{1} for device preparation, installation, dual-boot instructions, and device-specific notes."
+      }
+    ]
+  }
+}

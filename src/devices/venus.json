@@ -1,0 +1,30 @@
+{
+  "name": "Xiaomi Mi 11 (venus)",
+  "category": "Potential",
+  "code": "venus",
+  "Notes": {
+    "Notes": [
+      {
+        "links": [
+          {
+            "to": "https://t.me/DroidianLinux",
+            "text": "our Telegram group",
+            "id": 1
+          },
+          {
+            "to": "https://github.com/edevbr/linux-android-xiaomi-venus",
+            "text": "kernel",
+            "id": 2
+          },
+          {
+            "to": "https://github.com/edevbr/adaptation-droidian-venus",
+            "text": "adaptation",
+            "id": 3
+          }
+        ],
+        "type": "string",
+        "data": "This device is currently unsupported. If you are interested in maintaining the device or contributing to its progress, please reach out to #{1} to get information about the status. An experimental port that runs Phosh without the Android container is available (#{2} and #{3}): display, touch and Wi-Fi work, mobile data and calls do not, audio, camera and sensors are untested."
+      }
+    ]
+  }
+}
